@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Drawing;
+using Microsoft.Xna.Framework;
 using System.Linq;
 using Newtonsoft.Json;
 
@@ -115,7 +115,7 @@ namespace TerrariaInventoryEditor.Terraria
         ///     Gets or sets the item's knockback.
         /// </summary>
         [JsonProperty("knockback")]
-        public int Knockback { get; set; }
+        public float Knockback { get; set; }
 
         /// <summary>
         ///     Gets or sets the item's mana cost.
@@ -133,7 +133,7 @@ namespace TerrariaInventoryEditor.Terraria
         ///     Gets the item's name.
         /// </summary>
         [JsonProperty("name")]
-        public int Name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         ///     Gets the item's Net ID.
@@ -175,7 +175,7 @@ namespace TerrariaInventoryEditor.Terraria
         ///     Gets or sets the item's graphics scale.
         /// </summary>
         [JsonProperty("scale")]
-        public int Scale { get; set; }
+        public float Scale { get; set; }
 
         /// <summary>
         ///     Gets or sets the item's slot index.
@@ -212,8 +212,7 @@ namespace TerrariaInventoryEditor.Terraria
         /// <param name="netId">The net ID.</param>
         public void SetDefaults(int netId)
         {
-            var item = Terraria.Instance.Items.SingleOrDefault(i => i.NetId == netId); /*??
-                       throw new ArgumentException(nameof(netId));*/
+            var item = Terraria.Instance.Items.SingleOrDefault(i => i.NetId == netId);
             if (item == null)
             {
                 return;

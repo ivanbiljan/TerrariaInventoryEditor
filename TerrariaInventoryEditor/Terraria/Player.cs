@@ -1,8 +1,13 @@
 ﻿using System;
-using System.Drawing;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
+using System.Windows.Forms;
+using Microsoft.Xna.Framework;
+using TerrariaInventoryEditor.Annotations;
 using TerrariaInventoryEditor.Extensions;
 
 namespace TerrariaInventoryEditor.Terraria
@@ -14,12 +19,12 @@ namespace TerrariaInventoryEditor.Terraria
     /// <summary>
     ///     Represents a Terraria Player.
     /// </summary>
-    // TODO: Implement older version support
-    // TODO: Hide misc implementation
-    // TODO: Downed DD2 implementation
-    // TODO: Spawn points implementation
-    // TODO: Hide info implementation
-    public sealed class Player
+    // TODO: Implement older version support []
+    // TODO: Hide misc implementation - [X]
+    // TODO: Downed DD2 implementation - [X]
+    // TODO: Spawn points implementation - []
+    // TODO: Hide info implementation - [X]
+    public sealed class Player : INotifyPropertyChanged
     {
         /// <summary>
         ///     Gets the encryption key used to encrypt and decrypt player profiles.
@@ -31,16 +36,68 @@ namespace TerrariaInventoryEditor.Terraria
         /// </summary>
         private const ulong MagicNumber = 27981915666277746;
 
-        /// <summary>
-        ///     TODO
-        /// </summary>
-        public bool[] HideVisuals = new bool[10];
+        private int _anglerQuestsFinished;
+
+        private int _bartenderQuestLog;
+
+        private int _currentHealth;
+
+        private int _currentMana;
+
+        private PlayerDifficulty _difficulty;
+
+        private bool _downedDD2Event;
+
+        private bool _extraAccessory;
+
+        private Color _eyeColor;
+
+        private string _filePath;
+
+        private int _hair;
+
+        private Color _hairColor;
+
+        private byte _hairDye;
+
+        private byte _hideMisc;
+
+        private bool _isFavourite;
+
+        private bool _isHotbarLocked;
+
+        private int _maxHealth;
+
+        private int _maxMana;
+
+        private string _name;
+
+        private Color _pantsColor;
+
+        private TimeSpan _playTime;
+
+        private int _release;
+
+        private uint _revision;
+
+        private Color _shirtColor;
+
+        private Color _shoeColor;
+
+        private Color _skinColor;
+
+        private int _skinVariant;
+
+        private int _taxMoney;
+
+        private Color _undershirtColor;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="Player" /> class with some preset values.
+        ///     Initializes a new instance of the <see cref="Player" /> class.
         /// </summary>
         public Player()
         {
+            AnglerQuestsFinished = 0;
             Name = "Player name";
             Difficulty = PlayerDifficulty.Softcore;
             SkinVariant = 1;
@@ -81,18 +138,54 @@ namespace TerrariaInventoryEditor.Terraria
                 Safe[i] = new Item();
                 Forge[i] = new Item();
             }
+
+            for (var i = 0; i < WorldInfo.Length; ++i)
+            {
+                WorldInfo[i] = new WorldInformation();
+            }
         }
 
         /// <summary>
         ///     Gets or sets the number of angler quests the player has finished.
         /// </summary>
-        public int AnglerQuestsFinished { get; set; }
+        public int AnglerQuestsFinished
+        {
+            get => _anglerQuestsFinished;
+            set
+            {
+                if (value == _anglerQuestsFinished)
+                {
+                    return;
+                }
+
+                _anglerQuestsFinished = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets the player's armor.
         ///     Order: 0-2 = Armor, 3-9 = Accessories (1 extra + 1 hidden), 10-12 Social Armor, 13-19 Social Accessories.
         /// </summary>
         public Item[] Armor { get; } = new Item[20];
+
+        /// <summary>
+        ///     Pending documentation.
+        /// </summary>
+        public int BartenderQuestLog
+        {
+            get => _bartenderQuestLog;
+            set
+            {
+                if (value == _bartenderQuestLog)
+                {
+                    return;
+                }
+
+                _bartenderQuestLog = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets the player's buffs.
@@ -107,7 +200,43 @@ namespace TerrariaInventoryEditor.Terraria
         /// <summary>
         ///     Gets or sets the player's difficulty.
         /// </summary>
-        public PlayerDifficulty Difficulty { get; set; }
+        public PlayerDifficulty Difficulty
+        {
+            get => _difficulty;
+            set
+            {
+                if (value == _difficulty)
+                {
+                    return;
+                }
+
+                _difficulty = value;
+                OnPropertyChanged();
+            }
+        }
+
+        /// <summary>
+        ///     Gets or sets a value indicating whether the player has beaten the Old One's Army event.
+        /// </summary>
+        public bool DownedDd2Event
+        {
+            get => _downedDD2Event;
+            set
+            {
+                if (value == _downedDD2Event)
+                {
+                    return;
+                }
+
+                _downedDD2Event = value;
+                OnPropertyChanged();
+            }
+        }
+
+        /// <summary>
+        ///     Gets the player's DPad radial bindings.
+        /// </summary>
+        public int[] DPadRadialBindings { get; } = new int[4];
 
         /// <summary>
         ///     Gets the player's dye.
@@ -118,17 +247,56 @@ namespace TerrariaInventoryEditor.Terraria
         /// <summary>
         ///     Gets or sets a value indicating whether the player has an extra accessory slot available.
         /// </summary>
-        public bool ExtraAccessory { get; set; }
+        public bool ExtraAccessory
+        {
+            get => _extraAccessory;
+            set
+            {
+                if (value == _extraAccessory)
+                {
+                    return;
+                }
+
+                _extraAccessory = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the player's eye colour.
         /// </summary>
-        public Color EyeColor { get; set; }
+        public Color EyeColor
+        {
+            get => _eyeColor;
+            set
+            {
+                if (value == _eyeColor)
+                {
+                    return;
+                }
+
+                _eyeColor = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets the path to the player's storage file.
         /// </summary>
-        public string FilePath { get; set; }
+        public string FilePath
+        {
+            get => _filePath;
+            set
+            {
+                if (value == _filePath)
+                {
+                    return;
+                }
+
+                _filePath = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets the player's forge.
@@ -138,22 +306,102 @@ namespace TerrariaInventoryEditor.Terraria
         /// <summary>
         ///     Gets or sets the player's hair.
         /// </summary>
-        public int Hair { get; set; }
+        public int Hair
+        {
+            get => _hair;
+            set
+            {
+                if (value == _hair)
+                {
+                    return;
+                }
+
+                _hair = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the player's hair colour.
         /// </summary>
-        public Color HairColor { get; set; }
+        public Color HairColor
+        {
+            get => _hairColor;
+            set
+            {
+                if (value == _hairColor)
+                {
+                    return;
+                }
+
+                _hairColor = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the player's hair dye.
         /// </summary>
-        public byte HairDye { get; set; }
+        public byte HairDye
+        {
+            get => _hairDye;
+            set
+            {
+                if (value == _hairDye)
+                {
+                    return;
+                }
+
+                _hairDye = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the player's current health.
         /// </summary>
-        public int Health { get; set; }
+        public int Health
+        {
+            get => _currentHealth;
+            set
+            {
+                if (value == _currentHealth)
+                {
+                    return;
+                }
+
+                _currentHealth = value;
+                OnPropertyChanged();
+            }
+        }
+
+        /// <summary>
+        ///     Pending documentation.
+        /// </summary>
+        public bool[] HideInfo { get; } = new bool[13];
+
+        /// <summary>
+        ///     Gets or sets the player's hideMisc property.
+        /// </summary>
+        public byte HideMisc
+        {
+            get => _hideMisc;
+            set
+            {
+                if (value == _hideMisc)
+                {
+                    return;
+                }
+
+                _hideMisc = value;
+                OnPropertyChanged();
+            }
+        }
+
+        /// <summary>
+        ///     TODO
+        /// </summary>
+        public bool[] HideVisuals { get; } = new bool[10];
 
         /// <summary>
         ///     Gets the player's inventory.
@@ -163,12 +411,38 @@ namespace TerrariaInventoryEditor.Terraria
         /// <summary>
         ///     Gets or sets a value indicating whether the player is favourited.
         /// </summary>
-        public bool IsFavourite { get; set; }
+        public bool IsFavourite
+        {
+            get => _isFavourite;
+            set
+            {
+                if (value == _isFavourite)
+                {
+                    return;
+                }
+
+                _isFavourite = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets a value indicating whether the player's hotbar has been locked.
         /// </summary>
-        public bool IsHotbarLocked { get; set; }
+        public bool IsHotbarLocked
+        {
+            get => _isHotbarLocked;
+            set
+            {
+                if (value == _isHotbarLocked)
+                {
+                    return;
+                }
+
+                _isHotbarLocked = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets a value indicating whether the player is male.
@@ -177,19 +451,58 @@ namespace TerrariaInventoryEditor.Terraria
         public bool IsMale { get; set; }
 
         /// <summary>
+        ///     Gets or sets the player's current mana.
+        /// </summary>
+        public int Mana
+        {
+            get => _currentMana;
+            set
+            {
+                if (value == _currentMana)
+                {
+                    return;
+                }
+
+                _currentMana = value;
+                OnPropertyChanged();
+            }
+        }
+
+        /// <summary>
         ///     Get or sets the player's max health.
         /// </summary>
-        public int MaxHealth { get; set; }
+        public int MaxHealth
+        {
+            get => _maxHealth;
+            set
+            {
+                if (value == _maxHealth)
+                {
+                    return;
+                }
+
+                _maxHealth = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the player's max mana.
         /// </summary>
-        public int MaxMana { get; set; }
+        public int MaxMana
+        {
+            get => _maxMana;
+            set
+            {
+                if (value == _maxMana)
+                {
+                    return;
+                }
 
-        /// <summary>
-        ///     Gets or sets the player's current mana.
-        /// </summary>
-        public int Mana { get; set; }
+                _maxMana = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets the player's misc dyes.
@@ -204,12 +517,38 @@ namespace TerrariaInventoryEditor.Terraria
         /// <summary>
         ///     Gets or sets the player's name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                if (value == _name)
+                {
+                    return;
+                }
+
+                _name = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the player's pants colour.
         /// </summary>
-        public Color PantsColor { get; set; }
+        public Color PantsColor
+        {
+            get => _pantsColor;
+            set
+            {
+                if (value == _pantsColor)
+                {
+                    return;
+                }
+
+                _pantsColor = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets the player's piggy bank.
@@ -219,17 +558,56 @@ namespace TerrariaInventoryEditor.Terraria
         /// <summary>
         ///     Gets or sets the player's play time.
         /// </summary>
-        public TimeSpan PlayTime { get; set; }
+        public TimeSpan PlayTime
+        {
+            get => _playTime;
+            set
+            {
+                if (value == _playTime)
+                {
+                    return;
+                }
+
+                _playTime = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the release number.
         /// </summary>
-        public int Release { get; set; }
+        public int Release
+        {
+            get => _release;
+            set
+            {
+                if (value == _release)
+                {
+                    return;
+                }
+
+                _release = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the revision.
         /// </summary>
-        public uint Revision { get; set; }
+        public uint Revision
+        {
+            get => _revision;
+            set
+            {
+                if (value == _revision)
+                {
+                    return;
+                }
+
+                _revision = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets the player's safe.
@@ -239,32 +617,120 @@ namespace TerrariaInventoryEditor.Terraria
         /// <summary>
         ///     Gets or sets the player's shirt colour.
         /// </summary>
-        public Color ShirtColor { get; set; }
+        public Color ShirtColor
+        {
+            get => _shirtColor;
+            set
+            {
+                if (value == _shirtColor)
+                {
+                    return;
+                }
+
+                _shirtColor = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the player's shoe colour.
         /// </summary>
-        public Color ShoeColor { get; set; }
+        public Color ShoeColor
+        {
+            get => _shoeColor;
+            set
+            {
+                if (value == _shoeColor)
+                {
+                    return;
+                }
+
+                _shoeColor = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the player's skin colour.
         /// </summary>
-        public Color SkinColor { get; set; }
+        public Color SkinColor
+        {
+            get => _skinColor;
+            set
+            {
+                if (value == _skinColor)
+                {
+                    return;
+                }
+
+                _skinColor = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the player's skin variant. Used to determine the player's gender.
         /// </summary>
-        public int SkinVariant { get; set; }
+        public int SkinVariant
+        {
+            get => _skinVariant;
+            set
+            {
+                if (value == _skinVariant)
+                {
+                    return;
+                }
+
+                _skinVariant = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the player's tax money.
         /// </summary>
-        public int TaxMoney { get; set; }
+        public int TaxMoney
+        {
+            get => _taxMoney;
+            set
+            {
+                if (value == _taxMoney)
+                {
+                    return;
+                }
+
+                _taxMoney = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the player's undershirt colour.
         /// </summary>
-        public Color UndershirtColor { get; set; }
+        public Color UndershirtColor
+        {
+            get => _undershirtColor;
+            set
+            {
+                if (value == _undershirtColor)
+                {
+                    return;
+                }
+
+                _undershirtColor = value;
+                OnPropertyChanged();
+            }
+        }
+
+        /// <summary>
+        /// Gets the player's world information buffer.
+        /// </summary>
+        public WorldInformation[] WorldInfo { get; } = new WorldInformation[200];
+
+        /// <summary>
+        ///     Occurs when a property is changed.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         ///     Occurs when a player profile is loaded.
@@ -282,10 +748,7 @@ namespace TerrariaInventoryEditor.Terraria
         /// <param name="playerPath">The path.</param>
         public void Load(string playerPath)
         {
-            if (string.IsNullOrWhiteSpace(playerPath))
-            {
-                return;
-            }
+            Debug.Assert(playerPath != null, "Player file path must not be null.");
 
             FilePath = playerPath;
             using (var rijndaelManaged = new RijndaelManaged {Padding = PaddingMode.None})
@@ -328,19 +791,21 @@ namespace TerrariaInventoryEditor.Terraria
                     {
                         HideVisuals[i] = visuals.ReadBit(i);
                     }
+
+                    visuals = reader.ReadByte();
                     for (var i = 0; i < 2; ++i)
                     {
                         HideVisuals[i + 8] = visuals.ReadBit(i);
                     }
 
-                    reader.ReadBytes(2); // TODO (Hide misc)
+                    HideMisc = reader.ReadByte();
                     SkinVariant = reader.ReadByte();
                     Health = reader.ReadInt32();
                     MaxHealth = reader.ReadInt32();
                     Mana = reader.ReadInt32();
                     MaxMana = reader.ReadInt32();
                     ExtraAccessory = reader.ReadBoolean();
-                    reader.ReadBoolean(); // TODO (Downed DD2)
+                    DownedDd2Event = reader.ReadBoolean();
                     TaxMoney = reader.ReadInt32();
                     HairColor = reader.ReadColor();
                     SkinColor = reader.ReadColor();
@@ -435,7 +900,7 @@ namespace TerrariaInventoryEditor.Terraria
                         Buffs[i].Time = reader.ReadInt32();
                     }
 
-                    for (var i = 0; i < 200; ++i)
+                    for (var i = 0; i < WorldInfo.Length; ++i)
                     {
                         var num = reader.ReadInt32();
                         if (num == -1)
@@ -443,22 +908,22 @@ namespace TerrariaInventoryEditor.Terraria
                             break;
                         }
 
-                        // TODO: Figure this out
-                        reader.ReadInt32();
-                        reader.ReadInt32();
-                        reader.ReadString();
+                        WorldInfo[i].SpawnX = num;
+                        WorldInfo[i].SpawnY = reader.ReadInt32();
+                        WorldInfo[i].Id = reader.ReadInt32();
+                        WorldInfo[i].Name = reader.ReadString();
                     }
 
                     IsHotbarLocked = reader.ReadBoolean();
                     for (var i = 0; i < 13; ++i)
                     {
-                        reader.ReadBoolean();
+                        HideInfo[i] = reader.ReadBoolean();
                     }
 
                     AnglerQuestsFinished = reader.ReadInt32();
-                    for (var i = 0; i < 4; ++i)
+                    for (var i = 0; i < DPadRadialBindings.Length; ++i)
                     {
-                        reader.ReadInt32(); // DPad crap (??)
+                        DPadRadialBindings[i] = reader.ReadInt32();
                     }
 
                     for (var i = 0; i < BuildAccessorieStatus.Length; ++i)
@@ -466,10 +931,180 @@ namespace TerrariaInventoryEditor.Terraria
                         BuildAccessorieStatus[i] = reader.ReadInt32();
                     }
 
-                    reader.ReadInt32(); // Bartender quest log (TODO)
+                    BartenderQuestLog = reader.ReadInt32(); // Bartender quest log (TODO)
                     PlayerLoaded?.Invoke();
                 }
             }
+        }
+
+        /// <summary>
+        ///     Writes the current player profile to the specified path.
+        /// </summary>
+        /// <param name="playerPath">The path.</param>
+        public void Save(string playerPath)
+        {
+            Debug.Assert(playerPath != null, "Player file path must not be null.");
+
+            try
+            {
+                if (File.Exists(playerPath))
+                {
+                    File.Copy(playerPath, $"{playerPath}.bak", true);
+                }
+
+                using (var rijndaelManaged = new RijndaelManaged())
+                using (var fileStream = new FileStream(playerPath, FileMode.Create, FileAccess.ReadWrite))
+                {
+                    var encryption = new UnicodeEncoding().GetBytes(EncryptionKey);
+                    using (var cryptoStream = new CryptoStream(fileStream,
+                        rijndaelManaged.CreateEncryptor(encryption, encryption), CryptoStreamMode.Write))
+                    using (var writer = new BinaryWriter(cryptoStream))
+                    {
+                        writer.Write(Terraria.CurrentRelease);
+                        writer.Write(MagicNumber | (3L << 56));
+                        writer.Write(Revision);
+                        writer.Write((ulong) ((IsFavourite ? 1 : 0) & 1) | 0);
+                        writer.Write(Name);
+                        writer.Write((byte) Difficulty);
+                        writer.Write(PlayTime.Ticks);
+                        writer.Write(Hair);
+                        writer.Write(HairDye);
+
+                        byte hideVisuals = 0;
+                        for (var i = 0; i < 8; ++i)
+                        {
+                            hideVisuals.SetBit(i, HideVisuals[i]);
+                        }
+                        writer.Write(hideVisuals);
+
+                        byte hideVisuals2 = 0;
+                        for (var i = 0; i < 2; ++i)
+                        {
+                            hideVisuals2.SetBit(i, HideVisuals[i + 8]);
+                        }
+                        writer.Write(hideVisuals2);
+
+                        writer.Write(HideMisc);
+                        writer.Write((byte) SkinVariant);
+                        writer.Write(Health);
+                        writer.Write(MaxHealth);
+                        writer.Write(Mana);
+                        writer.Write(MaxMana);
+                        writer.Write(ExtraAccessory);
+                        writer.Write(DownedDd2Event);
+                        writer.Write(TaxMoney);
+                        writer.Write(HairColor);
+                        writer.Write(SkinColor);
+                        writer.Write(EyeColor);
+                        writer.Write(ShirtColor);
+                        writer.Write(UndershirtColor);
+                        writer.Write(PantsColor);
+                        writer.Write(ShoeColor);
+
+                        for (var i = 0; i < Armor.Length; ++i)
+                        {
+                            writer.Write(Armor[i].NetId);
+                            writer.Write((byte) Armor[i].Prefix);
+                        }
+
+                        for (var i = 0; i < Dye.Length; ++i)
+                        {
+                            writer.Write(Dye[i].NetId);
+                            writer.Write((byte) Dye[i].Prefix);
+                        }
+
+                        for (var i = 0; i < Inventory.Length; ++i)
+                        {
+                            writer.Write(Inventory[i].NetId);
+                            writer.Write(Inventory[i].StackSize);
+                            writer.Write((byte) Inventory[i].Prefix);
+                            writer.Write(Inventory[i].IsFavourite);
+                        }
+
+                        for (var i = 0; i < MiscEquips.Length; ++i)
+                        {
+                            writer.Write(MiscEquips[i].NetId);
+                            writer.Write((byte) MiscEquips[i].Prefix);
+                            writer.Write(MiscDye[i].NetId);
+                            writer.Write((byte) MiscDye[i].Prefix);
+                        }
+
+                        for (var i = 0; i < PiggyBank.Length; ++i)
+                        {
+                            writer.Write(PiggyBank[i].NetId);
+                            writer.Write(PiggyBank[i].StackSize);
+                            writer.Write((byte) PiggyBank[i].Prefix);
+                        }
+
+                        for (var i = 0; i < Safe.Length; ++i)
+                        {
+                            writer.Write(Safe[i].NetId);
+                            writer.Write(Safe[i].StackSize);
+                            writer.Write((byte) Safe[i].Prefix);
+                        }
+
+                        for (var i = 0; i < Forge.Length; ++i)
+                        {
+                            writer.Write(Forge[i].NetId);
+                            writer.Write(Forge[i].StackSize);
+                            writer.Write((byte) Forge[i].Prefix);
+                        }
+
+                        for (var i = 0; i < Buffs.Length; ++i)
+                        {
+                            writer.Write(Buffs[i].Id);
+                            writer.Write(Buffs[i].Time);
+                        }
+
+                        for (var i = 0; i < WorldInfo.Length; ++i)
+                        {
+                            if (string.IsNullOrWhiteSpace(WorldInfo[i].Name))
+                            {
+                                writer.Write(-1);
+                                break;
+                            }
+
+                            writer.Write(WorldInfo[i].SpawnX);
+                            writer.Write(WorldInfo[i].SpawnY);
+                            writer.Write(WorldInfo[i].Id);
+                            writer.Write(WorldInfo[i].Name);
+                        }
+
+                        writer.Write(IsHotbarLocked);
+                        for (var i = 0; i < HideInfo.Length; ++i)
+                        {
+                            writer.Write(HideInfo[i]);
+                        }
+
+                        writer.Write(AnglerQuestsFinished);
+                        for (var i = 0; i < DPadRadialBindings.Length; ++i)
+                        {
+                            writer.Write(DPadRadialBindings[i]);
+                        }
+
+                        for (var i = 0; i < BuildAccessorieStatus.Length; ++i)
+                        {
+                            writer.Write(BuildAccessorieStatus[i]);
+                        }
+
+                        writer.Write(BartenderQuestLog);
+                        writer.Flush();
+                        cryptoStream.FlushFinalBlock();
+                        fileStream.Flush();
+                        PlayerSaved?.Invoke();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        [NotifyPropertyChangedInvocator]
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

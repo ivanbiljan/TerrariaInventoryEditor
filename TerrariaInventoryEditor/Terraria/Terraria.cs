@@ -21,14 +21,14 @@ namespace TerrariaInventoryEditor.Terraria
         /// </summary>
         public Terraria()
         {
-            //Buffs = JsonConvert.DeserializeObject<List<Buff>>(File.ReadAllText("Data\\Buffs.json"));
-            //Items = JsonConvert.DeserializeObject<List<Item>>(File.ReadAllText("Data\\Items.json"));
+            Buffs = JsonConvert.DeserializeObject<List<Buff>>(File.ReadAllText("Data\\Buffs.json"));
+            Items = JsonConvert.DeserializeObject<List<Item>>(File.ReadAllText("Data\\Items.json"));
         }
 
         /// <summary>
         ///     Gets the list of buffs.
         /// </summary>
-        public List<Buff> Buffs { get; } = new List<Buff>();
+        public List<Buff> Buffs { get; }
 
         /// <summary>
         ///     Gets the Terraria instance.
@@ -38,7 +38,7 @@ namespace TerrariaInventoryEditor.Terraria
         /// <summary>
         ///     Gets the list of items.
         /// </summary>
-        public List<Item> Items { get; } = new List<Item>();
+        public List<Item> Items { get; }
 
         /// <summary>
         ///     Gets the player instance that's being edited.
