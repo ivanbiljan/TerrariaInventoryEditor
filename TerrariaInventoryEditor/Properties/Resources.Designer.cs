@@ -63,6 +63,16 @@ namespace TerrariaInventoryEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new_file {
+            get {
+                object obj = ResourceManager.GetObject("new_file", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap open_file {
             get {
                 object obj = ResourceManager.GetObject("open_file", resourceCulture);

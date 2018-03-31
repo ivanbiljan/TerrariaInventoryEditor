@@ -29,10 +29,6 @@ namespace TerrariaInventoryEditor
             playerBindingSource.DataSource = Terraria.Terraria.Instance.Player;
         }
 
-        private void currentHealthBox_TextChanged(object sender, EventArgs e)
-        {
-        }
-
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var openFileDialog = new OpenFileDialog())
@@ -62,22 +58,7 @@ namespace TerrariaInventoryEditor
             }
             else
             {
-                using (var saveFileDialog = new SaveFileDialog())
-                {
-                    saveFileDialog.AddExtension = true;
-                    saveFileDialog.DefaultExt = ".plr";
-                    saveFileDialog.Filter = "Terraria Player File (*.plr)|*.plr";
-                    saveFileDialog.Title = "Save As";
-
-                    if (saveFileDialog.ShowDialog() != DialogResult.OK)
-                    {
-                        MessageBox.Show("Save cancelled.", "TerrariaInventoryEditor", MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
-                        return;
-                    }
-
-                    Terraria.Terraria.Instance.Player.Save(saveFileDialog.FileName);
-                }
+                saveAsToolStripMenuItem_Click(sender, e);
             }
         }
 
@@ -101,16 +82,22 @@ namespace TerrariaInventoryEditor
             }
         }
 
-        private void playerNameTxtBox_Leave(object sender, EventArgs e)
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show($"Name: {Terraria.Terraria.Instance.Player.Name}");
-            //playerBindingSource.ResetBindings(false);
-            //MessageBox.Show($"Name: {Terraria.Terraria.Instance.Player.Name}");
+            playerBindingSource.DataSource = Terraria.Terraria.Instance.Player = new Terraria.Player();
         }
 
-        private void playerNameTxtBox_Validated(object sender, EventArgs e)
+        private void resetHealthBtn_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine($"Name text box validated. Player name: {Terraria.Terraria.Instance.Player.Name}");
+            Terraria.Terraria.Instance.Player.Health = Terraria.Terraria.Instance.Player.MaxHealth = 100;
+            Terraria.Terraria.Instance.Player.Mana = Terraria.Terraria.Instance.Player.MaxMana = 20;
+        }
+
+        private void maxOutBtn_Click(object sender, EventArgs e)
+        {
+            Terraria.Terraria.Instance.Player.Health = Terraria.Terraria.Instance.Player.MaxHealth = 500;
+            Terraria.Terraria.Instance.Player.Mana = 400;
+            Terraria.Terraria.Instance.Player.MaxMana = 200;
         }
     }
 }

@@ -104,9 +104,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Resources\open_file.png" />
-    <Content Include="Resources\save.png" />
     <Content Include="Resources\save_as.png" />
+    <Content Include="Resources\save.png" />
+    <Content Include="Resources\open_file.png" />
+    <Content Include="Resources\new_file.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

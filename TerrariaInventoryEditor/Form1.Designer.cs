@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,6 +93,7 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem,
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem,
             this.saveAsToolStripMenuItem,
@@ -99,6 +101,14 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
             this.toolStripMenuItem1.Text = "File";
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Image = global::TerrariaInventoryEditor.Properties.Resources.new_file;
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
@@ -200,6 +210,7 @@
             this.maxOutBtn.TabIndex = 9;
             this.maxOutBtn.Text = "Max Out";
             this.maxOutBtn.UseVisualStyleBackColor = true;
+            this.maxOutBtn.Click += new System.EventHandler(this.maxOutBtn_Click);
             // 
             // resetHealthBtn
             // 
@@ -209,11 +220,12 @@
             this.resetHealthBtn.TabIndex = 8;
             this.resetHealthBtn.Text = "Restore Defaults";
             this.resetHealthBtn.UseVisualStyleBackColor = true;
+            this.resetHealthBtn.Click += new System.EventHandler(this.resetHealthBtn_Click);
             // 
             // manaBar
             // 
             this.manaBar.BackColor = System.Drawing.SystemColors.Control;
-            this.manaBar.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "Mana", true));
+            this.manaBar.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "Mana", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.manaBar.DataBindings.Add(new System.Windows.Forms.Binding("Maximum", this.playerBindingSource, "MaxMana", true));
             this.manaBar.Location = new System.Drawing.Point(10, 98);
             this.manaBar.Maximum = 20;
@@ -228,7 +240,7 @@
             // 
             // maxManaBox
             // 
-            this.maxManaBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "MaxMana", true));
+            this.maxManaBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "MaxMana", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.maxManaBox.Location = new System.Drawing.Point(176, 72);
             this.maxManaBox.Name = "maxManaBox";
             this.maxManaBox.Size = new System.Drawing.Size(100, 20);
@@ -236,7 +248,7 @@
             // 
             // currentManaBox
             // 
-            this.currentManaBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Mana", true));
+            this.currentManaBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Mana", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.currentManaBox.Location = new System.Drawing.Point(70, 72);
             this.currentManaBox.Name = "currentManaBox";
             this.currentManaBox.Size = new System.Drawing.Size(100, 20);
@@ -254,7 +266,7 @@
             // 
             // maxHealthBox
             // 
-            this.maxHealthBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "MaxHealth", true));
+            this.maxHealthBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "MaxHealth", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.maxHealthBox.Location = new System.Drawing.Point(176, 17);
             this.maxHealthBox.Name = "maxHealthBox";
             this.maxHealthBox.Size = new System.Drawing.Size(100, 20);
@@ -262,7 +274,7 @@
             // 
             // healthBar
             // 
-            this.healthBar.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "Health", true));
+            this.healthBar.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "Health", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.healthBar.DataBindings.Add(new System.Windows.Forms.Binding("Maximum", this.playerBindingSource, "MaxHealth", true));
             this.healthBar.Location = new System.Drawing.Point(10, 43);
             this.healthBar.Name = "healthBar";
@@ -272,12 +284,11 @@
             // 
             // currentHealthBox
             // 
-            this.currentHealthBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Health", true));
+            this.currentHealthBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Health", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.currentHealthBox.Location = new System.Drawing.Point(70, 17);
             this.currentHealthBox.Name = "currentHealthBox";
             this.currentHealthBox.Size = new System.Drawing.Size(100, 20);
             this.currentHealthBox.TabIndex = 1;
-            this.currentHealthBox.TextChanged += new System.EventHandler(this.currentHealthBox_TextChanged);
             // 
             // healthLabel
             // 
@@ -315,6 +326,7 @@
             // hotbarCheckBox
             // 
             this.hotbarCheckBox.AutoSize = true;
+            this.hotbarCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.playerBindingSource, "IsHotbarLocked", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.hotbarCheckBox.Location = new System.Drawing.Point(211, 136);
             this.hotbarCheckBox.Name = "hotbarCheckBox";
             this.hotbarCheckBox.Size = new System.Drawing.Size(97, 17);
@@ -324,7 +336,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "TaxMoney", true));
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "TaxMoney", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox2.Location = new System.Drawing.Point(126, 162);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(180, 20);
@@ -343,6 +355,7 @@
             // extraAccCheckBox
             // 
             this.extraAccCheckBox.AutoSize = true;
+            this.extraAccCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.playerBindingSource, "ExtraAccessory", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.extraAccCheckBox.Location = new System.Drawing.Point(211, 110);
             this.extraAccCheckBox.Name = "extraAccCheckBox";
             this.extraAccCheckBox.Size = new System.Drawing.Size(102, 17);
@@ -352,7 +365,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "PlayTime", true));
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "PlayTime", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox1.Location = new System.Drawing.Point(127, 76);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(179, 20);
@@ -370,7 +383,7 @@
             // 
             // anglerQuestUpDown
             // 
-            this.anglerQuestUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "AnglerQuestsFinished", true));
+            this.anglerQuestUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "AnglerQuestsFinished", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.anglerQuestUpDown.Location = new System.Drawing.Point(126, 135);
             this.anglerQuestUpDown.Maximum = new decimal(new int[] {
             2147483647,
@@ -383,7 +396,7 @@
             // 
             // skinVariantUpDown
             // 
-            this.skinVariantUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "SkinVariant", true));
+            this.skinVariantUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "SkinVariant", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.skinVariantUpDown.Location = new System.Drawing.Point(126, 109);
             this.skinVariantUpDown.Maximum = new decimal(new int[] {
             7,
@@ -416,7 +429,7 @@
             // 
             // difficultyCmbBox
             // 
-            this.difficultyCmbBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Difficulty", true));
+            this.difficultyCmbBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Difficulty", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.difficultyCmbBox.FormattingEnabled = true;
             this.difficultyCmbBox.Items.AddRange(new object[] {
             "Softcore",
@@ -439,13 +452,11 @@
             // 
             // playerNameTxtBox
             // 
-            this.playerNameTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Name", true));
+            this.playerNameTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerNameTxtBox.Location = new System.Drawing.Point(127, 20);
             this.playerNameTxtBox.Name = "playerNameTxtBox";
             this.playerNameTxtBox.Size = new System.Drawing.Size(179, 20);
             this.playerNameTxtBox.TabIndex = 21;
-            this.playerNameTxtBox.Leave += new System.EventHandler(this.playerNameTxtBox_Leave);
-            this.playerNameTxtBox.Validated += new System.EventHandler(this.playerNameTxtBox_Validated);
             // 
             // playerNameLbl
             // 
@@ -534,6 +545,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.CheckBox hotbarCheckBox;
         private System.Windows.Forms.BindingSource playerBindingSource;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
     }
 }
 

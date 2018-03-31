@@ -5,7 +5,6 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
-using System.Windows.Forms;
 using Microsoft.Xna.Framework;
 using TerrariaInventoryEditor.Annotations;
 using TerrariaInventoryEditor.Extensions;
@@ -22,18 +21,12 @@ namespace TerrariaInventoryEditor.Terraria
     // TODO: Implement older version support []
     // TODO: Hide misc implementation - [X]
     // TODO: Downed DD2 implementation - [X]
-    // TODO: Spawn points implementation - []
+    // TODO: Spawn points implementation - [X]
     // TODO: Hide info implementation - [X]
     public sealed class Player : INotifyPropertyChanged
     {
-        /// <summary>
-        ///     Gets the encryption key used to encrypt and decrypt player profiles.
-        /// </summary>
         private const string EncryptionKey = "h3y_gUyZ";
 
-        /// <summary>
-        ///     Gets the magic number used for ReLogic's special logic for files.
-        /// </summary>
         private const ulong MagicNumber = 27981915666277746;
 
         private int _anglerQuestsFinished;
@@ -723,7 +716,7 @@ namespace TerrariaInventoryEditor.Terraria
         }
 
         /// <summary>
-        /// Gets the player's world information buffer.
+        ///     Gets the player's world information buffer.
         /// </summary>
         public WorldInformation[] WorldInfo { get; } = new WorldInformation[200];
 
@@ -745,8 +738,8 @@ namespace TerrariaInventoryEditor.Terraria
         /// <summary>
         ///     Loads a player profile from the given path.
         /// </summary>
-        /// <param name="playerPath">The path.</param>
-        public void Load(string playerPath)
+        /// <param name="playerPath">The path, which must not be null.</param>
+        public void Load([NotNull] string playerPath)
         {
             Debug.Assert(playerPath != null, "Player file path must not be null.");
 
@@ -915,7 +908,7 @@ namespace TerrariaInventoryEditor.Terraria
                     }
 
                     IsHotbarLocked = reader.ReadBoolean();
-                    for (var i = 0; i < 13; ++i)
+                    for (var i = 0; i < HideInfo.Length; ++i)
                     {
                         HideInfo[i] = reader.ReadBoolean();
                     }
@@ -940,164 +933,157 @@ namespace TerrariaInventoryEditor.Terraria
         /// <summary>
         ///     Writes the current player profile to the specified path.
         /// </summary>
-        /// <param name="playerPath">The path.</param>
-        public void Save(string playerPath)
+        /// <param name="playerPath">The path, which must not be null.</param>
+        public void Save([NotNull] string playerPath)
         {
             Debug.Assert(playerPath != null, "Player file path must not be null.");
 
-            try
+            if (File.Exists(playerPath))
             {
-                if (File.Exists(playerPath))
-                {
-                    File.Copy(playerPath, $"{playerPath}.bak", true);
-                }
-
-                using (var rijndaelManaged = new RijndaelManaged())
-                using (var fileStream = new FileStream(playerPath, FileMode.Create, FileAccess.ReadWrite))
-                {
-                    var encryption = new UnicodeEncoding().GetBytes(EncryptionKey);
-                    using (var cryptoStream = new CryptoStream(fileStream,
-                        rijndaelManaged.CreateEncryptor(encryption, encryption), CryptoStreamMode.Write))
-                    using (var writer = new BinaryWriter(cryptoStream))
-                    {
-                        writer.Write(Terraria.CurrentRelease);
-                        writer.Write(MagicNumber | (3L << 56));
-                        writer.Write(Revision);
-                        writer.Write((ulong) ((IsFavourite ? 1 : 0) & 1) | 0);
-                        writer.Write(Name);
-                        writer.Write((byte) Difficulty);
-                        writer.Write(PlayTime.Ticks);
-                        writer.Write(Hair);
-                        writer.Write(HairDye);
-
-                        byte hideVisuals = 0;
-                        for (var i = 0; i < 8; ++i)
-                        {
-                            hideVisuals.SetBit(i, HideVisuals[i]);
-                        }
-                        writer.Write(hideVisuals);
-
-                        byte hideVisuals2 = 0;
-                        for (var i = 0; i < 2; ++i)
-                        {
-                            hideVisuals2.SetBit(i, HideVisuals[i + 8]);
-                        }
-                        writer.Write(hideVisuals2);
-
-                        writer.Write(HideMisc);
-                        writer.Write((byte) SkinVariant);
-                        writer.Write(Health);
-                        writer.Write(MaxHealth);
-                        writer.Write(Mana);
-                        writer.Write(MaxMana);
-                        writer.Write(ExtraAccessory);
-                        writer.Write(DownedDd2Event);
-                        writer.Write(TaxMoney);
-                        writer.Write(HairColor);
-                        writer.Write(SkinColor);
-                        writer.Write(EyeColor);
-                        writer.Write(ShirtColor);
-                        writer.Write(UndershirtColor);
-                        writer.Write(PantsColor);
-                        writer.Write(ShoeColor);
-
-                        for (var i = 0; i < Armor.Length; ++i)
-                        {
-                            writer.Write(Armor[i].NetId);
-                            writer.Write((byte) Armor[i].Prefix);
-                        }
-
-                        for (var i = 0; i < Dye.Length; ++i)
-                        {
-                            writer.Write(Dye[i].NetId);
-                            writer.Write((byte) Dye[i].Prefix);
-                        }
-
-                        for (var i = 0; i < Inventory.Length; ++i)
-                        {
-                            writer.Write(Inventory[i].NetId);
-                            writer.Write(Inventory[i].StackSize);
-                            writer.Write((byte) Inventory[i].Prefix);
-                            writer.Write(Inventory[i].IsFavourite);
-                        }
-
-                        for (var i = 0; i < MiscEquips.Length; ++i)
-                        {
-                            writer.Write(MiscEquips[i].NetId);
-                            writer.Write((byte) MiscEquips[i].Prefix);
-                            writer.Write(MiscDye[i].NetId);
-                            writer.Write((byte) MiscDye[i].Prefix);
-                        }
-
-                        for (var i = 0; i < PiggyBank.Length; ++i)
-                        {
-                            writer.Write(PiggyBank[i].NetId);
-                            writer.Write(PiggyBank[i].StackSize);
-                            writer.Write((byte) PiggyBank[i].Prefix);
-                        }
-
-                        for (var i = 0; i < Safe.Length; ++i)
-                        {
-                            writer.Write(Safe[i].NetId);
-                            writer.Write(Safe[i].StackSize);
-                            writer.Write((byte) Safe[i].Prefix);
-                        }
-
-                        for (var i = 0; i < Forge.Length; ++i)
-                        {
-                            writer.Write(Forge[i].NetId);
-                            writer.Write(Forge[i].StackSize);
-                            writer.Write((byte) Forge[i].Prefix);
-                        }
-
-                        for (var i = 0; i < Buffs.Length; ++i)
-                        {
-                            writer.Write(Buffs[i].Id);
-                            writer.Write(Buffs[i].Time);
-                        }
-
-                        for (var i = 0; i < WorldInfo.Length; ++i)
-                        {
-                            if (string.IsNullOrWhiteSpace(WorldInfo[i].Name))
-                            {
-                                writer.Write(-1);
-                                break;
-                            }
-
-                            writer.Write(WorldInfo[i].SpawnX);
-                            writer.Write(WorldInfo[i].SpawnY);
-                            writer.Write(WorldInfo[i].Id);
-                            writer.Write(WorldInfo[i].Name);
-                        }
-
-                        writer.Write(IsHotbarLocked);
-                        for (var i = 0; i < HideInfo.Length; ++i)
-                        {
-                            writer.Write(HideInfo[i]);
-                        }
-
-                        writer.Write(AnglerQuestsFinished);
-                        for (var i = 0; i < DPadRadialBindings.Length; ++i)
-                        {
-                            writer.Write(DPadRadialBindings[i]);
-                        }
-
-                        for (var i = 0; i < BuildAccessorieStatus.Length; ++i)
-                        {
-                            writer.Write(BuildAccessorieStatus[i]);
-                        }
-
-                        writer.Write(BartenderQuestLog);
-                        writer.Flush();
-                        cryptoStream.FlushFinalBlock();
-                        fileStream.Flush();
-                        PlayerSaved?.Invoke();
-                    }
-                }
+                File.Copy(playerPath, $"{playerPath}.bak", true);
             }
-            catch (Exception ex)
+
+            using (var rijndaelManaged = new RijndaelManaged())
+            using (var fileStream = new FileStream(playerPath, FileMode.Create, FileAccess.ReadWrite))
             {
-                MessageBox.Show(ex.ToString());
+                var encryption = new UnicodeEncoding().GetBytes(EncryptionKey);
+                using (var cryptoStream = new CryptoStream(fileStream,
+                    rijndaelManaged.CreateEncryptor(encryption, encryption), CryptoStreamMode.Write))
+                using (var writer = new BinaryWriter(cryptoStream))
+                {
+                    writer.Write(Terraria.CurrentRelease);
+                    writer.Write(MagicNumber | (3L << 56));
+                    writer.Write(Revision);
+                    writer.Write((ulong) ((IsFavourite ? 1 : 0) & 1) | 0);
+                    writer.Write(Name);
+                    writer.Write((byte) Difficulty);
+                    writer.Write(PlayTime.Ticks);
+                    writer.Write(Hair);
+                    writer.Write(HairDye);
+
+                    byte hideVisuals = 0;
+                    for (var i = 0; i < 8; ++i)
+                    {
+                        hideVisuals.SetBit(i, HideVisuals[i]);
+                    }
+                    writer.Write(hideVisuals);
+
+                    byte hideVisuals2 = 0;
+                    for (var i = 0; i < 2; ++i)
+                    {
+                        hideVisuals2.SetBit(i, HideVisuals[i + 8]);
+                    }
+                    writer.Write(hideVisuals2);
+
+                    writer.Write(HideMisc);
+                    writer.Write((byte) SkinVariant);
+                    writer.Write(Health);
+                    writer.Write(MaxHealth);
+                    writer.Write(Mana);
+                    writer.Write(MaxMana);
+                    writer.Write(ExtraAccessory);
+                    writer.Write(DownedDd2Event);
+                    writer.Write(TaxMoney);
+                    writer.Write(HairColor);
+                    writer.Write(SkinColor);
+                    writer.Write(EyeColor);
+                    writer.Write(ShirtColor);
+                    writer.Write(UndershirtColor);
+                    writer.Write(PantsColor);
+                    writer.Write(ShoeColor);
+
+                    for (var i = 0; i < Armor.Length; ++i)
+                    {
+                        writer.Write(Armor[i].NetId);
+                        writer.Write((byte) Armor[i].Prefix);
+                    }
+
+                    for (var i = 0; i < Dye.Length; ++i)
+                    {
+                        writer.Write(Dye[i].NetId);
+                        writer.Write((byte) Dye[i].Prefix);
+                    }
+
+                    for (var i = 0; i < Inventory.Length; ++i)
+                    {
+                        writer.Write(Inventory[i].NetId);
+                        writer.Write(Inventory[i].StackSize);
+                        writer.Write((byte) Inventory[i].Prefix);
+                        writer.Write(Inventory[i].IsFavourite);
+                    }
+
+                    for (var i = 0; i < MiscEquips.Length; ++i)
+                    {
+                        writer.Write(MiscEquips[i].NetId);
+                        writer.Write((byte) MiscEquips[i].Prefix);
+                        writer.Write(MiscDye[i].NetId);
+                        writer.Write((byte) MiscDye[i].Prefix);
+                    }
+
+                    for (var i = 0; i < PiggyBank.Length; ++i)
+                    {
+                        writer.Write(PiggyBank[i].NetId);
+                        writer.Write(PiggyBank[i].StackSize);
+                        writer.Write((byte) PiggyBank[i].Prefix);
+                    }
+
+                    for (var i = 0; i < Safe.Length; ++i)
+                    {
+                        writer.Write(Safe[i].NetId);
+                        writer.Write(Safe[i].StackSize);
+                        writer.Write((byte) Safe[i].Prefix);
+                    }
+
+                    for (var i = 0; i < Forge.Length; ++i)
+                    {
+                        writer.Write(Forge[i].NetId);
+                        writer.Write(Forge[i].StackSize);
+                        writer.Write((byte) Forge[i].Prefix);
+                    }
+
+                    for (var i = 0; i < Buffs.Length; ++i)
+                    {
+                        writer.Write(Buffs[i].Id);
+                        writer.Write(Buffs[i].Time);
+                    }
+
+                    for (var i = 0; i < WorldInfo.Length; ++i)
+                    {
+                        if (string.IsNullOrWhiteSpace(WorldInfo[i].Name))
+                        {
+                            writer.Write(-1);
+                            break;
+                        }
+
+                        writer.Write(WorldInfo[i].SpawnX);
+                        writer.Write(WorldInfo[i].SpawnY);
+                        writer.Write(WorldInfo[i].Id);
+                        writer.Write(WorldInfo[i].Name);
+                    }
+
+                    writer.Write(IsHotbarLocked);
+                    for (var i = 0; i < HideInfo.Length; ++i)
+                    {
+                        writer.Write(HideInfo[i]);
+                    }
+
+                    writer.Write(AnglerQuestsFinished);
+                    for (var i = 0; i < DPadRadialBindings.Length; ++i)
+                    {
+                        writer.Write(DPadRadialBindings[i]);
+                    }
+
+                    for (var i = 0; i < BuildAccessorieStatus.Length; ++i)
+                    {
+                        writer.Write(BuildAccessorieStatus[i]);
+                    }
+
+                    writer.Write(BartenderQuestLog);
+                    writer.Flush();
+                    cryptoStream.FlushFinalBlock();
+                    fileStream.Flush();
+                    PlayerSaved?.Invoke();
+                }
             }
         }
 
