@@ -69,6 +69,7 @@
             this.playerNameTxtBox = new System.Windows.Forms.TextBox();
             this.playerNameLbl = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.playerPictureBox = new TerrariaInventoryEditor.Framework.PlayerPictureBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -77,6 +78,8 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.anglerQuestUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinVariantUpDown)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -106,7 +109,7 @@
             // 
             this.newToolStripMenuItem.Image = global::TerrariaInventoryEditor.Properties.Resources.new_file;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
@@ -114,7 +117,7 @@
             // 
             this.openToolStripMenuItem.Image = global::TerrariaInventoryEditor.Properties.Resources.open_file;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.openToolStripMenuItem.Text = "Open...";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -122,7 +125,7 @@
             // 
             this.saveToolStripMenuItem.Image = global::TerrariaInventoryEditor.Properties.Resources.save;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -130,14 +133,14 @@
             // 
             this.saveAsToolStripMenuItem.Image = global::TerrariaInventoryEditor.Properties.Resources.save_as;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.saveAsToolStripMenuItem.Text = "Save As...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // toolsToolStripMenuItem
@@ -470,6 +473,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.playerPictureBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -477,6 +481,24 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Appearance";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // playerPictureBox
+            // 
+            this.playerPictureBox.EyeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
+            this.playerPictureBox.EyeWhitesColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.playerPictureBox.HairColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(90)))), ((int)(((byte)(55)))));
+            this.playerPictureBox.HairTextureFile = "Data\\Hair\\Player_Hair_1.png";
+            this.playerPictureBox.Location = new System.Drawing.Point(31, 59);
+            this.playerPictureBox.Name = "playerPictureBox";
+            this.playerPictureBox.PantsColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(175)))));
+            this.playerPictureBox.ShirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(165)))), ((int)(((byte)(140)))));
+            this.playerPictureBox.ShoeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(105)))), ((int)(((byte)(60)))));
+            this.playerPictureBox.Size = new System.Drawing.Size(152, 211);
+            this.playerPictureBox.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(90)))));
+            this.playerPictureBox.SkinVariant = 0;
+            this.playerPictureBox.TabIndex = 1;
+            this.playerPictureBox.TabStop = false;
+            this.playerPictureBox.UndershirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(180)))), ((int)(((byte)(215)))));
             // 
             // MainForm
             // 
@@ -499,6 +521,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.anglerQuestUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinVariantUpDown)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,6 +570,7 @@
         private System.Windows.Forms.CheckBox hotbarCheckBox;
         private System.Windows.Forms.BindingSource playerBindingSource;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private Framework.PlayerPictureBox playerPictureBox;
     }
 }
 

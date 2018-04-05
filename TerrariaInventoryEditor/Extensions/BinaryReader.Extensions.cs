@@ -1,5 +1,6 @@
 ﻿using System.IO;
-using Microsoft.Xna.Framework;
+//using Microsoft.Xna.Framework;
+using System.Drawing;
 
 namespace TerrariaInventoryEditor.Extensions
 {
@@ -16,7 +17,7 @@ namespace TerrariaInventoryEditor.Extensions
         public static Color ReadColor(this BinaryReader reader)
         {
             var payload = reader.ReadBytes(3);
-            return new Color(payload[0], payload[1], payload[2]);
+            return Color.FromArgb(payload[0], payload[1], payload[2]);
         }
     }
 }

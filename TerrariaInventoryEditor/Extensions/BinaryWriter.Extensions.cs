@@ -1,5 +1,6 @@
 ﻿using System.IO;
-using Microsoft.Xna.Framework;
+//using Microsoft.Xna.Framework;
+using System.Drawing;
 
 namespace TerrariaInventoryEditor.Extensions
 {

@@ -5,7 +5,8 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
-using Microsoft.Xna.Framework;
+//using Microsoft.Xna.Framework;
+using System.Drawing;
 using TerrariaInventoryEditor.Annotations;
 using TerrariaInventoryEditor.Extensions;
 
@@ -90,7 +91,6 @@ namespace TerrariaInventoryEditor.Terraria
         /// </summary>
         public Player()
         {
-            AnglerQuestsFinished = 0;
             Name = "Player name";
             Difficulty = PlayerDifficulty.Softcore;
             SkinVariant = 1;
@@ -98,6 +98,14 @@ namespace TerrariaInventoryEditor.Terraria
             MaxHealth = 100;
             Mana = 20;
             MaxMana = 20;
+
+            HairColor = Color.FromArgb(215, 90, 55);
+            SkinColor = Color.FromArgb(255, 125, 90);
+            EyeColor = Color.FromArgb(105, 90, 75);
+            ShirtColor = Color.FromArgb(175, 165, 140);
+            UndershirtColor = Color.FromArgb(160, 180, 215);
+            PantsColor = Color.FromArgb(255, 230, 175);
+            ShoeColor = Color.FromArgb(160, 105, 60);
 
             for (var i = 0; i < Buffs.Length; ++i)
             {

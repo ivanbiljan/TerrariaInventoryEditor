@@ -18,15 +18,8 @@ namespace TerrariaInventoryEditor
         {
             InitializeComponent();
 
-            // Set default values
-            //playerNameTxtBox.Text = Terraria.Terraria.Instance.Player.Name;
-            //difficultyCmbBox.Text = Terraria.Terraria.Instance.Player.Difficulty.ToString();
-            //skinVariantUpDown.Value = Terraria.Terraria.Instance.Player.SkinVariant;
-            //currentHealthBox.Text = Terraria.Terraria.Instance.Player.Health.ToString();
-            //maxHealthBox.Text = Terraria.Terraria.Instance.Player.MaxHealth.ToString();
-            //currentManaBox.Text = Terraria.Terraria.Instance.Player.Mana.ToString();
-            //maxManaBox.Text = Terraria.Terraria.Instance.Player.MaxMana.ToString();
             playerBindingSource.DataSource = Terraria.Terraria.Instance.Player;
+            playerPictureBox.Draw();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,6 +39,8 @@ namespace TerrariaInventoryEditor
 
                 Terraria.Terraria.Instance.Player.Load(openFileDialog.FileName);
                 playerBindingSource.DataSource = Terraria.Terraria.Instance.Player;
+                playerPictureBox.Update(Terraria.Terraria.Instance.Player);
+                playerPictureBox.Draw();
             }
         }
 
