@@ -41,6 +41,12 @@ namespace TerrariaInventoryEditor.Terraria
         public int BaitPower { get; set; }
 
         /// <summary>
+        ///     Gets or sets the item's body slot.
+        /// </summary>
+        [JsonProperty("body_slot")]
+        public int BodySlot { get; set; }
+
+        /// <summary>
         ///     Gets or sets the item's colour.
         /// </summary>
         [JsonProperty("color")]
@@ -63,6 +69,12 @@ namespace TerrariaInventoryEditor.Terraria
         /// </summary>
         [JsonProperty("hammer_power")]
         public int HammerPower { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the item's head slot.
+        /// </summary>
+        [JsonProperty("head_slot")]
+        public int HeadSlot { get; set; }
 
         /// <summary>
         ///     Gets or sets the item's height.
@@ -116,6 +128,12 @@ namespace TerrariaInventoryEditor.Terraria
         /// </summary>
         [JsonProperty("knockback")]
         public float Knockback { get; set; }
+
+        /// <summary>
+        ///     Gets or set sthe item's leg slot.
+        /// </summary>
+        [JsonProperty("leg_slot")]
+        public int LegSlot { get; set; }
 
         /// <summary>
         ///     Gets or sets the item's mana cost.
@@ -227,10 +245,12 @@ namespace TerrariaInventoryEditor.Terraria
             AnimationTime = item.AnimationTime;
             AxePower = item.AxePower;
             BaitPower = item.BaitPower;
+            BodySlot = item.BodySlot;
             Color = item.Color;
             Damage = item.Damage;
             FishingPower = item.FishingPower;
             HammerPower = item.HammerPower;
+            HeadSlot = item.HeadSlot;
             Height = item.Height;
             IsAccessory = item.IsAccessory;
             IsAutoReuse = item.IsAutoReuse;
@@ -239,6 +259,7 @@ namespace TerrariaInventoryEditor.Terraria
             IsRanged = item.IsRanged;
             IsThrown = item.IsThrown;
             Knockback = item.Knockback;
+            LegSlot = item.LegSlot;
             ManaCost = item.ManaCost;
             MaxStack = item.MaxStack;
             Name = item.Name;

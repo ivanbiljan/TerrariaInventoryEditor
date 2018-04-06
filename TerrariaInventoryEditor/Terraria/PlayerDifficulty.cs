@@ -1,7 +1,7 @@
 ﻿namespace TerrariaInventoryEditor.Terraria
 {
     /// <summary>
-    ///     Represents a difficulty.
+    ///     Specifies a player's difficulty.
     /// </summary>
     public enum PlayerDifficulty : byte
     {

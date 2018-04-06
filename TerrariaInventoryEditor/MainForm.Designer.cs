@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,6 +70,7 @@
             this.playerNameTxtBox = new System.Windows.Forms.TextBox();
             this.playerNameLbl = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.hairDesignerBtn = new System.Windows.Forms.Button();
             this.shoeColorLbl = new System.Windows.Forms.Label();
             this.pantsColorLbl = new System.Windows.Forms.Label();
             this.undershirtColorLbl = new System.Windows.Forms.Label();
@@ -84,7 +86,9 @@
             this.hairColorLbl = new System.Windows.Forms.Label();
             this.hairClrPictureBox = new System.Windows.Forms.PictureBox();
             this.playerPictureBox = new TerrariaInventoryEditor.Framework.PlayerPictureBox();
-            this.hairDesignerBtn = new System.Windows.Forms.Button();
+            this.vanityHeadBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -164,6 +168,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
             // 
@@ -495,6 +500,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.vanityHeadBtn);
             this.tabPage2.Controls.Add(this.hairDesignerBtn);
             this.tabPage2.Controls.Add(this.shoeColorLbl);
             this.tabPage2.Controls.Add(this.pantsColorLbl);
@@ -518,6 +526,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Appearance";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // hairDesignerBtn
+            // 
+            this.hairDesignerBtn.Location = new System.Drawing.Point(31, 277);
+            this.hairDesignerBtn.Name = "hairDesignerBtn";
+            this.hairDesignerBtn.Size = new System.Drawing.Size(152, 23);
+            this.hairDesignerBtn.TabIndex = 16;
+            this.hairDesignerBtn.Text = "Hair Designer";
+            this.hairDesignerBtn.UseVisualStyleBackColor = true;
+            this.hairDesignerBtn.Click += new System.EventHandler(this.hairDesignerBtn_Click);
             // 
             // shoeColorLbl
             // 
@@ -684,15 +702,29 @@
             this.playerPictureBox.TabStop = false;
             this.playerPictureBox.UndershirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(180)))), ((int)(((byte)(215)))));
             // 
-            // hairDesignerBtn
+            // vanityHeadBtn
             // 
-            this.hairDesignerBtn.Location = new System.Drawing.Point(31, 277);
-            this.hairDesignerBtn.Name = "hairDesignerBtn";
-            this.hairDesignerBtn.Size = new System.Drawing.Size(152, 23);
-            this.hairDesignerBtn.TabIndex = 16;
-            this.hairDesignerBtn.Text = "Hair Designer";
-            this.hairDesignerBtn.UseVisualStyleBackColor = true;
-            this.hairDesignerBtn.Click += new System.EventHandler(this.hairDesignerBtn_Click);
+            this.vanityHeadBtn.Location = new System.Drawing.Point(403, 59);
+            this.vanityHeadBtn.Name = "vanityHeadBtn";
+            this.vanityHeadBtn.Size = new System.Drawing.Size(55, 55);
+            this.vanityHeadBtn.TabIndex = 17;
+            this.vanityHeadBtn.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(403, 120);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(55, 55);
+            this.button1.TabIndex = 18;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(402, 181);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(55, 55);
+            this.button2.TabIndex = 19;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -701,9 +733,10 @@
             this.ClientSize = new System.Drawing.Size(684, 417);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "Terraria Inventory Editor";
+            this.Text = "Terraria Inventory Editor - v1.0.0.0";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -788,6 +821,9 @@
         private System.Windows.Forms.Label undershirtColorLbl;
         private System.Windows.Forms.Label shirtColorLbl;
         private System.Windows.Forms.Button hairDesignerBtn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button vanityHeadBtn;
     }
 }
 

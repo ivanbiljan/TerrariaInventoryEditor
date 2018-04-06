@@ -1,6 +1,5 @@
-﻿using System.IO;
-//using Microsoft.Xna.Framework;
-using System.Drawing;
+﻿using System.Drawing;
+using System.IO;
 
 namespace TerrariaInventoryEditor.Extensions
 {
@@ -10,7 +9,7 @@ namespace TerrariaInventoryEditor.Extensions
     public static class BinaryWriterExtensions
     {
         /// <summary>
-        ///     Writes a color object to the current stream.
+        ///     Writes a <see cref="Color" /> value to the current stream and advances the stream position by three bytes.
         /// </summary>
         /// <param name="writer">The <see cref="BinaryWriter" /> instance.</param>
         /// <param name="color">The color.</param>

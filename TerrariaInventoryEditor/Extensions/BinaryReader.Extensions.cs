@@ -1,6 +1,5 @@
-﻿using System.IO;
-//using Microsoft.Xna.Framework;
-using System.Drawing;
+﻿using System.Drawing;
+using System.IO;
 
 namespace TerrariaInventoryEditor.Extensions
 {
@@ -10,9 +9,10 @@ namespace TerrariaInventoryEditor.Extensions
     public static class BinaryReaderExtensions
     {
         /// <summary>
-        ///     Reads a color from the specified reader.
+        ///     Reads a <see cref="Color" /> value from the current stream and advances the current position
+        ///     of the stream by three bytes.
         /// </summary>
-        /// <param name="reader">The reader.</param>
+        /// <param name="reader">The stream.</param>
         /// <returns>The color.</returns>
         public static Color ReadColor(this BinaryReader reader)
         {

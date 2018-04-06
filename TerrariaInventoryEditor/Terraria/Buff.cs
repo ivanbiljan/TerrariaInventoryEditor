@@ -3,10 +3,16 @@
 namespace TerrariaInventoryEditor.Terraria
 {
     /// <summary>
-    ///     Describes a Terraria Buff.
+    ///     Represents a Terraria buff.
     /// </summary>
     public sealed class Buff
     {
+        /// <summary>
+        /// Gets or sets the buff's description.
+        /// </summary>
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
         /// <summary>
         ///     Gets or sets the buff's ID.
         /// </summary>

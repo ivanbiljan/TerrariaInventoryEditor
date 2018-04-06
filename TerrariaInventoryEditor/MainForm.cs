@@ -14,6 +14,11 @@ namespace TerrariaInventoryEditor
             playerPictureBox.Draw();
         }
 
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void hairClrPictureBox_Click(object sender, EventArgs e)
         {
             using (var colorDialog = new ColorDialog())

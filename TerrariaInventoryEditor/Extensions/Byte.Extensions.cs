@@ -6,7 +6,7 @@
     public static class ByteExtensions
     {
         /// <summary>
-        ///     Returns the boolean state of the bit at the specified position of the byte.
+        ///     Returns the boolean state of a bit at the specified position of the byte.
         /// </summary>
         /// <param name="byte">The byte.</param>
         /// <param name="position">The bit's position.</param>

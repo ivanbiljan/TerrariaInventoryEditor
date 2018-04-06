@@ -931,7 +931,7 @@ namespace TerrariaInventoryEditor.Terraria
                         BuildAccessorieStatus[i] = reader.ReadInt32();
                     }
 
-                    BartenderQuestLog = reader.ReadInt32(); // Bartender quest log (TODO)
+                    BartenderQuestLog = reader.ReadInt32();
                     PlayerLoaded?.Invoke();
                 }
             }

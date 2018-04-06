@@ -42,7 +42,7 @@ namespace TerrariaInventoryEditor.Framework
         public Color HairColor { get; set; } = Color.FromArgb(215, 90, 55);
 
         /// <summary>
-        ///     Gets or sets the character's texture file path.
+        ///     Gets or sets the character's hair texture file path.
         /// </summary>
         public string HairTextureFile { get; set; } = "Data\\Hair\\Player_Hair_1.png";
 
@@ -72,7 +72,7 @@ namespace TerrariaInventoryEditor.Framework
         public int SkinVariant { get; set; }
 
         /// <summary>
-        ///     Gets or sets the cahracter's undershirt colour.
+        ///     Gets or sets the character's undershirt colour.
         /// </summary>
         public Color UndershirtColor { get; set; } = Color.FromArgb(160, 180, 215);
 

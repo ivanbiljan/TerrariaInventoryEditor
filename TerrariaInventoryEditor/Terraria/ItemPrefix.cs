@@ -1,7 +1,7 @@
 ﻿namespace TerrariaInventoryEditor.Terraria
 {
     /// <summary>
-    ///     Represents an item prefix.
+    ///     Specifies an item's prefix.
     /// </summary>
     public enum ItemPrefix
     {

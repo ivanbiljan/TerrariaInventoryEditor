@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HairDesignerForm));
             this.hairDisplayPictureBox = new System.Windows.Forms.PictureBox();
             this.redTrackBar = new System.Windows.Forms.TrackBar();
             this.redLabel = new System.Windows.Forms.Label();
@@ -220,8 +221,9 @@
             this.Controls.Add(this.redLabel);
             this.Controls.Add(this.redTrackBar);
             this.Controls.Add(this.hairDisplayPictureBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HairDesignerForm";
-            this.Text = "HairDesignerForm";
+            this.Text = "Hair Designer";
             ((System.ComponentModel.ISupportInitialize)(this.hairDisplayPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).EndInit();
