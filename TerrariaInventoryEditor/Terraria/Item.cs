@@ -1,5 +1,5 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using Newtonsoft.Json;
 
@@ -201,7 +201,7 @@ namespace TerrariaInventoryEditor.Terraria
         public int UseTime { get; set; }
 
         /// <summary>
-        ///     Gets or sets the width of this item.
+        ///     Gets or sets the item's width.
         /// </summary>
         [JsonProperty("width")]
         public int Width { get; set; }
@@ -212,6 +212,10 @@ namespace TerrariaInventoryEditor.Terraria
         /// <param name="netId">The net ID.</param>
         public void SetDefaults(int netId)
         {
+            Debug.Assert(netId >= 0, "NetId must not be negative.");
+            Debug.Assert(netId < Terraria.Instance.Items.Count,
+                "NetId must not be greater than the size of item collection.");
+
             var item = Terraria.Instance.Items.SingleOrDefault(i => i.NetId == netId);
             if (item == null)
             {

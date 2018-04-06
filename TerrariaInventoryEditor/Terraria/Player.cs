@@ -1,12 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
-//using Microsoft.Xna.Framework;
-using System.Drawing;
 using TerrariaInventoryEditor.Annotations;
 using TerrariaInventoryEditor.Extensions;
 

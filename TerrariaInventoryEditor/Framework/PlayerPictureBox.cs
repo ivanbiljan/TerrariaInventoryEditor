@@ -34,7 +34,7 @@ namespace TerrariaInventoryEditor.Framework
         /// <summary>
         ///     Gets or sets the character's eye whites colour.
         /// </summary>
-        public Color EyeWhitesColor { get; set; } = Color.FromArgb(255, 255, 255);
+        public Color EyeWhitesColor { get; } = Color.FromArgb(255, 255, 255);
 
         /// <summary>
         ///     Gets or sets the character's hair colour.
@@ -162,7 +162,7 @@ namespace TerrariaInventoryEditor.Framework
         {
             EyeColor = player.EyeColor;
             HairColor = player.HairColor;
-            HairTextureFile = $"Data\\Hair\\Player_Hair_{player.Hair}.png";
+            HairTextureFile = $"Data\\Hair\\Player_Hair_{player.Hair + 1}.png";
             PantsColor = player.PantsColor;
             ShirtColor = player.ShirtColor;
             ShoeColor = player.ShoeColor;
