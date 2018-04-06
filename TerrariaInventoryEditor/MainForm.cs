@@ -130,6 +130,7 @@ namespace TerrariaInventoryEditor
                     return;
                 }
 
+                Terraria.Terraria.Instance.Player.FilePath = saveFileDialog.FileName;
                 Terraria.Terraria.Instance.Player.Save(saveFileDialog.FileName);
             }
         }
