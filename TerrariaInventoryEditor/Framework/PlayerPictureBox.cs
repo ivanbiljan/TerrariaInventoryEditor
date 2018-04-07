@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using TerrariaInventoryEditor.TerrariaLib;
 
 namespace TerrariaInventoryEditor.Framework
 {
@@ -158,7 +159,7 @@ namespace TerrariaInventoryEditor.Framework
         /// Updates the control's properties based on the specified <see cref="Terraria.Player"/>.
         /// </summary>
         /// <param name="player">The player.</param>
-        public void Update(Terraria.Player player)
+        public void Update(Player player)
         {
             EyeColor = player.EyeColor;
             HairColor = player.HairColor;

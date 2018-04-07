@@ -2,7 +2,7 @@
 using System.IO;
 using Newtonsoft.Json;
 
-namespace TerrariaInventoryEditor.Terraria
+namespace TerrariaInventoryEditor.TerrariaLib
 {
     /// <summary>
     ///     Represents Terraria.

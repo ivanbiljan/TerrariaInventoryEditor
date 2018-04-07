@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Linq;
 using Newtonsoft.Json;
 
-namespace TerrariaInventoryEditor.Terraria
+namespace TerrariaInventoryEditor.TerrariaLib
 {
     /// <summary>
     ///     Represents a Terraria Item.

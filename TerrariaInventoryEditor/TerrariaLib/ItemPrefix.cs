@@ -1,4 +1,4 @@
-﻿namespace TerrariaInventoryEditor.Terraria
+﻿namespace TerrariaInventoryEditor.TerrariaLib
 {
     /// <summary>
     ///     Specifies an item's prefix.

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using TerrariaInventoryEditor.Terraria;
+using TerrariaInventoryEditor.TerrariaLib;
 
 namespace TerrariaInventoryEditor
 {
@@ -10,7 +10,7 @@ namespace TerrariaInventoryEditor
         {
             InitializeComponent();
 
-            playerBindingSource.DataSource = Terraria.Terraria.Instance.Player;
+            playerBindingSource.DataSource = Terraria.Instance.Player;
             playerPictureBox.Draw();
         }
 
@@ -33,14 +33,14 @@ namespace TerrariaInventoryEditor
                 }
 
                 hairClrPictureBox.BackColor = colorDialog.Color;
-                playerPictureBox.Update(Terraria.Terraria.Instance.Player);
+                playerPictureBox.Update(Terraria.Instance.Player);
                 playerPictureBox.Draw();
             }
         }
 
         private void hairDesignerBtn_Click(object sender, EventArgs e)
         {
-            var player = Terraria.Terraria.Instance.Player;
+            var player = Terraria.Instance.Player;
             using (var hairDesignerDialog = new HairDesignerForm(player.Hair, player.HairColor))
             {
                 if (hairDesignerDialog.ShowDialog() != DialogResult.OK)
@@ -57,14 +57,14 @@ namespace TerrariaInventoryEditor
 
         private void maxOutBtn_Click(object sender, EventArgs e)
         {
-            Terraria.Terraria.Instance.Player.Health = Terraria.Terraria.Instance.Player.MaxHealth = 500;
-            Terraria.Terraria.Instance.Player.Mana = 400;
-            Terraria.Terraria.Instance.Player.MaxMana = 200;
+            Terraria.Instance.Player.Health = Terraria.Instance.Player.MaxHealth = 500;
+            Terraria.Instance.Player.Mana = 400;
+            Terraria.Instance.Player.MaxMana = 200;
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            playerBindingSource.DataSource = Terraria.Terraria.Instance.Player = new Player();
+            playerBindingSource.DataSource = Terraria.Instance.Player = new Player();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,9 +82,9 @@ namespace TerrariaInventoryEditor
                     return;
                 }
 
-                Terraria.Terraria.Instance.Player.Load(openFileDialog.FileName);
-                playerBindingSource.DataSource = Terraria.Terraria.Instance.Player;
-                playerPictureBox.Update(Terraria.Terraria.Instance.Player);
+                Terraria.Instance.Player.Load(openFileDialog.FileName);
+                playerBindingSource.DataSource = Terraria.Instance.Player;
+                playerPictureBox.Update(Terraria.Instance.Player);
                 playerPictureBox.Draw();
             }
         }
@@ -108,15 +108,15 @@ namespace TerrariaInventoryEditor
                 }
 
                 pictureBox.BackColor = colorDialog.Color;
-                playerPictureBox.Update(Terraria.Terraria.Instance.Player);
+                playerPictureBox.Update(Terraria.Instance.Player);
                 playerPictureBox.Draw();
             }
         }
 
         private void resetHealthBtn_Click(object sender, EventArgs e)
         {
-            Terraria.Terraria.Instance.Player.Health = Terraria.Terraria.Instance.Player.MaxHealth = 100;
-            Terraria.Terraria.Instance.Player.Mana = Terraria.Terraria.Instance.Player.MaxMana = 20;
+            Terraria.Instance.Player.Health = Terraria.Instance.Player.MaxHealth = 100;
+            Terraria.Instance.Player.Mana = Terraria.Instance.Player.MaxMana = 20;
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace TerrariaInventoryEditor
             {
                 saveFileDialog.AddExtension = true;
                 saveFileDialog.DefaultExt = "plr";
-                saveFileDialog.FileName = Terraria.Terraria.Instance.Player.Name;
+                saveFileDialog.FileName = Terraria.Instance.Player.Name;
                 saveFileDialog.Filter = "Terraria Player File (*.plr)|*.plr";
 
                 if (saveFileDialog.ShowDialog() != DialogResult.OK)
@@ -135,17 +135,17 @@ namespace TerrariaInventoryEditor
                     return;
                 }
 
-                Terraria.Terraria.Instance.Player.FilePath = saveFileDialog.FileName;
-                Terraria.Terraria.Instance.Player.Save(saveFileDialog.FileName);
+                Terraria.Instance.Player.FilePath = saveFileDialog.FileName;
+                Terraria.Instance.Player.Save(saveFileDialog.FileName);
             }
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(Terraria.Terraria.Instance.Player.FilePath))
+            if (!string.IsNullOrWhiteSpace(Terraria.Instance.Player.FilePath))
             {
-                Terraria.Terraria.Instance.Player.Save(Terraria.Terraria.Instance.Player.FilePath);
-                MessageBox.Show($"Player file saved! Path: {Terraria.Terraria.Instance.Player.FilePath}",
+                Terraria.Instance.Player.Save(Terraria.Instance.Player.FilePath);
+                MessageBox.Show($"Player file saved! Path: {Terraria.Instance.Player.FilePath}",
                     "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else

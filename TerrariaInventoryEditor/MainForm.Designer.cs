@@ -86,9 +86,6 @@
             this.hairColorLbl = new System.Windows.Forms.Label();
             this.hairClrPictureBox = new System.Windows.Forms.PictureBox();
             this.playerPictureBox = new TerrariaInventoryEditor.Framework.PlayerPictureBox();
-            this.vanityHeadBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -266,7 +263,7 @@
             // 
             // playerBindingSource
             // 
-            this.playerBindingSource.DataSource = typeof(TerrariaInventoryEditor.Terraria.Player);
+            this.playerBindingSource.DataSource = typeof(TerrariaInventoryEditor.TerrariaLib.Player);
             // 
             // maxManaBox
             // 
@@ -500,9 +497,6 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.vanityHeadBtn);
             this.tabPage2.Controls.Add(this.hairDesignerBtn);
             this.tabPage2.Controls.Add(this.shoeColorLbl);
             this.tabPage2.Controls.Add(this.pantsColorLbl);
@@ -702,30 +696,6 @@
             this.playerPictureBox.TabStop = false;
             this.playerPictureBox.UndershirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(180)))), ((int)(((byte)(215)))));
             // 
-            // vanityHeadBtn
-            // 
-            this.vanityHeadBtn.Location = new System.Drawing.Point(403, 59);
-            this.vanityHeadBtn.Name = "vanityHeadBtn";
-            this.vanityHeadBtn.Size = new System.Drawing.Size(55, 55);
-            this.vanityHeadBtn.TabIndex = 17;
-            this.vanityHeadBtn.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(403, 120);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 55);
-            this.button1.TabIndex = 18;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(402, 181);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(55, 55);
-            this.button2.TabIndex = 19;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -821,9 +791,6 @@
         private System.Windows.Forms.Label undershirtColorLbl;
         private System.Windows.Forms.Label shirtColorLbl;
         private System.Windows.Forms.Button hairDesignerBtn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button vanityHeadBtn;
     }
 }
 

@@ -9,7 +9,7 @@ using System.Text;
 using TerrariaInventoryEditor.Annotations;
 using TerrariaInventoryEditor.Extensions;
 
-namespace TerrariaInventoryEditor.Terraria
+namespace TerrariaInventoryEditor.TerrariaLib
 {
     public delegate void PlayerLoadedD();
 

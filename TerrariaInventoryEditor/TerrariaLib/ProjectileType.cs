@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TerrariaInventoryEditor.Terraria
+namespace TerrariaInventoryEditor.TerrariaLib
 {
     /// <summary>
     /// Represents a projectile type.
