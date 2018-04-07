@@ -43,6 +43,11 @@ namespace TerrariaInventoryEditor.Framework
         public Color HairColor { get; set; } = Color.FromArgb(215, 90, 55);
 
         /// <summary>
+        /// Gets or set sthe character's hair ID.
+        /// </summary>
+        public int HairId { get; set; }
+
+        /// <summary>
         ///     Gets or sets the character's hair texture file path.
         /// </summary>
         public string HairTextureFile { get; set; } = "Data\\Hair\\Player_Hair_1.png";
@@ -112,7 +117,7 @@ namespace TerrariaInventoryEditor.Framework
         {
             _eyeTexture = ColorImage(new Bitmap(EyeTextureFile), EyeColor);
             _eyeWhitesTexture = ColorImage(new Bitmap(EyeWhitesTextureFile), EyeWhitesColor);
-            _hairTexture = ColorImage(new Bitmap(HairTextureFile), HairColor);
+            _hairTexture = ColorImage(new Bitmap($"Data\\Hair\\Player_Hair_{HairId + 1}.png"), HairColor);
             _handsTexture = ColorImage(new Bitmap(HandsTextureFile), SkinColor);
             _headTexture = ColorImage(new Bitmap(HeadTextureFile), SkinColor);
             _legsTexture = ColorImage(new Bitmap(LegsTextureFile), SkinColor);

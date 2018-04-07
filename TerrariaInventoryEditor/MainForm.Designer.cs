@@ -85,6 +85,8 @@
             this.eyeClrPictureBox = new System.Windows.Forms.PictureBox();
             this.hairColorLbl = new System.Windows.Forms.Label();
             this.hairClrPictureBox = new System.Windows.Forms.PictureBox();
+            this.randomizeHairBtn = new System.Windows.Forms.Button();
+            this.randomizeColorsBtn = new System.Windows.Forms.Button();
             this.playerPictureBox = new TerrariaInventoryEditor.Framework.PlayerPictureBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -497,6 +499,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.playerPictureBox);
+            this.tabPage2.Controls.Add(this.randomizeColorsBtn);
+            this.tabPage2.Controls.Add(this.randomizeHairBtn);
             this.tabPage2.Controls.Add(this.hairDesignerBtn);
             this.tabPage2.Controls.Add(this.shoeColorLbl);
             this.tabPage2.Controls.Add(this.pantsColorLbl);
@@ -512,7 +517,6 @@
             this.tabPage2.Controls.Add(this.eyeClrPictureBox);
             this.tabPage2.Controls.Add(this.hairColorLbl);
             this.tabPage2.Controls.Add(this.hairClrPictureBox);
-            this.tabPage2.Controls.Add(this.playerPictureBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -678,18 +682,41 @@
             this.hairClrPictureBox.TabStop = false;
             this.hairClrPictureBox.Click += new System.EventHandler(this.hairClrPictureBox_Click);
             // 
+            // randomizeHairBtn
+            // 
+            this.randomizeHairBtn.Location = new System.Drawing.Point(8, 258);
+            this.randomizeHairBtn.Name = "randomizeHairBtn";
+            this.randomizeHairBtn.Size = new System.Drawing.Size(152, 23);
+            this.randomizeHairBtn.TabIndex = 17;
+            this.randomizeHairBtn.Text = "Randomize Hair";
+            this.randomizeHairBtn.UseVisualStyleBackColor = true;
+            this.randomizeHairBtn.Click += new System.EventHandler(this.randomizeHairBtn_Click);
+            // 
+            // randomizeColorsBtn
+            // 
+            this.randomizeColorsBtn.Location = new System.Drawing.Point(8, 288);
+            this.randomizeColorsBtn.Name = "randomizeColorsBtn";
+            this.randomizeColorsBtn.Size = new System.Drawing.Size(152, 23);
+            this.randomizeColorsBtn.TabIndex = 18;
+            this.randomizeColorsBtn.Text = "Randomize Colors";
+            this.randomizeColorsBtn.UseVisualStyleBackColor = true;
+            this.randomizeColorsBtn.Click += new System.EventHandler(this.randomizeColorsBtn_Click);
+            // 
             // playerPictureBox
             // 
             this.playerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("EyeColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("HairColor", this.playerBindingSource, "HairColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("HairId", this.playerBindingSource, "Hair", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("PantsColor", this.playerBindingSource, "PantsColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("ShirtColor", this.playerBindingSource, "ShirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("ShoeColor", this.playerBindingSource, "ShoeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("SkinColor", this.playerBindingSource, "SkinColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("SkinVariant", this.playerBindingSource, "SkinVariant", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("UndershirtColor", this.playerBindingSource, "UndershirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerPictureBox.EyeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
             this.playerPictureBox.HairColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(90)))), ((int)(((byte)(55)))));
+            this.playerPictureBox.HairId = 0;
             this.playerPictureBox.HairTextureFile = "Data\\Hair\\Player_Hair_1.png";
             this.playerPictureBox.Location = new System.Drawing.Point(8, 10);
             this.playerPictureBox.Name = "playerPictureBox";
@@ -699,7 +726,7 @@
             this.playerPictureBox.Size = new System.Drawing.Size(152, 211);
             this.playerPictureBox.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(90)))));
             this.playerPictureBox.SkinVariant = 0;
-            this.playerPictureBox.TabIndex = 1;
+            this.playerPictureBox.TabIndex = 19;
             this.playerPictureBox.TabStop = false;
             this.playerPictureBox.UndershirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(180)))), ((int)(((byte)(215)))));
             // 
@@ -782,7 +809,6 @@
         private System.Windows.Forms.CheckBox hotbarCheckBox;
         private System.Windows.Forms.BindingSource playerBindingSource;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
-        private Framework.PlayerPictureBox playerPictureBox;
         private System.Windows.Forms.PictureBox hairClrPictureBox;
         private System.Windows.Forms.Label hairColorLbl;
         private System.Windows.Forms.PictureBox shoeClrPictureBox;
@@ -798,6 +824,9 @@
         private System.Windows.Forms.Label undershirtColorLbl;
         private System.Windows.Forms.Label shirtColorLbl;
         private System.Windows.Forms.Button hairDesignerBtn;
+        private System.Windows.Forms.Button randomizeColorsBtn;
+        private System.Windows.Forms.Button randomizeHairBtn;
+        private Framework.PlayerPictureBox playerPictureBox;
     }
 }
 

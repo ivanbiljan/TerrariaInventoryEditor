@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using TerrariaInventoryEditor.TerrariaLib;
 
@@ -6,6 +7,8 @@ namespace TerrariaInventoryEditor
 {
     public partial class MainForm : Form
     {
+        private readonly Random _random = new Random();
+
         public MainForm()
         {
             InitializeComponent();
@@ -107,6 +110,29 @@ namespace TerrariaInventoryEditor
                 pictureBox.BackColor = colorDialog.Color;
                 playerPictureBox.Draw();
             }
+        }
+
+        private void randomizeColorsBtn_Click(object sender, EventArgs e)
+        {
+            var player = Terraria.Instance.Player;
+            player.EyeColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            player.HairColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            player.PantsColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            player.ShirtColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            player.ShoeColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            player.SkinColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            player.UndershirtColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+
+            playerPictureBox.Draw();
+        }
+
+        private void randomizeHairBtn_Click(object sender, EventArgs e)
+        {
+            var player = Terraria.Instance.Player;
+            player.Hair = _random.Next(134);
+            player.HairColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+
+            playerPictureBox.Draw();
         }
 
         private void resetHealthBtn_Click(object sender, EventArgs e)
