@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TerrariaInventoryEditor.TerrariaLib
+﻿namespace TerrariaInventoryEditor.TerrariaLib
 {
     /// <summary>
-    /// Represents a projectile type.
+    ///     Represents a projectile type.
     /// </summary>
     public enum ProjectileType
     {

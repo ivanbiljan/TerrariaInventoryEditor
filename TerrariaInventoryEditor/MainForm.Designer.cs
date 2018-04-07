@@ -523,7 +523,7 @@
             // 
             // hairDesignerBtn
             // 
-            this.hairDesignerBtn.Location = new System.Drawing.Point(31, 277);
+            this.hairDesignerBtn.Location = new System.Drawing.Point(8, 228);
             this.hairDesignerBtn.Name = "hairDesignerBtn";
             this.hairDesignerBtn.Size = new System.Drawing.Size(152, 23);
             this.hairDesignerBtn.TabIndex = 16;
@@ -535,7 +535,7 @@
             // 
             this.shoeColorLbl.AutoSize = true;
             this.shoeColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shoeColorLbl.Location = new System.Drawing.Point(224, 245);
+            this.shoeColorLbl.Location = new System.Drawing.Point(201, 196);
             this.shoeColorLbl.Name = "shoeColorLbl";
             this.shoeColorLbl.Size = new System.Drawing.Size(87, 16);
             this.shoeColorLbl.TabIndex = 15;
@@ -545,7 +545,7 @@
             // 
             this.pantsColorLbl.AutoSize = true;
             this.pantsColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pantsColorLbl.Location = new System.Drawing.Point(221, 214);
+            this.pantsColorLbl.Location = new System.Drawing.Point(198, 165);
             this.pantsColorLbl.Name = "pantsColorLbl";
             this.pantsColorLbl.Size = new System.Drawing.Size(90, 16);
             this.pantsColorLbl.TabIndex = 14;
@@ -555,7 +555,7 @@
             // 
             this.undershirtColorLbl.AutoSize = true;
             this.undershirtColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.undershirtColorLbl.Location = new System.Drawing.Point(189, 183);
+            this.undershirtColorLbl.Location = new System.Drawing.Point(166, 134);
             this.undershirtColorLbl.Name = "undershirtColorLbl";
             this.undershirtColorLbl.Size = new System.Drawing.Size(122, 16);
             this.undershirtColorLbl.TabIndex = 13;
@@ -565,7 +565,7 @@
             // 
             this.shirtColorLbl.AutoSize = true;
             this.shirtColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shirtColorLbl.Location = new System.Drawing.Point(229, 152);
+            this.shirtColorLbl.Location = new System.Drawing.Point(206, 103);
             this.shirtColorLbl.Name = "shirtColorLbl";
             this.shirtColorLbl.Size = new System.Drawing.Size(82, 16);
             this.shirtColorLbl.TabIndex = 12;
@@ -575,7 +575,7 @@
             // 
             this.shoeClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.shoeClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "ShoeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.shoeClrPictureBox.Location = new System.Drawing.Point(317, 245);
+            this.shoeClrPictureBox.Location = new System.Drawing.Point(294, 196);
             this.shoeClrPictureBox.Name = "shoeClrPictureBox";
             this.shoeClrPictureBox.Size = new System.Drawing.Size(79, 25);
             this.shoeClrPictureBox.TabIndex = 11;
@@ -586,7 +586,7 @@
             // 
             this.pantsClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pantsClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "PantsColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pantsClrPictureBox.Location = new System.Drawing.Point(317, 214);
+            this.pantsClrPictureBox.Location = new System.Drawing.Point(294, 165);
             this.pantsClrPictureBox.Name = "pantsClrPictureBox";
             this.pantsClrPictureBox.Size = new System.Drawing.Size(79, 25);
             this.pantsClrPictureBox.TabIndex = 10;
@@ -597,7 +597,7 @@
             // 
             this.undershirtClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.undershirtClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "UndershirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.undershirtClrPictureBox.Location = new System.Drawing.Point(317, 183);
+            this.undershirtClrPictureBox.Location = new System.Drawing.Point(294, 134);
             this.undershirtClrPictureBox.Name = "undershirtClrPictureBox";
             this.undershirtClrPictureBox.Size = new System.Drawing.Size(79, 25);
             this.undershirtClrPictureBox.TabIndex = 9;
@@ -608,7 +608,7 @@
             // 
             this.shirtClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.shirtClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "ShirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.shirtClrPictureBox.Location = new System.Drawing.Point(317, 152);
+            this.shirtClrPictureBox.Location = new System.Drawing.Point(294, 103);
             this.shirtClrPictureBox.Name = "shirtClrPictureBox";
             this.shirtClrPictureBox.Size = new System.Drawing.Size(79, 25);
             this.shirtClrPictureBox.TabIndex = 8;
@@ -619,7 +619,7 @@
             // 
             this.skinColorLbl.AutoSize = true;
             this.skinColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinColorLbl.Location = new System.Drawing.Point(230, 121);
+            this.skinColorLbl.Location = new System.Drawing.Point(207, 72);
             this.skinColorLbl.Name = "skinColorLbl";
             this.skinColorLbl.Size = new System.Drawing.Size(81, 16);
             this.skinColorLbl.TabIndex = 7;
@@ -629,7 +629,7 @@
             // 
             this.skinClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.skinClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "SkinColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.skinClrPictureBox.Location = new System.Drawing.Point(317, 121);
+            this.skinClrPictureBox.Location = new System.Drawing.Point(294, 72);
             this.skinClrPictureBox.Name = "skinClrPictureBox";
             this.skinClrPictureBox.Size = new System.Drawing.Size(79, 25);
             this.skinClrPictureBox.TabIndex = 6;
@@ -640,7 +640,7 @@
             // 
             this.eyeColorLbl.AutoSize = true;
             this.eyeColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eyeColorLbl.Location = new System.Drawing.Point(233, 90);
+            this.eyeColorLbl.Location = new System.Drawing.Point(210, 41);
             this.eyeColorLbl.Name = "eyeColorLbl";
             this.eyeColorLbl.Size = new System.Drawing.Size(78, 16);
             this.eyeColorLbl.TabIndex = 5;
@@ -650,7 +650,7 @@
             // 
             this.eyeClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eyeClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.eyeClrPictureBox.Location = new System.Drawing.Point(317, 90);
+            this.eyeClrPictureBox.Location = new System.Drawing.Point(294, 41);
             this.eyeClrPictureBox.Name = "eyeClrPictureBox";
             this.eyeClrPictureBox.Size = new System.Drawing.Size(79, 25);
             this.eyeClrPictureBox.TabIndex = 4;
@@ -661,7 +661,7 @@
             // 
             this.hairColorLbl.AutoSize = true;
             this.hairColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hairColorLbl.Location = new System.Drawing.Point(231, 59);
+            this.hairColorLbl.Location = new System.Drawing.Point(208, 10);
             this.hairColorLbl.Name = "hairColorLbl";
             this.hairColorLbl.Size = new System.Drawing.Size(80, 16);
             this.hairColorLbl.TabIndex = 3;
@@ -671,7 +671,7 @@
             // 
             this.hairClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hairClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "HairColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.hairClrPictureBox.Location = new System.Drawing.Point(317, 59);
+            this.hairClrPictureBox.Location = new System.Drawing.Point(294, 10);
             this.hairClrPictureBox.Name = "hairClrPictureBox";
             this.hairClrPictureBox.Size = new System.Drawing.Size(79, 25);
             this.hairClrPictureBox.TabIndex = 2;
@@ -681,10 +681,17 @@
             // playerPictureBox
             // 
             this.playerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("EyeColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("HairColor", this.playerBindingSource, "HairColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("PantsColor", this.playerBindingSource, "PantsColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("ShirtColor", this.playerBindingSource, "ShirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("ShoeColor", this.playerBindingSource, "ShoeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("SkinColor", this.playerBindingSource, "SkinColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("UndershirtColor", this.playerBindingSource, "UndershirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerPictureBox.EyeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
             this.playerPictureBox.HairColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(90)))), ((int)(((byte)(55)))));
             this.playerPictureBox.HairTextureFile = "Data\\Hair\\Player_Hair_1.png";
-            this.playerPictureBox.Location = new System.Drawing.Point(31, 59);
+            this.playerPictureBox.Location = new System.Drawing.Point(8, 10);
             this.playerPictureBox.Name = "playerPictureBox";
             this.playerPictureBox.PantsColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(175)))));
             this.playerPictureBox.ShirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(165)))), ((int)(((byte)(140)))));

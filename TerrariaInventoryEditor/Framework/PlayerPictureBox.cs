@@ -154,22 +154,5 @@ namespace TerrariaInventoryEditor.Framework
 
             Image = character;
         }
-
-        /// <summary>
-        /// Updates the control's properties based on the specified <see cref="Terraria.Player"/>.
-        /// </summary>
-        /// <param name="player">The player.</param>
-        public void Update(Player player)
-        {
-            EyeColor = player.EyeColor;
-            HairColor = player.HairColor;
-            HairTextureFile = $"Data\\Hair\\Player_Hair_{player.Hair + 1}.png";
-            PantsColor = player.PantsColor;
-            ShirtColor = player.ShirtColor;
-            ShoeColor = player.ShoeColor;
-            SkinColor = player.SkinColor;
-            SkinVariant = player.SkinVariant;
-            UndershirtColor = player.UndershirtColor;
-        }
     }
 }

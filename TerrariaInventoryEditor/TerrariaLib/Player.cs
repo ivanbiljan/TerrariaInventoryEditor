@@ -281,7 +281,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
         }
 
         /// <summary>
-        ///     Gets the path to the player's storage file.
+        ///     Gets or sets the path to the player's storage file.
         /// </summary>
         public string FilePath
         {

@@ -11,7 +11,7 @@ namespace TerrariaInventoryEditor.Extensions
         /// <summary>
         ///     Writes a <see cref="Color" /> value to the current stream and advances the stream position by three bytes.
         /// </summary>
-        /// <param name="writer">The <see cref="BinaryWriter" /> instance.</param>
+        /// <param name="writer">The stream.</param>
         /// <param name="color">The color.</param>
         public static void Write(this BinaryWriter writer, Color color)
         {

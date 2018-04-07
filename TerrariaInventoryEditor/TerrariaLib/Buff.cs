@@ -8,7 +8,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
     public sealed class Buff
     {
         /// <summary>
-        /// Gets or sets the buff's description.
+        ///     Gets or sets the buff's description.
         /// </summary>
         [JsonProperty("description")]
         public string Description { get; set; }

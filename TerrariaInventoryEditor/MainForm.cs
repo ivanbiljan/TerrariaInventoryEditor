@@ -33,7 +33,6 @@ namespace TerrariaInventoryEditor
                 }
 
                 hairClrPictureBox.BackColor = colorDialog.Color;
-                playerPictureBox.Update(Terraria.Instance.Player);
                 playerPictureBox.Draw();
             }
         }
@@ -50,7 +49,6 @@ namespace TerrariaInventoryEditor
 
                 player.Hair = hairDesignerDialog.HairId - 1;
                 player.HairColor = hairDesignerDialog.HairColor;
-                playerPictureBox.Update(player);
                 playerPictureBox.Draw();
             }
         }
@@ -84,7 +82,6 @@ namespace TerrariaInventoryEditor
 
                 Terraria.Instance.Player.Load(openFileDialog.FileName);
                 playerBindingSource.DataSource = Terraria.Instance.Player;
-                playerPictureBox.Update(Terraria.Instance.Player);
                 playerPictureBox.Draw();
             }
         }
@@ -108,7 +105,6 @@ namespace TerrariaInventoryEditor
                 }
 
                 pictureBox.BackColor = colorDialog.Color;
-                playerPictureBox.Update(Terraria.Instance.Player);
                 playerPictureBox.Draw();
             }
         }
