@@ -42,7 +42,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.healthManaGroupBox = new System.Windows.Forms.GroupBox();
             this.maxOutBtn = new System.Windows.Forms.Button();
             this.resetHealthBtn = new System.Windows.Forms.Button();
             this.manaBar = new System.Windows.Forms.ProgressBar();
@@ -54,7 +54,7 @@
             this.healthBar = new System.Windows.Forms.ProgressBar();
             this.currentHealthBox = new System.Windows.Forms.TextBox();
             this.healthLabel = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.playerInfoGroupBox = new System.Windows.Forms.GroupBox();
             this.hotbarCheckBox = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.taxMoneyLbl = new System.Windows.Forms.Label();
@@ -70,6 +70,9 @@
             this.playerNameTxtBox = new System.Windows.Forms.TextBox();
             this.playerNameLbl = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.playerPictureBox = new TerrariaInventoryEditor.Framework.PlayerPictureBox();
+            this.randomizeColorsBtn = new System.Windows.Forms.Button();
+            this.randomizeHairBtn = new System.Windows.Forms.Button();
             this.hairDesignerBtn = new System.Windows.Forms.Button();
             this.shoeColorLbl = new System.Windows.Forms.Label();
             this.pantsColorLbl = new System.Windows.Forms.Label();
@@ -85,18 +88,24 @@
             this.eyeClrPictureBox = new System.Windows.Forms.PictureBox();
             this.hairColorLbl = new System.Windows.Forms.Label();
             this.hairClrPictureBox = new System.Windows.Forms.PictureBox();
-            this.randomizeHairBtn = new System.Windows.Forms.Button();
-            this.randomizeColorsBtn = new System.Windows.Forms.Button();
-            this.playerPictureBox = new TerrariaInventoryEditor.Framework.PlayerPictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.buffsGroupBox = new System.Windows.Forms.GroupBox();
+            this.buffGridView = new System.Windows.Forms.DataGridView();
+            this.buffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.healthManaGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.playerInfoGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.anglerQuestUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinVariantUpDown)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shoeClrPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pantsClrPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.undershirtClrPictureBox)).BeginInit();
@@ -104,7 +113,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.skinClrPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeClrPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hairClrPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.buffsGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buffGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buffsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -194,6 +206,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(13, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -202,8 +215,8 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.healthManaGroupBox);
+            this.tabPage1.Controls.Add(this.playerInfoGroupBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -212,24 +225,24 @@
             this.tabPage1.Text = "Stats";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // healthManaGroupBox
             // 
-            this.groupBox2.Controls.Add(this.maxOutBtn);
-            this.groupBox2.Controls.Add(this.resetHealthBtn);
-            this.groupBox2.Controls.Add(this.manaBar);
-            this.groupBox2.Controls.Add(this.maxManaBox);
-            this.groupBox2.Controls.Add(this.currentManaBox);
-            this.groupBox2.Controls.Add(this.manaLabel);
-            this.groupBox2.Controls.Add(this.maxHealthBox);
-            this.groupBox2.Controls.Add(this.healthBar);
-            this.groupBox2.Controls.Add(this.currentHealthBox);
-            this.groupBox2.Controls.Add(this.healthLabel);
-            this.groupBox2.Location = new System.Drawing.Point(343, 7);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(305, 194);
-            this.groupBox2.TabIndex = 14;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Health and Mana";
+            this.healthManaGroupBox.Controls.Add(this.maxOutBtn);
+            this.healthManaGroupBox.Controls.Add(this.resetHealthBtn);
+            this.healthManaGroupBox.Controls.Add(this.manaBar);
+            this.healthManaGroupBox.Controls.Add(this.maxManaBox);
+            this.healthManaGroupBox.Controls.Add(this.currentManaBox);
+            this.healthManaGroupBox.Controls.Add(this.manaLabel);
+            this.healthManaGroupBox.Controls.Add(this.maxHealthBox);
+            this.healthManaGroupBox.Controls.Add(this.healthBar);
+            this.healthManaGroupBox.Controls.Add(this.currentHealthBox);
+            this.healthManaGroupBox.Controls.Add(this.healthLabel);
+            this.healthManaGroupBox.Location = new System.Drawing.Point(343, 7);
+            this.healthManaGroupBox.Name = "healthManaGroupBox";
+            this.healthManaGroupBox.Size = new System.Drawing.Size(305, 194);
+            this.healthManaGroupBox.TabIndex = 14;
+            this.healthManaGroupBox.TabStop = false;
+            this.healthManaGroupBox.Text = "Health and Mana";
             // 
             // maxOutBtn
             // 
@@ -329,28 +342,28 @@
             this.healthLabel.TabIndex = 0;
             this.healthLabel.Text = "Health:";
             // 
-            // groupBox1
+            // playerInfoGroupBox
             // 
-            this.groupBox1.Controls.Add(this.hotbarCheckBox);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.taxMoneyLbl);
-            this.groupBox1.Controls.Add(this.extraAccCheckBox);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.playTimeLbl);
-            this.groupBox1.Controls.Add(this.anglerQuestUpDown);
-            this.groupBox1.Controls.Add(this.skinVariantUpDown);
-            this.groupBox1.Controls.Add(this.anglerLbl);
-            this.groupBox1.Controls.Add(this.skinVariantLbl);
-            this.groupBox1.Controls.Add(this.difficultyCmbBox);
-            this.groupBox1.Controls.Add(this.difficultyLbl);
-            this.groupBox1.Controls.Add(this.playerNameTxtBox);
-            this.groupBox1.Controls.Add(this.playerNameLbl);
-            this.groupBox1.Location = new System.Drawing.Point(6, 7);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(331, 194);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Player Information";
+            this.playerInfoGroupBox.Controls.Add(this.hotbarCheckBox);
+            this.playerInfoGroupBox.Controls.Add(this.textBox2);
+            this.playerInfoGroupBox.Controls.Add(this.taxMoneyLbl);
+            this.playerInfoGroupBox.Controls.Add(this.extraAccCheckBox);
+            this.playerInfoGroupBox.Controls.Add(this.textBox1);
+            this.playerInfoGroupBox.Controls.Add(this.playTimeLbl);
+            this.playerInfoGroupBox.Controls.Add(this.anglerQuestUpDown);
+            this.playerInfoGroupBox.Controls.Add(this.skinVariantUpDown);
+            this.playerInfoGroupBox.Controls.Add(this.anglerLbl);
+            this.playerInfoGroupBox.Controls.Add(this.skinVariantLbl);
+            this.playerInfoGroupBox.Controls.Add(this.difficultyCmbBox);
+            this.playerInfoGroupBox.Controls.Add(this.difficultyLbl);
+            this.playerInfoGroupBox.Controls.Add(this.playerNameTxtBox);
+            this.playerInfoGroupBox.Controls.Add(this.playerNameLbl);
+            this.playerInfoGroupBox.Location = new System.Drawing.Point(6, 7);
+            this.playerInfoGroupBox.Name = "playerInfoGroupBox";
+            this.playerInfoGroupBox.Size = new System.Drawing.Size(331, 194);
+            this.playerInfoGroupBox.TabIndex = 13;
+            this.playerInfoGroupBox.TabStop = false;
+            this.playerInfoGroupBox.Text = "Player Information";
             // 
             // hotbarCheckBox
             // 
@@ -525,6 +538,54 @@
             this.tabPage2.Text = "Appearance";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // playerPictureBox
+            // 
+            this.playerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("EyeColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("HairColor", this.playerBindingSource, "HairColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("HairId", this.playerBindingSource, "Hair", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("PantsColor", this.playerBindingSource, "PantsColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("ShirtColor", this.playerBindingSource, "ShirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("ShoeColor", this.playerBindingSource, "ShoeColor", true));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("SkinColor", this.playerBindingSource, "SkinColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("SkinVariant", this.playerBindingSource, "SkinVariant", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("UndershirtColor", this.playerBindingSource, "UndershirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.EyeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
+            this.playerPictureBox.HairColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(90)))), ((int)(((byte)(55)))));
+            this.playerPictureBox.HairId = 0;
+            this.playerPictureBox.HairTextureFile = "Data\\Hair\\Player_Hair_1.png";
+            this.playerPictureBox.Location = new System.Drawing.Point(8, 10);
+            this.playerPictureBox.Name = "playerPictureBox";
+            this.playerPictureBox.PantsColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(175)))));
+            this.playerPictureBox.ShirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(165)))), ((int)(((byte)(140)))));
+            this.playerPictureBox.ShoeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(105)))), ((int)(((byte)(60)))));
+            this.playerPictureBox.Size = new System.Drawing.Size(152, 211);
+            this.playerPictureBox.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(90)))));
+            this.playerPictureBox.SkinVariant = 0;
+            this.playerPictureBox.TabIndex = 19;
+            this.playerPictureBox.TabStop = false;
+            this.playerPictureBox.UndershirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(180)))), ((int)(((byte)(215)))));
+            // 
+            // randomizeColorsBtn
+            // 
+            this.randomizeColorsBtn.Location = new System.Drawing.Point(8, 288);
+            this.randomizeColorsBtn.Name = "randomizeColorsBtn";
+            this.randomizeColorsBtn.Size = new System.Drawing.Size(152, 23);
+            this.randomizeColorsBtn.TabIndex = 18;
+            this.randomizeColorsBtn.Text = "Randomize Colors";
+            this.randomizeColorsBtn.UseVisualStyleBackColor = true;
+            this.randomizeColorsBtn.Click += new System.EventHandler(this.randomizeColorsBtn_Click);
+            // 
+            // randomizeHairBtn
+            // 
+            this.randomizeHairBtn.Location = new System.Drawing.Point(8, 258);
+            this.randomizeHairBtn.Name = "randomizeHairBtn";
+            this.randomizeHairBtn.Size = new System.Drawing.Size(152, 23);
+            this.randomizeHairBtn.TabIndex = 17;
+            this.randomizeHairBtn.Text = "Randomize Hair";
+            this.randomizeHairBtn.UseVisualStyleBackColor = true;
+            this.randomizeHairBtn.Click += new System.EventHandler(this.randomizeHairBtn_Click);
+            // 
             // hairDesignerBtn
             // 
             this.hairDesignerBtn.Location = new System.Drawing.Point(8, 228);
@@ -682,53 +743,78 @@
             this.hairClrPictureBox.TabStop = false;
             this.hairClrPictureBox.Click += new System.EventHandler(this.hairClrPictureBox_Click);
             // 
-            // randomizeHairBtn
+            // tabPage3
             // 
-            this.randomizeHairBtn.Location = new System.Drawing.Point(8, 258);
-            this.randomizeHairBtn.Name = "randomizeHairBtn";
-            this.randomizeHairBtn.Size = new System.Drawing.Size(152, 23);
-            this.randomizeHairBtn.TabIndex = 17;
-            this.randomizeHairBtn.Text = "Randomize Hair";
-            this.randomizeHairBtn.UseVisualStyleBackColor = true;
-            this.randomizeHairBtn.Click += new System.EventHandler(this.randomizeHairBtn_Click);
+            this.tabPage3.Controls.Add(this.buffsGroupBox);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(651, 351);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Buffs";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // randomizeColorsBtn
+            // buffsGroupBox
             // 
-            this.randomizeColorsBtn.Location = new System.Drawing.Point(8, 288);
-            this.randomizeColorsBtn.Name = "randomizeColorsBtn";
-            this.randomizeColorsBtn.Size = new System.Drawing.Size(152, 23);
-            this.randomizeColorsBtn.TabIndex = 18;
-            this.randomizeColorsBtn.Text = "Randomize Colors";
-            this.randomizeColorsBtn.UseVisualStyleBackColor = true;
-            this.randomizeColorsBtn.Click += new System.EventHandler(this.randomizeColorsBtn_Click);
+            this.buffsGroupBox.Controls.Add(this.buffGridView);
+            this.buffsGroupBox.Location = new System.Drawing.Point(7, 7);
+            this.buffsGroupBox.Name = "buffsGroupBox";
+            this.buffsGroupBox.Size = new System.Drawing.Size(638, 338);
+            this.buffsGroupBox.TabIndex = 0;
+            this.buffsGroupBox.TabStop = false;
+            this.buffsGroupBox.Text = "Active Buffs";
             // 
-            // playerPictureBox
+            // buffGridView
             // 
-            this.playerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("EyeColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("HairColor", this.playerBindingSource, "HairColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("HairId", this.playerBindingSource, "Hair", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("PantsColor", this.playerBindingSource, "PantsColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("ShirtColor", this.playerBindingSource, "ShirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("ShoeColor", this.playerBindingSource, "ShoeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("SkinColor", this.playerBindingSource, "SkinColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("SkinVariant", this.playerBindingSource, "SkinVariant", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("UndershirtColor", this.playerBindingSource, "UndershirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.EyeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
-            this.playerPictureBox.HairColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(90)))), ((int)(((byte)(55)))));
-            this.playerPictureBox.HairId = 0;
-            this.playerPictureBox.HairTextureFile = "Data\\Hair\\Player_Hair_1.png";
-            this.playerPictureBox.Location = new System.Drawing.Point(8, 10);
-            this.playerPictureBox.Name = "playerPictureBox";
-            this.playerPictureBox.PantsColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(175)))));
-            this.playerPictureBox.ShirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(165)))), ((int)(((byte)(140)))));
-            this.playerPictureBox.ShoeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(105)))), ((int)(((byte)(60)))));
-            this.playerPictureBox.Size = new System.Drawing.Size(152, 211);
-            this.playerPictureBox.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(90)))));
-            this.playerPictureBox.SkinVariant = 0;
-            this.playerPictureBox.TabIndex = 19;
-            this.playerPictureBox.TabStop = false;
-            this.playerPictureBox.UndershirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(180)))), ((int)(((byte)(215)))));
+            this.buffGridView.AllowUserToAddRows = false;
+            this.buffGridView.AutoGenerateColumns = false;
+            this.buffGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.buffGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Image,
+            this.nameDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.timeDataGridViewTextBoxColumn});
+            this.buffGridView.DataSource = this.buffsBindingSource;
+            this.buffGridView.Location = new System.Drawing.Point(7, 20);
+            this.buffGridView.Name = "buffGridView";
+            this.buffGridView.RowHeadersVisible = false;
+            this.buffGridView.RowTemplate.Height = 30;
+            this.buffGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.buffGridView.Size = new System.Drawing.Size(625, 312);
+            this.buffGridView.TabIndex = 0;
+            // 
+            // buffsBindingSource
+            // 
+            this.buffsBindingSource.DataMember = "Buffs";
+            this.buffsBindingSource.DataSource = this.playerBindingSource;
+            // 
+            // Image
+            // 
+            this.Image.DataPropertyName = "Image";
+            this.Image.HeaderText = "";
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            this.timeDataGridViewTextBoxColumn.Width = 175;
             // 
             // MainForm
             // 
@@ -745,15 +831,16 @@
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.healthManaGroupBox.ResumeLayout(false);
+            this.healthManaGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.playerInfoGroupBox.ResumeLayout(false);
+            this.playerInfoGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.anglerQuestUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinVariantUpDown)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shoeClrPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pantsClrPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.undershirtClrPictureBox)).EndInit();
@@ -761,7 +848,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.skinClrPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeClrPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hairClrPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.buffsGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.buffGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buffsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -781,7 +871,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox healthManaGroupBox;
         private System.Windows.Forms.Button maxOutBtn;
         private System.Windows.Forms.Button resetHealthBtn;
         private System.Windows.Forms.ProgressBar manaBar;
@@ -792,7 +882,7 @@
         private System.Windows.Forms.ProgressBar healthBar;
         private System.Windows.Forms.TextBox currentHealthBox;
         private System.Windows.Forms.Label healthLabel;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox playerInfoGroupBox;
         private System.Windows.Forms.Label anglerLbl;
         private System.Windows.Forms.Label skinVariantLbl;
         private System.Windows.Forms.ComboBox difficultyCmbBox;
@@ -826,7 +916,15 @@
         private System.Windows.Forms.Button hairDesignerBtn;
         private System.Windows.Forms.Button randomizeColorsBtn;
         private System.Windows.Forms.Button randomizeHairBtn;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox buffsGroupBox;
         private Framework.PlayerPictureBox playerPictureBox;
+        private System.Windows.Forms.DataGridView buffGridView;
+        private System.Windows.Forms.BindingSource buffsBindingSource;
+        private System.Windows.Forms.DataGridViewImageColumn Image;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
     }
 }
 

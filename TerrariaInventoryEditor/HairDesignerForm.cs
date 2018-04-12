@@ -91,7 +91,7 @@ namespace TerrariaInventoryEditor
 
         private void DrawHair()
         {
-            var hairBitmap = new Bitmap($"Data\\Hair\\Player_Hair_{HairId}.png");
+            var hairBitmap = new Bitmap($"Data\\HairTextures\\Player_Hair_{HairId}.png");
             for (var x = 0; x < hairBitmap.Width; ++x)
             {
                 for (var y = 0; y < hairBitmap.Height; ++y)

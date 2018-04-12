@@ -728,7 +728,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
         public WorldInformation[] WorldInfo { get; } = new WorldInformation[200];
 
         /// <summary>
-        ///     Occurs when a property is changed.
+        ///     Occurs when a property changes.
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -896,7 +896,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
 
                     for (var i = 0; i < Buffs.Length; ++i)
                     {
-                        Buffs[i].Id = reader.ReadInt32();
+                        Buffs[i].SetDefaults(reader.ReadInt32());
                         Buffs[i].Time = reader.ReadInt32();
                     }
 

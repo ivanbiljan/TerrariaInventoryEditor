@@ -10,11 +10,11 @@ namespace TerrariaInventoryEditor.Framework
     /// </summary>
     public sealed class PlayerPictureBox : PictureBox
     {
-        private static readonly string EyeTextureFile = "Data\\Player\\eyes.png";
-        private static readonly string EyeWhitesTextureFile = "Data\\Player\\eyewhites.png";
-        private static readonly string HandsTextureFile = "Data\\Player\\hands.png";
-        private static readonly string HeadTextureFile = "Data\\Player\\head.png";
-        private static readonly string LegsTextureFile = "Data\\Player\\Female\\legs.png"; // Only drawn if character is female
+        private static readonly string EyeTextureFile = "Data\\PlayerTextures\\eyes.png";
+        private static readonly string EyeWhitesTextureFile = "Data\\PlayerTextures\\eyewhites.png";
+        private static readonly string HandsTextureFile = "Data\\PlayerTextures\\hands.png";
+        private static readonly string HeadTextureFile = "Data\\PlayerTextures\\head.png";
+        private static readonly string LegsTextureFile = "Data\\PlayerTextures\\Female\\legs.png"; // Only drawn if character is female
 
         private Bitmap _eyeTexture;
         private Bitmap _eyeWhitesTexture;
@@ -50,7 +50,7 @@ namespace TerrariaInventoryEditor.Framework
         /// <summary>
         ///     Gets or sets the character's hair texture file path.
         /// </summary>
-        public string HairTextureFile { get; set; } = "Data\\Hair\\Player_Hair_1.png";
+        public string HairTextureFile { get; set; } = "Data\\HairTextures\\Player_Hair_1.png";
 
         /// <summary>
         ///     Gets or sets the character's pants colour.
@@ -117,22 +117,22 @@ namespace TerrariaInventoryEditor.Framework
         {
             _eyeTexture = ColorImage(new Bitmap(EyeTextureFile), EyeColor);
             _eyeWhitesTexture = ColorImage(new Bitmap(EyeWhitesTextureFile), EyeWhitesColor);
-            _hairTexture = ColorImage(new Bitmap($"Data\\Hair\\Player_Hair_{HairId + 1}.png"), HairColor);
+            _hairTexture = ColorImage(new Bitmap($"Data\\HairTextures\\Player_Hair_{HairId + 1}.png"), HairColor);
             _handsTexture = ColorImage(new Bitmap(HandsTextureFile), SkinColor);
             _headTexture = ColorImage(new Bitmap(HeadTextureFile), SkinColor);
             _legsTexture = ColorImage(new Bitmap(LegsTextureFile), SkinColor);
 
-            var pantsTextureFile = $"Data\\Player\\{(SkinVariant < 4 ? "pants.png" : "Female\\pants.png")}";
+            var pantsTextureFile = $"Data\\PlayerTextures\\{(SkinVariant < 4 ? "pants.png" : "Female\\pants.png")}";
             _pantsTexture = ColorImage(new Bitmap(pantsTextureFile), PantsColor);
 
-            var shirtTextureFile = $"Data\\Player\\{(SkinVariant < 4 ? "shirt.png" : "Female\\shirt.png")}";
+            var shirtTextureFile = $"Data\\PlayerTextures\\{(SkinVariant < 4 ? "shirt.png" : "Female\\shirt.png")}";
             _shirtTexture = ColorImage(new Bitmap(shirtTextureFile), ShirtColor);
 
-            var shoeTextureFile = $"Data\\Player\\{(SkinVariant < 4 ? "shoes.png" : "Female\\shoes.png")}";
+            var shoeTextureFile = $"Data\\PlayerTextures\\{(SkinVariant < 4 ? "shoes.png" : "Female\\shoes.png")}";
             _shoeTexture = ColorImage(new Bitmap(shoeTextureFile), ShoeColor);
 
             var undershirtTextureFile =
-                $"Data\\Player\\{(SkinVariant < 4 ? "undershirt.png" : "Female\\undershirt.png")}";
+                $"Data\\PlayerTextures\\{(SkinVariant < 4 ? "undershirt.png" : "Female\\undershirt.png")}";
             _undershirtTexture = ColorImage(new Bitmap(undershirtTextureFile), UndershirtColor);
 
             var character = new Bitmap(Width, Height);
