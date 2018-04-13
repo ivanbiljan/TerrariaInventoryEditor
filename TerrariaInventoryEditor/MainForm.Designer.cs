@@ -89,13 +89,20 @@
             this.hairColorLbl = new System.Windows.Forms.Label();
             this.hairClrPictureBox = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.buffsGroupBox = new System.Windows.Forms.GroupBox();
+            this.activeBuffsGroupBox = new System.Windows.Forms.GroupBox();
             this.buffGridView = new System.Windows.Forms.DataGridView();
-            this.buffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buffControlsGroupBox = new System.Windows.Forms.GroupBox();
+            this.buffSearchBox = new System.Windows.Forms.ListBox();
+            this.applyBuffBtn = new System.Windows.Forms.Button();
+            this.deleteBuffBtn = new System.Windows.Forms.Button();
+            this.maxDurationBtn = new System.Windows.Forms.Button();
+            this.maxAllDurationsBtn = new System.Windows.Forms.Button();
+            this.buffFilterTxtBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -114,9 +121,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.eyeClrPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hairClrPictureBox)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.buffsGroupBox.SuspendLayout();
+            this.activeBuffsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buffGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buffsBindingSource)).BeginInit();
+            this.buffControlsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -741,11 +749,12 @@
             this.hairClrPictureBox.Size = new System.Drawing.Size(79, 25);
             this.hairClrPictureBox.TabIndex = 2;
             this.hairClrPictureBox.TabStop = false;
-            this.hairClrPictureBox.Click += new System.EventHandler(this.hairClrPictureBox_Click);
+            this.hairClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.buffsGroupBox);
+            this.tabPage3.Controls.Add(this.buffControlsGroupBox);
+            this.tabPage3.Controls.Add(this.activeBuffsGroupBox);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -754,19 +763,20 @@
             this.tabPage3.Text = "Buffs";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // buffsGroupBox
+            // activeBuffsGroupBox
             // 
-            this.buffsGroupBox.Controls.Add(this.buffGridView);
-            this.buffsGroupBox.Location = new System.Drawing.Point(7, 7);
-            this.buffsGroupBox.Name = "buffsGroupBox";
-            this.buffsGroupBox.Size = new System.Drawing.Size(638, 338);
-            this.buffsGroupBox.TabIndex = 0;
-            this.buffsGroupBox.TabStop = false;
-            this.buffsGroupBox.Text = "Active Buffs";
+            this.activeBuffsGroupBox.Controls.Add(this.buffGridView);
+            this.activeBuffsGroupBox.Location = new System.Drawing.Point(7, 7);
+            this.activeBuffsGroupBox.Name = "activeBuffsGroupBox";
+            this.activeBuffsGroupBox.Size = new System.Drawing.Size(419, 338);
+            this.activeBuffsGroupBox.TabIndex = 0;
+            this.activeBuffsGroupBox.TabStop = false;
+            this.activeBuffsGroupBox.Text = "Active Buffs";
             // 
             // buffGridView
             // 
             this.buffGridView.AllowUserToAddRows = false;
+            this.buffGridView.AllowUserToDeleteRows = false;
             this.buffGridView.AutoGenerateColumns = false;
             this.buffGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.buffGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -777,16 +787,12 @@
             this.buffGridView.DataSource = this.buffsBindingSource;
             this.buffGridView.Location = new System.Drawing.Point(7, 20);
             this.buffGridView.Name = "buffGridView";
+            this.buffGridView.ReadOnly = true;
             this.buffGridView.RowHeadersVisible = false;
             this.buffGridView.RowTemplate.Height = 30;
             this.buffGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.buffGridView.Size = new System.Drawing.Size(625, 312);
+            this.buffGridView.Size = new System.Drawing.Size(406, 312);
             this.buffGridView.TabIndex = 0;
-            // 
-            // buffsBindingSource
-            // 
-            this.buffsBindingSource.DataMember = "Buffs";
-            this.buffsBindingSource.DataSource = this.playerBindingSource;
             // 
             // Image
             // 
@@ -800,6 +806,7 @@
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             this.nameDataGridViewTextBoxColumn.Width = 175;
             // 
             // descriptionDataGridViewTextBoxColumn
@@ -807,6 +814,7 @@
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             this.descriptionDataGridViewTextBoxColumn.Width = 175;
             // 
             // timeDataGridViewTextBoxColumn
@@ -814,7 +822,84 @@
             this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
             this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
             this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            this.timeDataGridViewTextBoxColumn.ReadOnly = true;
             this.timeDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // buffsBindingSource
+            // 
+            this.buffsBindingSource.DataMember = "Buffs";
+            this.buffsBindingSource.DataSource = this.playerBindingSource;
+            // 
+            // buffControlsGroupBox
+            // 
+            this.buffControlsGroupBox.Controls.Add(this.buffFilterTxtBox);
+            this.buffControlsGroupBox.Controls.Add(this.maxAllDurationsBtn);
+            this.buffControlsGroupBox.Controls.Add(this.maxDurationBtn);
+            this.buffControlsGroupBox.Controls.Add(this.deleteBuffBtn);
+            this.buffControlsGroupBox.Controls.Add(this.applyBuffBtn);
+            this.buffControlsGroupBox.Controls.Add(this.buffSearchBox);
+            this.buffControlsGroupBox.Location = new System.Drawing.Point(432, 7);
+            this.buffControlsGroupBox.Name = "buffControlsGroupBox";
+            this.buffControlsGroupBox.Size = new System.Drawing.Size(213, 338);
+            this.buffControlsGroupBox.TabIndex = 1;
+            this.buffControlsGroupBox.TabStop = false;
+            this.buffControlsGroupBox.Text = "Controls";
+            // 
+            // buffSearchBox
+            // 
+            this.buffSearchBox.FormattingEnabled = true;
+            this.buffSearchBox.Location = new System.Drawing.Point(6, 49);
+            this.buffSearchBox.Name = "buffSearchBox";
+            this.buffSearchBox.Size = new System.Drawing.Size(201, 225);
+            this.buffSearchBox.TabIndex = 0;
+            // 
+            // applyBuffBtn
+            // 
+            this.applyBuffBtn.Location = new System.Drawing.Point(6, 280);
+            this.applyBuffBtn.Name = "applyBuffBtn";
+            this.applyBuffBtn.Size = new System.Drawing.Size(95, 23);
+            this.applyBuffBtn.TabIndex = 1;
+            this.applyBuffBtn.Text = "Apply";
+            this.applyBuffBtn.UseVisualStyleBackColor = true;
+            this.applyBuffBtn.Click += new System.EventHandler(this.applyBuffBtn_Click);
+            // 
+            // deleteBuffBtn
+            // 
+            this.deleteBuffBtn.Location = new System.Drawing.Point(112, 280);
+            this.deleteBuffBtn.Name = "deleteBuffBtn";
+            this.deleteBuffBtn.Size = new System.Drawing.Size(95, 23);
+            this.deleteBuffBtn.TabIndex = 2;
+            this.deleteBuffBtn.Text = "Delete";
+            this.deleteBuffBtn.UseVisualStyleBackColor = true;
+            this.deleteBuffBtn.Click += new System.EventHandler(this.deleteBuffBtn_Click);
+            // 
+            // maxDurationBtn
+            // 
+            this.maxDurationBtn.Location = new System.Drawing.Point(6, 309);
+            this.maxDurationBtn.Name = "maxDurationBtn";
+            this.maxDurationBtn.Size = new System.Drawing.Size(94, 23);
+            this.maxDurationBtn.TabIndex = 3;
+            this.maxDurationBtn.Text = "Max Duration";
+            this.maxDurationBtn.UseVisualStyleBackColor = true;
+            this.maxDurationBtn.Click += new System.EventHandler(this.maxDurationBtn_Click);
+            // 
+            // maxAllDurationsBtn
+            // 
+            this.maxAllDurationsBtn.Location = new System.Drawing.Point(112, 309);
+            this.maxAllDurationsBtn.Name = "maxAllDurationsBtn";
+            this.maxAllDurationsBtn.Size = new System.Drawing.Size(95, 23);
+            this.maxAllDurationsBtn.TabIndex = 4;
+            this.maxAllDurationsBtn.Text = "Max All ";
+            this.maxAllDurationsBtn.UseVisualStyleBackColor = true;
+            this.maxAllDurationsBtn.Click += new System.EventHandler(this.maxAllDurationsBtn_Click);
+            // 
+            // buffFilterTxtBox
+            // 
+            this.buffFilterTxtBox.Location = new System.Drawing.Point(7, 20);
+            this.buffFilterTxtBox.Name = "buffFilterTxtBox";
+            this.buffFilterTxtBox.Size = new System.Drawing.Size(200, 20);
+            this.buffFilterTxtBox.TabIndex = 5;
+            this.buffFilterTxtBox.TextChanged += new System.EventHandler(this.buffFilterTxtBox_TextChanged);
             // 
             // MainForm
             // 
@@ -849,9 +934,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.eyeClrPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hairClrPictureBox)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.buffsGroupBox.ResumeLayout(false);
+            this.activeBuffsGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.buffGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buffsBindingSource)).EndInit();
+            this.buffControlsGroupBox.ResumeLayout(false);
+            this.buffControlsGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -917,7 +1004,7 @@
         private System.Windows.Forms.Button randomizeColorsBtn;
         private System.Windows.Forms.Button randomizeHairBtn;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.GroupBox buffsGroupBox;
+        private System.Windows.Forms.GroupBox activeBuffsGroupBox;
         private Framework.PlayerPictureBox playerPictureBox;
         private System.Windows.Forms.DataGridView buffGridView;
         private System.Windows.Forms.BindingSource buffsBindingSource;
@@ -925,6 +1012,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.GroupBox buffControlsGroupBox;
+        private System.Windows.Forms.Button maxAllDurationsBtn;
+        private System.Windows.Forms.Button maxDurationBtn;
+        private System.Windows.Forms.Button deleteBuffBtn;
+        private System.Windows.Forms.Button applyBuffBtn;
+        private System.Windows.Forms.ListBox buffSearchBox;
+        private System.Windows.Forms.TextBox buffFilterTxtBox;
     }
 }
 

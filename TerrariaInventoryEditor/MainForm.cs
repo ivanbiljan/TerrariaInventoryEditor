@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using TerrariaInventoryEditor.TerrariaLib;
 
@@ -15,29 +16,13 @@ namespace TerrariaInventoryEditor
 
             playerBindingSource.DataSource = Terraria.Instance.Player;
             playerPictureBox.Draw();
+
+            buffSearchBox.DataSource = Terraria.Instance.Buffs;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void hairClrPictureBox_Click(object sender, EventArgs e)
-        {
-            using (var colorDialog = new ColorDialog())
-            {
-                colorDialog.AllowFullOpen = true;
-                colorDialog.AnyColor = true;
-                colorDialog.SolidColorOnly = false;
-
-                if (colorDialog.ShowDialog() != DialogResult.OK)
-                {
-                    return;
-                }
-
-                hairClrPictureBox.BackColor = colorDialog.Color;
-                playerPictureBox.Draw();
-            }
         }
 
         private void hairDesignerBtn_Click(object sender, EventArgs e)
@@ -173,6 +158,48 @@ namespace TerrariaInventoryEditor
             else
             {
                 saveAsToolStripMenuItem_Click(sender, e);
+            }
+        }
+
+        private void applyBuffBtn_Click(object sender, EventArgs e)
+        {
+            Terraria.Instance.Player.Buffs[buffGridView.CurrentCell.RowIndex] = (Buff) buffSearchBox.SelectedItem;
+            buffGridView.Refresh();
+        }
+
+        private void deleteBuffBtn_Click(object sender, EventArgs e)
+        {
+            Terraria.Instance.Player.Buffs[buffGridView.CurrentCell.RowIndex] = new Buff();
+            buffGridView.Refresh();
+        }
+
+        private void maxDurationBtn_Click(object sender, EventArgs e)
+        {
+            Terraria.Instance.Player.Buffs[buffGridView.CurrentCell.RowIndex].Time = int.MaxValue;
+            buffGridView.Refresh();
+        }
+
+        private void maxAllDurationsBtn_Click(object sender, EventArgs e)
+        {
+            foreach (var buff in Terraria.Instance.Player.Buffs.Where(b => b.Id != 0))
+            {
+                buff.Time = int.MaxValue;
+            }
+
+            buffGridView.Refresh();
+        }
+
+        private void buffFilterTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(buffFilterTxtBox.Text))
+            {
+                buffSearchBox.DataSource = Terraria.Instance.Buffs;
+            }
+            else
+            {
+                buffSearchBox.DataSource = (from buff in Terraria.Instance.Buffs
+                    where buff.Name.ToLowerInvariant().Contains(buffFilterTxtBox.Text.ToLowerInvariant())
+                    select buff).ToList();
             }
         }
     }

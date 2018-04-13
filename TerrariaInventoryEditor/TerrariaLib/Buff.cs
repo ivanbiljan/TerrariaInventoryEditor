@@ -21,7 +21,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
 
         private string _name = "Inactive";
 
-        private int _time;
+        private int _time = 3600;
 
         /// <summary>
         ///     Gets or sets the buff's description.
@@ -57,7 +57,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
                 }
 
                 _buffId = value;
-                _image = new Bitmap($"Data\\BuffTextures\\Buff_{_buffId}.png");
+                _image = new Bitmap($"Data\\BuffTextures\\Buff_{value}.png");
                 OnPropertyChanged();
             }
         }
@@ -142,6 +142,15 @@ namespace TerrariaInventoryEditor.TerrariaLib
             Description = buff.Description;
             Id = buff.Id;
             Name = buff.Name;
+        }
+
+        /// <summary>
+        ///     Returns the string representation of this buff.
+        /// </summary>
+        /// <returns>The string representation of this buff.</returns>
+        public override string ToString()
+        {
+            return Name;
         }
 
         [NotifyPropertyChangedInvocator]

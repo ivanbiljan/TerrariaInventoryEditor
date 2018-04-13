@@ -34,7 +34,7 @@ namespace TerrariaInventoryEditor
                 DataSourceUpdateMode.OnPropertyChanged));
 
             redTrackBar.DataBindings.Add(
-                new Binding("Value", HairColor, "R", true, DataSourceUpdateMode.OnPropertyChanged)
+                new Binding("Value", HairColor, "R", true, DataSourceUpdateMode.Never)
                 {
                     ControlUpdateMode = ControlUpdateMode.OnPropertyChanged
                 });

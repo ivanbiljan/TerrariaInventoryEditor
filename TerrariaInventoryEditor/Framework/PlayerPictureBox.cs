@@ -86,7 +86,7 @@ namespace TerrariaInventoryEditor.Framework
         {
             for (var x = 0; x < image.Width; ++x)
             {
-                for (var y = 0; y < image.Height; y++)
+                for (var y = 0; y < image.Height; ++y)
                 {
                     var currentPixel = image.GetPixel(x, y);
                     if (currentPixel == Color.FromArgb(0, 0, 0, 0))

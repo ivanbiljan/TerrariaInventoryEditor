@@ -16,7 +16,7 @@
         Gray = -1,
 
         /// <summary>
-        ///     The item is default tier. Includes most furniter and early items.
+        ///     The item is default tier. Includes most furniture and early items.
         /// </summary>
         White = 0,
 
