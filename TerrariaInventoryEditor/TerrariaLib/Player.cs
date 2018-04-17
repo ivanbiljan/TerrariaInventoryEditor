@@ -447,8 +447,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// <summary>
         ///     Gets or sets a value indicating whether the player is male.
         /// </summary>
-        [Obsolete("Use Player.SkinVariant instead.")]
-        public bool IsMale { get; set; }
+        public bool IsMale => SkinVariant < 4 || SkinVariant == 8;
 
         /// <summary>
         ///     Gets or sets the player's current mana.

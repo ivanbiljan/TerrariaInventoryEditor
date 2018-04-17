@@ -123,6 +123,7 @@ namespace TerrariaInventoryEditor
             }
 
             hairDisplayPictureBox.Image = newBitmap;
+            GC.Collect();
         }
 
         private void okBtn_Click(object sender, EventArgs e)

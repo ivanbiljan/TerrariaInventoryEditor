@@ -161,10 +161,26 @@ namespace TerrariaInventoryEditor
             }
         }
 
+        #region Buffs Tab
+
         private void applyBuffBtn_Click(object sender, EventArgs e)
         {
             Terraria.Instance.Player.Buffs[buffGridView.CurrentCell.RowIndex] = (Buff) buffSearchBox.SelectedItem;
             buffGridView.Refresh();
+        }
+
+        private void buffFilterTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(buffFilterTxtBox.Text))
+            {
+                buffSearchBox.DataSource = Terraria.Instance.Buffs;
+            }
+            else
+            {
+                buffSearchBox.DataSource = (from buff in Terraria.Instance.Buffs
+                    where buff.Name.ToLowerInvariant().Contains(buffFilterTxtBox.Text.ToLowerInvariant())
+                    select buff).ToList();
+            }
         }
 
         private void deleteBuffBtn_Click(object sender, EventArgs e)
@@ -189,18 +205,6 @@ namespace TerrariaInventoryEditor
             buffGridView.Refresh();
         }
 
-        private void buffFilterTxtBox_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(buffFilterTxtBox.Text))
-            {
-                buffSearchBox.DataSource = Terraria.Instance.Buffs;
-            }
-            else
-            {
-                buffSearchBox.DataSource = (from buff in Terraria.Instance.Buffs
-                    where buff.Name.ToLowerInvariant().Contains(buffFilterTxtBox.Text.ToLowerInvariant())
-                    select buff).ToList();
-            }
-        }
+        #endregion
     }
 }

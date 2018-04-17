@@ -76,6 +76,7 @@
     <Compile Include="TerrariaLib\ItemPrefix.cs" />
     <Compile Include="TerrariaLib\ItemRarity.cs" />
     <Compile Include="TerrariaLib\Player.cs" />
+    <Compile Include="TerrariaLib\PlayerVariant.cs" />
     <Compile Include="TerrariaLib\ProjectileType.cs" />
     <Compile Include="TerrariaLib\WorldInformation.cs" />
     <Compile Include="TerrariaLib\Terraria.cs" />
