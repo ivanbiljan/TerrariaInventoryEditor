@@ -5,41 +5,23 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 using TerrariaInventoryEditor.Annotations;
+using TerrariaInventoryEditor.Framework;
 
 namespace TerrariaInventoryEditor.TerrariaLib
 {
     /// <summary>
     ///     Represents a Terraria buff.
     /// </summary>
-    public sealed class Buff : INotifyPropertyChanged
+    public sealed class Buff : DataSourceObject
     {
-        private int _buffId;
-
-        private string _description = "N/A";
-
-        private Bitmap _image = new Bitmap("Data\\BuffTextures\\Buff_0.png");
-
-        private string _name = "Inactive";
-
-        private int _time = 3600;
-
         /// <summary>
         ///     Gets or sets the buff's description.
         /// </summary>
         [JsonProperty("description")]
         public string Description
         {
-            get => _description;
-            set
-            {
-                if (value == _description)
-                {
-                    return;
-                }
-
-                _description = value;
-                OnPropertyChanged();
-            }
+            get => !string.IsNullOrWhiteSpace(Get<string>()) ? Get<string>() : "N/A";
+            set => Set(value);
         }
 
         /// <summary>
@@ -48,17 +30,11 @@ namespace TerrariaInventoryEditor.TerrariaLib
         [JsonProperty("id")]
         public int Id
         {
-            get => _buffId;
+            get => Get<int>();
             set
             {
-                if (value == _buffId)
-                {
-                    return;
-                }
-
-                _buffId = value;
-                _image = new Bitmap($"Data\\BuffTextures\\Buff_{value}.png");
-                OnPropertyChanged();
+                Set(value);
+                Image = new Bitmap($"Data\\BuffTextures\\Buff_{value}.png");
             }
         }
 
@@ -67,17 +43,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public Bitmap Image
         {
-            get => _image;
-            set
-            {
-                if (value == _image)
-                {
-                    return;
-                }
-
-                _image = value;
-                OnPropertyChanged();
-            }
+            get => Get<Bitmap>() ?? new Bitmap("Data\\BuffTextures\\Buff_0.png");
+            private set => Set(value);
         }
 
         /// <summary>
@@ -86,17 +53,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         [JsonProperty("name")]
         public string Name
         {
-            get => _name;
-            set
-            {
-                if (value == _name)
-                {
-                    return;
-                }
-
-                _name = value;
-                OnPropertyChanged();
-            }
+            get => !string.IsNullOrWhiteSpace(Get<string>()) ? Get<string>() : "Inactive";
+            set => Set(value);
         }
 
         /// <summary>
@@ -105,23 +63,9 @@ namespace TerrariaInventoryEditor.TerrariaLib
         [JsonProperty("time")]
         public int Time
         {
-            get => _time;
-            set
-            {
-                if (value == _time)
-                {
-                    return;
-                }
-
-                _time = value;
-                OnPropertyChanged();
-            }
+            get => Get<int>();
+            set => Set(value);
         }
-
-        /// <summary>
-        ///     Occurs when a property changes.
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         ///     Constructs the buff based on the specified buff ID.
@@ -151,12 +95,6 @@ namespace TerrariaInventoryEditor.TerrariaLib
         public override string ToString()
         {
             return Name;
-        }
-
-        [NotifyPropertyChangedInvocator]
-        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

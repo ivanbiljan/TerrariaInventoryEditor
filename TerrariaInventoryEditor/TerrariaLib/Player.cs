@@ -1,13 +1,12 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using TerrariaInventoryEditor.Annotations;
 using TerrariaInventoryEditor.Extensions;
+using TerrariaInventoryEditor.Framework;
 
 namespace TerrariaInventoryEditor.TerrariaLib
 {
@@ -23,67 +22,10 @@ namespace TerrariaInventoryEditor.TerrariaLib
     // TODO: Downed DD2 implementation - [X]
     // TODO: Spawn points implementation - [X]
     // TODO: Hide info implementation - [X]
-    public sealed class Player : INotifyPropertyChanged
+    public sealed class Player : DataSourceObject
     {
         private const string EncryptionKey = "h3y_gUyZ";
-
         private const ulong MagicNumber = 27981915666277746;
-
-        private int _anglerQuestsFinished;
-
-        private int _bartenderQuestLog;
-
-        private int _currentHealth;
-
-        private int _currentMana;
-
-        private PlayerDifficulty _difficulty;
-
-        private bool _downedDD2Event;
-
-        private bool _extraAccessory;
-
-        private Color _eyeColor;
-
-        private string _filePath;
-
-        private int _hair;
-
-        private Color _hairColor;
-
-        private byte _hairDye;
-
-        private byte _hideMisc;
-
-        private bool _isFavourite;
-
-        private bool _isHotbarLocked;
-
-        private int _maxHealth;
-
-        private int _maxMana;
-
-        private string _name;
-
-        private Color _pantsColor;
-
-        private TimeSpan _playTime;
-
-        private int _release;
-
-        private uint _revision;
-
-        private Color _shirtColor;
-
-        private Color _shoeColor;
-
-        private Color _skinColor;
-
-        private int _skinVariant;
-
-        private int _taxMoney;
-
-        private Color _undershirtColor;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="Player" /> class.
@@ -150,17 +92,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public int AnglerQuestsFinished
         {
-            get => _anglerQuestsFinished;
-            set
-            {
-                if (value == _anglerQuestsFinished)
-                {
-                    return;
-                }
-
-                _anglerQuestsFinished = value;
-                OnPropertyChanged();
-            }
+            get => Get<int>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -174,17 +107,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public int BartenderQuestLog
         {
-            get => _bartenderQuestLog;
-            set
-            {
-                if (value == _bartenderQuestLog)
-                {
-                    return;
-                }
-
-                _bartenderQuestLog = value;
-                OnPropertyChanged();
-            }
+            get => Get<int>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -202,17 +126,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public PlayerDifficulty Difficulty
         {
-            get => _difficulty;
-            set
-            {
-                if (value == _difficulty)
-                {
-                    return;
-                }
-
-                _difficulty = value;
-                OnPropertyChanged();
-            }
+            get => Get<PlayerDifficulty>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -220,17 +135,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public bool DownedDd2Event
         {
-            get => _downedDD2Event;
-            set
-            {
-                if (value == _downedDD2Event)
-                {
-                    return;
-                }
-
-                _downedDD2Event = value;
-                OnPropertyChanged();
-            }
+            get => Get<bool>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -249,17 +155,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public bool ExtraAccessory
         {
-            get => _extraAccessory;
-            set
-            {
-                if (value == _extraAccessory)
-                {
-                    return;
-                }
-
-                _extraAccessory = value;
-                OnPropertyChanged();
-            }
+            get => Get<bool>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -267,17 +164,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public Color EyeColor
         {
-            get => _eyeColor;
-            set
-            {
-                if (value == _eyeColor)
-                {
-                    return;
-                }
-
-                _eyeColor = value;
-                OnPropertyChanged();
-            }
+            get => Get<Color>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -285,17 +173,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public string FilePath
         {
-            get => _filePath;
-            set
-            {
-                if (value == _filePath)
-                {
-                    return;
-                }
-
-                _filePath = value;
-                OnPropertyChanged();
-            }
+            get => Get<string>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -308,17 +187,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public int Hair
         {
-            get => _hair;
-            set
-            {
-                if (value == _hair)
-                {
-                    return;
-                }
-
-                _hair = value;
-                OnPropertyChanged();
-            }
+            get => Get<int>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -326,17 +196,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public Color HairColor
         {
-            get => _hairColor;
-            set
-            {
-                if (value == _hairColor)
-                {
-                    return;
-                }
-
-                _hairColor = value;
-                OnPropertyChanged();
-            }
+            get => Get<Color>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -344,17 +205,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public byte HairDye
         {
-            get => _hairDye;
-            set
-            {
-                if (value == _hairDye)
-                {
-                    return;
-                }
-
-                _hairDye = value;
-                OnPropertyChanged();
-            }
+            get => Get<byte>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -362,17 +214,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public int Health
         {
-            get => _currentHealth;
-            set
-            {
-                if (value == _currentHealth)
-                {
-                    return;
-                }
-
-                _currentHealth = value;
-                OnPropertyChanged();
-            }
+            get => Get<int>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -385,17 +228,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public byte HideMisc
         {
-            get => _hideMisc;
-            set
-            {
-                if (value == _hideMisc)
-                {
-                    return;
-                }
-
-                _hideMisc = value;
-                OnPropertyChanged();
-            }
+            get => Get<byte>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -413,17 +247,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public bool IsFavourite
         {
-            get => _isFavourite;
-            set
-            {
-                if (value == _isFavourite)
-                {
-                    return;
-                }
-
-                _isFavourite = value;
-                OnPropertyChanged();
-            }
+            get => Get<bool>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -431,17 +256,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public bool IsHotbarLocked
         {
-            get => _isHotbarLocked;
-            set
-            {
-                if (value == _isHotbarLocked)
-                {
-                    return;
-                }
-
-                _isHotbarLocked = value;
-                OnPropertyChanged();
-            }
+            get => Get<bool>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -454,17 +270,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public int Mana
         {
-            get => _currentMana;
-            set
-            {
-                if (value == _currentMana)
-                {
-                    return;
-                }
-
-                _currentMana = value;
-                OnPropertyChanged();
-            }
+            get => Get<int>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -472,17 +279,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public int MaxHealth
         {
-            get => _maxHealth;
-            set
-            {
-                if (value == _maxHealth)
-                {
-                    return;
-                }
-
-                _maxHealth = value;
-                OnPropertyChanged();
-            }
+            get => Get<int>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -490,17 +288,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public int MaxMana
         {
-            get => _maxMana;
-            set
-            {
-                if (value == _maxMana)
-                {
-                    return;
-                }
-
-                _maxMana = value;
-                OnPropertyChanged();
-            }
+            get => Get<int>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -518,17 +307,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public string Name
         {
-            get => _name;
-            set
-            {
-                if (value == _name)
-                {
-                    return;
-                }
-
-                _name = value;
-                OnPropertyChanged();
-            }
+            get => Get<string>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -536,17 +316,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public Color PantsColor
         {
-            get => _pantsColor;
-            set
-            {
-                if (value == _pantsColor)
-                {
-                    return;
-                }
-
-                _pantsColor = value;
-                OnPropertyChanged();
-            }
+            get => Get<Color>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -559,17 +330,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public TimeSpan PlayTime
         {
-            get => _playTime;
-            set
-            {
-                if (value == _playTime)
-                {
-                    return;
-                }
-
-                _playTime = value;
-                OnPropertyChanged();
-            }
+            get => Get<TimeSpan>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -577,17 +339,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public int Release
         {
-            get => _release;
-            set
-            {
-                if (value == _release)
-                {
-                    return;
-                }
-
-                _release = value;
-                OnPropertyChanged();
-            }
+            get => Get<int>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -595,17 +348,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public uint Revision
         {
-            get => _revision;
-            set
-            {
-                if (value == _revision)
-                {
-                    return;
-                }
-
-                _revision = value;
-                OnPropertyChanged();
-            }
+            get => Get<uint>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -618,17 +362,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public Color ShirtColor
         {
-            get => _shirtColor;
-            set
-            {
-                if (value == _shirtColor)
-                {
-                    return;
-                }
-
-                _shirtColor = value;
-                OnPropertyChanged();
-            }
+            get => Get<Color>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -636,17 +371,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public Color ShoeColor
         {
-            get => _shoeColor;
-            set
-            {
-                if (value == _shoeColor)
-                {
-                    return;
-                }
-
-                _shoeColor = value;
-                OnPropertyChanged();
-            }
+            get => Get<Color>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -654,17 +380,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public Color SkinColor
         {
-            get => _skinColor;
-            set
-            {
-                if (value == _skinColor)
-                {
-                    return;
-                }
-
-                _skinColor = value;
-                OnPropertyChanged();
-            }
+            get => Get<Color>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -672,17 +389,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public int SkinVariant
         {
-            get => _skinVariant;
-            set
-            {
-                if (value == _skinVariant)
-                {
-                    return;
-                }
-
-                _skinVariant = value;
-                OnPropertyChanged();
-            }
+            get => Get<int>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -690,17 +398,8 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public int TaxMoney
         {
-            get => _taxMoney;
-            set
-            {
-                if (value == _taxMoney)
-                {
-                    return;
-                }
-
-                _taxMoney = value;
-                OnPropertyChanged();
-            }
+            get => Get<int>();
+            set => Set(value);
         }
 
         /// <summary>
@@ -708,28 +407,14 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public Color UndershirtColor
         {
-            get => _undershirtColor;
-            set
-            {
-                if (value == _undershirtColor)
-                {
-                    return;
-                }
-
-                _undershirtColor = value;
-                OnPropertyChanged();
-            }
+            get => Get<Color>();
+            set => Set(value);
         }
 
         /// <summary>
         ///     Gets the player's world information buffer.
         /// </summary>
         public WorldInformation[] WorldInfo { get; } = new WorldInformation[200];
-
-        /// <summary>
-        ///     Occurs when a property changes.
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         ///     Occurs when a player profile is loaded.
@@ -1091,12 +776,6 @@ namespace TerrariaInventoryEditor.TerrariaLib
                     PlayerSaved?.Invoke();
                 }
             }
-        }
-
-        [NotifyPropertyChangedInvocator]
-        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
