@@ -1,10 +1,7 @@
-﻿using System.ComponentModel;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
-using TerrariaInventoryEditor.Annotations;
 using TerrariaInventoryEditor.Framework;
 
 namespace TerrariaInventoryEditor.TerrariaLib
@@ -15,12 +12,23 @@ namespace TerrariaInventoryEditor.TerrariaLib
     public sealed class Buff : DataSourceObject
     {
         /// <summary>
+        ///     Initializes a new instance of the <see cref="Buff" /> class.
+        /// </summary>
+        public Buff()
+        {
+            Id = 0;
+            Name = "None";
+            Description = "Not available";
+            Time = 0;
+        }
+
+        /// <summary>
         ///     Gets or sets the buff's description.
         /// </summary>
         [JsonProperty("description")]
         public string Description
         {
-            get => !string.IsNullOrWhiteSpace(Get<string>()) ? Get<string>() : "N/A";
+            get => Get<string>();
             set => Set(value);
         }
 
@@ -43,7 +51,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// </summary>
         public Bitmap Image
         {
-            get => Get<Bitmap>() ?? new Bitmap("Data\\BuffTextures\\Buff_0.png");
+            get => Get<Bitmap>();
             private set => Set(value);
         }
 
@@ -53,12 +61,12 @@ namespace TerrariaInventoryEditor.TerrariaLib
         [JsonProperty("name")]
         public string Name
         {
-            get => !string.IsNullOrWhiteSpace(Get<string>()) ? Get<string>() : "Inactive";
+            get => Get<string>();
             set => Set(value);
         }
 
         /// <summary>
-        ///     Gets or sets the buff's duration time.
+        ///     Gets or sets the buff's duration.
         /// </summary>
         [JsonProperty("time")]
         public int Time

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -9,15 +11,26 @@ namespace TerrariaInventoryEditor
     public partial class MainForm : Form
     {
         private readonly Random _random = new Random();
+        private readonly List<Button> _inventoryItems = new List<Button>();
 
         public MainForm()
         {
             InitializeComponent();
 
             playerBindingSource.DataSource = Terraria.Instance.Player;
-            playerPictureBox.Draw();
-
             buffSearchBox.DataSource = Terraria.Instance.Buffs;
+
+            for (var i = 0; i < 50; ++i)
+            {
+                if (!(Controls.Find($"inventoryItem{i}", true).SingleOrDefault() is Button item))
+                {
+                    continue;
+                }
+
+                _inventoryItems.Add(item);
+            }
+
+            playerPictureBox.Draw();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,8 +82,10 @@ namespace TerrariaInventoryEditor
                 }
 
                 Terraria.Instance.Player.Load(openFileDialog.FileName);
-                playerBindingSource.DataSource = Terraria.Instance.Player;
+                //playerBindingSource.DataSource = Terraria.Instance.Player;
+
                 playerPictureBox.Draw();
+                DrawInventory();
             }
         }
 
@@ -165,8 +180,8 @@ namespace TerrariaInventoryEditor
 
         private void applyBuffBtn_Click(object sender, EventArgs e)
         {
-            Terraria.Instance.Player.Buffs[buffGridView.CurrentCell.RowIndex] = (Buff) buffSearchBox.SelectedItem;
-            buffGridView.Refresh();
+            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex] = (Buff) buffSearchBox.SelectedItem;
+            buffDisplayGrid.Refresh();
         }
 
         private void buffFilterTxtBox_TextChanged(object sender, EventArgs e)
@@ -185,14 +200,14 @@ namespace TerrariaInventoryEditor
 
         private void deleteBuffBtn_Click(object sender, EventArgs e)
         {
-            Terraria.Instance.Player.Buffs[buffGridView.CurrentCell.RowIndex] = new Buff();
-            buffGridView.Refresh();
+            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex] = new Buff();
+            buffDisplayGrid.Refresh();
         }
 
         private void maxDurationBtn_Click(object sender, EventArgs e)
         {
-            Terraria.Instance.Player.Buffs[buffGridView.CurrentCell.RowIndex].Time = int.MaxValue;
-            buffGridView.Refresh();
+            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].Time = int.MaxValue;
+            buffDisplayGrid.Refresh();
         }
 
         private void maxAllDurationsBtn_Click(object sender, EventArgs e)
@@ -202,7 +217,27 @@ namespace TerrariaInventoryEditor
                 buff.Time = int.MaxValue;
             }
 
-            buffGridView.Refresh();
+            buffDisplayGrid.Refresh();
+        }
+
+        #endregion
+
+        #region Miscellaneous Methods
+
+        private void DrawInventory()
+        {
+            var player = Terraria.Instance.Player;
+            for (var i = 0; i < 50; ++i)
+            {
+                var item = _inventoryItems[i];
+                if (player.Inventory[i].NetId == 0)
+                {
+                    continue;
+                }
+
+                item.Image = player.Inventory[i].Image;
+                item.Text = player.Inventory[i].StackSize > 1 ? player.Inventory[i].StackSize.ToString() : string.Empty;
+            }
         }
 
         #endregion

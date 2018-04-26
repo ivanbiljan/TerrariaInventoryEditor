@@ -97,12 +97,63 @@
             this.applyBuffBtn = new System.Windows.Forms.Button();
             this.buffSearchBox = new System.Windows.Forms.ListBox();
             this.activeBuffsGroupBox = new System.Windows.Forms.GroupBox();
-            this.buffGridView = new System.Windows.Forms.DataGridView();
-            this.buffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buffDisplayGrid = new System.Windows.Forms.DataGridView();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.inventoryItem49 = new System.Windows.Forms.Button();
+            this.inventoryItem48 = new System.Windows.Forms.Button();
+            this.inventoryItem47 = new System.Windows.Forms.Button();
+            this.inventoryItem46 = new System.Windows.Forms.Button();
+            this.inventoryItem45 = new System.Windows.Forms.Button();
+            this.inventoryItem44 = new System.Windows.Forms.Button();
+            this.inventoryItem43 = new System.Windows.Forms.Button();
+            this.inventoryItem42 = new System.Windows.Forms.Button();
+            this.inventoryItem41 = new System.Windows.Forms.Button();
+            this.inventoryItem40 = new System.Windows.Forms.Button();
+            this.inventoryItem39 = new System.Windows.Forms.Button();
+            this.inventoryItem38 = new System.Windows.Forms.Button();
+            this.inventoryItem37 = new System.Windows.Forms.Button();
+            this.inventoryItem36 = new System.Windows.Forms.Button();
+            this.inventoryItem35 = new System.Windows.Forms.Button();
+            this.inventoryItem34 = new System.Windows.Forms.Button();
+            this.inventoryItem33 = new System.Windows.Forms.Button();
+            this.inventoryItem32 = new System.Windows.Forms.Button();
+            this.inventoryItem31 = new System.Windows.Forms.Button();
+            this.inventoryItem30 = new System.Windows.Forms.Button();
+            this.inventoryItem29 = new System.Windows.Forms.Button();
+            this.inventoryItem28 = new System.Windows.Forms.Button();
+            this.inventoryItem27 = new System.Windows.Forms.Button();
+            this.inventoryItem26 = new System.Windows.Forms.Button();
+            this.inventoryItem25 = new System.Windows.Forms.Button();
+            this.inventoryItem24 = new System.Windows.Forms.Button();
+            this.inventoryItem23 = new System.Windows.Forms.Button();
+            this.inventoryItem22 = new System.Windows.Forms.Button();
+            this.inventoryItem21 = new System.Windows.Forms.Button();
+            this.inventoryItem20 = new System.Windows.Forms.Button();
+            this.inventoryItem19 = new System.Windows.Forms.Button();
+            this.inventoryItem18 = new System.Windows.Forms.Button();
+            this.inventoryItem17 = new System.Windows.Forms.Button();
+            this.inventoryItem16 = new System.Windows.Forms.Button();
+            this.inventoryItem15 = new System.Windows.Forms.Button();
+            this.inventoryItem14 = new System.Windows.Forms.Button();
+            this.inventoryItem13 = new System.Windows.Forms.Button();
+            this.inventoryItem12 = new System.Windows.Forms.Button();
+            this.inventoryItem11 = new System.Windows.Forms.Button();
+            this.inventoryItem10 = new System.Windows.Forms.Button();
+            this.inventoryItem9 = new System.Windows.Forms.Button();
+            this.inventoryItem8 = new System.Windows.Forms.Button();
+            this.inventoryItem7 = new System.Windows.Forms.Button();
+            this.inventoryItem6 = new System.Windows.Forms.Button();
+            this.inventoryItem5 = new System.Windows.Forms.Button();
+            this.inventoryItem4 = new System.Windows.Forms.Button();
+            this.inventoryItem3 = new System.Windows.Forms.Button();
+            this.inventoryItem2 = new System.Windows.Forms.Button();
+            this.inventoryItem1 = new System.Windows.Forms.Button();
+            this.inventoryItem0 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -123,8 +174,9 @@
             this.tabPage3.SuspendLayout();
             this.buffControlsGroupBox.SuspendLayout();
             this.activeBuffsGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buffGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buffDisplayGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buffsBindingSource)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -134,7 +186,7 @@
             this.toolsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(684, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(839, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -215,10 +267,11 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(13, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(659, 377);
+            this.tabControl1.Size = new System.Drawing.Size(826, 465);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -228,7 +281,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(651, 351);
+            this.tabPage1.Size = new System.Drawing.Size(818, 439);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Stats";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -541,7 +594,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(651, 351);
+            this.tabPage2.Size = new System.Drawing.Size(818, 439);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Appearance";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -758,7 +811,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(651, 351);
+            this.tabPage3.Size = new System.Drawing.Size(818, 439);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Buffs";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -771,9 +824,9 @@
             this.buffControlsGroupBox.Controls.Add(this.deleteBuffBtn);
             this.buffControlsGroupBox.Controls.Add(this.applyBuffBtn);
             this.buffControlsGroupBox.Controls.Add(this.buffSearchBox);
-            this.buffControlsGroupBox.Location = new System.Drawing.Point(455, 7);
+            this.buffControlsGroupBox.Location = new System.Drawing.Point(569, 7);
             this.buffControlsGroupBox.Name = "buffControlsGroupBox";
-            this.buffControlsGroupBox.Size = new System.Drawing.Size(190, 338);
+            this.buffControlsGroupBox.Size = new System.Drawing.Size(190, 420);
             this.buffControlsGroupBox.TabIndex = 1;
             this.buffControlsGroupBox.TabStop = false;
             this.buffControlsGroupBox.Text = "Controls";
@@ -798,7 +851,7 @@
             // 
             // maxDurationBtn
             // 
-            this.maxDurationBtn.Location = new System.Drawing.Point(6, 309);
+            this.maxDurationBtn.Location = new System.Drawing.Point(0, 309);
             this.maxDurationBtn.Name = "maxDurationBtn";
             this.maxDurationBtn.Size = new System.Drawing.Size(80, 23);
             this.maxDurationBtn.TabIndex = 3;
@@ -818,7 +871,7 @@
             // 
             // applyBuffBtn
             // 
-            this.applyBuffBtn.Location = new System.Drawing.Point(6, 280);
+            this.applyBuffBtn.Location = new System.Drawing.Point(0, 280);
             this.applyBuffBtn.Name = "applyBuffBtn";
             this.applyBuffBtn.Size = new System.Drawing.Size(80, 23);
             this.applyBuffBtn.TabIndex = 1;
@@ -836,38 +889,34 @@
             // 
             // activeBuffsGroupBox
             // 
-            this.activeBuffsGroupBox.Controls.Add(this.buffGridView);
+            this.activeBuffsGroupBox.Controls.Add(this.buffDisplayGrid);
             this.activeBuffsGroupBox.Location = new System.Drawing.Point(7, 7);
             this.activeBuffsGroupBox.Name = "activeBuffsGroupBox";
-            this.activeBuffsGroupBox.Size = new System.Drawing.Size(442, 338);
+            this.activeBuffsGroupBox.Size = new System.Drawing.Size(556, 420);
             this.activeBuffsGroupBox.TabIndex = 0;
             this.activeBuffsGroupBox.TabStop = false;
             this.activeBuffsGroupBox.Text = "Active Buffs";
             // 
-            // buffGridView
+            // buffDisplayGrid
             // 
-            this.buffGridView.AllowUserToAddRows = false;
-            this.buffGridView.AllowUserToDeleteRows = false;
-            this.buffGridView.AutoGenerateColumns = false;
-            this.buffGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.buffGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.buffDisplayGrid.AllowUserToAddRows = false;
+            this.buffDisplayGrid.AllowUserToDeleteRows = false;
+            this.buffDisplayGrid.AutoGenerateColumns = false;
+            this.buffDisplayGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.buffDisplayGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Image,
             this.nameDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.timeDataGridViewTextBoxColumn});
-            this.buffGridView.DataSource = this.buffsBindingSource;
-            this.buffGridView.Location = new System.Drawing.Point(7, 20);
-            this.buffGridView.Name = "buffGridView";
-            this.buffGridView.RowHeadersVisible = false;
-            this.buffGridView.RowTemplate.Height = 30;
-            this.buffGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.buffGridView.Size = new System.Drawing.Size(429, 312);
-            this.buffGridView.TabIndex = 0;
-            // 
-            // buffsBindingSource
-            // 
-            this.buffsBindingSource.DataMember = "Buffs";
-            this.buffsBindingSource.DataSource = this.playerBindingSource;
+            this.buffDisplayGrid.DataSource = this.buffsBindingSource;
+            this.buffDisplayGrid.Location = new System.Drawing.Point(7, 20);
+            this.buffDisplayGrid.Name = "buffDisplayGrid";
+            this.buffDisplayGrid.ReadOnly = true;
+            this.buffDisplayGrid.RowHeadersVisible = false;
+            this.buffDisplayGrid.RowTemplate.Height = 30;
+            this.buffDisplayGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.buffDisplayGrid.Size = new System.Drawing.Size(537, 371);
+            this.buffDisplayGrid.TabIndex = 0;
             // 
             // Image
             // 
@@ -883,7 +932,7 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 125;
+            this.nameDataGridViewTextBoxColumn.Width = 150;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
@@ -891,20 +940,686 @@
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descriptionDataGridViewTextBoxColumn.Width = 150;
+            this.descriptionDataGridViewTextBoxColumn.Width = 200;
             // 
             // timeDataGridViewTextBoxColumn
             // 
             this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
             this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
             this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
-            this.timeDataGridViewTextBoxColumn.Width = 117;
+            this.timeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.timeDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // buffsBindingSource
+            // 
+            this.buffsBindingSource.DataMember = "Buffs";
+            this.buffsBindingSource.DataSource = this.playerBindingSource;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.inventoryItem49);
+            this.tabPage4.Controls.Add(this.inventoryItem48);
+            this.tabPage4.Controls.Add(this.inventoryItem47);
+            this.tabPage4.Controls.Add(this.inventoryItem46);
+            this.tabPage4.Controls.Add(this.inventoryItem45);
+            this.tabPage4.Controls.Add(this.inventoryItem44);
+            this.tabPage4.Controls.Add(this.inventoryItem43);
+            this.tabPage4.Controls.Add(this.inventoryItem42);
+            this.tabPage4.Controls.Add(this.inventoryItem41);
+            this.tabPage4.Controls.Add(this.inventoryItem40);
+            this.tabPage4.Controls.Add(this.inventoryItem39);
+            this.tabPage4.Controls.Add(this.inventoryItem38);
+            this.tabPage4.Controls.Add(this.inventoryItem37);
+            this.tabPage4.Controls.Add(this.inventoryItem36);
+            this.tabPage4.Controls.Add(this.inventoryItem35);
+            this.tabPage4.Controls.Add(this.inventoryItem34);
+            this.tabPage4.Controls.Add(this.inventoryItem33);
+            this.tabPage4.Controls.Add(this.inventoryItem32);
+            this.tabPage4.Controls.Add(this.inventoryItem31);
+            this.tabPage4.Controls.Add(this.inventoryItem30);
+            this.tabPage4.Controls.Add(this.inventoryItem29);
+            this.tabPage4.Controls.Add(this.inventoryItem28);
+            this.tabPage4.Controls.Add(this.inventoryItem27);
+            this.tabPage4.Controls.Add(this.inventoryItem26);
+            this.tabPage4.Controls.Add(this.inventoryItem25);
+            this.tabPage4.Controls.Add(this.inventoryItem24);
+            this.tabPage4.Controls.Add(this.inventoryItem23);
+            this.tabPage4.Controls.Add(this.inventoryItem22);
+            this.tabPage4.Controls.Add(this.inventoryItem21);
+            this.tabPage4.Controls.Add(this.inventoryItem20);
+            this.tabPage4.Controls.Add(this.inventoryItem19);
+            this.tabPage4.Controls.Add(this.inventoryItem18);
+            this.tabPage4.Controls.Add(this.inventoryItem17);
+            this.tabPage4.Controls.Add(this.inventoryItem16);
+            this.tabPage4.Controls.Add(this.inventoryItem15);
+            this.tabPage4.Controls.Add(this.inventoryItem14);
+            this.tabPage4.Controls.Add(this.inventoryItem13);
+            this.tabPage4.Controls.Add(this.inventoryItem12);
+            this.tabPage4.Controls.Add(this.inventoryItem11);
+            this.tabPage4.Controls.Add(this.inventoryItem10);
+            this.tabPage4.Controls.Add(this.inventoryItem9);
+            this.tabPage4.Controls.Add(this.inventoryItem8);
+            this.tabPage4.Controls.Add(this.inventoryItem7);
+            this.tabPage4.Controls.Add(this.inventoryItem6);
+            this.tabPage4.Controls.Add(this.inventoryItem5);
+            this.tabPage4.Controls.Add(this.inventoryItem4);
+            this.tabPage4.Controls.Add(this.inventoryItem3);
+            this.tabPage4.Controls.Add(this.inventoryItem2);
+            this.tabPage4.Controls.Add(this.inventoryItem1);
+            this.tabPage4.Controls.Add(this.inventoryItem0);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(818, 439);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Inventory";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // inventoryItem49
+            // 
+            this.inventoryItem49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem49.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem49.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem49.Location = new System.Drawing.Point(484, 218);
+            this.inventoryItem49.Name = "inventoryItem49";
+            this.inventoryItem49.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem49.TabIndex = 49;
+            this.inventoryItem49.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem49.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem48
+            // 
+            this.inventoryItem48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem48.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem48.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem48.Location = new System.Drawing.Point(431, 219);
+            this.inventoryItem48.Name = "inventoryItem48";
+            this.inventoryItem48.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem48.TabIndex = 48;
+            this.inventoryItem48.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem48.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem47
+            // 
+            this.inventoryItem47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem47.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem47.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem47.Location = new System.Drawing.Point(378, 219);
+            this.inventoryItem47.Name = "inventoryItem47";
+            this.inventoryItem47.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem47.TabIndex = 47;
+            this.inventoryItem47.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem47.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem46
+            // 
+            this.inventoryItem46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem46.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem46.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem46.Location = new System.Drawing.Point(325, 219);
+            this.inventoryItem46.Name = "inventoryItem46";
+            this.inventoryItem46.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem46.TabIndex = 46;
+            this.inventoryItem46.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem46.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem45
+            // 
+            this.inventoryItem45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem45.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem45.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem45.Location = new System.Drawing.Point(272, 219);
+            this.inventoryItem45.Name = "inventoryItem45";
+            this.inventoryItem45.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem45.TabIndex = 45;
+            this.inventoryItem45.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem45.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem44
+            // 
+            this.inventoryItem44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem44.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem44.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem44.Location = new System.Drawing.Point(219, 219);
+            this.inventoryItem44.Name = "inventoryItem44";
+            this.inventoryItem44.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem44.TabIndex = 44;
+            this.inventoryItem44.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem44.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem43
+            // 
+            this.inventoryItem43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem43.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem43.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem43.Location = new System.Drawing.Point(166, 219);
+            this.inventoryItem43.Name = "inventoryItem43";
+            this.inventoryItem43.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem43.TabIndex = 43;
+            this.inventoryItem43.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem43.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem42
+            // 
+            this.inventoryItem42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem42.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem42.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem42.Location = new System.Drawing.Point(113, 219);
+            this.inventoryItem42.Name = "inventoryItem42";
+            this.inventoryItem42.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem42.TabIndex = 42;
+            this.inventoryItem42.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem42.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem41
+            // 
+            this.inventoryItem41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem41.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem41.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem41.Location = new System.Drawing.Point(60, 219);
+            this.inventoryItem41.Name = "inventoryItem41";
+            this.inventoryItem41.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem41.TabIndex = 41;
+            this.inventoryItem41.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem41.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem40
+            // 
+            this.inventoryItem40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem40.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem40.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem40.Location = new System.Drawing.Point(7, 219);
+            this.inventoryItem40.Name = "inventoryItem40";
+            this.inventoryItem40.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem40.TabIndex = 40;
+            this.inventoryItem40.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem40.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem39
+            // 
+            this.inventoryItem39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem39.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem39.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem39.Location = new System.Drawing.Point(484, 165);
+            this.inventoryItem39.Name = "inventoryItem39";
+            this.inventoryItem39.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem39.TabIndex = 39;
+            this.inventoryItem39.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem39.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem38
+            // 
+            this.inventoryItem38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem38.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem38.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem38.Location = new System.Drawing.Point(431, 166);
+            this.inventoryItem38.Name = "inventoryItem38";
+            this.inventoryItem38.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem38.TabIndex = 38;
+            this.inventoryItem38.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem38.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem37
+            // 
+            this.inventoryItem37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem37.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem37.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem37.Location = new System.Drawing.Point(378, 166);
+            this.inventoryItem37.Name = "inventoryItem37";
+            this.inventoryItem37.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem37.TabIndex = 37;
+            this.inventoryItem37.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem37.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem36
+            // 
+            this.inventoryItem36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem36.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem36.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem36.Location = new System.Drawing.Point(325, 166);
+            this.inventoryItem36.Name = "inventoryItem36";
+            this.inventoryItem36.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem36.TabIndex = 36;
+            this.inventoryItem36.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem36.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem35
+            // 
+            this.inventoryItem35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem35.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem35.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem35.Location = new System.Drawing.Point(272, 166);
+            this.inventoryItem35.Name = "inventoryItem35";
+            this.inventoryItem35.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem35.TabIndex = 35;
+            this.inventoryItem35.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem35.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem34
+            // 
+            this.inventoryItem34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem34.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem34.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem34.Location = new System.Drawing.Point(219, 166);
+            this.inventoryItem34.Name = "inventoryItem34";
+            this.inventoryItem34.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem34.TabIndex = 34;
+            this.inventoryItem34.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem34.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem33
+            // 
+            this.inventoryItem33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem33.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem33.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem33.Location = new System.Drawing.Point(166, 166);
+            this.inventoryItem33.Name = "inventoryItem33";
+            this.inventoryItem33.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem33.TabIndex = 33;
+            this.inventoryItem33.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem33.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem32
+            // 
+            this.inventoryItem32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem32.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem32.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem32.Location = new System.Drawing.Point(113, 166);
+            this.inventoryItem32.Name = "inventoryItem32";
+            this.inventoryItem32.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem32.TabIndex = 32;
+            this.inventoryItem32.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem32.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem31
+            // 
+            this.inventoryItem31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem31.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem31.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem31.Location = new System.Drawing.Point(60, 166);
+            this.inventoryItem31.Name = "inventoryItem31";
+            this.inventoryItem31.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem31.TabIndex = 31;
+            this.inventoryItem31.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem31.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem30
+            // 
+            this.inventoryItem30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem30.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem30.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem30.Location = new System.Drawing.Point(7, 166);
+            this.inventoryItem30.Name = "inventoryItem30";
+            this.inventoryItem30.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem30.TabIndex = 30;
+            this.inventoryItem30.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem30.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem29
+            // 
+            this.inventoryItem29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem29.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem29.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem29.Location = new System.Drawing.Point(484, 112);
+            this.inventoryItem29.Name = "inventoryItem29";
+            this.inventoryItem29.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem29.TabIndex = 29;
+            this.inventoryItem29.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem29.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem28
+            // 
+            this.inventoryItem28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem28.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem28.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem28.Location = new System.Drawing.Point(431, 113);
+            this.inventoryItem28.Name = "inventoryItem28";
+            this.inventoryItem28.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem28.TabIndex = 28;
+            this.inventoryItem28.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem28.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem27
+            // 
+            this.inventoryItem27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem27.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem27.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem27.Location = new System.Drawing.Point(378, 113);
+            this.inventoryItem27.Name = "inventoryItem27";
+            this.inventoryItem27.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem27.TabIndex = 27;
+            this.inventoryItem27.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem27.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem26
+            // 
+            this.inventoryItem26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem26.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem26.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem26.Location = new System.Drawing.Point(325, 113);
+            this.inventoryItem26.Name = "inventoryItem26";
+            this.inventoryItem26.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem26.TabIndex = 26;
+            this.inventoryItem26.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem26.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem25
+            // 
+            this.inventoryItem25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem25.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem25.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem25.Location = new System.Drawing.Point(272, 113);
+            this.inventoryItem25.Name = "inventoryItem25";
+            this.inventoryItem25.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem25.TabIndex = 25;
+            this.inventoryItem25.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem25.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem24
+            // 
+            this.inventoryItem24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem24.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem24.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem24.Location = new System.Drawing.Point(219, 113);
+            this.inventoryItem24.Name = "inventoryItem24";
+            this.inventoryItem24.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem24.TabIndex = 24;
+            this.inventoryItem24.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem24.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem23
+            // 
+            this.inventoryItem23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem23.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem23.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem23.Location = new System.Drawing.Point(166, 113);
+            this.inventoryItem23.Name = "inventoryItem23";
+            this.inventoryItem23.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem23.TabIndex = 23;
+            this.inventoryItem23.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem23.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem22
+            // 
+            this.inventoryItem22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem22.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem22.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem22.Location = new System.Drawing.Point(113, 113);
+            this.inventoryItem22.Name = "inventoryItem22";
+            this.inventoryItem22.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem22.TabIndex = 22;
+            this.inventoryItem22.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem22.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem21
+            // 
+            this.inventoryItem21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem21.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem21.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem21.Location = new System.Drawing.Point(60, 113);
+            this.inventoryItem21.Name = "inventoryItem21";
+            this.inventoryItem21.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem21.TabIndex = 21;
+            this.inventoryItem21.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem21.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem20
+            // 
+            this.inventoryItem20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem20.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem20.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem20.Location = new System.Drawing.Point(7, 113);
+            this.inventoryItem20.Name = "inventoryItem20";
+            this.inventoryItem20.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem20.TabIndex = 20;
+            this.inventoryItem20.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem20.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem19
+            // 
+            this.inventoryItem19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem19.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem19.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem19.Location = new System.Drawing.Point(484, 59);
+            this.inventoryItem19.Name = "inventoryItem19";
+            this.inventoryItem19.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem19.TabIndex = 19;
+            this.inventoryItem19.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem19.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem18
+            // 
+            this.inventoryItem18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem18.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem18.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem18.Location = new System.Drawing.Point(431, 60);
+            this.inventoryItem18.Name = "inventoryItem18";
+            this.inventoryItem18.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem18.TabIndex = 18;
+            this.inventoryItem18.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem18.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem17
+            // 
+            this.inventoryItem17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem17.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem17.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem17.Location = new System.Drawing.Point(378, 60);
+            this.inventoryItem17.Name = "inventoryItem17";
+            this.inventoryItem17.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem17.TabIndex = 17;
+            this.inventoryItem17.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem17.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem16
+            // 
+            this.inventoryItem16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem16.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem16.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem16.Location = new System.Drawing.Point(325, 60);
+            this.inventoryItem16.Name = "inventoryItem16";
+            this.inventoryItem16.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem16.TabIndex = 16;
+            this.inventoryItem16.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem16.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem15
+            // 
+            this.inventoryItem15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem15.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem15.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem15.Location = new System.Drawing.Point(272, 60);
+            this.inventoryItem15.Name = "inventoryItem15";
+            this.inventoryItem15.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem15.TabIndex = 15;
+            this.inventoryItem15.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem15.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem14
+            // 
+            this.inventoryItem14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem14.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem14.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem14.Location = new System.Drawing.Point(219, 60);
+            this.inventoryItem14.Name = "inventoryItem14";
+            this.inventoryItem14.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem14.TabIndex = 14;
+            this.inventoryItem14.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem14.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem13
+            // 
+            this.inventoryItem13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem13.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem13.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem13.Location = new System.Drawing.Point(166, 60);
+            this.inventoryItem13.Name = "inventoryItem13";
+            this.inventoryItem13.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem13.TabIndex = 13;
+            this.inventoryItem13.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem13.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem12
+            // 
+            this.inventoryItem12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem12.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem12.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem12.Location = new System.Drawing.Point(113, 60);
+            this.inventoryItem12.Name = "inventoryItem12";
+            this.inventoryItem12.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem12.TabIndex = 12;
+            this.inventoryItem12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem12.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem11
+            // 
+            this.inventoryItem11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem11.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem11.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem11.Location = new System.Drawing.Point(60, 60);
+            this.inventoryItem11.Name = "inventoryItem11";
+            this.inventoryItem11.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem11.TabIndex = 11;
+            this.inventoryItem11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem11.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem10
+            // 
+            this.inventoryItem10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem10.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem10.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem10.Location = new System.Drawing.Point(7, 60);
+            this.inventoryItem10.Name = "inventoryItem10";
+            this.inventoryItem10.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem10.TabIndex = 10;
+            this.inventoryItem10.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem10.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem9
+            // 
+            this.inventoryItem9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem9.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem9.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem9.Location = new System.Drawing.Point(484, 6);
+            this.inventoryItem9.Name = "inventoryItem9";
+            this.inventoryItem9.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem9.TabIndex = 9;
+            this.inventoryItem9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem9.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem8
+            // 
+            this.inventoryItem8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem8.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem8.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem8.Location = new System.Drawing.Point(431, 7);
+            this.inventoryItem8.Name = "inventoryItem8";
+            this.inventoryItem8.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem8.TabIndex = 8;
+            this.inventoryItem8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem8.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem7
+            // 
+            this.inventoryItem7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem7.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem7.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem7.Location = new System.Drawing.Point(378, 7);
+            this.inventoryItem7.Name = "inventoryItem7";
+            this.inventoryItem7.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem7.TabIndex = 7;
+            this.inventoryItem7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem7.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem6
+            // 
+            this.inventoryItem6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem6.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem6.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem6.Location = new System.Drawing.Point(325, 7);
+            this.inventoryItem6.Name = "inventoryItem6";
+            this.inventoryItem6.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem6.TabIndex = 6;
+            this.inventoryItem6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem6.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem5
+            // 
+            this.inventoryItem5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem5.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem5.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem5.Location = new System.Drawing.Point(272, 7);
+            this.inventoryItem5.Name = "inventoryItem5";
+            this.inventoryItem5.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem5.TabIndex = 5;
+            this.inventoryItem5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem5.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem4
+            // 
+            this.inventoryItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem4.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem4.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem4.Location = new System.Drawing.Point(219, 7);
+            this.inventoryItem4.Name = "inventoryItem4";
+            this.inventoryItem4.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem4.TabIndex = 4;
+            this.inventoryItem4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem4.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem3
+            // 
+            this.inventoryItem3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem3.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem3.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem3.Location = new System.Drawing.Point(166, 7);
+            this.inventoryItem3.Name = "inventoryItem3";
+            this.inventoryItem3.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem3.TabIndex = 3;
+            this.inventoryItem3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem3.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem2
+            // 
+            this.inventoryItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem2.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem2.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem2.Location = new System.Drawing.Point(113, 7);
+            this.inventoryItem2.Name = "inventoryItem2";
+            this.inventoryItem2.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem2.TabIndex = 2;
+            this.inventoryItem2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem2.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem1
+            // 
+            this.inventoryItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem1.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem1.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem1.Location = new System.Drawing.Point(60, 7);
+            this.inventoryItem1.Name = "inventoryItem1";
+            this.inventoryItem1.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem1.TabIndex = 1;
+            this.inventoryItem1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem1.UseVisualStyleBackColor = false;
+            // 
+            // inventoryItem0
+            // 
+            this.inventoryItem0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.inventoryItem0.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryItem0.ForeColor = System.Drawing.Color.White;
+            this.inventoryItem0.Location = new System.Drawing.Point(7, 7);
+            this.inventoryItem0.Name = "inventoryItem0";
+            this.inventoryItem0.Size = new System.Drawing.Size(47, 47);
+            this.inventoryItem0.TabIndex = 0;
+            this.inventoryItem0.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.inventoryItem0.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 417);
+            this.ClientSize = new System.Drawing.Size(839, 508);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -936,8 +1651,9 @@
             this.buffControlsGroupBox.ResumeLayout(false);
             this.buffControlsGroupBox.PerformLayout();
             this.activeBuffsGroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.buffGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buffDisplayGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buffsBindingSource)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1005,7 +1721,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.GroupBox activeBuffsGroupBox;
         private Framework.PlayerPictureBox playerPictureBox;
-        private System.Windows.Forms.DataGridView buffGridView;
+        private System.Windows.Forms.DataGridView buffDisplayGrid;
         private System.Windows.Forms.BindingSource buffsBindingSource;
         private System.Windows.Forms.GroupBox buffControlsGroupBox;
         private System.Windows.Forms.Button maxAllDurationsBtn;
@@ -1014,10 +1730,61 @@
         private System.Windows.Forms.Button applyBuffBtn;
         private System.Windows.Forms.ListBox buffSearchBox;
         private System.Windows.Forms.TextBox buffFilterTxtBox;
+        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridViewImageColumn Image;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button inventoryItem49;
+        private System.Windows.Forms.Button inventoryItem48;
+        private System.Windows.Forms.Button inventoryItem47;
+        private System.Windows.Forms.Button inventoryItem46;
+        private System.Windows.Forms.Button inventoryItem45;
+        private System.Windows.Forms.Button inventoryItem44;
+        private System.Windows.Forms.Button inventoryItem43;
+        private System.Windows.Forms.Button inventoryItem42;
+        private System.Windows.Forms.Button inventoryItem41;
+        private System.Windows.Forms.Button inventoryItem40;
+        private System.Windows.Forms.Button inventoryItem39;
+        private System.Windows.Forms.Button inventoryItem38;
+        private System.Windows.Forms.Button inventoryItem37;
+        private System.Windows.Forms.Button inventoryItem36;
+        private System.Windows.Forms.Button inventoryItem35;
+        private System.Windows.Forms.Button inventoryItem34;
+        private System.Windows.Forms.Button inventoryItem33;
+        private System.Windows.Forms.Button inventoryItem32;
+        private System.Windows.Forms.Button inventoryItem31;
+        private System.Windows.Forms.Button inventoryItem30;
+        private System.Windows.Forms.Button inventoryItem29;
+        private System.Windows.Forms.Button inventoryItem28;
+        private System.Windows.Forms.Button inventoryItem27;
+        private System.Windows.Forms.Button inventoryItem26;
+        private System.Windows.Forms.Button inventoryItem25;
+        private System.Windows.Forms.Button inventoryItem24;
+        private System.Windows.Forms.Button inventoryItem23;
+        private System.Windows.Forms.Button inventoryItem22;
+        private System.Windows.Forms.Button inventoryItem21;
+        private System.Windows.Forms.Button inventoryItem20;
+        private System.Windows.Forms.Button inventoryItem19;
+        private System.Windows.Forms.Button inventoryItem18;
+        private System.Windows.Forms.Button inventoryItem17;
+        private System.Windows.Forms.Button inventoryItem16;
+        private System.Windows.Forms.Button inventoryItem15;
+        private System.Windows.Forms.Button inventoryItem14;
+        private System.Windows.Forms.Button inventoryItem13;
+        private System.Windows.Forms.Button inventoryItem12;
+        private System.Windows.Forms.Button inventoryItem11;
+        private System.Windows.Forms.Button inventoryItem10;
+        private System.Windows.Forms.Button inventoryItem9;
+        private System.Windows.Forms.Button inventoryItem8;
+        private System.Windows.Forms.Button inventoryItem7;
+        private System.Windows.Forms.Button inventoryItem6;
+        private System.Windows.Forms.Button inventoryItem5;
+        private System.Windows.Forms.Button inventoryItem4;
+        private System.Windows.Forms.Button inventoryItem3;
+        private System.Windows.Forms.Button inventoryItem2;
+        private System.Windows.Forms.Button inventoryItem1;
+        private System.Windows.Forms.Button inventoryItem0;
     }
 }
 
