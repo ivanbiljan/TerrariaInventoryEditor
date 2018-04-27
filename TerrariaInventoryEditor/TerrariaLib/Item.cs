@@ -439,5 +439,14 @@ namespace TerrariaInventoryEditor.TerrariaLib
             UseTime = item.UseTime;
             Width = item.Width;
         }
+
+        /// <summary>
+        /// Returns the string representation of this item.
+        /// </summary>
+        /// <returns>The string representation of this item.</returns>
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
