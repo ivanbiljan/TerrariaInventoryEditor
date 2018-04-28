@@ -35,6 +35,7 @@ namespace TerrariaInventoryEditor
             }
 
             playerPictureBox.Draw();
+            DrawInventory();
         }
 
         #region Toolstrip Items
@@ -47,6 +48,10 @@ namespace TerrariaInventoryEditor
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             playerBindingSource.DataSource = Terraria.Instance.Player = new Player();
+
+            itemPrefixComboBox.SelectedIndex = 0;
+            stackSizeUpDown.Value = 1;
+            DrawInventory();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -212,7 +217,7 @@ namespace TerrariaInventoryEditor
             }
 
             var player = Terraria.Instance.Player;
-            player.Inventory[(int)_selectedItem.Tag] = new Item();
+            player.Inventory[(int) _selectedItem.Tag] = new Item();
 
             _selectedItem.Image = new Bitmap("Data\\ItemTextures\\Item_0.png");
             _selectedItem.Text = string.Empty;
@@ -220,15 +225,20 @@ namespace TerrariaInventoryEditor
 
         private void inventoryItem_GotFocus(object sender, EventArgs e)
         {
+            var player = Terraria.Instance.Player;
             var button = (Button)sender;
-            button.BackColor = Color.DeepSkyBlue;
 
+            button.BackColor = Color.DeepSkyBlue;
             foreach (var inventoryButton in _inventoryItems.Where(b => b != button))
             {
                 inventoryButton.BackColor = Color.FromArgb(90, 90, 180);
             }
 
             _selectedItem = button;
+            itemPrefixComboBox.SelectedItem = player.Inventory[(int) button.Tag].Prefix;
+            stackSizeUpDown.Value = player.Inventory[(int) button.Tag].StackSize > 0
+                ? player.Inventory[(int) button.Tag].StackSize
+                : 1;
         }
 
         private void itemFilterTxtBox_TextChanged(object sender, EventArgs e)
@@ -253,10 +263,10 @@ namespace TerrariaInventoryEditor
                 return;
             }
 
-            var selectedItem = (Item)itemSearchBox.SelectedItem;
-            (player.Inventory[(int)_selectedItem.Tag] = selectedItem).StackSize = selectedItem.MaxStack;
+            var selectedItem = (Item) itemSearchBox.SelectedItem;
+            (player.Inventory[(int) _selectedItem.Tag] = selectedItem).StackSize = selectedItem.MaxStack;
             _selectedItem.Image = selectedItem.Image;
-            _selectedItem.Text = selectedItem.StackSize > 1 ? selectedItem.StackSize.ToString() : string.Empty;
+            _selectedItem.Text = selectedItem.StackSize.ToString();
         }
 
         private void maxAllStacksBtn_Click(object sender, EventArgs e)
@@ -278,8 +288,36 @@ namespace TerrariaInventoryEditor
             }
 
             var player = Terraria.Instance.Player;
+            if (player.Inventory[(int) _selectedItem.Tag].NetId == 0)
+            {
+                return;
+            }
+
             player.Inventory[(int)_selectedItem.Tag].StackSize = player.Inventory[(int)_selectedItem.Tag].MaxStack;
             _selectedItem.Text = player.Inventory[(int)_selectedItem.Tag].StackSize.ToString();
+        }
+
+        private void prefixComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_selectedItem == null)
+            {
+                return;
+            }
+
+            var player = Terraria.Instance.Player;
+            player.Inventory[(int) _selectedItem.Tag].Prefix = (ItemPrefix) itemPrefixComboBox.SelectedItem;
+        }
+
+        private void stackSizeUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (_selectedItem == null)
+            {
+                return;
+            }
+
+            var player = Terraria.Instance.Player;
+            player.Inventory[(int) _selectedItem.Tag].StackSize = (int) stackSizeUpDown.Value;
+            _selectedItem.Text = player.Inventory[(int) _selectedItem.Tag].StackSize.ToString();
         }
 
         #endregion
@@ -340,7 +378,7 @@ namespace TerrariaInventoryEditor
                 var item = _inventoryItems[i];
 
                 item.Image = player.Inventory[i].Image;
-                item.Text = player.Inventory[i].StackSize > 1 ? player.Inventory[i].StackSize.ToString() : string.Empty;
+                item.Text = player.Inventory[i].StackSize.ToString();
             }
         }
 

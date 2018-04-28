@@ -1231,6 +1231,7 @@
             0,
             0,
             0});
+            this.stackSizeUpDown.ValueChanged += new System.EventHandler(this.stackSizeUpDown_ValueChanged);
             // 
             // label1
             // 
@@ -1249,6 +1250,7 @@
             this.itemPrefixComboBox.Name = "itemPrefixComboBox";
             this.itemPrefixComboBox.Size = new System.Drawing.Size(121, 21);
             this.itemPrefixComboBox.TabIndex = 1;
+            this.itemPrefixComboBox.SelectedIndexChanged += new System.EventHandler(this.prefixComboBox_SelectedIndexChanged);
             // 
             // itemPrefixLbl
             // 
