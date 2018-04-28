@@ -10,10 +10,6 @@ using TerrariaInventoryEditor.Framework;
 
 namespace TerrariaInventoryEditor.TerrariaLib
 {
-    public delegate void PlayerLoadedD();
-
-    public delegate void PlayerSavedD();
-
     /// <summary>
     ///     Represents a Terraria Player.
     /// </summary>
@@ -34,7 +30,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
         {
             Name = "Player name";
             Difficulty = PlayerDifficulty.Softcore;
-            SkinVariant = 1;
+            SkinVariant = 0;
             Health = 100;
             MaxHealth = 100;
             Mana = 20;
@@ -417,16 +413,6 @@ namespace TerrariaInventoryEditor.TerrariaLib
         public WorldInformation[] WorldInfo { get; } = new WorldInformation[200];
 
         /// <summary>
-        ///     Occurs when a player profile is loaded.
-        /// </summary>
-        public static event PlayerLoadedD PlayerLoaded;
-
-        /// <summary>
-        ///     Occurs when a player profile is saved.
-        /// </summary>
-        public static event PlayerSavedD PlayerSaved;
-
-        /// <summary>
         ///     Loads a player profile from the given path.
         /// </summary>
         /// <param name="playerPath">The path, which must not be null.</param>
@@ -616,7 +602,6 @@ namespace TerrariaInventoryEditor.TerrariaLib
                     }
 
                     BartenderQuestLog = reader.ReadInt32();
-                    PlayerLoaded?.Invoke();
                 }
             }
         }
@@ -773,7 +758,6 @@ namespace TerrariaInventoryEditor.TerrariaLib
                     writer.Flush();
                     cryptoStream.FlushFinalBlock();
                     fileStream.Flush();
-                    PlayerSaved?.Invoke();
                 }
             }
         }

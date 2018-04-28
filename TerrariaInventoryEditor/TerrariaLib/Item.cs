@@ -441,7 +441,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
         }
 
         /// <summary>
-        /// Returns the string representation of this item.
+        ///     Returns the string representation of this item.
         /// </summary>
         /// <returns>The string representation of this item.</returns>
         public override string ToString()

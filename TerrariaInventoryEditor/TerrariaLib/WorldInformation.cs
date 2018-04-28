@@ -1,7 +1,7 @@
 ﻿namespace TerrariaInventoryEditor.TerrariaLib
 {
     /// <summary>
-    ///     Represents world information.
+    ///     Holds world information.
     /// </summary>
     public sealed class WorldInformation
     {

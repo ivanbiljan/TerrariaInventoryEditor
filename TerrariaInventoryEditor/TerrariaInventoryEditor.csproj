@@ -52,9 +52,6 @@
     <Compile Include="Extensions\BinaryWriter.Extensions.cs" />
     <Compile Include="Extensions\Byte.Extensions.cs" />
     <Compile Include="Framework\DataSourceObject.cs" />
-    <Compile Include="Framework\PlaceholderTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Framework\PlayerPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>

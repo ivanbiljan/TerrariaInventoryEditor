@@ -226,7 +226,7 @@ namespace TerrariaInventoryEditor.Forms
         private void inventoryItem_GotFocus(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
-            var button = (Button)sender;
+            var button = (Button) sender;
 
             button.BackColor = Color.DeepSkyBlue;
             foreach (var inventoryButton in _inventoryItems.Where(b => b != button))
