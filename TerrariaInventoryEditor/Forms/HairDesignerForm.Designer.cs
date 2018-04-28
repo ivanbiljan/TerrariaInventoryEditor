@@ -1,4 +1,4 @@
-﻿namespace TerrariaInventoryEditor
+﻿namespace TerrariaInventoryEditor.Forms
 {
     partial class HairDesignerForm
     {

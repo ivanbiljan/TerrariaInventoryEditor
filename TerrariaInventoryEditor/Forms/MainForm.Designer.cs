@@ -1,4 +1,4 @@
-﻿namespace TerrariaInventoryEditor
+﻿namespace TerrariaInventoryEditor.Forms
 {
     partial class MainForm
     {
@@ -37,9 +37,6 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.healthManaGroupBox = new System.Windows.Forms.GroupBox();
@@ -118,7 +115,7 @@
             this.maxAllStacksBtn = new System.Windows.Forms.Button();
             this.maxStackBtn = new System.Windows.Forms.Button();
             this.stackSizeUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
+            this.stackSizeLbl = new System.Windows.Forms.Label();
             this.itemPrefixComboBox = new System.Windows.Forms.ComboBox();
             this.itemPrefixLbl = new System.Windows.Forms.Label();
             this.itemFilterGroupBox = new System.Windows.Forms.GroupBox();
@@ -175,6 +172,8 @@
             this.inventoryItem2 = new System.Windows.Forms.Button();
             this.inventoryItem1 = new System.Windows.Forms.Button();
             this.inventoryItem0 = new System.Windows.Forms.Button();
+            this.coinsLbl = new System.Windows.Forms.Label();
+            this.ammoLbl = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -206,8 +205,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolsToolStripMenuItem});
+            this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(839, 24);
@@ -230,7 +228,7 @@
             // 
             this.newToolStripMenuItem.Image = global::TerrariaInventoryEditor.Properties.Resources.new_file;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
@@ -238,7 +236,7 @@
             // 
             this.openToolStripMenuItem.Image = global::TerrariaInventoryEditor.Properties.Resources.open_file;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openToolStripMenuItem.Text = "Open...";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -246,7 +244,7 @@
             // 
             this.saveToolStripMenuItem.Image = global::TerrariaInventoryEditor.Properties.Resources.save;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -254,37 +252,16 @@
             // 
             this.saveAsToolStripMenuItem.Image = global::TerrariaInventoryEditor.Properties.Resources.save_as;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveAsToolStripMenuItem.Text = "Save As...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkForUpdatesToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.toolsToolStripMenuItem.Text = "Tools";
-            // 
-            // checkForUpdatesToolStripMenuItem
-            // 
-            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
-            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.checkForUpdatesToolStripMenuItem.Text = "Check For Updates";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.aboutToolStripMenuItem.Text = "About";
             // 
             // tabControl1
             // 
@@ -981,6 +958,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.ammoLbl);
+            this.tabPage4.Controls.Add(this.coinsLbl);
             this.tabPage4.Controls.Add(this.inventoryItem57);
             this.tabPage4.Controls.Add(this.inventoryItem56);
             this.tabPage4.Controls.Add(this.inventoryItem55);
@@ -1160,7 +1139,7 @@
             this.itemPropertiesGroupBox.Controls.Add(this.maxAllStacksBtn);
             this.itemPropertiesGroupBox.Controls.Add(this.maxStackBtn);
             this.itemPropertiesGroupBox.Controls.Add(this.stackSizeUpDown);
-            this.itemPropertiesGroupBox.Controls.Add(this.label1);
+            this.itemPropertiesGroupBox.Controls.Add(this.stackSizeLbl);
             this.itemPropertiesGroupBox.Controls.Add(this.itemPrefixComboBox);
             this.itemPropertiesGroupBox.Controls.Add(this.itemPrefixLbl);
             this.itemPropertiesGroupBox.Location = new System.Drawing.Point(191, 272);
@@ -1233,15 +1212,15 @@
             0});
             this.stackSizeUpDown.ValueChanged += new System.EventHandler(this.stackSizeUpDown_ValueChanged);
             // 
-            // label1
+            // stackSizeLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Stack Size:";
+            this.stackSizeLbl.AutoSize = true;
+            this.stackSizeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stackSizeLbl.Location = new System.Drawing.Point(7, 48);
+            this.stackSizeLbl.Name = "stackSizeLbl";
+            this.stackSizeLbl.Size = new System.Drawing.Size(85, 16);
+            this.stackSizeLbl.TabIndex = 2;
+            this.stackSizeLbl.Text = "Stack Size:";
             // 
             // itemPrefixComboBox
             // 
@@ -2001,6 +1980,26 @@
             this.inventoryItem0.UseVisualStyleBackColor = false;
             this.inventoryItem0.Enter += new System.EventHandler(this.inventoryItem_GotFocus);
             // 
+            // coinsLbl
+            // 
+            this.coinsLbl.AutoSize = true;
+            this.coinsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coinsLbl.Location = new System.Drawing.Point(721, 52);
+            this.coinsLbl.Name = "coinsLbl";
+            this.coinsLbl.Size = new System.Drawing.Size(38, 13);
+            this.coinsLbl.TabIndex = 61;
+            this.coinsLbl.Text = "Coins";
+            // 
+            // ammoLbl
+            // 
+            this.ammoLbl.AutoSize = true;
+            this.ammoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ammoLbl.Location = new System.Drawing.Point(767, 52);
+            this.ammoLbl.Name = "ammoLbl";
+            this.ammoLbl.Size = new System.Drawing.Size(40, 13);
+            this.ammoLbl.TabIndex = 62;
+            this.ammoLbl.Text = "Ammo";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2040,6 +2039,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.buffDisplayGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buffsBindingSource)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.itemPropertiesGroupBox.ResumeLayout(false);
             this.itemPropertiesGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stackSizeUpDown)).EndInit();
@@ -2058,9 +2058,6 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -2182,7 +2179,7 @@
         private System.Windows.Forms.Button maxAllStacksBtn;
         private System.Windows.Forms.Button maxStackBtn;
         private System.Windows.Forms.NumericUpDown stackSizeUpDown;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label stackSizeLbl;
         private System.Windows.Forms.ComboBox itemPrefixComboBox;
         private System.Windows.Forms.Label itemPrefixLbl;
         private System.Windows.Forms.GroupBox itemFilterGroupBox;
@@ -2197,6 +2194,8 @@
         private System.Windows.Forms.Button inventoryItem54;
         private System.Windows.Forms.Label searchForItemLbl;
         private System.Windows.Forms.TextBox itemFilterTxtBox;
+        private System.Windows.Forms.Label ammoLbl;
+        private System.Windows.Forms.Label coinsLbl;
     }
 }
 

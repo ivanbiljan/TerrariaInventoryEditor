@@ -6,7 +6,7 @@ using System.Linq;
 using System.Windows.Forms;
 using TerrariaInventoryEditor.TerrariaLib;
 
-namespace TerrariaInventoryEditor
+namespace TerrariaInventoryEditor.Forms
 {
     public partial class MainForm : Form
     {
