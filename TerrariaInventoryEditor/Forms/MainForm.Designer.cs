@@ -90,8 +90,7 @@
             this.buffFilterTxtBox = new System.Windows.Forms.TextBox();
             this.maxAllDurationsBtn = new System.Windows.Forms.Button();
             this.maxDurationBtn = new System.Windows.Forms.Button();
-            this.deleteBuffBtn = new System.Windows.Forms.Button();
-            this.applyBuffBtn = new System.Windows.Forms.Button();
+            this.deleteAllBuffsBtn = new System.Windows.Forms.Button();
             this.buffSearchBox = new System.Windows.Forms.ListBox();
             this.activeBuffsGroupBox = new System.Windows.Forms.GroupBox();
             this.buffDisplayGrid = new System.Windows.Forms.DataGridView();
@@ -101,6 +100,8 @@
             this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.ammoLbl = new System.Windows.Forms.Label();
+            this.coinsLbl = new System.Windows.Forms.Label();
             this.inventoryItem57 = new System.Windows.Forms.Button();
             this.inventoryItem56 = new System.Windows.Forms.Button();
             this.inventoryItem55 = new System.Windows.Forms.Button();
@@ -172,8 +173,7 @@
             this.inventoryItem2 = new System.Windows.Forms.Button();
             this.inventoryItem1 = new System.Windows.Forms.Button();
             this.inventoryItem0 = new System.Windows.Forms.Button();
-            this.coinsLbl = new System.Windows.Forms.Label();
-            this.ammoLbl = new System.Windows.Forms.Label();
+            this.deleteBuffBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -228,7 +228,7 @@
             // 
             this.newToolStripMenuItem.Image = global::TerrariaInventoryEditor.Properties.Resources.new_file;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
@@ -236,7 +236,7 @@
             // 
             this.openToolStripMenuItem.Image = global::TerrariaInventoryEditor.Properties.Resources.open_file;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.openToolStripMenuItem.Text = "Open...";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -244,7 +244,7 @@
             // 
             this.saveToolStripMenuItem.Image = global::TerrariaInventoryEditor.Properties.Resources.save;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -252,14 +252,14 @@
             // 
             this.saveAsToolStripMenuItem.Image = global::TerrariaInventoryEditor.Properties.Resources.save_as;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.saveAsToolStripMenuItem.Text = "Save As...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -819,11 +819,11 @@
             // 
             // buffControlsGroupBox
             // 
+            this.buffControlsGroupBox.Controls.Add(this.deleteBuffBtn);
             this.buffControlsGroupBox.Controls.Add(this.buffFilterTxtBox);
             this.buffControlsGroupBox.Controls.Add(this.maxAllDurationsBtn);
             this.buffControlsGroupBox.Controls.Add(this.maxDurationBtn);
-            this.buffControlsGroupBox.Controls.Add(this.deleteBuffBtn);
-            this.buffControlsGroupBox.Controls.Add(this.applyBuffBtn);
+            this.buffControlsGroupBox.Controls.Add(this.deleteAllBuffsBtn);
             this.buffControlsGroupBox.Controls.Add(this.buffSearchBox);
             this.buffControlsGroupBox.Location = new System.Drawing.Point(569, 7);
             this.buffControlsGroupBox.Name = "buffControlsGroupBox";
@@ -860,25 +860,15 @@
             this.maxDurationBtn.UseVisualStyleBackColor = true;
             this.maxDurationBtn.Click += new System.EventHandler(this.maxDurationBtn_Click);
             // 
-            // deleteBuffBtn
+            // deleteAllBuffsBtn
             // 
-            this.deleteBuffBtn.Location = new System.Drawing.Point(104, 339);
-            this.deleteBuffBtn.Name = "deleteBuffBtn";
-            this.deleteBuffBtn.Size = new System.Drawing.Size(80, 23);
-            this.deleteBuffBtn.TabIndex = 2;
-            this.deleteBuffBtn.Text = "Delete";
-            this.deleteBuffBtn.UseVisualStyleBackColor = true;
-            this.deleteBuffBtn.Click += new System.EventHandler(this.deleteBuffBtn_Click);
-            // 
-            // applyBuffBtn
-            // 
-            this.applyBuffBtn.Location = new System.Drawing.Point(0, 339);
-            this.applyBuffBtn.Name = "applyBuffBtn";
-            this.applyBuffBtn.Size = new System.Drawing.Size(80, 23);
-            this.applyBuffBtn.TabIndex = 1;
-            this.applyBuffBtn.Text = "Apply";
-            this.applyBuffBtn.UseVisualStyleBackColor = true;
-            this.applyBuffBtn.Click += new System.EventHandler(this.applyBuffBtn_Click);
+            this.deleteAllBuffsBtn.Location = new System.Drawing.Point(104, 339);
+            this.deleteAllBuffsBtn.Name = "deleteAllBuffsBtn";
+            this.deleteAllBuffsBtn.Size = new System.Drawing.Size(80, 23);
+            this.deleteAllBuffsBtn.TabIndex = 2;
+            this.deleteAllBuffsBtn.Text = "Delete All";
+            this.deleteAllBuffsBtn.UseVisualStyleBackColor = true;
+            this.deleteAllBuffsBtn.Click += new System.EventHandler(this.deleteAllBuffsBtn_Click);
             // 
             // buffSearchBox
             // 
@@ -887,6 +877,7 @@
             this.buffSearchBox.Name = "buffSearchBox";
             this.buffSearchBox.Size = new System.Drawing.Size(178, 277);
             this.buffSearchBox.TabIndex = 0;
+            this.buffSearchBox.SelectedIndexChanged += new System.EventHandler(this.buffSearchBox_SelectedIndexChanged);
             // 
             // activeBuffsGroupBox
             // 
@@ -1027,6 +1018,26 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Inventory";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // ammoLbl
+            // 
+            this.ammoLbl.AutoSize = true;
+            this.ammoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ammoLbl.Location = new System.Drawing.Point(767, 52);
+            this.ammoLbl.Name = "ammoLbl";
+            this.ammoLbl.Size = new System.Drawing.Size(40, 13);
+            this.ammoLbl.TabIndex = 62;
+            this.ammoLbl.Text = "Ammo";
+            // 
+            // coinsLbl
+            // 
+            this.coinsLbl.AutoSize = true;
+            this.coinsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coinsLbl.Location = new System.Drawing.Point(721, 52);
+            this.coinsLbl.Name = "coinsLbl";
+            this.coinsLbl.Size = new System.Drawing.Size(38, 13);
+            this.coinsLbl.TabIndex = 61;
+            this.coinsLbl.Text = "Coins";
             // 
             // inventoryItem57
             // 
@@ -1980,25 +1991,15 @@
             this.inventoryItem0.UseVisualStyleBackColor = false;
             this.inventoryItem0.Enter += new System.EventHandler(this.inventoryItem_GotFocus);
             // 
-            // coinsLbl
+            // deleteBuffBtn
             // 
-            this.coinsLbl.AutoSize = true;
-            this.coinsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.coinsLbl.Location = new System.Drawing.Point(721, 52);
-            this.coinsLbl.Name = "coinsLbl";
-            this.coinsLbl.Size = new System.Drawing.Size(38, 13);
-            this.coinsLbl.TabIndex = 61;
-            this.coinsLbl.Text = "Coins";
-            // 
-            // ammoLbl
-            // 
-            this.ammoLbl.AutoSize = true;
-            this.ammoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ammoLbl.Location = new System.Drawing.Point(767, 52);
-            this.ammoLbl.Name = "ammoLbl";
-            this.ammoLbl.Size = new System.Drawing.Size(40, 13);
-            this.ammoLbl.TabIndex = 62;
-            this.ammoLbl.Text = "Ammo";
+            this.deleteBuffBtn.Location = new System.Drawing.Point(0, 339);
+            this.deleteBuffBtn.Name = "deleteBuffBtn";
+            this.deleteBuffBtn.Size = new System.Drawing.Size(80, 23);
+            this.deleteBuffBtn.TabIndex = 6;
+            this.deleteBuffBtn.Text = "Delete";
+            this.deleteBuffBtn.UseVisualStyleBackColor = true;
+            this.deleteBuffBtn.Click += new System.EventHandler(this.deleteBuffBtn_Click);
             // 
             // MainForm
             // 
@@ -2114,8 +2115,7 @@
         private System.Windows.Forms.GroupBox buffControlsGroupBox;
         private System.Windows.Forms.Button maxAllDurationsBtn;
         private System.Windows.Forms.Button maxDurationBtn;
-        private System.Windows.Forms.Button deleteBuffBtn;
-        private System.Windows.Forms.Button applyBuffBtn;
+        private System.Windows.Forms.Button deleteAllBuffsBtn;
         private System.Windows.Forms.ListBox buffSearchBox;
         private System.Windows.Forms.TextBox buffFilterTxtBox;
         private System.Windows.Forms.TabPage tabPage4;
@@ -2196,6 +2196,7 @@
         private System.Windows.Forms.TextBox itemFilterTxtBox;
         private System.Windows.Forms.Label ammoLbl;
         private System.Windows.Forms.Label coinsLbl;
+        private System.Windows.Forms.Button deleteBuffBtn;
     }
 }
 

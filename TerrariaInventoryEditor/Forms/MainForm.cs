@@ -118,14 +118,15 @@ namespace TerrariaInventoryEditor.Forms
         private void maxOutBtn_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
-            player.Health = player.MaxHealth = 500;
-            player.Mana = player.MaxMana = 400;
+            player.Health = player.MaxHealth = 32767;
+            player.Mana = player.MaxMana = 200;
         }
 
         private void resetHealthBtn_Click(object sender, EventArgs e)
         {
-            Terraria.Instance.Player.Health = Terraria.Instance.Player.MaxHealth = 100;
-            Terraria.Instance.Player.Mana = Terraria.Instance.Player.MaxMana = 20;
+            var player = Terraria.Instance.Player;
+            player.Health = player.MaxHealth = 100;
+            player.Mana = player.MaxMana = 20;
         }
 
         #endregion
@@ -198,15 +199,17 @@ namespace TerrariaInventoryEditor.Forms
 
         #region Buffs
 
-        private void applyBuffBtn_Click(object sender, EventArgs e)
+        private void buffSearchBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedBuff = (Buff)buffSearchBox.SelectedItem;
-            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].SetDefaults(selectedBuff.Id);
-            buffDisplayGrid.Refresh();
+            var player = Terraria.Instance.Player;
+            var selectedBuff = (Buff) buffSearchBox.SelectedItem;
+            player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].SetDefaults(selectedBuff.Id);
+            player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].Time = int.MaxValue;
         }
 
         private void buffFilterTxtBox_TextChanged(object sender, EventArgs e)
         {
+            buffSearchBox.SelectedIndexChanged -= buffSearchBox_SelectedIndexChanged;
             if (string.IsNullOrWhiteSpace(buffFilterTxtBox.Text))
             {
                 buffSearchBox.DataSource = Terraria.Instance.Buffs;
@@ -217,6 +220,18 @@ namespace TerrariaInventoryEditor.Forms
                     where buff.Name.ToLowerInvariant().Contains(buffFilterTxtBox.Text.ToLowerInvariant())
                     select buff).ToList();
             }
+
+            buffSearchBox.SelectedIndexChanged += buffSearchBox_SelectedIndexChanged;
+        }
+
+        private void deleteAllBuffsBtn_Click(object sender, EventArgs e)
+        {
+            foreach (var buff in Terraria.Instance.Player.Buffs.Where(b => b.Id != 0))
+            {
+                buff.SetDefaults(0);
+            }
+
+            buffDisplayGrid.Refresh();
         }
 
         private void deleteBuffBtn_Click(object sender, EventArgs e)
@@ -248,9 +263,9 @@ namespace TerrariaInventoryEditor.Forms
         private void deleteAllItemsBtn_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
-            foreach (var item in _inventoryItems)
+            foreach (var item in player.Inventory.Where(i => i.NetId != 0))
             {
-                player.Inventory[(int) item.Tag].SetDefaults(0);
+                item.SetDefaults(0);
             }
 
             DrawInventory();
@@ -298,8 +313,8 @@ namespace TerrariaInventoryEditor.Forms
             else
             {
                 itemSearchBox.DataSource = (from item in Terraria.Instance.Items
-                                            where item.Name.ToLowerInvariant().Contains(itemFilterTxtBox.Text.ToLowerInvariant())
-                                            select item).ToList();
+                    where item.Name.ToLowerInvariant().Contains(itemFilterTxtBox.Text.ToLowerInvariant())
+                    select item).ToList();
             }
 
             itemSearchBox.SelectedIndexChanged += itemSearchBox_SelectedIndexChanged;
