@@ -196,6 +196,53 @@ namespace TerrariaInventoryEditor.Forms
 
         #endregion
 
+        #region Buffs
+
+        private void applyBuffBtn_Click(object sender, EventArgs e)
+        {
+            var selectedBuff = (Buff)buffSearchBox.SelectedItem;
+            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].SetDefaults(selectedBuff.Id);
+            buffDisplayGrid.Refresh();
+        }
+
+        private void buffFilterTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(buffFilterTxtBox.Text))
+            {
+                buffSearchBox.DataSource = Terraria.Instance.Buffs;
+            }
+            else
+            {
+                buffSearchBox.DataSource = (from buff in Terraria.Instance.Buffs
+                    where buff.Name.ToLowerInvariant().Contains(buffFilterTxtBox.Text.ToLowerInvariant())
+                    select buff).ToList();
+            }
+        }
+
+        private void deleteBuffBtn_Click(object sender, EventArgs e)
+        {
+            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].SetDefaults(0);
+            buffDisplayGrid.Refresh();
+        }
+
+        private void maxDurationBtn_Click(object sender, EventArgs e)
+        {
+            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].Time = int.MaxValue;
+            buffDisplayGrid.Refresh();
+        }
+
+        private void maxAllDurationsBtn_Click(object sender, EventArgs e)
+        {
+            foreach (var buff in Terraria.Instance.Player.Buffs.Where(b => b.Id != 0))
+            {
+                buff.Time = int.MaxValue;
+            }
+
+            buffDisplayGrid.Refresh();
+        }
+
+        #endregion
+
         #region Inventory
 
         private void deleteAllItemsBtn_Click(object sender, EventArgs e)
@@ -203,7 +250,7 @@ namespace TerrariaInventoryEditor.Forms
             var player = Terraria.Instance.Player;
             foreach (var item in _inventoryItems)
             {
-                player.Inventory[(int)item.Tag] = new Item();
+                player.Inventory[(int) item.Tag].SetDefaults(0);
             }
 
             DrawInventory();
@@ -243,6 +290,7 @@ namespace TerrariaInventoryEditor.Forms
 
         private void itemFilterTxtBox_TextChanged(object sender, EventArgs e)
         {
+            itemSearchBox.SelectedIndexChanged -= itemSearchBox_SelectedIndexChanged;
             if (string.IsNullOrWhiteSpace(itemFilterTxtBox.Text))
             {
                 itemSearchBox.DataSource = Terraria.Instance.Items;
@@ -253,6 +301,8 @@ namespace TerrariaInventoryEditor.Forms
                                             where item.Name.ToLowerInvariant().Contains(itemFilterTxtBox.Text.ToLowerInvariant())
                                             select item).ToList();
             }
+
+            itemSearchBox.SelectedIndexChanged += itemSearchBox_SelectedIndexChanged;
         }
 
         private void itemSearchBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -264,7 +314,9 @@ namespace TerrariaInventoryEditor.Forms
             }
 
             var selectedItem = (Item) itemSearchBox.SelectedItem;
-            (player.Inventory[(int) _selectedItem.Tag] = selectedItem).StackSize = selectedItem.MaxStack;
+            player.Inventory[(int) _selectedItem.Tag].SetDefaults(selectedItem.NetId);
+            player.Inventory[(int) _selectedItem.Tag].StackSize = selectedItem.MaxStack;
+
             _selectedItem.Image = selectedItem.Image;
             _selectedItem.Text = selectedItem.StackSize.ToString();
         }
@@ -298,8 +350,8 @@ namespace TerrariaInventoryEditor.Forms
                 return;
             }
 
-            player.Inventory[(int)_selectedItem.Tag].StackSize = player.Inventory[(int)_selectedItem.Tag].MaxStack;
-            _selectedItem.Text = player.Inventory[(int)_selectedItem.Tag].StackSize.ToString();
+            player.Inventory[(int) _selectedItem.Tag].StackSize = player.Inventory[(int) _selectedItem.Tag].MaxStack;
+            _selectedItem.Text = player.Inventory[(int) _selectedItem.Tag].StackSize.ToString();
         }
 
         private void prefixComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -333,52 +385,6 @@ namespace TerrariaInventoryEditor.Forms
 
             player.Inventory[(int) _selectedItem.Tag].StackSize = (int) stackSizeUpDown.Value;
             _selectedItem.Text = player.Inventory[(int) _selectedItem.Tag].StackSize.ToString();
-        }
-
-        #endregion
-
-        #region Buffs
-
-        private void applyBuffBtn_Click(object sender, EventArgs e)
-        {
-            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex] = (Buff) buffSearchBox.SelectedItem;
-            buffDisplayGrid.Refresh();
-        }
-
-        private void buffFilterTxtBox_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(buffFilterTxtBox.Text))
-            {
-                buffSearchBox.DataSource = Terraria.Instance.Buffs;
-            }
-            else
-            {
-                buffSearchBox.DataSource = (from buff in Terraria.Instance.Buffs
-                    where buff.Name.ToLowerInvariant().Contains(buffFilterTxtBox.Text.ToLowerInvariant())
-                    select buff).ToList();
-            }
-        }
-
-        private void deleteBuffBtn_Click(object sender, EventArgs e)
-        {
-            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex] = new Buff();
-            buffDisplayGrid.Refresh();
-        }
-
-        private void maxDurationBtn_Click(object sender, EventArgs e)
-        {
-            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].Time = int.MaxValue;
-            buffDisplayGrid.Refresh();
-        }
-
-        private void maxAllDurationsBtn_Click(object sender, EventArgs e)
-        {
-            foreach (var buff in Terraria.Instance.Player.Buffs.Where(b => b.Id != 0))
-            {
-                buff.Time = int.MaxValue;
-            }
-
-            buffDisplayGrid.Refresh();
         }
 
         #endregion
