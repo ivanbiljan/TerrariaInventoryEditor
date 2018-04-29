@@ -316,6 +316,11 @@ namespace TerrariaInventoryEditor.Forms
             }
 
             var player = Terraria.Instance.Player;
+            if (player.Inventory[(int) _selectedItem.Tag].NetId == 0)
+            {
+                return;
+            }
+
             player.Inventory[(int) _selectedItem.Tag].StackSize = (int) stackSizeUpDown.Value;
             _selectedItem.Text = player.Inventory[(int) _selectedItem.Tag].StackSize.ToString();
         }
