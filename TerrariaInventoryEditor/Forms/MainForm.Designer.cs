@@ -67,26 +67,56 @@
             this.playerNameTxtBox = new System.Windows.Forms.TextBox();
             this.playerNameLbl = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.equipmentItem18 = new System.Windows.Forms.Button();
+            this.equipmentItem8 = new System.Windows.Forms.Button();
+            this.equipmentItem7 = new System.Windows.Forms.Button();
+            this.equipmentItem6 = new System.Windows.Forms.Button();
+            this.equipmentItem5 = new System.Windows.Forms.Button();
+            this.equipmentItem4 = new System.Windows.Forms.Button();
+            this.equipmentItem3 = new System.Windows.Forms.Button();
+            this.equipmentItem2 = new System.Windows.Forms.Button();
+            this.equipmentItem1 = new System.Windows.Forms.Button();
+            this.equipmentItem0 = new System.Windows.Forms.Button();
+            this.equipmentItem17 = new System.Windows.Forms.Button();
+            this.equipmentItem16 = new System.Windows.Forms.Button();
+            this.equipmentItem15 = new System.Windows.Forms.Button();
+            this.equipmentItem14 = new System.Windows.Forms.Button();
+            this.equipmentItem13 = new System.Windows.Forms.Button();
+            this.equipmentItem12 = new System.Windows.Forms.Button();
+            this.equipmentItem11 = new System.Windows.Forms.Button();
+            this.equipmentItem10 = new System.Windows.Forms.Button();
+            this.dyeItem2 = new System.Windows.Forms.Button();
+            this.dyeItem1 = new System.Windows.Forms.Button();
+            this.armorLbl = new System.Windows.Forms.Label();
+            this.socialsLbl = new System.Windows.Forms.Label();
+            this.dyeLbl = new System.Windows.Forms.Label();
+            this.appearanceGroupBox = new System.Windows.Forms.GroupBox();
             this.playerPictureBox = new TerrariaInventoryEditor.Framework.PlayerPictureBox();
+            this.hairClrPictureBox = new System.Windows.Forms.PictureBox();
+            this.hairColorLbl = new System.Windows.Forms.Label();
+            this.eyeClrPictureBox = new System.Windows.Forms.PictureBox();
             this.randomizeColorsBtn = new System.Windows.Forms.Button();
+            this.eyeColorLbl = new System.Windows.Forms.Label();
             this.randomizeHairBtn = new System.Windows.Forms.Button();
+            this.skinClrPictureBox = new System.Windows.Forms.PictureBox();
             this.hairDesignerBtn = new System.Windows.Forms.Button();
+            this.skinColorLbl = new System.Windows.Forms.Label();
             this.shoeColorLbl = new System.Windows.Forms.Label();
+            this.shirtClrPictureBox = new System.Windows.Forms.PictureBox();
             this.pantsColorLbl = new System.Windows.Forms.Label();
+            this.undershirtClrPictureBox = new System.Windows.Forms.PictureBox();
             this.undershirtColorLbl = new System.Windows.Forms.Label();
+            this.pantsClrPictureBox = new System.Windows.Forms.PictureBox();
             this.shirtColorLbl = new System.Windows.Forms.Label();
             this.shoeClrPictureBox = new System.Windows.Forms.PictureBox();
-            this.pantsClrPictureBox = new System.Windows.Forms.PictureBox();
-            this.undershirtClrPictureBox = new System.Windows.Forms.PictureBox();
-            this.shirtClrPictureBox = new System.Windows.Forms.PictureBox();
-            this.skinColorLbl = new System.Windows.Forms.Label();
-            this.skinClrPictureBox = new System.Windows.Forms.PictureBox();
-            this.eyeColorLbl = new System.Windows.Forms.Label();
-            this.eyeClrPictureBox = new System.Windows.Forms.PictureBox();
-            this.hairColorLbl = new System.Windows.Forms.Label();
-            this.hairClrPictureBox = new System.Windows.Forms.PictureBox();
+            this.equipmentFilterGroupBox = new System.Windows.Forms.GroupBox();
+            this.equipmentFilterTxtBox = new System.Windows.Forms.TextBox();
+            this.equipmentSearchLbl = new System.Windows.Forms.Label();
+            this.equipmentSearchBox = new System.Windows.Forms.ListBox();
+            this.dyeItem0 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.buffControlsGroupBox = new System.Windows.Forms.GroupBox();
+            this.deleteBuffBtn = new System.Windows.Forms.Button();
             this.buffFilterTxtBox = new System.Windows.Forms.TextBox();
             this.maxAllDurationsBtn = new System.Windows.Forms.Button();
             this.maxDurationBtn = new System.Windows.Forms.Button();
@@ -119,7 +149,7 @@
             this.stackSizeLbl = new System.Windows.Forms.Label();
             this.itemPrefixComboBox = new System.Windows.Forms.ComboBox();
             this.itemPrefixLbl = new System.Windows.Forms.Label();
-            this.itemFilterGroupBox = new System.Windows.Forms.GroupBox();
+            this.inventoryFilterGroupBox = new System.Windows.Forms.GroupBox();
             this.itemFilterTxtBox = new System.Windows.Forms.TextBox();
             this.searchForItemLbl = new System.Windows.Forms.Label();
             this.itemSearchBox = new System.Windows.Forms.ListBox();
@@ -173,7 +203,12 @@
             this.inventoryItem2 = new System.Windows.Forms.Button();
             this.inventoryItem1 = new System.Windows.Forms.Button();
             this.inventoryItem0 = new System.Windows.Forms.Button();
-            this.deleteBuffBtn = new System.Windows.Forms.Button();
+            this.dyeItem3 = new System.Windows.Forms.Button();
+            this.dyeItem4 = new System.Windows.Forms.Button();
+            this.dyeItem5 = new System.Windows.Forms.Button();
+            this.dyeItem6 = new System.Windows.Forms.Button();
+            this.dyeItem7 = new System.Windows.Forms.Button();
+            this.dyeItem8 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -183,14 +218,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.anglerQuestUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinVariantUpDown)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.appearanceGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shoeClrPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pantsClrPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.undershirtClrPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shirtClrPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinClrPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eyeClrPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hairClrPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eyeClrPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skinClrPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shirtClrPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.undershirtClrPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pantsClrPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shoeClrPictureBox)).BeginInit();
+            this.equipmentFilterGroupBox.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.buffControlsGroupBox.SuspendLayout();
             this.activeBuffsGroupBox.SuspendLayout();
@@ -199,7 +236,7 @@
             this.tabPage4.SuspendLayout();
             this.itemPropertiesGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stackSizeUpDown)).BeginInit();
-            this.itemFilterGroupBox.SuspendLayout();
+            this.inventoryFilterGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -208,7 +245,7 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(839, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1019, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -272,7 +309,7 @@
             this.tabControl1.Location = new System.Drawing.Point(13, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(826, 465);
+            this.tabControl1.Size = new System.Drawing.Size(1006, 508);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -282,7 +319,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(818, 439);
+            this.tabPage1.Size = new System.Drawing.Size(998, 482);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Stats";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -574,35 +611,405 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.playerPictureBox);
-            this.tabPage2.Controls.Add(this.randomizeColorsBtn);
-            this.tabPage2.Controls.Add(this.randomizeHairBtn);
-            this.tabPage2.Controls.Add(this.hairDesignerBtn);
-            this.tabPage2.Controls.Add(this.shoeColorLbl);
-            this.tabPage2.Controls.Add(this.pantsColorLbl);
-            this.tabPage2.Controls.Add(this.undershirtColorLbl);
-            this.tabPage2.Controls.Add(this.shirtColorLbl);
-            this.tabPage2.Controls.Add(this.shoeClrPictureBox);
-            this.tabPage2.Controls.Add(this.pantsClrPictureBox);
-            this.tabPage2.Controls.Add(this.undershirtClrPictureBox);
-            this.tabPage2.Controls.Add(this.shirtClrPictureBox);
-            this.tabPage2.Controls.Add(this.skinColorLbl);
-            this.tabPage2.Controls.Add(this.skinClrPictureBox);
-            this.tabPage2.Controls.Add(this.eyeColorLbl);
-            this.tabPage2.Controls.Add(this.eyeClrPictureBox);
-            this.tabPage2.Controls.Add(this.hairColorLbl);
-            this.tabPage2.Controls.Add(this.hairClrPictureBox);
+            this.tabPage2.Controls.Add(this.dyeItem8);
+            this.tabPage2.Controls.Add(this.dyeItem7);
+            this.tabPage2.Controls.Add(this.dyeItem6);
+            this.tabPage2.Controls.Add(this.dyeItem5);
+            this.tabPage2.Controls.Add(this.dyeItem4);
+            this.tabPage2.Controls.Add(this.dyeItem3);
+            this.tabPage2.Controls.Add(this.equipmentItem18);
+            this.tabPage2.Controls.Add(this.equipmentItem8);
+            this.tabPage2.Controls.Add(this.equipmentItem7);
+            this.tabPage2.Controls.Add(this.equipmentItem6);
+            this.tabPage2.Controls.Add(this.equipmentItem5);
+            this.tabPage2.Controls.Add(this.equipmentItem4);
+            this.tabPage2.Controls.Add(this.equipmentItem3);
+            this.tabPage2.Controls.Add(this.equipmentItem2);
+            this.tabPage2.Controls.Add(this.equipmentItem1);
+            this.tabPage2.Controls.Add(this.equipmentItem0);
+            this.tabPage2.Controls.Add(this.equipmentItem17);
+            this.tabPage2.Controls.Add(this.equipmentItem16);
+            this.tabPage2.Controls.Add(this.equipmentItem15);
+            this.tabPage2.Controls.Add(this.equipmentItem14);
+            this.tabPage2.Controls.Add(this.equipmentItem13);
+            this.tabPage2.Controls.Add(this.equipmentItem12);
+            this.tabPage2.Controls.Add(this.equipmentItem11);
+            this.tabPage2.Controls.Add(this.equipmentItem10);
+            this.tabPage2.Controls.Add(this.dyeItem2);
+            this.tabPage2.Controls.Add(this.dyeItem1);
+            this.tabPage2.Controls.Add(this.armorLbl);
+            this.tabPage2.Controls.Add(this.socialsLbl);
+            this.tabPage2.Controls.Add(this.dyeLbl);
+            this.tabPage2.Controls.Add(this.appearanceGroupBox);
+            this.tabPage2.Controls.Add(this.equipmentFilterGroupBox);
+            this.tabPage2.Controls.Add(this.dyeItem0);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(818, 439);
+            this.tabPage2.Size = new System.Drawing.Size(998, 482);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Appearance";
+            this.tabPage2.Text = "Appearance & Equipment";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // equipmentItem18
+            // 
+            this.equipmentItem18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem18.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem18.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem18.Location = new System.Drawing.Point(769, 430);
+            this.equipmentItem18.Name = "equipmentItem18";
+            this.equipmentItem18.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem18.TabIndex = 45;
+            this.equipmentItem18.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem18.UseVisualStyleBackColor = false;
+            this.equipmentItem18.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem18.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem8
+            // 
+            this.equipmentItem8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem8.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem8.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem8.Location = new System.Drawing.Point(855, 430);
+            this.equipmentItem8.Name = "equipmentItem8";
+            this.equipmentItem8.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem8.TabIndex = 44;
+            this.equipmentItem8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem8.UseVisualStyleBackColor = false;
+            this.equipmentItem8.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem7
+            // 
+            this.equipmentItem7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem7.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem7.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem7.Location = new System.Drawing.Point(855, 379);
+            this.equipmentItem7.Name = "equipmentItem7";
+            this.equipmentItem7.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem7.TabIndex = 43;
+            this.equipmentItem7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem7.UseVisualStyleBackColor = false;
+            this.equipmentItem7.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem6
+            // 
+            this.equipmentItem6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem6.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem6.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem6.Location = new System.Drawing.Point(855, 328);
+            this.equipmentItem6.Name = "equipmentItem6";
+            this.equipmentItem6.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem6.TabIndex = 42;
+            this.equipmentItem6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem6.UseVisualStyleBackColor = false;
+            this.equipmentItem6.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem5
+            // 
+            this.equipmentItem5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem5.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem5.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem5.Location = new System.Drawing.Point(855, 277);
+            this.equipmentItem5.Name = "equipmentItem5";
+            this.equipmentItem5.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem5.TabIndex = 41;
+            this.equipmentItem5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem5.UseVisualStyleBackColor = false;
+            this.equipmentItem5.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem4
+            // 
+            this.equipmentItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem4.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem4.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem4.Location = new System.Drawing.Point(855, 226);
+            this.equipmentItem4.Name = "equipmentItem4";
+            this.equipmentItem4.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem4.TabIndex = 40;
+            this.equipmentItem4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem4.UseVisualStyleBackColor = false;
+            this.equipmentItem4.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem3
+            // 
+            this.equipmentItem3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem3.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem3.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem3.Location = new System.Drawing.Point(855, 175);
+            this.equipmentItem3.Name = "equipmentItem3";
+            this.equipmentItem3.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem3.TabIndex = 39;
+            this.equipmentItem3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem3.UseVisualStyleBackColor = false;
+            this.equipmentItem3.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem2
+            // 
+            this.equipmentItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem2.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem2.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem2.Location = new System.Drawing.Point(855, 124);
+            this.equipmentItem2.Name = "equipmentItem2";
+            this.equipmentItem2.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem2.TabIndex = 38;
+            this.equipmentItem2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem2.UseVisualStyleBackColor = false;
+            this.equipmentItem2.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem1
+            // 
+            this.equipmentItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem1.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem1.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem1.Location = new System.Drawing.Point(855, 74);
+            this.equipmentItem1.Name = "equipmentItem1";
+            this.equipmentItem1.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem1.TabIndex = 37;
+            this.equipmentItem1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem1.UseVisualStyleBackColor = false;
+            this.equipmentItem1.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem0
+            // 
+            this.equipmentItem0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem0.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem0.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem0.Location = new System.Drawing.Point(855, 23);
+            this.equipmentItem0.Name = "equipmentItem0";
+            this.equipmentItem0.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem0.TabIndex = 36;
+            this.equipmentItem0.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem0.UseVisualStyleBackColor = false;
+            this.equipmentItem0.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem17
+            // 
+            this.equipmentItem17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem17.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem17.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem17.Location = new System.Drawing.Point(769, 379);
+            this.equipmentItem17.Name = "equipmentItem17";
+            this.equipmentItem17.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem17.TabIndex = 35;
+            this.equipmentItem17.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem17.UseVisualStyleBackColor = false;
+            this.equipmentItem17.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem17.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem16
+            // 
+            this.equipmentItem16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem16.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem16.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem16.Location = new System.Drawing.Point(769, 328);
+            this.equipmentItem16.Name = "equipmentItem16";
+            this.equipmentItem16.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem16.TabIndex = 34;
+            this.equipmentItem16.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem16.UseVisualStyleBackColor = false;
+            this.equipmentItem16.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem16.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem15
+            // 
+            this.equipmentItem15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem15.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem15.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem15.Location = new System.Drawing.Point(769, 277);
+            this.equipmentItem15.Name = "equipmentItem15";
+            this.equipmentItem15.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem15.TabIndex = 33;
+            this.equipmentItem15.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem15.UseVisualStyleBackColor = false;
+            this.equipmentItem15.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem15.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem14
+            // 
+            this.equipmentItem14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem14.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem14.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem14.Location = new System.Drawing.Point(769, 226);
+            this.equipmentItem14.Name = "equipmentItem14";
+            this.equipmentItem14.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem14.TabIndex = 32;
+            this.equipmentItem14.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem14.UseVisualStyleBackColor = false;
+            this.equipmentItem14.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem14.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem13
+            // 
+            this.equipmentItem13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem13.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem13.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem13.Location = new System.Drawing.Point(769, 175);
+            this.equipmentItem13.Name = "equipmentItem13";
+            this.equipmentItem13.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem13.TabIndex = 31;
+            this.equipmentItem13.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem13.UseVisualStyleBackColor = false;
+            this.equipmentItem13.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem13.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem12
+            // 
+            this.equipmentItem12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem12.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem12.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem12.Location = new System.Drawing.Point(769, 124);
+            this.equipmentItem12.Name = "equipmentItem12";
+            this.equipmentItem12.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem12.TabIndex = 30;
+            this.equipmentItem12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem12.UseVisualStyleBackColor = false;
+            this.equipmentItem12.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem12.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem11
+            // 
+            this.equipmentItem11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem11.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem11.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem11.Location = new System.Drawing.Point(769, 74);
+            this.equipmentItem11.Name = "equipmentItem11";
+            this.equipmentItem11.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem11.TabIndex = 29;
+            this.equipmentItem11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem11.UseVisualStyleBackColor = false;
+            this.equipmentItem11.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem11.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // equipmentItem10
+            // 
+            this.equipmentItem10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.equipmentItem10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.equipmentItem10.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentItem10.ForeColor = System.Drawing.Color.White;
+            this.equipmentItem10.Location = new System.Drawing.Point(769, 23);
+            this.equipmentItem10.Name = "equipmentItem10";
+            this.equipmentItem10.Size = new System.Drawing.Size(45, 45);
+            this.equipmentItem10.TabIndex = 28;
+            this.equipmentItem10.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.equipmentItem10.UseVisualStyleBackColor = false;
+            this.equipmentItem10.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.equipmentItem10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // dyeItem2
+            // 
+            this.dyeItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem2.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem2.ForeColor = System.Drawing.Color.White;
+            this.dyeItem2.Location = new System.Drawing.Point(684, 125);
+            this.dyeItem2.Name = "dyeItem2";
+            this.dyeItem2.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem2.TabIndex = 27;
+            this.dyeItem2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem2.UseVisualStyleBackColor = false;
+            this.dyeItem2.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // dyeItem1
+            // 
+            this.dyeItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem1.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem1.ForeColor = System.Drawing.Color.White;
+            this.dyeItem1.Location = new System.Drawing.Point(684, 74);
+            this.dyeItem1.Name = "dyeItem1";
+            this.dyeItem1.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem1.TabIndex = 26;
+            this.dyeItem1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem1.UseVisualStyleBackColor = false;
+            this.dyeItem1.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // armorLbl
+            // 
+            this.armorLbl.AutoSize = true;
+            this.armorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.armorLbl.Location = new System.Drawing.Point(861, 7);
+            this.armorLbl.Name = "armorLbl";
+            this.armorLbl.Size = new System.Drawing.Size(39, 13);
+            this.armorLbl.TabIndex = 25;
+            this.armorLbl.Text = "Armor";
+            // 
+            // socialsLbl
+            // 
+            this.socialsLbl.AutoSize = true;
+            this.socialsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.socialsLbl.Location = new System.Drawing.Point(772, 7);
+            this.socialsLbl.Name = "socialsLbl";
+            this.socialsLbl.Size = new System.Drawing.Size(42, 13);
+            this.socialsLbl.TabIndex = 24;
+            this.socialsLbl.Text = "Social";
+            // 
+            // dyeLbl
+            // 
+            this.dyeLbl.AutoSize = true;
+            this.dyeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeLbl.Location = new System.Drawing.Point(692, 7);
+            this.dyeLbl.Name = "dyeLbl";
+            this.dyeLbl.Size = new System.Drawing.Size(29, 13);
+            this.dyeLbl.TabIndex = 23;
+            this.dyeLbl.Text = "Dye";
+            // 
+            // appearanceGroupBox
+            // 
+            this.appearanceGroupBox.Controls.Add(this.playerPictureBox);
+            this.appearanceGroupBox.Controls.Add(this.hairClrPictureBox);
+            this.appearanceGroupBox.Controls.Add(this.hairColorLbl);
+            this.appearanceGroupBox.Controls.Add(this.eyeClrPictureBox);
+            this.appearanceGroupBox.Controls.Add(this.randomizeColorsBtn);
+            this.appearanceGroupBox.Controls.Add(this.eyeColorLbl);
+            this.appearanceGroupBox.Controls.Add(this.randomizeHairBtn);
+            this.appearanceGroupBox.Controls.Add(this.skinClrPictureBox);
+            this.appearanceGroupBox.Controls.Add(this.hairDesignerBtn);
+            this.appearanceGroupBox.Controls.Add(this.skinColorLbl);
+            this.appearanceGroupBox.Controls.Add(this.shoeColorLbl);
+            this.appearanceGroupBox.Controls.Add(this.shirtClrPictureBox);
+            this.appearanceGroupBox.Controls.Add(this.pantsColorLbl);
+            this.appearanceGroupBox.Controls.Add(this.undershirtClrPictureBox);
+            this.appearanceGroupBox.Controls.Add(this.undershirtColorLbl);
+            this.appearanceGroupBox.Controls.Add(this.pantsClrPictureBox);
+            this.appearanceGroupBox.Controls.Add(this.shirtColorLbl);
+            this.appearanceGroupBox.Controls.Add(this.shoeClrPictureBox);
+            this.appearanceGroupBox.Location = new System.Drawing.Point(183, 7);
+            this.appearanceGroupBox.Name = "appearanceGroupBox";
+            this.appearanceGroupBox.Size = new System.Drawing.Size(475, 287);
+            this.appearanceGroupBox.TabIndex = 22;
+            this.appearanceGroupBox.TabStop = false;
+            this.appearanceGroupBox.Text = "Appearance";
             // 
             // playerPictureBox
             // 
-            this.playerPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("EyeColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("HairColor", this.playerBindingSource, "HairColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("HairId", this.playerBindingSource, "Hair", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -616,7 +1023,7 @@
             this.playerPictureBox.HairColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(90)))), ((int)(((byte)(55)))));
             this.playerPictureBox.HairId = 0;
             this.playerPictureBox.HairTextureFile = "Data\\Hair\\Player_Hair_1.png";
-            this.playerPictureBox.Location = new System.Drawing.Point(8, 10);
+            this.playerPictureBox.Location = new System.Drawing.Point(207, 44);
             this.playerPictureBox.Name = "playerPictureBox";
             this.playerPictureBox.PantsColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(175)))));
             this.playerPictureBox.ShirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(165)))), ((int)(((byte)(140)))));
@@ -628,73 +1035,169 @@
             this.playerPictureBox.TabStop = false;
             this.playerPictureBox.UndershirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(180)))), ((int)(((byte)(215)))));
             // 
+            // hairClrPictureBox
+            // 
+            this.hairClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.hairClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "HairColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.hairClrPictureBox.Location = new System.Drawing.Point(126, 44);
+            this.hairClrPictureBox.Name = "hairClrPictureBox";
+            this.hairClrPictureBox.Size = new System.Drawing.Size(75, 25);
+            this.hairClrPictureBox.TabIndex = 2;
+            this.hairClrPictureBox.TabStop = false;
+            this.hairClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            // 
+            // hairColorLbl
+            // 
+            this.hairColorLbl.AutoSize = true;
+            this.hairColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hairColorLbl.Location = new System.Drawing.Point(46, 44);
+            this.hairColorLbl.Name = "hairColorLbl";
+            this.hairColorLbl.Size = new System.Drawing.Size(74, 15);
+            this.hairColorLbl.TabIndex = 3;
+            this.hairColorLbl.Text = "Hair color:";
+            // 
+            // eyeClrPictureBox
+            // 
+            this.eyeClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.eyeClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.eyeClrPictureBox.Location = new System.Drawing.Point(126, 75);
+            this.eyeClrPictureBox.Name = "eyeClrPictureBox";
+            this.eyeClrPictureBox.Size = new System.Drawing.Size(75, 25);
+            this.eyeClrPictureBox.TabIndex = 4;
+            this.eyeClrPictureBox.TabStop = false;
+            this.eyeClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            // 
             // randomizeColorsBtn
             // 
-            this.randomizeColorsBtn.Location = new System.Drawing.Point(8, 288);
+            this.randomizeColorsBtn.Location = new System.Drawing.Point(365, 232);
             this.randomizeColorsBtn.Name = "randomizeColorsBtn";
-            this.randomizeColorsBtn.Size = new System.Drawing.Size(152, 23);
+            this.randomizeColorsBtn.Size = new System.Drawing.Size(100, 23);
             this.randomizeColorsBtn.TabIndex = 18;
             this.randomizeColorsBtn.Text = "Randomize Colors";
             this.randomizeColorsBtn.UseVisualStyleBackColor = true;
             this.randomizeColorsBtn.Click += new System.EventHandler(this.randomizeColorsBtn_Click);
             // 
+            // eyeColorLbl
+            // 
+            this.eyeColorLbl.AutoSize = true;
+            this.eyeColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eyeColorLbl.Location = new System.Drawing.Point(50, 75);
+            this.eyeColorLbl.Name = "eyeColorLbl";
+            this.eyeColorLbl.Size = new System.Drawing.Size(70, 15);
+            this.eyeColorLbl.TabIndex = 5;
+            this.eyeColorLbl.Text = "Eye color:";
+            // 
             // randomizeHairBtn
             // 
-            this.randomizeHairBtn.Location = new System.Drawing.Point(8, 258);
+            this.randomizeHairBtn.Location = new System.Drawing.Point(365, 203);
             this.randomizeHairBtn.Name = "randomizeHairBtn";
-            this.randomizeHairBtn.Size = new System.Drawing.Size(152, 23);
+            this.randomizeHairBtn.Size = new System.Drawing.Size(100, 23);
             this.randomizeHairBtn.TabIndex = 17;
             this.randomizeHairBtn.Text = "Randomize Hair";
             this.randomizeHairBtn.UseVisualStyleBackColor = true;
             this.randomizeHairBtn.Click += new System.EventHandler(this.randomizeHairBtn_Click);
             // 
+            // skinClrPictureBox
+            // 
+            this.skinClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.skinClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "SkinColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.skinClrPictureBox.Location = new System.Drawing.Point(126, 106);
+            this.skinClrPictureBox.Name = "skinClrPictureBox";
+            this.skinClrPictureBox.Size = new System.Drawing.Size(75, 25);
+            this.skinClrPictureBox.TabIndex = 6;
+            this.skinClrPictureBox.TabStop = false;
+            this.skinClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            // 
             // hairDesignerBtn
             // 
-            this.hairDesignerBtn.Location = new System.Drawing.Point(8, 228);
+            this.hairDesignerBtn.Location = new System.Drawing.Point(365, 44);
             this.hairDesignerBtn.Name = "hairDesignerBtn";
-            this.hairDesignerBtn.Size = new System.Drawing.Size(152, 23);
+            this.hairDesignerBtn.Size = new System.Drawing.Size(100, 23);
             this.hairDesignerBtn.TabIndex = 16;
             this.hairDesignerBtn.Text = "Hair Designer";
             this.hairDesignerBtn.UseVisualStyleBackColor = true;
             this.hairDesignerBtn.Click += new System.EventHandler(this.hairDesignerBtn_Click);
             // 
+            // skinColorLbl
+            // 
+            this.skinColorLbl.AutoSize = true;
+            this.skinColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinColorLbl.Location = new System.Drawing.Point(45, 106);
+            this.skinColorLbl.Name = "skinColorLbl";
+            this.skinColorLbl.Size = new System.Drawing.Size(75, 15);
+            this.skinColorLbl.TabIndex = 7;
+            this.skinColorLbl.Text = "Skin color:";
+            // 
             // shoeColorLbl
             // 
             this.shoeColorLbl.AutoSize = true;
-            this.shoeColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shoeColorLbl.Location = new System.Drawing.Point(201, 196);
+            this.shoeColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shoeColorLbl.Location = new System.Drawing.Point(40, 230);
             this.shoeColorLbl.Name = "shoeColorLbl";
-            this.shoeColorLbl.Size = new System.Drawing.Size(87, 16);
+            this.shoeColorLbl.Size = new System.Drawing.Size(80, 15);
             this.shoeColorLbl.TabIndex = 15;
             this.shoeColorLbl.Text = "Shoe color:";
+            // 
+            // shirtClrPictureBox
+            // 
+            this.shirtClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.shirtClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "ShirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.shirtClrPictureBox.Location = new System.Drawing.Point(126, 137);
+            this.shirtClrPictureBox.Name = "shirtClrPictureBox";
+            this.shirtClrPictureBox.Size = new System.Drawing.Size(75, 25);
+            this.shirtClrPictureBox.TabIndex = 8;
+            this.shirtClrPictureBox.TabStop = false;
+            this.shirtClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
             // 
             // pantsColorLbl
             // 
             this.pantsColorLbl.AutoSize = true;
-            this.pantsColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pantsColorLbl.Location = new System.Drawing.Point(198, 165);
+            this.pantsColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pantsColorLbl.Location = new System.Drawing.Point(37, 199);
             this.pantsColorLbl.Name = "pantsColorLbl";
-            this.pantsColorLbl.Size = new System.Drawing.Size(90, 16);
+            this.pantsColorLbl.Size = new System.Drawing.Size(83, 15);
             this.pantsColorLbl.TabIndex = 14;
             this.pantsColorLbl.Text = "Pants color:";
+            // 
+            // undershirtClrPictureBox
+            // 
+            this.undershirtClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.undershirtClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "UndershirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.undershirtClrPictureBox.Location = new System.Drawing.Point(126, 168);
+            this.undershirtClrPictureBox.Name = "undershirtClrPictureBox";
+            this.undershirtClrPictureBox.Size = new System.Drawing.Size(75, 25);
+            this.undershirtClrPictureBox.TabIndex = 9;
+            this.undershirtClrPictureBox.TabStop = false;
+            this.undershirtClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
             // 
             // undershirtColorLbl
             // 
             this.undershirtColorLbl.AutoSize = true;
-            this.undershirtColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.undershirtColorLbl.Location = new System.Drawing.Point(166, 134);
+            this.undershirtColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.undershirtColorLbl.Location = new System.Drawing.Point(6, 168);
             this.undershirtColorLbl.Name = "undershirtColorLbl";
-            this.undershirtColorLbl.Size = new System.Drawing.Size(122, 16);
+            this.undershirtColorLbl.Size = new System.Drawing.Size(114, 15);
             this.undershirtColorLbl.TabIndex = 13;
             this.undershirtColorLbl.Text = "Undershirt color:";
+            // 
+            // pantsClrPictureBox
+            // 
+            this.pantsClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pantsClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "PantsColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pantsClrPictureBox.Location = new System.Drawing.Point(126, 199);
+            this.pantsClrPictureBox.Name = "pantsClrPictureBox";
+            this.pantsClrPictureBox.Size = new System.Drawing.Size(75, 25);
+            this.pantsClrPictureBox.TabIndex = 10;
+            this.pantsClrPictureBox.TabStop = false;
+            this.pantsClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
             // 
             // shirtColorLbl
             // 
             this.shirtColorLbl.AutoSize = true;
-            this.shirtColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shirtColorLbl.Location = new System.Drawing.Point(206, 103);
+            this.shirtColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shirtColorLbl.Location = new System.Drawing.Point(43, 137);
             this.shirtColorLbl.Name = "shirtColorLbl";
-            this.shirtColorLbl.Size = new System.Drawing.Size(82, 16);
+            this.shirtColorLbl.Size = new System.Drawing.Size(77, 15);
             this.shirtColorLbl.TabIndex = 12;
             this.shirtColorLbl.Text = "Shirt color:";
             // 
@@ -702,108 +1205,66 @@
             // 
             this.shoeClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.shoeClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "ShoeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.shoeClrPictureBox.Location = new System.Drawing.Point(294, 196);
+            this.shoeClrPictureBox.Location = new System.Drawing.Point(126, 230);
             this.shoeClrPictureBox.Name = "shoeClrPictureBox";
-            this.shoeClrPictureBox.Size = new System.Drawing.Size(79, 25);
+            this.shoeClrPictureBox.Size = new System.Drawing.Size(75, 25);
             this.shoeClrPictureBox.TabIndex = 11;
             this.shoeClrPictureBox.TabStop = false;
             this.shoeClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
             // 
-            // pantsClrPictureBox
+            // equipmentFilterGroupBox
             // 
-            this.pantsClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pantsClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "PantsColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pantsClrPictureBox.Location = new System.Drawing.Point(294, 165);
-            this.pantsClrPictureBox.Name = "pantsClrPictureBox";
-            this.pantsClrPictureBox.Size = new System.Drawing.Size(79, 25);
-            this.pantsClrPictureBox.TabIndex = 10;
-            this.pantsClrPictureBox.TabStop = false;
-            this.pantsClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            this.equipmentFilterGroupBox.Controls.Add(this.equipmentFilterTxtBox);
+            this.equipmentFilterGroupBox.Controls.Add(this.equipmentSearchLbl);
+            this.equipmentFilterGroupBox.Controls.Add(this.equipmentSearchBox);
+            this.equipmentFilterGroupBox.Location = new System.Drawing.Point(7, 7);
+            this.equipmentFilterGroupBox.Name = "equipmentFilterGroupBox";
+            this.equipmentFilterGroupBox.Size = new System.Drawing.Size(170, 287);
+            this.equipmentFilterGroupBox.TabIndex = 21;
+            this.equipmentFilterGroupBox.TabStop = false;
+            this.equipmentFilterGroupBox.Text = "Item Filtering";
             // 
-            // undershirtClrPictureBox
+            // equipmentFilterTxtBox
             // 
-            this.undershirtClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.undershirtClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "UndershirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.undershirtClrPictureBox.Location = new System.Drawing.Point(294, 134);
-            this.undershirtClrPictureBox.Name = "undershirtClrPictureBox";
-            this.undershirtClrPictureBox.Size = new System.Drawing.Size(79, 25);
-            this.undershirtClrPictureBox.TabIndex = 9;
-            this.undershirtClrPictureBox.TabStop = false;
-            this.undershirtClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            this.equipmentFilterTxtBox.Location = new System.Drawing.Point(6, 41);
+            this.equipmentFilterTxtBox.Name = "equipmentFilterTxtBox";
+            this.equipmentFilterTxtBox.Size = new System.Drawing.Size(158, 20);
+            this.equipmentFilterTxtBox.TabIndex = 56;
+            this.equipmentFilterTxtBox.TextChanged += new System.EventHandler(this.equipmentFilterTxtBox_TextChanged);
             // 
-            // shirtClrPictureBox
+            // equipmentSearchLbl
             // 
-            this.shirtClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.shirtClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "ShirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.shirtClrPictureBox.Location = new System.Drawing.Point(294, 103);
-            this.shirtClrPictureBox.Name = "shirtClrPictureBox";
-            this.shirtClrPictureBox.Size = new System.Drawing.Size(79, 25);
-            this.shirtClrPictureBox.TabIndex = 8;
-            this.shirtClrPictureBox.TabStop = false;
-            this.shirtClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            this.equipmentSearchLbl.AutoSize = true;
+            this.equipmentSearchLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equipmentSearchLbl.Location = new System.Drawing.Point(3, 20);
+            this.equipmentSearchLbl.Name = "equipmentSearchLbl";
+            this.equipmentSearchLbl.Size = new System.Drawing.Size(137, 16);
+            this.equipmentSearchLbl.TabIndex = 55;
+            this.equipmentSearchLbl.Text = "Search for an item:";
             // 
-            // skinColorLbl
+            // equipmentSearchBox
             // 
-            this.skinColorLbl.AutoSize = true;
-            this.skinColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinColorLbl.Location = new System.Drawing.Point(207, 72);
-            this.skinColorLbl.Name = "skinColorLbl";
-            this.skinColorLbl.Size = new System.Drawing.Size(81, 16);
-            this.skinColorLbl.TabIndex = 7;
-            this.skinColorLbl.Text = "Skin color:";
+            this.equipmentSearchBox.FormattingEnabled = true;
+            this.equipmentSearchBox.Location = new System.Drawing.Point(6, 67);
+            this.equipmentSearchBox.Name = "equipmentSearchBox";
+            this.equipmentSearchBox.Size = new System.Drawing.Size(158, 212);
+            this.equipmentSearchBox.TabIndex = 54;
+            this.equipmentSearchBox.SelectedIndexChanged += new System.EventHandler(this.equipmentSearchBox_SelectedIndexChanged);
             // 
-            // skinClrPictureBox
+            // dyeItem0
             // 
-            this.skinClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.skinClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "SkinColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.skinClrPictureBox.Location = new System.Drawing.Point(294, 72);
-            this.skinClrPictureBox.Name = "skinClrPictureBox";
-            this.skinClrPictureBox.Size = new System.Drawing.Size(79, 25);
-            this.skinClrPictureBox.TabIndex = 6;
-            this.skinClrPictureBox.TabStop = false;
-            this.skinClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
-            // 
-            // eyeColorLbl
-            // 
-            this.eyeColorLbl.AutoSize = true;
-            this.eyeColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eyeColorLbl.Location = new System.Drawing.Point(210, 41);
-            this.eyeColorLbl.Name = "eyeColorLbl";
-            this.eyeColorLbl.Size = new System.Drawing.Size(78, 16);
-            this.eyeColorLbl.TabIndex = 5;
-            this.eyeColorLbl.Text = "Eye color:";
-            // 
-            // eyeClrPictureBox
-            // 
-            this.eyeClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.eyeClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.eyeClrPictureBox.Location = new System.Drawing.Point(294, 41);
-            this.eyeClrPictureBox.Name = "eyeClrPictureBox";
-            this.eyeClrPictureBox.Size = new System.Drawing.Size(79, 25);
-            this.eyeClrPictureBox.TabIndex = 4;
-            this.eyeClrPictureBox.TabStop = false;
-            this.eyeClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
-            // 
-            // hairColorLbl
-            // 
-            this.hairColorLbl.AutoSize = true;
-            this.hairColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hairColorLbl.Location = new System.Drawing.Point(208, 10);
-            this.hairColorLbl.Name = "hairColorLbl";
-            this.hairColorLbl.Size = new System.Drawing.Size(80, 16);
-            this.hairColorLbl.TabIndex = 3;
-            this.hairColorLbl.Text = "Hair color:";
-            // 
-            // hairClrPictureBox
-            // 
-            this.hairClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.hairClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "HairColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.hairClrPictureBox.Location = new System.Drawing.Point(294, 10);
-            this.hairClrPictureBox.Name = "hairClrPictureBox";
-            this.hairClrPictureBox.Size = new System.Drawing.Size(79, 25);
-            this.hairClrPictureBox.TabIndex = 2;
-            this.hairClrPictureBox.TabStop = false;
-            this.hairClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            this.dyeItem0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem0.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem0.ForeColor = System.Drawing.Color.White;
+            this.dyeItem0.Location = new System.Drawing.Point(684, 23);
+            this.dyeItem0.Name = "dyeItem0";
+            this.dyeItem0.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem0.TabIndex = 20;
+            this.dyeItem0.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem0.UseVisualStyleBackColor = false;
+            this.dyeItem0.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
             // 
             // tabPage3
             // 
@@ -812,7 +1273,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(818, 439);
+            this.tabPage3.Size = new System.Drawing.Size(998, 482);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Buffs";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -831,6 +1292,16 @@
             this.buffControlsGroupBox.TabIndex = 1;
             this.buffControlsGroupBox.TabStop = false;
             this.buffControlsGroupBox.Text = "Controls";
+            // 
+            // deleteBuffBtn
+            // 
+            this.deleteBuffBtn.Location = new System.Drawing.Point(0, 339);
+            this.deleteBuffBtn.Name = "deleteBuffBtn";
+            this.deleteBuffBtn.Size = new System.Drawing.Size(80, 23);
+            this.deleteBuffBtn.TabIndex = 6;
+            this.deleteBuffBtn.Text = "Delete";
+            this.deleteBuffBtn.UseVisualStyleBackColor = true;
+            this.deleteBuffBtn.Click += new System.EventHandler(this.deleteBuffBtn_Click);
             // 
             // buffFilterTxtBox
             // 
@@ -960,7 +1431,7 @@
             this.tabPage4.Controls.Add(this.inventoryItem51);
             this.tabPage4.Controls.Add(this.inventoryItem50);
             this.tabPage4.Controls.Add(this.itemPropertiesGroupBox);
-            this.tabPage4.Controls.Add(this.itemFilterGroupBox);
+            this.tabPage4.Controls.Add(this.inventoryFilterGroupBox);
             this.tabPage4.Controls.Add(this.inventoryItem49);
             this.tabPage4.Controls.Add(this.inventoryItem48);
             this.tabPage4.Controls.Add(this.inventoryItem47);
@@ -1014,7 +1485,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(818, 439);
+            this.tabPage4.Size = new System.Drawing.Size(998, 482);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Inventory";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1252,17 +1723,17 @@
             this.itemPrefixLbl.TabIndex = 0;
             this.itemPrefixLbl.Text = "Item Prefix:";
             // 
-            // itemFilterGroupBox
+            // inventoryFilterGroupBox
             // 
-            this.itemFilterGroupBox.Controls.Add(this.itemFilterTxtBox);
-            this.itemFilterGroupBox.Controls.Add(this.searchForItemLbl);
-            this.itemFilterGroupBox.Controls.Add(this.itemSearchBox);
-            this.itemFilterGroupBox.Location = new System.Drawing.Point(7, 10);
-            this.itemFilterGroupBox.Name = "itemFilterGroupBox";
-            this.itemFilterGroupBox.Size = new System.Drawing.Size(178, 256);
-            this.itemFilterGroupBox.TabIndex = 51;
-            this.itemFilterGroupBox.TabStop = false;
-            this.itemFilterGroupBox.Text = "Filtering";
+            this.inventoryFilterGroupBox.Controls.Add(this.itemFilterTxtBox);
+            this.inventoryFilterGroupBox.Controls.Add(this.searchForItemLbl);
+            this.inventoryFilterGroupBox.Controls.Add(this.itemSearchBox);
+            this.inventoryFilterGroupBox.Location = new System.Drawing.Point(7, 10);
+            this.inventoryFilterGroupBox.Name = "inventoryFilterGroupBox";
+            this.inventoryFilterGroupBox.Size = new System.Drawing.Size(178, 256);
+            this.inventoryFilterGroupBox.TabIndex = 51;
+            this.inventoryFilterGroupBox.TabStop = false;
+            this.inventoryFilterGroupBox.Text = "Item Filtering";
             // 
             // itemFilterTxtBox
             // 
@@ -1991,21 +2462,101 @@
             this.inventoryItem0.UseVisualStyleBackColor = false;
             this.inventoryItem0.Enter += new System.EventHandler(this.inventoryItem_GotFocus);
             // 
-            // deleteBuffBtn
+            // dyeItem3
             // 
-            this.deleteBuffBtn.Location = new System.Drawing.Point(0, 339);
-            this.deleteBuffBtn.Name = "deleteBuffBtn";
-            this.deleteBuffBtn.Size = new System.Drawing.Size(80, 23);
-            this.deleteBuffBtn.TabIndex = 6;
-            this.deleteBuffBtn.Text = "Delete";
-            this.deleteBuffBtn.UseVisualStyleBackColor = true;
-            this.deleteBuffBtn.Click += new System.EventHandler(this.deleteBuffBtn_Click);
+            this.dyeItem3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem3.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem3.ForeColor = System.Drawing.Color.White;
+            this.dyeItem3.Location = new System.Drawing.Point(684, 176);
+            this.dyeItem3.Name = "dyeItem3";
+            this.dyeItem3.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem3.TabIndex = 46;
+            this.dyeItem3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem3.UseVisualStyleBackColor = false;
+            this.dyeItem3.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // dyeItem4
+            // 
+            this.dyeItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem4.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem4.ForeColor = System.Drawing.Color.White;
+            this.dyeItem4.Location = new System.Drawing.Point(684, 227);
+            this.dyeItem4.Name = "dyeItem4";
+            this.dyeItem4.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem4.TabIndex = 47;
+            this.dyeItem4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem4.UseVisualStyleBackColor = false;
+            this.dyeItem4.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // dyeItem5
+            // 
+            this.dyeItem5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem5.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem5.ForeColor = System.Drawing.Color.White;
+            this.dyeItem5.Location = new System.Drawing.Point(684, 278);
+            this.dyeItem5.Name = "dyeItem5";
+            this.dyeItem5.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem5.TabIndex = 48;
+            this.dyeItem5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem5.UseVisualStyleBackColor = false;
+            this.dyeItem5.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // dyeItem6
+            // 
+            this.dyeItem6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem6.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem6.ForeColor = System.Drawing.Color.White;
+            this.dyeItem6.Location = new System.Drawing.Point(684, 329);
+            this.dyeItem6.Name = "dyeItem6";
+            this.dyeItem6.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem6.TabIndex = 49;
+            this.dyeItem6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem6.UseVisualStyleBackColor = false;
+            this.dyeItem6.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // dyeItem7
+            // 
+            this.dyeItem7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem7.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem7.ForeColor = System.Drawing.Color.White;
+            this.dyeItem7.Location = new System.Drawing.Point(684, 380);
+            this.dyeItem7.Name = "dyeItem7";
+            this.dyeItem7.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem7.TabIndex = 50;
+            this.dyeItem7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem7.UseVisualStyleBackColor = false;
+            this.dyeItem7.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // dyeItem8
+            // 
+            this.dyeItem8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem8.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem8.ForeColor = System.Drawing.Color.White;
+            this.dyeItem8.Location = new System.Drawing.Point(684, 431);
+            this.dyeItem8.Name = "dyeItem8";
+            this.dyeItem8.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem8.TabIndex = 51;
+            this.dyeItem8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem8.UseVisualStyleBackColor = false;
+            this.dyeItem8.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 508);
+            this.ClientSize = new System.Drawing.Size(1019, 541);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2025,14 +2576,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.skinVariantUpDown)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.appearanceGroupBox.ResumeLayout(false);
+            this.appearanceGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shoeClrPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pantsClrPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.undershirtClrPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shirtClrPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinClrPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eyeClrPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hairClrPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eyeClrPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skinClrPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shirtClrPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.undershirtClrPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pantsClrPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shoeClrPictureBox)).EndInit();
+            this.equipmentFilterGroupBox.ResumeLayout(false);
+            this.equipmentFilterGroupBox.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.buffControlsGroupBox.ResumeLayout(false);
             this.buffControlsGroupBox.PerformLayout();
@@ -2044,8 +2599,8 @@
             this.itemPropertiesGroupBox.ResumeLayout(false);
             this.itemPropertiesGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stackSizeUpDown)).EndInit();
-            this.itemFilterGroupBox.ResumeLayout(false);
-            this.itemFilterGroupBox.PerformLayout();
+            this.inventoryFilterGroupBox.ResumeLayout(false);
+            this.inventoryFilterGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2182,7 +2737,7 @@
         private System.Windows.Forms.Label stackSizeLbl;
         private System.Windows.Forms.ComboBox itemPrefixComboBox;
         private System.Windows.Forms.Label itemPrefixLbl;
-        private System.Windows.Forms.GroupBox itemFilterGroupBox;
+        private System.Windows.Forms.GroupBox inventoryFilterGroupBox;
         private System.Windows.Forms.ListBox itemSearchBox;
         private System.Windows.Forms.Button inventoryItem53;
         private System.Windows.Forms.Button inventoryItem52;
@@ -2197,6 +2752,41 @@
         private System.Windows.Forms.Label ammoLbl;
         private System.Windows.Forms.Label coinsLbl;
         private System.Windows.Forms.Button deleteBuffBtn;
+        private System.Windows.Forms.GroupBox equipmentFilterGroupBox;
+        private System.Windows.Forms.Button dyeItem0;
+        private System.Windows.Forms.TextBox equipmentFilterTxtBox;
+        private System.Windows.Forms.Label equipmentSearchLbl;
+        private System.Windows.Forms.ListBox equipmentSearchBox;
+        private System.Windows.Forms.GroupBox appearanceGroupBox;
+        private System.Windows.Forms.Label dyeLbl;
+        private System.Windows.Forms.Button dyeItem2;
+        private System.Windows.Forms.Button dyeItem1;
+        private System.Windows.Forms.Label armorLbl;
+        private System.Windows.Forms.Label socialsLbl;
+        private System.Windows.Forms.Button equipmentItem10;
+        private System.Windows.Forms.Button equipmentItem7;
+        private System.Windows.Forms.Button equipmentItem6;
+        private System.Windows.Forms.Button equipmentItem5;
+        private System.Windows.Forms.Button equipmentItem4;
+        private System.Windows.Forms.Button equipmentItem3;
+        private System.Windows.Forms.Button equipmentItem2;
+        private System.Windows.Forms.Button equipmentItem1;
+        private System.Windows.Forms.Button equipmentItem0;
+        private System.Windows.Forms.Button equipmentItem17;
+        private System.Windows.Forms.Button equipmentItem16;
+        private System.Windows.Forms.Button equipmentItem15;
+        private System.Windows.Forms.Button equipmentItem14;
+        private System.Windows.Forms.Button equipmentItem13;
+        private System.Windows.Forms.Button equipmentItem12;
+        private System.Windows.Forms.Button equipmentItem11;
+        private System.Windows.Forms.Button equipmentItem18;
+        private System.Windows.Forms.Button equipmentItem8;
+        private System.Windows.Forms.Button dyeItem8;
+        private System.Windows.Forms.Button dyeItem7;
+        private System.Windows.Forms.Button dyeItem6;
+        private System.Windows.Forms.Button dyeItem5;
+        private System.Windows.Forms.Button dyeItem4;
+        private System.Windows.Forms.Button dyeItem3;
     }
 }
 

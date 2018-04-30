@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,8 +9,12 @@ namespace TerrariaInventoryEditor.Forms
 {
     public partial class MainForm : Form
     {
-        private readonly Random _random = new Random();
+        private readonly List<Button> _dyeItems = new List<Button>();
+        private readonly List<Button> _equipmentItems = new List<Button>();
         private readonly List<Button> _inventoryItems = new List<Button>();
+        private readonly Random _random = new Random();
+
+        private Button _selectedEquip;
         private Button _selectedItem;
 
         public MainForm()
@@ -19,26 +22,74 @@ namespace TerrariaInventoryEditor.Forms
             InitializeComponent();
 
             playerBindingSource.DataSource = Terraria.Instance.Player;
+            equipmentSearchBox.DataSource = GetFilteredEquipmentList();
             buffSearchBox.DataSource = Terraria.Instance.Buffs;
             itemSearchBox.DataSource = Terraria.Instance.Items;
             itemPrefixComboBox.DataSource = Enum.GetValues(typeof(ItemPrefix)).Cast<ItemPrefix>().ToList();
 
-            for (var i = 0; i < 58; ++i)
+            for (var i = 0; i < 10; i++)
             {
-                if (!(Controls.Find($"inventoryItem{i}", true).SingleOrDefault() is Button item))
+                if (!(Controls.Find($"dyeItem{i}", true).SingleOrDefault() is Button dyeItem))
                 {
                     continue;
                 }
 
-                item.Tag = i;
-                _inventoryItems.Add(item);
+                dyeItem.Tag = i;
+                _dyeItems.Add(dyeItem);
+            }
+
+            for (var i = 0; i < 20; ++i)
+            {
+                if (!(Controls.Find($"equipmentItem{i}", true).SingleOrDefault() is Button equipmentItem))
+                {
+                    continue;
+                }
+
+                equipmentItem.Tag = i;
+                _equipmentItems.Add(equipmentItem);
+            }
+
+            for (var i = 0; i < 58; ++i)
+            {
+                if (!(Controls.Find($"inventoryItem{i}", true).SingleOrDefault() is Button inventoryItem))
+                {
+                    continue;
+                }
+
+                inventoryItem.Tag = i;
+                _inventoryItems.Add(inventoryItem);
             }
 
             playerPictureBox.Draw();
+            DrawEquipment();
             DrawInventory();
         }
 
-        #region Toolstrip Items
+        private void DrawInventory()
+        {
+            var player = Terraria.Instance.Player;
+            for (var i = 0; i < 58; ++i)
+            {
+                var item = _inventoryItems[i];
+
+                item.Image = player.Inventory[i].Image;
+                item.Text = player.Inventory[i].StackSize.ToString();
+            }
+        }
+
+        private void DrawEquipment()
+        {
+            var player = Terraria.Instance.Player;
+            for (var i = 0; i < player.Armor.Length - 2; ++i) // TODO: Temporarily unsupported hidden accessory slots
+            {
+                if (i < player.Dye.Length - 1)
+                {
+                    _dyeItems[i].Image = player.Dye[(int) _dyeItems[i].Tag].Image;
+                }
+
+                _equipmentItems[i].Image = player.Armor[(int) _equipmentItems[i].Tag].Image;
+            }
+        }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -51,6 +102,9 @@ namespace TerrariaInventoryEditor.Forms
 
             itemPrefixComboBox.SelectedIndex = 0;
             stackSizeUpDown.Value = 1;
+
+            playerPictureBox.Draw();
+            DrawEquipment();
             DrawInventory();
         }
 
@@ -72,6 +126,7 @@ namespace TerrariaInventoryEditor.Forms
                 Terraria.Instance.Player.Load(openFileDialog.FileName);
 
                 playerPictureBox.Draw();
+                DrawEquipment();
                 DrawInventory();
             }
         }
@@ -111,10 +166,6 @@ namespace TerrariaInventoryEditor.Forms
             }
         }
 
-        #endregion
-
-        #region Stats
-
         private void maxOutBtn_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
@@ -129,9 +180,90 @@ namespace TerrariaInventoryEditor.Forms
             player.Mana = player.MaxMana = 20;
         }
 
-        #endregion
+        private static List<Item> GetFilteredEquipmentList(string filter = null)
+        {
+            var items = (from item in Terraria.Instance.Items
+                where item.BodySlot > 0 || item.HeadSlot > 0 || item.LegSlot > 0 || item.IsAccessory
+                orderby item.Name
+                select item).ToList();
 
-        #region Appearance
+            if (!string.IsNullOrWhiteSpace(filter))
+            {
+                return items.Where(i => i.Name.ToLowerInvariant().Contains(filter.ToLowerInvariant())).ToList();
+            }
+
+            return items;
+        }
+
+        private void equipmentFilterTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            equipmentSearchBox.DataSource = GetFilteredEquipmentList(equipmentFilterTxtBox.Text);
+        }
+
+        private void equipmentItem_GotFocus(object sender, EventArgs e)
+        {
+            var button = (Button) sender;
+
+            button.BackColor = Color.FromArgb(0, 171, 229);
+            foreach (var equipmentButton in _equipmentItems.Concat(_dyeItems).Where(b => b != button))
+            {
+                equipmentButton.BackColor = Color.FromArgb(90, 90, 180);
+            }
+
+            _selectedEquip = button;
+        }
+
+        private void equipmentItem_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Right)
+            {
+                return;
+            }
+
+            var button = (Button) sender;
+            if (e.Location.X < 0 || e.Location.X > button.Width)
+            {
+                return;
+            }
+            if (e.Location.Y < 0 || e.Location.Y > button.Height)
+            {
+                return;
+            }
+
+            var player = Terraria.Instance.Player;
+            if (_dyeItems.Contains(button))
+            {
+                player.Dye[(int) button.Tag].SetDefaults(0);
+            }
+            else
+            {
+                player.Armor[(int) button.Tag].SetDefaults(0);
+            }
+
+            button.Image = new Bitmap("Data\\ItemTextures\\Item_0.png");
+        }
+
+        private void equipmentSearchBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_selectedEquip == null)
+            {
+                return;
+            }
+
+            var player = Terraria.Instance.Player;
+            var selectedItem = (Item) equipmentSearchBox.SelectedItem;
+
+            if (_dyeItems.Contains(_selectedEquip))
+            {
+                player.Dye[(int) _selectedEquip.Tag].SetDefaults(selectedItem.NetId);
+            }
+            else
+            {
+                player.Armor[(int) _selectedEquip.Tag].SetDefaults(selectedItem.NetId);
+            }
+
+            _selectedEquip.Image = player.Armor[(int) _selectedEquip.Tag].Image;
+        }
 
         private void hairDesignerBtn_Click(object sender, EventArgs e)
         {
@@ -195,12 +327,13 @@ namespace TerrariaInventoryEditor.Forms
             playerPictureBox.Draw();
         }
 
-        #endregion
-
-        #region Buffs
-
         private void buffSearchBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (buffDisplayGrid.CurrentCell == null)
+            {
+                return;
+            }
+
             var player = Terraria.Instance.Player;
             var selectedBuff = (Buff) buffSearchBox.SelectedItem;
             player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].SetDefaults(selectedBuff.Id);
@@ -256,10 +389,6 @@ namespace TerrariaInventoryEditor.Forms
             buffDisplayGrid.Refresh();
         }
 
-        #endregion
-
-        #region Inventory
-
         private void deleteAllItemsBtn_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
@@ -290,7 +419,7 @@ namespace TerrariaInventoryEditor.Forms
             var player = Terraria.Instance.Player;
             var button = (Button) sender;
 
-            button.BackColor = Color.DeepSkyBlue;
+            button.BackColor = Color.FromArgb(0, 171, 229);
             foreach (var inventoryButton in _inventoryItems.Where(b => b != button))
             {
                 inventoryButton.BackColor = Color.FromArgb(90, 90, 180);
@@ -401,23 +530,5 @@ namespace TerrariaInventoryEditor.Forms
             player.Inventory[(int) _selectedItem.Tag].StackSize = (int) stackSizeUpDown.Value;
             _selectedItem.Text = player.Inventory[(int) _selectedItem.Tag].StackSize.ToString();
         }
-
-        #endregion
-
-        #region Miscellaneous Methods
-
-        private void DrawInventory()
-        {
-            var player = Terraria.Instance.Player;
-            for (var i = 0; i < 58; ++i)
-            {
-                var item = _inventoryItems[i];
-
-                item.Image = player.Inventory[i].Image;
-                item.Text = player.Inventory[i].StackSize.ToString();
-            }
-        }
-
-        #endregion
     }
 }
