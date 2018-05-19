@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using TerrariaInventoryEditor.Framework;
 using TerrariaInventoryEditor.TerrariaLib;
 
 namespace TerrariaInventoryEditor.Forms
@@ -20,6 +22,9 @@ namespace TerrariaInventoryEditor.Forms
         public MainForm()
         {
             InitializeComponent();
+
+            playerPictureBox.PreventUpdates();
+            TextureManager.Instance.Load();
 
             playerBindingSource.DataSource = Terraria.Instance.Player;
             equipmentSearchBox.DataSource = GetFilteredEquipmentList();
@@ -60,21 +65,95 @@ namespace TerrariaInventoryEditor.Forms
                 _inventoryItems.Add(inventoryItem);
             }
 
-            playerPictureBox.Draw();
+            playerPictureBox.AllowUpdates();
             DrawEquipment();
             DrawInventory();
         }
 
-        private void DrawInventory()
+        private static List<Item> GetFilteredEquipmentList(string filter = null)
+        {
+            var items = (from item in Terraria.Instance.Items
+                where item.BodySlot > 0 || item.HeadSlot > 0 || item.LegSlot > 0 || item.IsAccessory
+                orderby item.Name
+                select item).ToList();
+
+            if (!string.IsNullOrWhiteSpace(filter))
+            {
+                return items.Where(i => i.Name.ToLowerInvariant().Contains(filter.ToLowerInvariant())).ToList();
+            }
+
+            return items;
+        }
+
+        private void buffFilterTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            buffSearchBox.SelectedIndexChanged -= buffSearchBox_SelectedIndexChanged;
+            if (string.IsNullOrWhiteSpace(buffFilterTxtBox.Text))
+            {
+                buffSearchBox.DataSource = Terraria.Instance.Buffs;
+            }
+            else
+            {
+                buffSearchBox.DataSource = (from buff in Terraria.Instance.Buffs
+                    where buff.Name.ToLowerInvariant().Contains(buffFilterTxtBox.Text.ToLowerInvariant())
+                    select buff).ToList();
+            }
+
+            buffSearchBox.SelectedIndexChanged += buffSearchBox_SelectedIndexChanged;
+        }
+
+        private void buffSearchBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (buffDisplayGrid.CurrentCell == null)
+            {
+                return;
+            }
+
+            var player = Terraria.Instance.Player;
+            var selectedBuff = (Buff) buffSearchBox.SelectedItem;
+            player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].SetDefaults(selectedBuff.Id);
+            player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].Time = int.MaxValue;
+        }
+
+        private void deleteAllBuffsBtn_Click(object sender, EventArgs e)
+        {
+            foreach (var buff in Terraria.Instance.Player.Buffs.Where(b => b.Id != 0))
+            {
+                buff.SetDefaults(0);
+            }
+
+            buffDisplayGrid.Refresh();
+        }
+
+        private void deleteAllItemsBtn_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
-            for (var i = 0; i < 58; ++i)
+            foreach (var item in player.Inventory.Where(i => i.NetId != 0))
             {
-                var item = _inventoryItems[i];
-
-                item.Image = player.Inventory[i].Image;
-                item.Text = player.Inventory[i].StackSize.ToString();
+                item.SetDefaults(0);
             }
+
+            DrawInventory();
+        }
+
+        private void deleteBuffBtn_Click(object sender, EventArgs e)
+        {
+            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].SetDefaults(0);
+            buffDisplayGrid.Refresh();
+        }
+
+        private void deleteItemBtn_Click(object sender, EventArgs e)
+        {
+            if (_selectedItem == null)
+            {
+                return;
+            }
+
+            var player = Terraria.Instance.Player;
+            player.Inventory[(int) _selectedItem.Tag] = new Item();
+
+            _selectedItem.Image = new Bitmap("Data\\ItemTextures\\Item_0.png");
+            _selectedItem.Text = string.Empty;
         }
 
         private void DrawEquipment()
@@ -91,108 +170,16 @@ namespace TerrariaInventoryEditor.Forms
             }
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            playerBindingSource.DataSource = Terraria.Instance.Player = new Player();
-
-            itemPrefixComboBox.SelectedIndex = 0;
-            stackSizeUpDown.Value = 1;
-
-            playerPictureBox.Draw();
-            DrawEquipment();
-            DrawInventory();
-        }
-
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.AddExtension = true;
-                openFileDialog.Filter = "Terraria Player Files (*.plr)|*.plr|All Files (*.*)|*.*";
-                openFileDialog.Title = "Select a Player File";
-
-                if (openFileDialog.ShowDialog() != DialogResult.OK)
-                {
-                    MessageBox.Show("Unable to load player file!", "TerrariaInventoryEditor", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                    return;
-                }
-
-                Terraria.Instance.Player.Load(openFileDialog.FileName);
-
-                playerPictureBox.Draw();
-                DrawEquipment();
-                DrawInventory();
-            }
-        }
-
-        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var saveFileDialog = new SaveFileDialog())
-            {
-                saveFileDialog.AddExtension = true;
-                saveFileDialog.DefaultExt = "plr";
-                saveFileDialog.FileName = Terraria.Instance.Player.Name;
-                saveFileDialog.Filter = "Terraria Player File (*.plr)|*.plr";
-
-                if (saveFileDialog.ShowDialog() != DialogResult.OK)
-                {
-                    MessageBox.Show("Save cancelled.", "TerrariaInventoryEditor", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                    return;
-                }
-
-                Terraria.Instance.Player.FilePath = saveFileDialog.FileName;
-                Terraria.Instance.Player.Save(saveFileDialog.FileName);
-            }
-        }
-
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(Terraria.Instance.Player.FilePath))
-            {
-                Terraria.Instance.Player.Save(Terraria.Instance.Player.FilePath);
-                MessageBox.Show($"Player file saved! Path: {Terraria.Instance.Player.FilePath}",
-                    "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-            else
-            {
-                saveAsToolStripMenuItem_Click(sender, e);
-            }
-        }
-
-        private void maxOutBtn_Click(object sender, EventArgs e)
+        private void DrawInventory()
         {
             var player = Terraria.Instance.Player;
-            player.Health = player.MaxHealth = 32767;
-            player.Mana = player.MaxMana = 200;
-        }
-
-        private void resetHealthBtn_Click(object sender, EventArgs e)
-        {
-            var player = Terraria.Instance.Player;
-            player.Health = player.MaxHealth = 100;
-            player.Mana = player.MaxMana = 20;
-        }
-
-        private static List<Item> GetFilteredEquipmentList(string filter = null)
-        {
-            var items = (from item in Terraria.Instance.Items
-                where item.BodySlot > 0 || item.HeadSlot > 0 || item.LegSlot > 0 || item.IsAccessory
-                orderby item.Name
-                select item).ToList();
-
-            if (!string.IsNullOrWhiteSpace(filter))
+            for (var i = 0; i < 58; ++i)
             {
-                return items.Where(i => i.Name.ToLowerInvariant().Contains(filter.ToLowerInvariant())).ToList();
-            }
+                var item = _inventoryItems[i];
 
-            return items;
+                item.Image = player.Inventory[i].Image;
+                item.Text = player.Inventory[i].StackSize.ToString();
+            }
         }
 
         private void equipmentFilterTxtBox_TextChanged(object sender, EventArgs e)
@@ -265,6 +252,11 @@ namespace TerrariaInventoryEditor.Forms
             _selectedEquip.Image = player.Armor[(int) _selectedEquip.Tag].Image;
         }
 
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void hairDesignerBtn_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
@@ -279,139 +271,6 @@ namespace TerrariaInventoryEditor.Forms
                 player.HairColor = hairDesignerDialog.HairColor;
                 playerPictureBox.Draw();
             }
-        }
-
-        private void playerClrPictureBox_Click(object sender, EventArgs e)
-        {
-            if (!(sender is PictureBox pictureBox))
-            {
-                return;
-            }
-
-            using (var colorDialog = new ColorDialog())
-            {
-                colorDialog.AllowFullOpen = true;
-                colorDialog.AnyColor = true;
-                colorDialog.SolidColorOnly = false;
-
-                if (colorDialog.ShowDialog() != DialogResult.OK)
-                {
-                    return;
-                }
-
-                pictureBox.BackColor = colorDialog.Color;
-                playerPictureBox.Draw();
-            }
-        }
-
-        private void randomizeColorsBtn_Click(object sender, EventArgs e)
-        {
-            var player = Terraria.Instance.Player;
-            player.EyeColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-            player.HairColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-            player.PantsColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-            player.ShirtColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-            player.ShoeColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-            player.SkinColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-            player.UndershirtColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-
-            playerPictureBox.Draw();
-        }
-
-        private void randomizeHairBtn_Click(object sender, EventArgs e)
-        {
-            var player = Terraria.Instance.Player;
-            player.Hair = _random.Next(134);
-            player.HairColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-
-            playerPictureBox.Draw();
-        }
-
-        private void buffSearchBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (buffDisplayGrid.CurrentCell == null)
-            {
-                return;
-            }
-
-            var player = Terraria.Instance.Player;
-            var selectedBuff = (Buff) buffSearchBox.SelectedItem;
-            player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].SetDefaults(selectedBuff.Id);
-            player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].Time = int.MaxValue;
-        }
-
-        private void buffFilterTxtBox_TextChanged(object sender, EventArgs e)
-        {
-            buffSearchBox.SelectedIndexChanged -= buffSearchBox_SelectedIndexChanged;
-            if (string.IsNullOrWhiteSpace(buffFilterTxtBox.Text))
-            {
-                buffSearchBox.DataSource = Terraria.Instance.Buffs;
-            }
-            else
-            {
-                buffSearchBox.DataSource = (from buff in Terraria.Instance.Buffs
-                    where buff.Name.ToLowerInvariant().Contains(buffFilterTxtBox.Text.ToLowerInvariant())
-                    select buff).ToList();
-            }
-
-            buffSearchBox.SelectedIndexChanged += buffSearchBox_SelectedIndexChanged;
-        }
-
-        private void deleteAllBuffsBtn_Click(object sender, EventArgs e)
-        {
-            foreach (var buff in Terraria.Instance.Player.Buffs.Where(b => b.Id != 0))
-            {
-                buff.SetDefaults(0);
-            }
-
-            buffDisplayGrid.Refresh();
-        }
-
-        private void deleteBuffBtn_Click(object sender, EventArgs e)
-        {
-            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].SetDefaults(0);
-            buffDisplayGrid.Refresh();
-        }
-
-        private void maxDurationBtn_Click(object sender, EventArgs e)
-        {
-            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].Time = int.MaxValue;
-            buffDisplayGrid.Refresh();
-        }
-
-        private void maxAllDurationsBtn_Click(object sender, EventArgs e)
-        {
-            foreach (var buff in Terraria.Instance.Player.Buffs.Where(b => b.Id != 0))
-            {
-                buff.Time = int.MaxValue;
-            }
-
-            buffDisplayGrid.Refresh();
-        }
-
-        private void deleteAllItemsBtn_Click(object sender, EventArgs e)
-        {
-            var player = Terraria.Instance.Player;
-            foreach (var item in player.Inventory.Where(i => i.NetId != 0))
-            {
-                item.SetDefaults(0);
-            }
-
-            DrawInventory();
-        }
-
-        private void deleteItemBtn_Click(object sender, EventArgs e)
-        {
-            if (_selectedItem == null)
-            {
-                return;
-            }
-
-            var player = Terraria.Instance.Player;
-            player.Inventory[(int) _selectedItem.Tag] = new Item();
-
-            _selectedItem.Image = new Bitmap("Data\\ItemTextures\\Item_0.png");
-            _selectedItem.Text = string.Empty;
         }
 
         private void inventoryItem_GotFocus(object sender, EventArgs e)
@@ -465,6 +324,16 @@ namespace TerrariaInventoryEditor.Forms
             _selectedItem.Text = selectedItem.StackSize.ToString();
         }
 
+        private void maxAllDurationsBtn_Click(object sender, EventArgs e)
+        {
+            foreach (var buff in Terraria.Instance.Player.Buffs.Where(b => b.Id != 0))
+            {
+                buff.Time = int.MaxValue;
+            }
+
+            buffDisplayGrid.Refresh();
+        }
+
         private void maxAllStacksBtn_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
@@ -479,6 +348,19 @@ namespace TerrariaInventoryEditor.Forms
             }
 
             DrawInventory();
+        }
+
+        private void maxDurationBtn_Click(object sender, EventArgs e)
+        {
+            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].Time = int.MaxValue;
+            buffDisplayGrid.Refresh();
+        }
+
+        private void maxOutBtn_Click(object sender, EventArgs e)
+        {
+            var player = Terraria.Instance.Player;
+            player.Health = player.MaxHealth = 32767;
+            player.Mana = player.MaxMana = 200;
         }
 
         private void maxStackBtn_Click(object sender, EventArgs e)
@@ -498,6 +380,64 @@ namespace TerrariaInventoryEditor.Forms
             _selectedItem.Text = player.Inventory[(int) _selectedItem.Tag].StackSize.ToString();
         }
 
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            playerBindingSource.DataSource = Terraria.Instance.Player = new Player();
+
+            itemPrefixComboBox.SelectedIndex = 0;
+            stackSizeUpDown.Value = 1;
+
+            playerPictureBox.Draw();
+            DrawEquipment();
+            DrawInventory();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.AddExtension = true;
+                openFileDialog.Filter = "Terraria Player Files (*.plr)|*.plr|All Files (*.*)|*.*";
+                openFileDialog.Title = "Select a Player File";
+
+                if (openFileDialog.ShowDialog() != DialogResult.OK)
+                {
+                    MessageBox.Show("Unable to load player file!", "TerrariaInventoryEditor", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
+
+                Terraria.Instance.Player.Load(openFileDialog.FileName);
+            }
+
+            playerPictureBox.Draw();
+            DrawEquipment();
+            DrawInventory();
+        }
+
+        private void playerClrPictureBox_Click(object sender, EventArgs e)
+        {
+            if (!(sender is PictureBox pictureBox))
+            {
+                return;
+            }
+
+            using (var colorDialog = new ColorDialog())
+            {
+                colorDialog.AllowFullOpen = true;
+                colorDialog.AnyColor = true;
+                colorDialog.SolidColorOnly = false;
+
+                if (colorDialog.ShowDialog() != DialogResult.OK)
+                {
+                    return;
+                }
+
+                pictureBox.BackColor = colorDialog.Color;
+                playerPictureBox.Draw();
+            }
+        }
+
         private void prefixComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (_selectedItem == null)
@@ -512,6 +452,75 @@ namespace TerrariaInventoryEditor.Forms
             }
 
             player.Inventory[(int) _selectedItem.Tag].Prefix = (ItemPrefix) itemPrefixComboBox.SelectedItem;
+        }
+
+        private void randomizeColorsBtn_Click(object sender, EventArgs e)
+        {
+            playerPictureBox.PreventUpdates();
+
+            var player = Terraria.Instance.Player;
+            player.EyeColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            player.HairColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            player.PantsColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            player.ShirtColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            player.ShoeColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            player.SkinColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            player.UndershirtColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+
+            playerPictureBox.AllowUpdates();
+        }
+
+        private void randomizeHairBtn_Click(object sender, EventArgs e)
+        {
+            playerPictureBox.PreventUpdates();
+
+            var player = Terraria.Instance.Player;
+            player.Hair = _random.Next(134);
+            player.HairColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+
+            playerPictureBox.AllowUpdates();
+        }
+
+        private void resetHealthBtn_Click(object sender, EventArgs e)
+        {
+            var player = Terraria.Instance.Player;
+            player.Health = player.MaxHealth = 100;
+            player.Mana = player.MaxMana = 20;
+        }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.AddExtension = true;
+                saveFileDialog.DefaultExt = "plr";
+                saveFileDialog.FileName = Terraria.Instance.Player.Name;
+                saveFileDialog.Filter = "Terraria Player File (*.plr)|*.plr";
+
+                if (saveFileDialog.ShowDialog() != DialogResult.OK)
+                {
+                    MessageBox.Show("Save cancelled.", "TerrariaInventoryEditor", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    return;
+                }
+
+                Terraria.Instance.Player.FilePath = saveFileDialog.FileName;
+                Terraria.Instance.Player.Save(saveFileDialog.FileName);
+            }
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(Terraria.Instance.Player.FilePath))
+            {
+                Terraria.Instance.Player.Save(Terraria.Instance.Player.FilePath);
+                MessageBox.Show($"Player file saved! Path: {Terraria.Instance.Player.FilePath}",
+                    "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                saveAsToolStripMenuItem_Click(sender, e);
+            }
         }
 
         private void stackSizeUpDown_ValueChanged(object sender, EventArgs e)

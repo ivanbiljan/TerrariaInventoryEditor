@@ -67,6 +67,7 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Framework\TextureManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="TerrariaLib\ItemPrefix.cs" />
     <Compile Include="TerrariaLib\ItemRarity.cs" />
     <Compile Include="TerrariaLib\Player.cs" />
+    <Compile Include="TerrariaLib\PlayerTexture.cs" />
     <Compile Include="TerrariaLib\PlayerVariant.cs" />
     <Compile Include="TerrariaLib\ProjectileType.cs" />
     <Compile Include="TerrariaLib\WorldInformation.cs" />

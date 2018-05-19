@@ -67,6 +67,12 @@
             this.playerNameTxtBox = new System.Windows.Forms.TextBox();
             this.playerNameLbl = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dyeItem8 = new System.Windows.Forms.Button();
+            this.dyeItem7 = new System.Windows.Forms.Button();
+            this.dyeItem6 = new System.Windows.Forms.Button();
+            this.dyeItem5 = new System.Windows.Forms.Button();
+            this.dyeItem4 = new System.Windows.Forms.Button();
+            this.dyeItem3 = new System.Windows.Forms.Button();
             this.equipmentItem18 = new System.Windows.Forms.Button();
             this.equipmentItem8 = new System.Windows.Forms.Button();
             this.equipmentItem7 = new System.Windows.Forms.Button();
@@ -203,12 +209,6 @@
             this.inventoryItem2 = new System.Windows.Forms.Button();
             this.inventoryItem1 = new System.Windows.Forms.Button();
             this.inventoryItem0 = new System.Windows.Forms.Button();
-            this.dyeItem3 = new System.Windows.Forms.Button();
-            this.dyeItem4 = new System.Windows.Forms.Button();
-            this.dyeItem5 = new System.Windows.Forms.Button();
-            this.dyeItem6 = new System.Windows.Forms.Button();
-            this.dyeItem7 = new System.Windows.Forms.Button();
-            this.dyeItem8 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -650,6 +650,96 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Appearance & Equipment";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dyeItem8
+            // 
+            this.dyeItem8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem8.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem8.ForeColor = System.Drawing.Color.White;
+            this.dyeItem8.Location = new System.Drawing.Point(684, 431);
+            this.dyeItem8.Name = "dyeItem8";
+            this.dyeItem8.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem8.TabIndex = 51;
+            this.dyeItem8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem8.UseVisualStyleBackColor = false;
+            this.dyeItem8.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // dyeItem7
+            // 
+            this.dyeItem7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem7.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem7.ForeColor = System.Drawing.Color.White;
+            this.dyeItem7.Location = new System.Drawing.Point(684, 380);
+            this.dyeItem7.Name = "dyeItem7";
+            this.dyeItem7.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem7.TabIndex = 50;
+            this.dyeItem7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem7.UseVisualStyleBackColor = false;
+            this.dyeItem7.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // dyeItem6
+            // 
+            this.dyeItem6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem6.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem6.ForeColor = System.Drawing.Color.White;
+            this.dyeItem6.Location = new System.Drawing.Point(684, 329);
+            this.dyeItem6.Name = "dyeItem6";
+            this.dyeItem6.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem6.TabIndex = 49;
+            this.dyeItem6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem6.UseVisualStyleBackColor = false;
+            this.dyeItem6.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // dyeItem5
+            // 
+            this.dyeItem5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem5.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem5.ForeColor = System.Drawing.Color.White;
+            this.dyeItem5.Location = new System.Drawing.Point(684, 278);
+            this.dyeItem5.Name = "dyeItem5";
+            this.dyeItem5.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem5.TabIndex = 48;
+            this.dyeItem5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem5.UseVisualStyleBackColor = false;
+            this.dyeItem5.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // dyeItem4
+            // 
+            this.dyeItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem4.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem4.ForeColor = System.Drawing.Color.White;
+            this.dyeItem4.Location = new System.Drawing.Point(684, 227);
+            this.dyeItem4.Name = "dyeItem4";
+            this.dyeItem4.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem4.TabIndex = 47;
+            this.dyeItem4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem4.UseVisualStyleBackColor = false;
+            this.dyeItem4.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
+            // 
+            // dyeItem3
+            // 
+            this.dyeItem3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.dyeItem3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dyeItem3.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dyeItem3.ForeColor = System.Drawing.Color.White;
+            this.dyeItem3.Location = new System.Drawing.Point(684, 176);
+            this.dyeItem3.Name = "dyeItem3";
+            this.dyeItem3.Size = new System.Drawing.Size(45, 45);
+            this.dyeItem3.TabIndex = 46;
+            this.dyeItem3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.dyeItem3.UseVisualStyleBackColor = false;
+            this.dyeItem3.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
+            this.dyeItem3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
             // 
             // equipmentItem18
             // 
@@ -2461,96 +2551,6 @@
             this.inventoryItem0.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.inventoryItem0.UseVisualStyleBackColor = false;
             this.inventoryItem0.Enter += new System.EventHandler(this.inventoryItem_GotFocus);
-            // 
-            // dyeItem3
-            // 
-            this.dyeItem3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.dyeItem3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dyeItem3.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dyeItem3.ForeColor = System.Drawing.Color.White;
-            this.dyeItem3.Location = new System.Drawing.Point(684, 176);
-            this.dyeItem3.Name = "dyeItem3";
-            this.dyeItem3.Size = new System.Drawing.Size(45, 45);
-            this.dyeItem3.TabIndex = 46;
-            this.dyeItem3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.dyeItem3.UseVisualStyleBackColor = false;
-            this.dyeItem3.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
-            this.dyeItem3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
-            // 
-            // dyeItem4
-            // 
-            this.dyeItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.dyeItem4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dyeItem4.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dyeItem4.ForeColor = System.Drawing.Color.White;
-            this.dyeItem4.Location = new System.Drawing.Point(684, 227);
-            this.dyeItem4.Name = "dyeItem4";
-            this.dyeItem4.Size = new System.Drawing.Size(45, 45);
-            this.dyeItem4.TabIndex = 47;
-            this.dyeItem4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.dyeItem4.UseVisualStyleBackColor = false;
-            this.dyeItem4.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
-            this.dyeItem4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
-            // 
-            // dyeItem5
-            // 
-            this.dyeItem5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.dyeItem5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dyeItem5.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dyeItem5.ForeColor = System.Drawing.Color.White;
-            this.dyeItem5.Location = new System.Drawing.Point(684, 278);
-            this.dyeItem5.Name = "dyeItem5";
-            this.dyeItem5.Size = new System.Drawing.Size(45, 45);
-            this.dyeItem5.TabIndex = 48;
-            this.dyeItem5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.dyeItem5.UseVisualStyleBackColor = false;
-            this.dyeItem5.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
-            this.dyeItem5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
-            // 
-            // dyeItem6
-            // 
-            this.dyeItem6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.dyeItem6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dyeItem6.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dyeItem6.ForeColor = System.Drawing.Color.White;
-            this.dyeItem6.Location = new System.Drawing.Point(684, 329);
-            this.dyeItem6.Name = "dyeItem6";
-            this.dyeItem6.Size = new System.Drawing.Size(45, 45);
-            this.dyeItem6.TabIndex = 49;
-            this.dyeItem6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.dyeItem6.UseVisualStyleBackColor = false;
-            this.dyeItem6.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
-            this.dyeItem6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
-            // 
-            // dyeItem7
-            // 
-            this.dyeItem7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.dyeItem7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dyeItem7.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dyeItem7.ForeColor = System.Drawing.Color.White;
-            this.dyeItem7.Location = new System.Drawing.Point(684, 380);
-            this.dyeItem7.Name = "dyeItem7";
-            this.dyeItem7.Size = new System.Drawing.Size(45, 45);
-            this.dyeItem7.TabIndex = 50;
-            this.dyeItem7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.dyeItem7.UseVisualStyleBackColor = false;
-            this.dyeItem7.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
-            this.dyeItem7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
-            // 
-            // dyeItem8
-            // 
-            this.dyeItem8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.dyeItem8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dyeItem8.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dyeItem8.ForeColor = System.Drawing.Color.White;
-            this.dyeItem8.Location = new System.Drawing.Point(684, 431);
-            this.dyeItem8.Name = "dyeItem8";
-            this.dyeItem8.Size = new System.Drawing.Size(45, 45);
-            this.dyeItem8.TabIndex = 51;
-            this.dyeItem8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.dyeItem8.UseVisualStyleBackColor = false;
-            this.dyeItem8.Enter += new System.EventHandler(this.equipmentItem_GotFocus);
-            this.dyeItem8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.equipmentItem_MouseUp);
             // 
             // MainForm
             // 
