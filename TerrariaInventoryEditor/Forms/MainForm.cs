@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TerrariaInventoryEditor.Framework;
 using TerrariaInventoryEditor.TerrariaLib;
@@ -23,15 +22,21 @@ namespace TerrariaInventoryEditor.Forms
         {
             InitializeComponent();
 
-            playerPictureBox.PreventUpdates();
+            // Set the default size 
+            Width = 687;
+            Height = 298;
+
+            // Initialize player texture files
             TextureManager.Instance.Load();
 
+            // Setup data sources
             playerBindingSource.DataSource = Terraria.Instance.Player;
             equipmentSearchBox.DataSource = GetFilteredEquipmentList();
             buffSearchBox.DataSource = Terraria.Instance.Buffs;
             itemSearchBox.DataSource = Terraria.Instance.Items;
             itemPrefixComboBox.DataSource = Enum.GetValues(typeof(ItemPrefix)).Cast<ItemPrefix>().ToList();
 
+            // Store dye labels
             for (var i = 0; i < 10; i++)
             {
                 if (!(Controls.Find($"dyeItem{i}", true).SingleOrDefault() is Button dyeItem))
@@ -43,6 +48,7 @@ namespace TerrariaInventoryEditor.Forms
                 _dyeItems.Add(dyeItem);
             }
 
+            // Store equipment labels
             for (var i = 0; i < 20; ++i)
             {
                 if (!(Controls.Find($"equipmentItem{i}", true).SingleOrDefault() is Button equipmentItem))
@@ -54,6 +60,7 @@ namespace TerrariaInventoryEditor.Forms
                 _equipmentItems.Add(equipmentItem);
             }
 
+            // Store inventory labels
             for (var i = 0; i < 58; ++i)
             {
                 if (!(Controls.Find($"inventoryItem{i}", true).SingleOrDefault() is Button inventoryItem))
@@ -65,7 +72,8 @@ namespace TerrariaInventoryEditor.Forms
                 _inventoryItems.Add(inventoryItem);
             }
 
-            playerPictureBox.AllowUpdates();
+            // Draw the character
+            playerPictureBox.Draw();
             DrawEquipment();
             DrawInventory();
         }
@@ -456,8 +464,6 @@ namespace TerrariaInventoryEditor.Forms
 
         private void randomizeColorsBtn_Click(object sender, EventArgs e)
         {
-            playerPictureBox.PreventUpdates();
-
             var player = Terraria.Instance.Player;
             player.EyeColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
             player.HairColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
@@ -467,18 +473,16 @@ namespace TerrariaInventoryEditor.Forms
             player.SkinColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
             player.UndershirtColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
 
-            playerPictureBox.AllowUpdates();
+            playerPictureBox.Draw();
         }
 
         private void randomizeHairBtn_Click(object sender, EventArgs e)
         {
-            playerPictureBox.PreventUpdates();
-
             var player = Terraria.Instance.Player;
             player.Hair = _random.Next(134);
             player.HairColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
 
-            playerPictureBox.AllowUpdates();
+            playerPictureBox.Draw();
         }
 
         private void resetHealthBtn_Click(object sender, EventArgs e)
@@ -538,6 +542,29 @@ namespace TerrariaInventoryEditor.Forms
 
             player.Inventory[(int) _selectedItem.Tag].StackSize = (int) stackSizeUpDown.Value;
             _selectedItem.Text = player.Inventory[(int) _selectedItem.Tag].StackSize.ToString();
+        }
+
+        private void tabControl_TabSelected(object sender, TabControlEventArgs e)
+        {
+            switch (e.TabPageIndex)
+            {
+                case 0:
+                    Width = 687;
+                    Height = 298;
+                    break;
+                case 1:
+                    Width = 950;
+                    Height = 583;
+                    break;
+                case 2:
+                    Width = 800;
+                    Height = 512;
+                    break;
+                case 3:
+                    Width = 852;
+                    Height = 526;
+                    break;
+            }
         }
     }
 }

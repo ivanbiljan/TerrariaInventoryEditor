@@ -42,15 +42,13 @@ namespace TerrariaInventoryEditor.Framework
                     var textureBitmap = default(Bitmap);
                     try
                     {
-                        textureBitmap = new Bitmap(Path.Combine(Application.StartupPath,
-                            $"Data\\PlayerTextures\\Player_{i}_{j}.png"));
+                        textureBitmap = new Bitmap($"Data\\PlayerTextures\\Player_{i}_{j}.png");
                     }
                     catch (ArgumentException)
                     {
                         if (j != (int) PlayerTexture.Extras)
                         {
-                            textureBitmap = new Bitmap(Path.Combine(Application.StartupPath,
-                                $"Data\\PlayerTextures\\Player_0_{j}.png"));
+                            textureBitmap = new Bitmap($"Data\\PlayerTextures\\Player_0_{j}.png");
                         }
                     }
 

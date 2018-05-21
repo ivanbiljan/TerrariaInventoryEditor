@@ -14,8 +14,6 @@ namespace TerrariaInventoryEditor.Framework
         private Bitmap _armShirtTexture;
         private Bitmap _armSkinTexture;
         private Bitmap _armUndershirtTexture;
-
-        private bool _canDraw;
         private Bitmap _extrasTexture;
         private Bitmap _eyeTexture;
         private Bitmap _eyeWhitesTexture;
@@ -113,33 +111,18 @@ namespace TerrariaInventoryEditor.Framework
         }
 
         /// <summary>
-        ///     Re-allows drawing to the control.
-        /// </summary>
-        public void AllowUpdates()
-        {
-            _canDraw = true;
-            Draw();
-        }
-
-        /// <summary>
         ///     Draws the current character onto the control.
         /// </summary>
         public void Draw()
         {
-            if (!_canDraw)
-            {
-                return;
-            }
-
             // Colorize texture files using appropriate colors
             _hairTexture = GetColoredImage(new Bitmap($"Data\\HairTextures\\Player_Hair_{HairId + 1}.png"), HairColor);
             _headTexture = GetColoredImage(TextureManager.Instance.GetTexture(SkinVariant, PlayerTexture.Head),
                 SkinColor);
-            _eyeWhitesTexture = GetColoredImage(
-                TextureManager.Instance.GetTexture(SkinVariant, PlayerTexture.EyeWhites),
-                EyeWhitesColor);
             _eyeTexture = GetColoredImage(TextureManager.Instance.GetTexture(SkinVariant, PlayerTexture.Eyes),
                 EyeColor);
+            _eyeWhitesTexture = GetColoredImage(
+                TextureManager.Instance.GetTexture(SkinVariant, PlayerTexture.EyeWhites), EyeWhitesColor);
             _torsoTexture = GetColoredImage(TextureManager.Instance.GetTexture(SkinVariant, PlayerTexture.Torso),
                 SkinColor);
             _undershirtTexture = GetColoredImage(
@@ -173,46 +156,38 @@ namespace TerrariaInventoryEditor.Framework
 
                 if (SkinVariant > 3 && SkinVariant != 8)
                 {
-                    gfx.DrawImage(_legsTexture, 0, 0, _legsTexture.Width * 3.75F, _legsTexture.Height * 3.75F);
+                    gfx.DrawImage(_legsTexture, 0, 0, _legsTexture.Width * 4, _legsTexture.Height * 4);
                 }
 
-                gfx.DrawImage(_headTexture, 0, 0, _headTexture.Width * 3.75F, _headTexture.Height * 3.75F);
-                gfx.DrawImage(_hairTexture, 0, 0, _hairTexture.Width * 3.75F, _hairTexture.Height * 3.75F);
-                gfx.DrawImage(_eyeWhitesTexture, 0, 0, _eyeWhitesTexture.Width * 3.75F,
-                    _eyeWhitesTexture.Height * 3.75F);
-                gfx.DrawImage(_eyeTexture, 0, 0, _eyeTexture.Width * 3.75F, -_eyeTexture.Height * 3.75F);
-                gfx.DrawImage(_torsoTexture, 0, 0, _torsoTexture.Width * 3.75F, _torsoTexture.Height * 3.75F);
-                gfx.DrawImage(_undershirtTexture, 0, 0, _undershirtTexture.Width * 3.75F,
-                    _undershirtTexture.Height * 3.75F);
-                gfx.DrawImage(_handsTexture, 0, 0, _handsTexture.Width * 3.75F, _handsTexture.Height * 3.75F);
-                gfx.DrawImage(_shirtTexture, 0, 0, _shirtTexture.Width * 3.75F, _shirtTexture.Height * 3.75F);
-                gfx.DrawImage(_armSkinTexture, 0, 0, _armSkinTexture.Width * 3.75F, _armSkinTexture.Height * 3.75F);
-                gfx.DrawImage(_armUndershirtTexture, 0, 0, _armUndershirtTexture.Width * 3.75F,
-                    _armUndershirtTexture.Height * 3.75F);
-                gfx.DrawImage(_armHandTexture, 0, 0, _armHandTexture.Width * 3.75F, _armHandTexture.Height * 3.75F);
-                gfx.DrawImage(_legsTexture, 0, 0, _legsTexture.Width * 3.75F, _legsTexture.Height * 3.75F);
-                gfx.DrawImage(_pantsTexture, 0, 0, _pantsTexture.Width * 3.75F, _pantsTexture.Height * 3.75F);
-                gfx.DrawImage(_shoeTexture, 0, 0, _shoeTexture.Width * 3.75F, _shoeTexture.Height * 3.75F);
-                gfx.DrawImage(_armShirtTexture, 0, 0, _armShirtTexture.Width * 3.75F, _armShirtTexture.Height * 3.75F);
+                gfx.DrawImage(_headTexture, 0, 0, _headTexture.Width * 4, _headTexture.Height * 4);
+                gfx.DrawImage(_hairTexture, 0, 0, _hairTexture.Width * 4, _hairTexture.Height * 4);
+                gfx.DrawImage(_eyeWhitesTexture, 0, 0, _eyeWhitesTexture.Width * 4,
+                    _eyeWhitesTexture.Height * 4);
+                gfx.DrawImage(_eyeTexture, 0, 0, _eyeTexture.Width * 4, _eyeTexture.Height * 4);
+                gfx.DrawImage(_torsoTexture, 0, 0, _torsoTexture.Width * 4, _torsoTexture.Height * 4);
+                gfx.DrawImage(_undershirtTexture, 0, 0, _undershirtTexture.Width * 4,
+                    _undershirtTexture.Height * 4);
+                gfx.DrawImage(_handsTexture, 0, 0, _handsTexture.Width * 4, _handsTexture.Height * 4);
+                gfx.DrawImage(_shirtTexture, 0, 0, _shirtTexture.Width * 4, _shirtTexture.Height * 4);
+                gfx.DrawImage(_armSkinTexture, 0, 0, _armSkinTexture.Width * 4, _armSkinTexture.Height * 4);
+                gfx.DrawImage(_armUndershirtTexture, 0, 0, _armUndershirtTexture.Width * 4,
+                    _armUndershirtTexture.Height * 4);
+                gfx.DrawImage(_armHandTexture, 0, 0, _armHandTexture.Width * 4, _armHandTexture.Height * 4);
+                gfx.DrawImage(_legsTexture, 0, 0, _legsTexture.Width * 4, _legsTexture.Height * 4);
+                gfx.DrawImage(_pantsTexture, 0, 0, _pantsTexture.Width * 4, _pantsTexture.Height * 4);
+                gfx.DrawImage(_shoeTexture, 0, 0, _shoeTexture.Width * 4, _shoeTexture.Height * 4);
+                gfx.DrawImage(_armShirtTexture, 0, 0, _armShirtTexture.Width * 4, _armShirtTexture.Height * 4);
 
                 if (TextureManager.Instance.GetTexture(SkinVariant, PlayerTexture.Extras) != null)
                 {
                     _extrasTexture = GetColoredImage(
                         TextureManager.Instance.GetTexture(SkinVariant, PlayerTexture.Extras),
                         ShirtColor);
-                    gfx.DrawImage(_extrasTexture, 0, 0, _extrasTexture.Width * 3.75F, _extrasTexture.Height * 3.75F);
+                    gfx.DrawImage(_extrasTexture, 0, 0, _extrasTexture.Width * 4, _extrasTexture.Height * 4);
                 }
             }
 
             Image = characterImage;
-        }
-
-        /// <summary>
-        ///     Prevents drawing to the control.
-        /// </summary>
-        public void PreventUpdates()
-        {
-            _canDraw = false;
         }
     }
 }
