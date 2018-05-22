@@ -43,7 +43,6 @@
             this.maxOutBtn = new System.Windows.Forms.Button();
             this.resetHealthBtn = new System.Windows.Forms.Button();
             this.manaBar = new System.Windows.Forms.ProgressBar();
-            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maxManaBox = new System.Windows.Forms.TextBox();
             this.currentManaBox = new System.Windows.Forms.TextBox();
             this.manaLabel = new System.Windows.Forms.Label();
@@ -130,9 +129,6 @@
             this.activeBuffsGroupBox = new System.Windows.Forms.GroupBox();
             this.buffDisplayGrid = new System.Windows.Forms.DataGridView();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.inventoryTab = new System.Windows.Forms.TabPage();
             this.ammoLbl = new System.Windows.Forms.Label();
@@ -155,6 +151,13 @@
             this.itemPrefixComboBox = new System.Windows.Forms.ComboBox();
             this.itemPrefixLbl = new System.Windows.Forms.Label();
             this.inventoryFilterGroupBox = new System.Windows.Forms.GroupBox();
+            this.rangedCheckBox = new System.Windows.Forms.CheckBox();
+            this.thrownCheckBox = new System.Windows.Forms.CheckBox();
+            this.magicCheckBox = new System.Windows.Forms.CheckBox();
+            this.accessoryCheckBox = new System.Windows.Forms.CheckBox();
+            this.meleeCheckBox = new System.Windows.Forms.CheckBox();
+            this.rarityComboBox = new System.Windows.Forms.ComboBox();
+            this.rarityLbl = new System.Windows.Forms.Label();
             this.itemFilterTxtBox = new System.Windows.Forms.TextBox();
             this.searchForItemLbl = new System.Windows.Forms.Label();
             this.itemSearchBox = new System.Windows.Forms.ListBox();
@@ -208,12 +211,15 @@
             this.inventoryItem2 = new System.Windows.Forms.Button();
             this.inventoryItem1 = new System.Windows.Forms.Button();
             this.inventoryItem0 = new System.Windows.Forms.Button();
+            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.playerPictureBox = new TerrariaInventoryEditor.Framework.PlayerPictureBox();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.statsTab.SuspendLayout();
             this.healthManaGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
             this.playerInfoGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.anglerQuestUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinVariantUpDown)).BeginInit();
@@ -236,6 +242,7 @@
             this.itemPropertiesGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stackSizeUpDown)).BeginInit();
             this.inventoryFilterGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -375,10 +382,6 @@
             this.manaBar.Size = new System.Drawing.Size(266, 23);
             this.manaBar.TabIndex = 7;
             this.manaBar.Value = 20;
-            // 
-            // playerBindingSource
-            // 
-            this.playerBindingSource.DataSource = typeof(TerrariaInventoryEditor.TerrariaLib.Player);
             // 
             // maxManaBox
             // 
@@ -1453,30 +1456,6 @@
             this.Image.ReadOnly = true;
             this.Image.Width = 33;
             // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descriptionDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // timeDataGridViewTextBoxColumn
-            // 
-            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
-            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
-            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
-            this.timeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.timeDataGridViewTextBoxColumn.Width = 150;
-            // 
             // buffsBindingSource
             // 
             this.buffsBindingSource.DataMember = "Buffs";
@@ -1789,15 +1768,96 @@
             // 
             // inventoryFilterGroupBox
             // 
+            this.inventoryFilterGroupBox.Controls.Add(this.rangedCheckBox);
+            this.inventoryFilterGroupBox.Controls.Add(this.thrownCheckBox);
+            this.inventoryFilterGroupBox.Controls.Add(this.magicCheckBox);
+            this.inventoryFilterGroupBox.Controls.Add(this.accessoryCheckBox);
+            this.inventoryFilterGroupBox.Controls.Add(this.meleeCheckBox);
+            this.inventoryFilterGroupBox.Controls.Add(this.rarityComboBox);
+            this.inventoryFilterGroupBox.Controls.Add(this.rarityLbl);
             this.inventoryFilterGroupBox.Controls.Add(this.itemFilterTxtBox);
             this.inventoryFilterGroupBox.Controls.Add(this.searchForItemLbl);
             this.inventoryFilterGroupBox.Controls.Add(this.itemSearchBox);
             this.inventoryFilterGroupBox.Location = new System.Drawing.Point(7, 10);
             this.inventoryFilterGroupBox.Name = "inventoryFilterGroupBox";
-            this.inventoryFilterGroupBox.Size = new System.Drawing.Size(178, 256);
+            this.inventoryFilterGroupBox.Size = new System.Drawing.Size(178, 419);
             this.inventoryFilterGroupBox.TabIndex = 51;
             this.inventoryFilterGroupBox.TabStop = false;
             this.inventoryFilterGroupBox.Text = "Item Filtering";
+            // 
+            // rangedCheckBox
+            // 
+            this.rangedCheckBox.AutoSize = true;
+            this.rangedCheckBox.Location = new System.Drawing.Point(106, 313);
+            this.rangedCheckBox.Name = "rangedCheckBox";
+            this.rangedCheckBox.Size = new System.Drawing.Size(64, 17);
+            this.rangedCheckBox.TabIndex = 60;
+            this.rangedCheckBox.Text = "Ranged";
+            this.rangedCheckBox.UseVisualStyleBackColor = true;
+            this.rangedCheckBox.CheckedChanged += new System.EventHandler(this.itemFilterBoxes_CheckedChanged);
+            // 
+            // thrownCheckBox
+            // 
+            this.thrownCheckBox.AutoSize = true;
+            this.thrownCheckBox.Location = new System.Drawing.Point(106, 336);
+            this.thrownCheckBox.Name = "thrownCheckBox";
+            this.thrownCheckBox.Size = new System.Drawing.Size(62, 17);
+            this.thrownCheckBox.TabIndex = 59;
+            this.thrownCheckBox.Text = "Thrown";
+            this.thrownCheckBox.UseVisualStyleBackColor = true;
+            this.thrownCheckBox.CheckedChanged += new System.EventHandler(this.itemFilterBoxes_CheckedChanged);
+            // 
+            // magicCheckBox
+            // 
+            this.magicCheckBox.AutoSize = true;
+            this.magicCheckBox.Location = new System.Drawing.Point(12, 336);
+            this.magicCheckBox.Name = "magicCheckBox";
+            this.magicCheckBox.Size = new System.Drawing.Size(55, 17);
+            this.magicCheckBox.TabIndex = 58;
+            this.magicCheckBox.Text = "Magic";
+            this.magicCheckBox.UseVisualStyleBackColor = true;
+            this.magicCheckBox.CheckedChanged += new System.EventHandler(this.itemFilterBoxes_CheckedChanged);
+            // 
+            // accessoryCheckBox
+            // 
+            this.accessoryCheckBox.AutoSize = true;
+            this.accessoryCheckBox.Location = new System.Drawing.Point(12, 313);
+            this.accessoryCheckBox.Name = "accessoryCheckBox";
+            this.accessoryCheckBox.Size = new System.Drawing.Size(75, 17);
+            this.accessoryCheckBox.TabIndex = 57;
+            this.accessoryCheckBox.Text = "Accessory";
+            this.accessoryCheckBox.UseVisualStyleBackColor = true;
+            this.accessoryCheckBox.CheckedChanged += new System.EventHandler(this.itemFilterBoxes_CheckedChanged);
+            // 
+            // meleeCheckBox
+            // 
+            this.meleeCheckBox.AutoSize = true;
+            this.meleeCheckBox.Location = new System.Drawing.Point(12, 359);
+            this.meleeCheckBox.Name = "meleeCheckBox";
+            this.meleeCheckBox.Size = new System.Drawing.Size(55, 17);
+            this.meleeCheckBox.TabIndex = 56;
+            this.meleeCheckBox.Text = "Melee";
+            this.meleeCheckBox.UseVisualStyleBackColor = true;
+            this.meleeCheckBox.CheckedChanged += new System.EventHandler(this.itemFilterBoxes_CheckedChanged);
+            // 
+            // rarityComboBox
+            // 
+            this.rarityComboBox.FormattingEnabled = true;
+            this.rarityComboBox.Location = new System.Drawing.Point(12, 282);
+            this.rarityComboBox.Name = "rarityComboBox";
+            this.rarityComboBox.Size = new System.Drawing.Size(160, 21);
+            this.rarityComboBox.TabIndex = 55;
+            this.rarityComboBox.SelectedIndexChanged += new System.EventHandler(this.rarityComboBox_SelectedIndexChanged);
+            // 
+            // rarityLbl
+            // 
+            this.rarityLbl.AutoSize = true;
+            this.rarityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rarityLbl.Location = new System.Drawing.Point(9, 262);
+            this.rarityLbl.Name = "rarityLbl";
+            this.rarityLbl.Size = new System.Drawing.Size(53, 16);
+            this.rarityLbl.TabIndex = 54;
+            this.rarityLbl.Text = "Rarity:";
             // 
             // itemFilterTxtBox
             // 
@@ -2526,6 +2586,10 @@
             this.inventoryItem0.UseVisualStyleBackColor = false;
             this.inventoryItem0.Enter += new System.EventHandler(this.inventoryItem_GotFocus);
             // 
+            // playerBindingSource
+            // 
+            this.playerBindingSource.DataSource = typeof(TerrariaInventoryEditor.TerrariaLib.Player);
+            // 
             // playerPictureBox
             // 
             this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("EyeColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -2553,6 +2617,30 @@
             this.playerPictureBox.TabStop = false;
             this.playerPictureBox.UndershirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(180)))), ((int)(((byte)(215)))));
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            this.timeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.timeDataGridViewTextBoxColumn.Width = 150;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2570,7 +2658,6 @@
             this.statsTab.ResumeLayout(false);
             this.healthManaGroupBox.ResumeLayout(false);
             this.healthManaGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
             this.playerInfoGroupBox.ResumeLayout(false);
             this.playerInfoGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.anglerQuestUpDown)).EndInit();
@@ -2601,6 +2688,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.stackSizeUpDown)).EndInit();
             this.inventoryFilterGroupBox.ResumeLayout(false);
             this.inventoryFilterGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2788,6 +2876,13 @@
         private System.Windows.Forms.Button dyeItem4;
         private System.Windows.Forms.Button dyeItem3;
         private Framework.PlayerPictureBox playerPictureBox;
+        private System.Windows.Forms.CheckBox meleeCheckBox;
+        private System.Windows.Forms.ComboBox rarityComboBox;
+        private System.Windows.Forms.Label rarityLbl;
+        private System.Windows.Forms.CheckBox thrownCheckBox;
+        private System.Windows.Forms.CheckBox magicCheckBox;
+        private System.Windows.Forms.CheckBox accessoryCheckBox;
+        private System.Windows.Forms.CheckBox rangedCheckBox;
     }
 }
 

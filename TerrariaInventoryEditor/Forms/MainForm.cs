@@ -35,6 +35,7 @@ namespace TerrariaInventoryEditor.Forms
             buffSearchBox.DataSource = Terraria.Instance.Buffs;
             itemSearchBox.DataSource = Terraria.Instance.Items;
             itemPrefixComboBox.DataSource = Enum.GetValues(typeof(ItemPrefix)).Cast<ItemPrefix>().ToList();
+            rarityComboBox.DataSource = Enum.GetValues(typeof(ItemRarity)).Cast<ItemRarity>().ToList();
 
             // Store dye labels
             for (var i = 0; i < 10; i++)
@@ -265,6 +266,46 @@ namespace TerrariaInventoryEditor.Forms
             Application.Exit();
         }
 
+        private void FilterItemList(string filter = null)
+        {
+            itemSearchBox.SelectedIndexChanged += itemSearchBox_SelectedIndexChanged;
+
+            var items = Terraria.Instance.Items;
+            if (!string.IsNullOrWhiteSpace(filter))
+            {
+                items = items.Where(i => i.Name.ToLowerInvariant().Contains(filter.ToLowerInvariant())).ToList();
+            }
+
+            ItemRarity rarity;
+            if ((rarity = (ItemRarity) rarityComboBox.SelectedItem) != ItemRarity.All)
+            {
+                items = items.Where(i => i.Rarity == rarity).ToList();
+            }
+            if (accessoryCheckBox.Checked)
+            {
+                items = items.Where(i => i.IsAccessory).ToList();
+            }
+            if (magicCheckBox.Checked)
+            {
+                items = items.Where(i => i.IsMagic).ToList();
+            }
+            if (meleeCheckBox.Checked)
+            {
+                items = items.Where(i => i.IsMeele).ToList();
+            }
+            if (rangedCheckBox.Checked)
+            {
+                items = items.Where(i => i.IsRanged).ToList();
+            }
+            if (thrownCheckBox.Checked)
+            {
+                items = items.Where(i => i.IsThrown).ToList();
+            }
+
+            itemSearchBox.DataSource = items;
+            itemSearchBox.SelectedIndexChanged += itemSearchBox_SelectedIndexChanged;
+        }
+
         private void hairDesignerBtn_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
@@ -299,21 +340,14 @@ namespace TerrariaInventoryEditor.Forms
                 : 1;
         }
 
+        private void itemFilterBoxes_CheckedChanged(object sender, EventArgs e)
+        {
+            FilterItemList(itemFilterTxtBox.Text);
+        }
+
         private void itemFilterTxtBox_TextChanged(object sender, EventArgs e)
         {
-            itemSearchBox.SelectedIndexChanged -= itemSearchBox_SelectedIndexChanged;
-            if (string.IsNullOrWhiteSpace(itemFilterTxtBox.Text))
-            {
-                itemSearchBox.DataSource = Terraria.Instance.Items;
-            }
-            else
-            {
-                itemSearchBox.DataSource = (from item in Terraria.Instance.Items
-                    where item.Name.ToLowerInvariant().Contains(itemFilterTxtBox.Text.ToLowerInvariant())
-                    select item).ToList();
-            }
-
-            itemSearchBox.SelectedIndexChanged += itemSearchBox_SelectedIndexChanged;
+            FilterItemList(itemFilterTxtBox.Text);
         }
 
         private void itemSearchBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -367,7 +401,7 @@ namespace TerrariaInventoryEditor.Forms
         private void maxOutBtn_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
-            player.Health = player.MaxHealth = 32767;
+            player.Health = player.MaxHealth = 500;
             player.Mana = player.MaxMana = 200;
         }
 
@@ -483,6 +517,11 @@ namespace TerrariaInventoryEditor.Forms
             player.HairColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
 
             playerPictureBox.Draw();
+        }
+
+        private void rarityComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FilterItemList(itemFilterTxtBox.Text);
         }
 
         private void resetHealthBtn_Click(object sender, EventArgs e)

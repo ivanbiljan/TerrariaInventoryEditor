@@ -73,6 +73,11 @@
         /// <summary>
         ///     The item contains high-level modifiers.
         /// </summary>
-        Purple = 11
+        Purple = 11,
+
+        /// <summary>
+        ///     Represents all rarities.
+        /// </summary>
+        All = 12
     }
 }
