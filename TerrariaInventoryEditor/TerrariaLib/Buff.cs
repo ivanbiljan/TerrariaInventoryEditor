@@ -12,17 +12,6 @@ namespace TerrariaInventoryEditor.TerrariaLib
     public sealed class Buff : DataSourceObject
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="Buff" /> class.
-        /// </summary>
-        public Buff()
-        {
-            Id = 0;
-            Name = "None";
-            Description = "Not available";
-            Time = 0;
-        }
-
-        /// <summary>
         ///     Gets or sets the buff's description.
         /// </summary>
         [JsonProperty("description")]
@@ -39,21 +28,13 @@ namespace TerrariaInventoryEditor.TerrariaLib
         public int Id
         {
             get => Get<int>();
-            set
-            {
-                Set(value);
-                Image = new Bitmap($"Data\\BuffTextures\\Buff_{value}.png");
-            }
+            set => Set(value);
         }
 
         /// <summary>
         ///     Gets or sets the buff's image.
         /// </summary>
-        public Bitmap Image
-        {
-            get => Get<Bitmap>();
-            private set => Set(value);
-        }
+        public Bitmap Image => new Bitmap($"Data\\BuffTextures\\Buff_{Id}.png");
 
         /// <summary>
         ///     Gets or sets the buff's name.

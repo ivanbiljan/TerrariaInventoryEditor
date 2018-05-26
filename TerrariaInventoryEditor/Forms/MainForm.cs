@@ -26,16 +26,17 @@ namespace TerrariaInventoryEditor.Forms
             Width = 687;
             Height = 298;
 
+            // Hook the required events
+            itemFilterInventory.ItemListBoxSelectedIndexChanged += itemFilterInventory_SelectedItemIndexChanged;
+
             // Initialize player texture files
             TextureManager.Instance.Load();
 
             // Setup data sources
             playerBindingSource.DataSource = Terraria.Instance.Player;
-            equipmentSearchBox.DataSource = GetFilteredEquipmentList();
-            buffSearchBox.DataSource = Terraria.Instance.Buffs;
-            itemSearchBox.DataSource = Terraria.Instance.Items;
-            itemPrefixComboBox.DataSource = Enum.GetValues(typeof(ItemPrefix)).Cast<ItemPrefix>().ToList();
-            rarityComboBox.DataSource = Enum.GetValues(typeof(ItemRarity)).Cast<ItemRarity>().ToList();
+            listBoxEquips.DataSource = GetFilteredEquipmentList();
+            listBoxBuffs.DataSource = Terraria.Instance.Buffs;
+            comboBoxItemPrefix.DataSource = Enum.GetValues(typeof(ItemPrefix)).Cast<ItemPrefix>().ToList();
 
             // Store dye labels
             for (var i = 0; i < 10; i++)
@@ -79,6 +80,19 @@ namespace TerrariaInventoryEditor.Forms
             DrawInventory();
         }
 
+        private void itemFilterInventory_SelectedItemIndexChanged(object sender, EventArgs e)
+        {
+            var player = Terraria.Instance.Player;
+            if (_selectedItem == null)
+            {
+                return;
+            }
+
+            _selectedItem.Text = itemFilterInventory.SelectedItem.StackSize.ToString();
+            _selectedItem.Image = itemFilterInventory.SelectedItem.Image;
+            player.Inventory[(int) _selectedItem.Tag].SetDefaults(itemFilterInventory.SelectedItem.NetId);
+        }
+
         private static List<Item> GetFilteredEquipmentList(string filter = null)
         {
             var items = (from item in Terraria.Instance.Items
@@ -86,55 +100,54 @@ namespace TerrariaInventoryEditor.Forms
                 orderby item.Name
                 select item).ToList();
 
-            if (!string.IsNullOrWhiteSpace(filter))
-            {
-                return items.Where(i => i.Name.ToLowerInvariant().Contains(filter.ToLowerInvariant())).ToList();
-            }
-
-            return items;
+            return !string.IsNullOrWhiteSpace(filter)
+                ? items.Where(i => i.Name.ToLowerInvariant().Contains(filter.ToLowerInvariant())).ToList()
+                : items;
         }
 
-        private void buffFilterTxtBox_TextChanged(object sender, EventArgs e)
+        private void textBoxBuffName_TextChanged(object sender, EventArgs e)
         {
-            buffSearchBox.SelectedIndexChanged -= buffSearchBox_SelectedIndexChanged;
-            if (string.IsNullOrWhiteSpace(buffFilterTxtBox.Text))
+            listBoxBuffs.SelectedIndexChanged -= listBoxBuffs_SelectedIndexChanged;
+
+            var buffs = Terraria.Instance.Buffs;
+            if (string.IsNullOrWhiteSpace(textBoxBuffName.Text))
             {
-                buffSearchBox.DataSource = Terraria.Instance.Buffs;
+                listBoxBuffs.DataSource = Terraria.Instance.Buffs;
             }
             else
             {
-                buffSearchBox.DataSource = (from buff in Terraria.Instance.Buffs
-                    where buff.Name.ToLowerInvariant().Contains(buffFilterTxtBox.Text.ToLowerInvariant())
+                listBoxBuffs.DataSource = (from buff in Terraria.Instance.Buffs
+                    where buff.Name.ToLowerInvariant().Contains(textBoxBuffName.Text.ToLowerInvariant())
                     select buff).ToList();
             }
 
-            buffSearchBox.SelectedIndexChanged += buffSearchBox_SelectedIndexChanged;
+            listBoxBuffs.SelectedIndexChanged += listBoxBuffs_SelectedIndexChanged;
         }
 
-        private void buffSearchBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBoxBuffs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (buffDisplayGrid.CurrentCell == null)
+            if (gridViewBuffs.CurrentCell == null)
             {
                 return;
             }
 
             var player = Terraria.Instance.Player;
-            var selectedBuff = (Buff) buffSearchBox.SelectedItem;
-            player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].SetDefaults(selectedBuff.Id);
-            player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].Time = int.MaxValue;
+            var selectedBuff = (Buff) listBoxBuffs.SelectedItem;
+            player.Buffs[gridViewBuffs.CurrentCell.RowIndex].SetDefaults(selectedBuff.Id);
+            player.Buffs[gridViewBuffs.CurrentCell.RowIndex].Time = int.MaxValue;
         }
 
-        private void deleteAllBuffsBtn_Click(object sender, EventArgs e)
+        private void buttonDeleteAllBuffs_Click(object sender, EventArgs e)
         {
             foreach (var buff in Terraria.Instance.Player.Buffs.Where(b => b.Id != 0))
             {
                 buff.SetDefaults(0);
             }
 
-            buffDisplayGrid.Refresh();
+            gridViewBuffs.Refresh();
         }
 
-        private void deleteAllItemsBtn_Click(object sender, EventArgs e)
+        private void buttonDeleteAllItems_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
             foreach (var item in player.Inventory.Where(i => i.NetId != 0))
@@ -145,13 +158,13 @@ namespace TerrariaInventoryEditor.Forms
             DrawInventory();
         }
 
-        private void deleteBuffBtn_Click(object sender, EventArgs e)
+        private void buttonDeleteBuff_Click(object sender, EventArgs e)
         {
-            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].SetDefaults(0);
-            buffDisplayGrid.Refresh();
+            Terraria.Instance.Player.Buffs[gridViewBuffs.CurrentCell.RowIndex].SetDefaults(0);
+            gridViewBuffs.Refresh();
         }
 
-        private void deleteItemBtn_Click(object sender, EventArgs e)
+        private void buttonDeleteItem_Click(object sender, EventArgs e)
         {
             if (_selectedItem == null)
             {
@@ -191,9 +204,9 @@ namespace TerrariaInventoryEditor.Forms
             }
         }
 
-        private void equipmentFilterTxtBox_TextChanged(object sender, EventArgs e)
+        private void textBoxEquipName_TextChanged(object sender, EventArgs e)
         {
-            equipmentSearchBox.DataSource = GetFilteredEquipmentList(equipmentFilterTxtBox.Text);
+            listBoxEquips.DataSource = GetFilteredEquipmentList(textBoxEquipName.Text);
         }
 
         private void equipmentItem_GotFocus(object sender, EventArgs e)
@@ -239,7 +252,7 @@ namespace TerrariaInventoryEditor.Forms
             button.Image = new Bitmap("Data\\ItemTextures\\Item_0.png");
         }
 
-        private void equipmentSearchBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBoxEquips_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (_selectedEquip == null)
             {
@@ -247,7 +260,7 @@ namespace TerrariaInventoryEditor.Forms
             }
 
             var player = Terraria.Instance.Player;
-            var selectedItem = (Item) equipmentSearchBox.SelectedItem;
+            var selectedItem = (Item) listBoxEquips.SelectedItem;
 
             if (_dyeItems.Contains(_selectedEquip))
             {
@@ -266,47 +279,7 @@ namespace TerrariaInventoryEditor.Forms
             Application.Exit();
         }
 
-        private void FilterItemList(string filter = null)
-        {
-            itemSearchBox.SelectedIndexChanged += itemSearchBox_SelectedIndexChanged;
-
-            var items = Terraria.Instance.Items;
-            if (!string.IsNullOrWhiteSpace(filter))
-            {
-                items = items.Where(i => i.Name.ToLowerInvariant().Contains(filter.ToLowerInvariant())).ToList();
-            }
-
-            ItemRarity rarity;
-            if ((rarity = (ItemRarity) rarityComboBox.SelectedItem) != ItemRarity.All)
-            {
-                items = items.Where(i => i.Rarity == rarity).ToList();
-            }
-            if (accessoryCheckBox.Checked)
-            {
-                items = items.Where(i => i.IsAccessory).ToList();
-            }
-            if (magicCheckBox.Checked)
-            {
-                items = items.Where(i => i.IsMagic).ToList();
-            }
-            if (meleeCheckBox.Checked)
-            {
-                items = items.Where(i => i.IsMeele).ToList();
-            }
-            if (rangedCheckBox.Checked)
-            {
-                items = items.Where(i => i.IsRanged).ToList();
-            }
-            if (thrownCheckBox.Checked)
-            {
-                items = items.Where(i => i.IsThrown).ToList();
-            }
-
-            itemSearchBox.DataSource = items;
-            itemSearchBox.SelectedIndexChanged += itemSearchBox_SelectedIndexChanged;
-        }
-
-        private void hairDesignerBtn_Click(object sender, EventArgs e)
+        private void buttonEditHair_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
             using (var hairDesignerDialog = new HairDesignerForm(player.Hair, player.HairColor))
@@ -334,20 +307,10 @@ namespace TerrariaInventoryEditor.Forms
             }
 
             _selectedItem = button;
-            itemPrefixComboBox.SelectedItem = player.Inventory[(int) button.Tag].Prefix;
-            stackSizeUpDown.Value = player.Inventory[(int) button.Tag].StackSize > 0
+            comboBoxItemPrefix.SelectedItem = player.Inventory[(int) button.Tag].Prefix;
+            upDownStackSize.Value = player.Inventory[(int) button.Tag].StackSize > 0
                 ? player.Inventory[(int) button.Tag].StackSize
                 : 1;
-        }
-
-        private void itemFilterBoxes_CheckedChanged(object sender, EventArgs e)
-        {
-            FilterItemList(itemFilterTxtBox.Text);
-        }
-
-        private void itemFilterTxtBox_TextChanged(object sender, EventArgs e)
-        {
-            FilterItemList(itemFilterTxtBox.Text);
         }
 
         private void itemSearchBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -358,25 +321,26 @@ namespace TerrariaInventoryEditor.Forms
                 return;
             }
 
-            var selectedItem = (Item) itemSearchBox.SelectedItem;
-            player.Inventory[(int) _selectedItem.Tag].SetDefaults(selectedItem.NetId);
-            player.Inventory[(int) _selectedItem.Tag].StackSize = selectedItem.MaxStack;
 
-            _selectedItem.Image = selectedItem.Image;
-            _selectedItem.Text = selectedItem.StackSize.ToString();
+            //var selectedItem = (Item) itemSearchBox.SelectedItem;
+            //player.Inventory[(int) _selectedItem.Tag].SetDefaults(selectedItem.NetId);
+            //player.Inventory[(int) _selectedItem.Tag].StackSize = selectedItem.MaxStack;
+
+            //_selectedItem.Image = selectedItem.Image;
+            //_selectedItem.Text = selectedItem.StackSize.ToString();
         }
 
-        private void maxAllDurationsBtn_Click(object sender, EventArgs e)
+        private void buttonMaxAllBuffs_Click(object sender, EventArgs e)
         {
             foreach (var buff in Terraria.Instance.Player.Buffs.Where(b => b.Id != 0))
             {
                 buff.Time = int.MaxValue;
             }
 
-            buffDisplayGrid.Refresh();
+            gridViewBuffs.Refresh();
         }
 
-        private void maxAllStacksBtn_Click(object sender, EventArgs e)
+        private void buttonMaxAllStacks_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
             foreach (var item in _inventoryItems)
@@ -392,20 +356,20 @@ namespace TerrariaInventoryEditor.Forms
             DrawInventory();
         }
 
-        private void maxDurationBtn_Click(object sender, EventArgs e)
+        private void buttonMaxBuff_Click(object sender, EventArgs e)
         {
-            Terraria.Instance.Player.Buffs[buffDisplayGrid.CurrentCell.RowIndex].Time = int.MaxValue;
-            buffDisplayGrid.Refresh();
+            Terraria.Instance.Player.Buffs[gridViewBuffs.CurrentCell.RowIndex].Time = int.MaxValue;
+            gridViewBuffs.Refresh();
         }
 
-        private void maxOutBtn_Click(object sender, EventArgs e)
+        private void buttonMaxOut_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
             player.Health = player.MaxHealth = 500;
             player.Mana = player.MaxMana = 200;
         }
 
-        private void maxStackBtn_Click(object sender, EventArgs e)
+        private void buttonMaxStack_Click(object sender, EventArgs e)
         {
             if (_selectedItem == null)
             {
@@ -426,8 +390,8 @@ namespace TerrariaInventoryEditor.Forms
         {
             playerBindingSource.DataSource = Terraria.Instance.Player = new Player();
 
-            itemPrefixComboBox.SelectedIndex = 0;
-            stackSizeUpDown.Value = 1;
+            comboBoxItemPrefix.SelectedIndex = 0;
+            upDownStackSize.Value = 1;
 
             playerPictureBox.Draw();
             DrawEquipment();
@@ -457,7 +421,7 @@ namespace TerrariaInventoryEditor.Forms
             DrawInventory();
         }
 
-        private void playerClrPictureBox_Click(object sender, EventArgs e)
+        private void pictureBox_Click(object sender, EventArgs e)
         {
             if (!(sender is PictureBox pictureBox))
             {
@@ -480,7 +444,7 @@ namespace TerrariaInventoryEditor.Forms
             }
         }
 
-        private void prefixComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxItemPrefix_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (_selectedItem == null)
             {
@@ -493,10 +457,10 @@ namespace TerrariaInventoryEditor.Forms
                 return;
             }
 
-            player.Inventory[(int) _selectedItem.Tag].Prefix = (ItemPrefix) itemPrefixComboBox.SelectedItem;
+            player.Inventory[(int) _selectedItem.Tag].Prefix = (ItemPrefix) comboBoxItemPrefix.SelectedItem;
         }
 
-        private void randomizeColorsBtn_Click(object sender, EventArgs e)
+        private void buttonRandomColors_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
             player.EyeColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
@@ -510,7 +474,7 @@ namespace TerrariaInventoryEditor.Forms
             playerPictureBox.Draw();
         }
 
-        private void randomizeHairBtn_Click(object sender, EventArgs e)
+        private void buttonRandomHair_Click(object sender, EventArgs e)
         {
             var player = Terraria.Instance.Player;
             player.Hair = _random.Next(134);
@@ -519,9 +483,9 @@ namespace TerrariaInventoryEditor.Forms
             playerPictureBox.Draw();
         }
 
-        private void rarityComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxItemRarity_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FilterItemList(itemFilterTxtBox.Text);
+            //FilterItemList(itemFilterTxtBox.Text);
         }
 
         private void resetHealthBtn_Click(object sender, EventArgs e)
@@ -566,7 +530,7 @@ namespace TerrariaInventoryEditor.Forms
             }
         }
 
-        private void stackSizeUpDown_ValueChanged(object sender, EventArgs e)
+        private void upDownStackSize_ValueChanged(object sender, EventArgs e)
         {
             if (_selectedItem == null)
             {
@@ -579,7 +543,7 @@ namespace TerrariaInventoryEditor.Forms
                 return;
             }
 
-            player.Inventory[(int) _selectedItem.Tag].StackSize = (int) stackSizeUpDown.Value;
+            player.Inventory[(int) _selectedItem.Tag].StackSize = (int) upDownStackSize.Value;
             _selectedItem.Text = player.Inventory[(int) _selectedItem.Tag].StackSize.ToString();
         }
 

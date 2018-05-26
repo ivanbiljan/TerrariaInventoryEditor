@@ -37,33 +37,34 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.statsTab = new System.Windows.Forms.TabPage();
             this.healthManaGroupBox = new System.Windows.Forms.GroupBox();
-            this.maxOutBtn = new System.Windows.Forms.Button();
-            this.resetHealthBtn = new System.Windows.Forms.Button();
+            this.buttonMaxOut = new System.Windows.Forms.Button();
+            this.buttonResetDefaults = new System.Windows.Forms.Button();
             this.manaBar = new System.Windows.Forms.ProgressBar();
-            this.maxManaBox = new System.Windows.Forms.TextBox();
-            this.currentManaBox = new System.Windows.Forms.TextBox();
+            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBoxMaxMana = new System.Windows.Forms.TextBox();
+            this.textBoxCurrentMana = new System.Windows.Forms.TextBox();
             this.manaLabel = new System.Windows.Forms.Label();
-            this.maxHealthBox = new System.Windows.Forms.TextBox();
+            this.textBoxMaxHealth = new System.Windows.Forms.TextBox();
             this.healthBar = new System.Windows.Forms.ProgressBar();
-            this.currentHealthBox = new System.Windows.Forms.TextBox();
+            this.textBoxCurrentHealth = new System.Windows.Forms.TextBox();
             this.healthLabel = new System.Windows.Forms.Label();
             this.playerInfoGroupBox = new System.Windows.Forms.GroupBox();
-            this.hotbarCheckBox = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.checkBoxHotbarLocked = new System.Windows.Forms.CheckBox();
+            this.textBoxTaxMoney = new System.Windows.Forms.TextBox();
             this.taxMoneyLbl = new System.Windows.Forms.Label();
-            this.extraAccCheckBox = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBoxExtraAccessory = new System.Windows.Forms.CheckBox();
+            this.textBoxPlayTime = new System.Windows.Forms.TextBox();
             this.playTimeLbl = new System.Windows.Forms.Label();
-            this.anglerQuestUpDown = new System.Windows.Forms.NumericUpDown();
-            this.skinVariantUpDown = new System.Windows.Forms.NumericUpDown();
+            this.upDownAnglerQuests = new System.Windows.Forms.NumericUpDown();
+            this.upDownSkinVariant = new System.Windows.Forms.NumericUpDown();
             this.anglerLbl = new System.Windows.Forms.Label();
             this.skinVariantLbl = new System.Windows.Forms.Label();
-            this.difficultyCmbBox = new System.Windows.Forms.ComboBox();
+            this.comboBoxDifficulty = new System.Windows.Forms.ComboBox();
             this.difficultyLbl = new System.Windows.Forms.Label();
-            this.playerNameTxtBox = new System.Windows.Forms.TextBox();
+            this.textBoxPlayerName = new System.Windows.Forms.TextBox();
             this.playerNameLbl = new System.Windows.Forms.Label();
             this.appearanceTab = new System.Windows.Forms.TabPage();
             this.dyeItem8 = new System.Windows.Forms.Button();
@@ -96,39 +97,43 @@
             this.socialsLbl = new System.Windows.Forms.Label();
             this.dyeLbl = new System.Windows.Forms.Label();
             this.appearanceGroupBox = new System.Windows.Forms.GroupBox();
-            this.hairClrPictureBox = new System.Windows.Forms.PictureBox();
-            this.hairColorLbl = new System.Windows.Forms.Label();
-            this.eyeClrPictureBox = new System.Windows.Forms.PictureBox();
-            this.randomizeColorsBtn = new System.Windows.Forms.Button();
-            this.eyeColorLbl = new System.Windows.Forms.Label();
-            this.randomizeHairBtn = new System.Windows.Forms.Button();
-            this.skinClrPictureBox = new System.Windows.Forms.PictureBox();
-            this.hairDesignerBtn = new System.Windows.Forms.Button();
-            this.skinColorLbl = new System.Windows.Forms.Label();
-            this.shoeColorLbl = new System.Windows.Forms.Label();
-            this.shirtClrPictureBox = new System.Windows.Forms.PictureBox();
-            this.pantsColorLbl = new System.Windows.Forms.Label();
-            this.undershirtClrPictureBox = new System.Windows.Forms.PictureBox();
-            this.undershirtColorLbl = new System.Windows.Forms.Label();
-            this.pantsClrPictureBox = new System.Windows.Forms.PictureBox();
-            this.shirtColorLbl = new System.Windows.Forms.Label();
-            this.shoeClrPictureBox = new System.Windows.Forms.PictureBox();
+            this.buttonRandomColors = new System.Windows.Forms.Button();
+            this.buttonRandomHair = new System.Windows.Forms.Button();
+            this.buttonEditHair = new System.Windows.Forms.Button();
+            this.pictureBoxShoeColor = new System.Windows.Forms.PictureBox();
+            this.labelShoeColor = new System.Windows.Forms.Label();
+            this.pictureBoxPantsColor = new System.Windows.Forms.PictureBox();
+            this.labelPantsColor = new System.Windows.Forms.Label();
+            this.pictureBoxUndershirtColor = new System.Windows.Forms.PictureBox();
+            this.labelUndershirtColor = new System.Windows.Forms.Label();
+            this.pictureBoxShirtColor = new System.Windows.Forms.PictureBox();
+            this.labelShirtColor = new System.Windows.Forms.Label();
+            this.pictureBoxEyeColor = new System.Windows.Forms.PictureBox();
+            this.labelEyeColor = new System.Windows.Forms.Label();
+            this.pictureBoxSkinColor = new System.Windows.Forms.PictureBox();
+            this.labelSkinColor = new System.Windows.Forms.Label();
+            this.pictureBoxHairColor = new System.Windows.Forms.PictureBox();
+            this.labelHairColor = new System.Windows.Forms.Label();
+            this.playerPictureBox = new TerrariaInventoryEditor.Framework.PlayerPictureBox();
             this.equipmentFilterGroupBox = new System.Windows.Forms.GroupBox();
-            this.equipmentFilterTxtBox = new System.Windows.Forms.TextBox();
-            this.equipmentSearchLbl = new System.Windows.Forms.Label();
-            this.equipmentSearchBox = new System.Windows.Forms.ListBox();
+            this.textBoxEquipName = new System.Windows.Forms.TextBox();
+            this.labelSearchForEquip = new System.Windows.Forms.Label();
+            this.listBoxEquips = new System.Windows.Forms.ListBox();
             this.dyeItem0 = new System.Windows.Forms.Button();
             this.buffsTab = new System.Windows.Forms.TabPage();
             this.buffControlsGroupBox = new System.Windows.Forms.GroupBox();
-            this.deleteBuffBtn = new System.Windows.Forms.Button();
-            this.buffFilterTxtBox = new System.Windows.Forms.TextBox();
-            this.maxAllDurationsBtn = new System.Windows.Forms.Button();
-            this.maxDurationBtn = new System.Windows.Forms.Button();
-            this.deleteAllBuffsBtn = new System.Windows.Forms.Button();
-            this.buffSearchBox = new System.Windows.Forms.ListBox();
+            this.buttonDeleteBuff = new System.Windows.Forms.Button();
+            this.textBoxBuffName = new System.Windows.Forms.TextBox();
+            this.buttonMaxAllBuffs = new System.Windows.Forms.Button();
+            this.buttonMaxBuff = new System.Windows.Forms.Button();
+            this.buttonDeleteAllBuffs = new System.Windows.Forms.Button();
+            this.listBoxBuffs = new System.Windows.Forms.ListBox();
             this.activeBuffsGroupBox = new System.Windows.Forms.GroupBox();
-            this.buffDisplayGrid = new System.Windows.Forms.DataGridView();
+            this.gridViewBuffs = new System.Windows.Forms.DataGridView();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buffsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.inventoryTab = new System.Windows.Forms.TabPage();
             this.ammoLbl = new System.Windows.Forms.Label();
@@ -142,25 +147,16 @@
             this.inventoryItem51 = new System.Windows.Forms.Button();
             this.inventoryItem50 = new System.Windows.Forms.Button();
             this.itemPropertiesGroupBox = new System.Windows.Forms.GroupBox();
-            this.deleteAllItemsBtn = new System.Windows.Forms.Button();
-            this.deleteItemBtn = new System.Windows.Forms.Button();
-            this.maxAllStacksBtn = new System.Windows.Forms.Button();
-            this.maxStackBtn = new System.Windows.Forms.Button();
-            this.stackSizeUpDown = new System.Windows.Forms.NumericUpDown();
+            this.buttonDeleteAllItems = new System.Windows.Forms.Button();
+            this.buttonDeleteItem = new System.Windows.Forms.Button();
+            this.buttonMaxAllStacks = new System.Windows.Forms.Button();
+            this.buttonMaxStack = new System.Windows.Forms.Button();
+            this.upDownStackSize = new System.Windows.Forms.NumericUpDown();
             this.stackSizeLbl = new System.Windows.Forms.Label();
-            this.itemPrefixComboBox = new System.Windows.Forms.ComboBox();
+            this.comboBoxItemPrefix = new System.Windows.Forms.ComboBox();
             this.itemPrefixLbl = new System.Windows.Forms.Label();
             this.inventoryFilterGroupBox = new System.Windows.Forms.GroupBox();
-            this.rangedCheckBox = new System.Windows.Forms.CheckBox();
-            this.thrownCheckBox = new System.Windows.Forms.CheckBox();
-            this.magicCheckBox = new System.Windows.Forms.CheckBox();
-            this.accessoryCheckBox = new System.Windows.Forms.CheckBox();
-            this.meleeCheckBox = new System.Windows.Forms.CheckBox();
-            this.rarityComboBox = new System.Windows.Forms.ComboBox();
-            this.rarityLbl = new System.Windows.Forms.Label();
-            this.itemFilterTxtBox = new System.Windows.Forms.TextBox();
-            this.searchForItemLbl = new System.Windows.Forms.Label();
-            this.itemSearchBox = new System.Windows.Forms.ListBox();
+            this.itemFilterInventory = new TerrariaInventoryEditor.Framework.ItemFilterControl();
             this.inventoryItem49 = new System.Windows.Forms.Button();
             this.inventoryItem48 = new System.Windows.Forms.Button();
             this.inventoryItem47 = new System.Windows.Forms.Button();
@@ -211,20 +207,54 @@
             this.inventoryItem2 = new System.Windows.Forms.Button();
             this.inventoryItem1 = new System.Windows.Forms.Button();
             this.inventoryItem0 = new System.Windows.Forms.Button();
-            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.playerPictureBox = new TerrariaInventoryEditor.Framework.PlayerPictureBox();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.itemFilterControl1 = new TerrariaInventoryEditor.Framework.ItemFilterControl();
+            this.hairClrPictureBox = new System.Windows.Forms.PictureBox();
+            this.hairColorLbl = new System.Windows.Forms.Label();
+            this.eyeClrPictureBox = new System.Windows.Forms.PictureBox();
+            this.randomizeColorsBtn = new System.Windows.Forms.Button();
+            this.eyeColorLbl = new System.Windows.Forms.Label();
+            this.randomizeHairBtn = new System.Windows.Forms.Button();
+            this.skinClrPictureBox = new System.Windows.Forms.PictureBox();
+            this.hairDesignerBtn = new System.Windows.Forms.Button();
+            this.skinColorLbl = new System.Windows.Forms.Label();
+            this.shoeColorLbl = new System.Windows.Forms.Label();
+            this.shirtClrPictureBox = new System.Windows.Forms.PictureBox();
+            this.pantsColorLbl = new System.Windows.Forms.Label();
+            this.undershirtClrPictureBox = new System.Windows.Forms.PictureBox();
+            this.undershirtColorLbl = new System.Windows.Forms.Label();
+            this.pantsClrPictureBox = new System.Windows.Forms.PictureBox();
+            this.shirtColorLbl = new System.Windows.Forms.Label();
+            this.shoeClrPictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabControl.SuspendLayout();
             this.statsTab.SuspendLayout();
             this.healthManaGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
             this.playerInfoGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.anglerQuestUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinVariantUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownAnglerQuests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownSkinVariant)).BeginInit();
             this.appearanceTab.SuspendLayout();
             this.appearanceGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShoeColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPantsColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUndershirtColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShirtColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEyeColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSkinColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHairColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).BeginInit();
+            this.equipmentFilterGroupBox.SuspendLayout();
+            this.buffsTab.SuspendLayout();
+            this.buffControlsGroupBox.SuspendLayout();
+            this.activeBuffsGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewBuffs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buffsBindingSource)).BeginInit();
+            this.inventoryTab.SuspendLayout();
+            this.itemPropertiesGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownStackSize)).BeginInit();
+            this.inventoryFilterGroupBox.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hairClrPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeClrPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinClrPictureBox)).BeginInit();
@@ -232,18 +262,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.undershirtClrPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pantsClrPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shoeClrPictureBox)).BeginInit();
-            this.equipmentFilterGroupBox.SuspendLayout();
-            this.buffsTab.SuspendLayout();
-            this.buffControlsGroupBox.SuspendLayout();
-            this.activeBuffsGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buffDisplayGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buffsBindingSource)).BeginInit();
-            this.inventoryTab.SuspendLayout();
-            this.itemPropertiesGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.stackSizeUpDown)).BeginInit();
-            this.inventoryFilterGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -307,18 +325,19 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Controls.Add(this.statsTab);
-            this.tabControl1.Controls.Add(this.appearanceTab);
-            this.tabControl1.Controls.Add(this.buffsTab);
-            this.tabControl1.Controls.Add(this.inventoryTab);
-            this.tabControl1.Location = new System.Drawing.Point(13, 28);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1006, 508);
-            this.tabControl1.TabIndex = 1;
-            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl_TabSelected);
+            this.tabControl.Controls.Add(this.statsTab);
+            this.tabControl.Controls.Add(this.appearanceTab);
+            this.tabControl.Controls.Add(this.buffsTab);
+            this.tabControl.Controls.Add(this.inventoryTab);
+            this.tabControl.Controls.Add(this.tabPage1);
+            this.tabControl.Location = new System.Drawing.Point(13, 28);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1006, 508);
+            this.tabControl.TabIndex = 1;
+            this.tabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl_TabSelected);
             // 
             // statsTab
             // 
@@ -334,15 +353,15 @@
             // 
             // healthManaGroupBox
             // 
-            this.healthManaGroupBox.Controls.Add(this.maxOutBtn);
-            this.healthManaGroupBox.Controls.Add(this.resetHealthBtn);
+            this.healthManaGroupBox.Controls.Add(this.buttonMaxOut);
+            this.healthManaGroupBox.Controls.Add(this.buttonResetDefaults);
             this.healthManaGroupBox.Controls.Add(this.manaBar);
-            this.healthManaGroupBox.Controls.Add(this.maxManaBox);
-            this.healthManaGroupBox.Controls.Add(this.currentManaBox);
+            this.healthManaGroupBox.Controls.Add(this.textBoxMaxMana);
+            this.healthManaGroupBox.Controls.Add(this.textBoxCurrentMana);
             this.healthManaGroupBox.Controls.Add(this.manaLabel);
-            this.healthManaGroupBox.Controls.Add(this.maxHealthBox);
+            this.healthManaGroupBox.Controls.Add(this.textBoxMaxHealth);
             this.healthManaGroupBox.Controls.Add(this.healthBar);
-            this.healthManaGroupBox.Controls.Add(this.currentHealthBox);
+            this.healthManaGroupBox.Controls.Add(this.textBoxCurrentHealth);
             this.healthManaGroupBox.Controls.Add(this.healthLabel);
             this.healthManaGroupBox.Location = new System.Drawing.Point(343, 7);
             this.healthManaGroupBox.Name = "healthManaGroupBox";
@@ -351,25 +370,25 @@
             this.healthManaGroupBox.TabStop = false;
             this.healthManaGroupBox.Text = "Health and Mana";
             // 
-            // maxOutBtn
+            // buttonMaxOut
             // 
-            this.maxOutBtn.Location = new System.Drawing.Point(166, 155);
-            this.maxOutBtn.Name = "maxOutBtn";
-            this.maxOutBtn.Size = new System.Drawing.Size(110, 23);
-            this.maxOutBtn.TabIndex = 9;
-            this.maxOutBtn.Text = "Max Out";
-            this.maxOutBtn.UseVisualStyleBackColor = true;
-            this.maxOutBtn.Click += new System.EventHandler(this.maxOutBtn_Click);
+            this.buttonMaxOut.Location = new System.Drawing.Point(166, 155);
+            this.buttonMaxOut.Name = "buttonMaxOut";
+            this.buttonMaxOut.Size = new System.Drawing.Size(110, 23);
+            this.buttonMaxOut.TabIndex = 9;
+            this.buttonMaxOut.Text = "Max Out";
+            this.buttonMaxOut.UseVisualStyleBackColor = true;
+            this.buttonMaxOut.Click += new System.EventHandler(this.buttonMaxOut_Click);
             // 
-            // resetHealthBtn
+            // buttonResetDefaults
             // 
-            this.resetHealthBtn.Location = new System.Drawing.Point(10, 155);
-            this.resetHealthBtn.Name = "resetHealthBtn";
-            this.resetHealthBtn.Size = new System.Drawing.Size(110, 23);
-            this.resetHealthBtn.TabIndex = 8;
-            this.resetHealthBtn.Text = "Restore Defaults";
-            this.resetHealthBtn.UseVisualStyleBackColor = true;
-            this.resetHealthBtn.Click += new System.EventHandler(this.resetHealthBtn_Click);
+            this.buttonResetDefaults.Location = new System.Drawing.Point(10, 155);
+            this.buttonResetDefaults.Name = "buttonResetDefaults";
+            this.buttonResetDefaults.Size = new System.Drawing.Size(110, 23);
+            this.buttonResetDefaults.TabIndex = 8;
+            this.buttonResetDefaults.Text = "Restore Defaults";
+            this.buttonResetDefaults.UseVisualStyleBackColor = true;
+            this.buttonResetDefaults.Click += new System.EventHandler(this.resetHealthBtn_Click);
             // 
             // manaBar
             // 
@@ -383,21 +402,25 @@
             this.manaBar.TabIndex = 7;
             this.manaBar.Value = 20;
             // 
-            // maxManaBox
+            // playerBindingSource
             // 
-            this.maxManaBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "MaxMana", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.maxManaBox.Location = new System.Drawing.Point(176, 72);
-            this.maxManaBox.Name = "maxManaBox";
-            this.maxManaBox.Size = new System.Drawing.Size(100, 20);
-            this.maxManaBox.TabIndex = 6;
+            this.playerBindingSource.DataSource = typeof(TerrariaInventoryEditor.TerrariaLib.Player);
             // 
-            // currentManaBox
+            // textBoxMaxMana
             // 
-            this.currentManaBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Mana", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.currentManaBox.Location = new System.Drawing.Point(70, 72);
-            this.currentManaBox.Name = "currentManaBox";
-            this.currentManaBox.Size = new System.Drawing.Size(100, 20);
-            this.currentManaBox.TabIndex = 5;
+            this.textBoxMaxMana.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "MaxMana", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBoxMaxMana.Location = new System.Drawing.Point(176, 72);
+            this.textBoxMaxMana.Name = "textBoxMaxMana";
+            this.textBoxMaxMana.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMaxMana.TabIndex = 6;
+            // 
+            // textBoxCurrentMana
+            // 
+            this.textBoxCurrentMana.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Mana", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBoxCurrentMana.Location = new System.Drawing.Point(70, 72);
+            this.textBoxCurrentMana.Name = "textBoxCurrentMana";
+            this.textBoxCurrentMana.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCurrentMana.TabIndex = 5;
             // 
             // manaLabel
             // 
@@ -409,13 +432,13 @@
             this.manaLabel.TabIndex = 4;
             this.manaLabel.Text = "Mana:";
             // 
-            // maxHealthBox
+            // textBoxMaxHealth
             // 
-            this.maxHealthBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "MaxHealth", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.maxHealthBox.Location = new System.Drawing.Point(176, 17);
-            this.maxHealthBox.Name = "maxHealthBox";
-            this.maxHealthBox.Size = new System.Drawing.Size(100, 20);
-            this.maxHealthBox.TabIndex = 3;
+            this.textBoxMaxHealth.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "MaxHealth", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBoxMaxHealth.Location = new System.Drawing.Point(176, 17);
+            this.textBoxMaxHealth.Name = "textBoxMaxHealth";
+            this.textBoxMaxHealth.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMaxHealth.TabIndex = 3;
             // 
             // healthBar
             // 
@@ -427,13 +450,13 @@
             this.healthBar.TabIndex = 2;
             this.healthBar.Value = 100;
             // 
-            // currentHealthBox
+            // textBoxCurrentHealth
             // 
-            this.currentHealthBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Health", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.currentHealthBox.Location = new System.Drawing.Point(70, 17);
-            this.currentHealthBox.Name = "currentHealthBox";
-            this.currentHealthBox.Size = new System.Drawing.Size(100, 20);
-            this.currentHealthBox.TabIndex = 1;
+            this.textBoxCurrentHealth.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Health", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBoxCurrentHealth.Location = new System.Drawing.Point(70, 17);
+            this.textBoxCurrentHealth.Name = "textBoxCurrentHealth";
+            this.textBoxCurrentHealth.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCurrentHealth.TabIndex = 1;
             // 
             // healthLabel
             // 
@@ -447,19 +470,19 @@
             // 
             // playerInfoGroupBox
             // 
-            this.playerInfoGroupBox.Controls.Add(this.hotbarCheckBox);
-            this.playerInfoGroupBox.Controls.Add(this.textBox2);
+            this.playerInfoGroupBox.Controls.Add(this.checkBoxHotbarLocked);
+            this.playerInfoGroupBox.Controls.Add(this.textBoxTaxMoney);
             this.playerInfoGroupBox.Controls.Add(this.taxMoneyLbl);
-            this.playerInfoGroupBox.Controls.Add(this.extraAccCheckBox);
-            this.playerInfoGroupBox.Controls.Add(this.textBox1);
+            this.playerInfoGroupBox.Controls.Add(this.checkBoxExtraAccessory);
+            this.playerInfoGroupBox.Controls.Add(this.textBoxPlayTime);
             this.playerInfoGroupBox.Controls.Add(this.playTimeLbl);
-            this.playerInfoGroupBox.Controls.Add(this.anglerQuestUpDown);
-            this.playerInfoGroupBox.Controls.Add(this.skinVariantUpDown);
+            this.playerInfoGroupBox.Controls.Add(this.upDownAnglerQuests);
+            this.playerInfoGroupBox.Controls.Add(this.upDownSkinVariant);
             this.playerInfoGroupBox.Controls.Add(this.anglerLbl);
             this.playerInfoGroupBox.Controls.Add(this.skinVariantLbl);
-            this.playerInfoGroupBox.Controls.Add(this.difficultyCmbBox);
+            this.playerInfoGroupBox.Controls.Add(this.comboBoxDifficulty);
             this.playerInfoGroupBox.Controls.Add(this.difficultyLbl);
-            this.playerInfoGroupBox.Controls.Add(this.playerNameTxtBox);
+            this.playerInfoGroupBox.Controls.Add(this.textBoxPlayerName);
             this.playerInfoGroupBox.Controls.Add(this.playerNameLbl);
             this.playerInfoGroupBox.Location = new System.Drawing.Point(6, 7);
             this.playerInfoGroupBox.Name = "playerInfoGroupBox";
@@ -468,24 +491,24 @@
             this.playerInfoGroupBox.TabStop = false;
             this.playerInfoGroupBox.Text = "Player Information";
             // 
-            // hotbarCheckBox
+            // checkBoxHotbarLocked
             // 
-            this.hotbarCheckBox.AutoSize = true;
-            this.hotbarCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.playerBindingSource, "IsHotbarLocked", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.hotbarCheckBox.Location = new System.Drawing.Point(211, 136);
-            this.hotbarCheckBox.Name = "hotbarCheckBox";
-            this.hotbarCheckBox.Size = new System.Drawing.Size(97, 17);
-            this.hotbarCheckBox.TabIndex = 37;
-            this.hotbarCheckBox.Text = "Hotbar Locked";
-            this.hotbarCheckBox.UseVisualStyleBackColor = true;
+            this.checkBoxHotbarLocked.AutoSize = true;
+            this.checkBoxHotbarLocked.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.playerBindingSource, "IsHotbarLocked", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBoxHotbarLocked.Location = new System.Drawing.Point(211, 136);
+            this.checkBoxHotbarLocked.Name = "checkBoxHotbarLocked";
+            this.checkBoxHotbarLocked.Size = new System.Drawing.Size(97, 17);
+            this.checkBoxHotbarLocked.TabIndex = 37;
+            this.checkBoxHotbarLocked.Text = "Hotbar Locked";
+            this.checkBoxHotbarLocked.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // textBoxTaxMoney
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "TaxMoney", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox2.Location = new System.Drawing.Point(126, 162);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 20);
-            this.textBox2.TabIndex = 36;
+            this.textBoxTaxMoney.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "TaxMoney", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBoxTaxMoney.Location = new System.Drawing.Point(126, 162);
+            this.textBoxTaxMoney.Name = "textBoxTaxMoney";
+            this.textBoxTaxMoney.Size = new System.Drawing.Size(180, 20);
+            this.textBoxTaxMoney.TabIndex = 36;
             // 
             // taxMoneyLbl
             // 
@@ -497,24 +520,24 @@
             this.taxMoneyLbl.TabIndex = 35;
             this.taxMoneyLbl.Text = "Tax Money:";
             // 
-            // extraAccCheckBox
+            // checkBoxExtraAccessory
             // 
-            this.extraAccCheckBox.AutoSize = true;
-            this.extraAccCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.playerBindingSource, "ExtraAccessory", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.extraAccCheckBox.Location = new System.Drawing.Point(211, 110);
-            this.extraAccCheckBox.Name = "extraAccCheckBox";
-            this.extraAccCheckBox.Size = new System.Drawing.Size(102, 17);
-            this.extraAccCheckBox.TabIndex = 34;
-            this.extraAccCheckBox.Text = "Extra Accessory";
-            this.extraAccCheckBox.UseVisualStyleBackColor = true;
+            this.checkBoxExtraAccessory.AutoSize = true;
+            this.checkBoxExtraAccessory.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.playerBindingSource, "ExtraAccessory", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBoxExtraAccessory.Location = new System.Drawing.Point(211, 110);
+            this.checkBoxExtraAccessory.Name = "checkBoxExtraAccessory";
+            this.checkBoxExtraAccessory.Size = new System.Drawing.Size(102, 17);
+            this.checkBoxExtraAccessory.TabIndex = 34;
+            this.checkBoxExtraAccessory.Text = "Extra Accessory";
+            this.checkBoxExtraAccessory.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxPlayTime
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "PlayTime", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox1.Location = new System.Drawing.Point(127, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 20);
-            this.textBox1.TabIndex = 33;
+            this.textBoxPlayTime.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "PlayTime", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBoxPlayTime.Location = new System.Drawing.Point(127, 76);
+            this.textBoxPlayTime.Name = "textBoxPlayTime";
+            this.textBoxPlayTime.Size = new System.Drawing.Size(179, 20);
+            this.textBoxPlayTime.TabIndex = 33;
             // 
             // playTimeLbl
             // 
@@ -526,31 +549,31 @@
             this.playTimeLbl.TabIndex = 32;
             this.playTimeLbl.Text = "Play Time:";
             // 
-            // anglerQuestUpDown
+            // upDownAnglerQuests
             // 
-            this.anglerQuestUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "AnglerQuestsFinished", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.anglerQuestUpDown.Location = new System.Drawing.Point(126, 135);
-            this.anglerQuestUpDown.Maximum = new decimal(new int[] {
+            this.upDownAnglerQuests.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "AnglerQuestsFinished", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.upDownAnglerQuests.Location = new System.Drawing.Point(126, 135);
+            this.upDownAnglerQuests.Maximum = new decimal(new int[] {
             2147483647,
             0,
             0,
             0});
-            this.anglerQuestUpDown.Name = "anglerQuestUpDown";
-            this.anglerQuestUpDown.Size = new System.Drawing.Size(79, 20);
-            this.anglerQuestUpDown.TabIndex = 31;
+            this.upDownAnglerQuests.Name = "upDownAnglerQuests";
+            this.upDownAnglerQuests.Size = new System.Drawing.Size(79, 20);
+            this.upDownAnglerQuests.TabIndex = 31;
             // 
-            // skinVariantUpDown
+            // upDownSkinVariant
             // 
-            this.skinVariantUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "SkinVariant", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.skinVariantUpDown.Location = new System.Drawing.Point(126, 109);
-            this.skinVariantUpDown.Maximum = new decimal(new int[] {
+            this.upDownSkinVariant.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "SkinVariant", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.upDownSkinVariant.Location = new System.Drawing.Point(126, 109);
+            this.upDownSkinVariant.Maximum = new decimal(new int[] {
             9,
             0,
             0,
             0});
-            this.skinVariantUpDown.Name = "skinVariantUpDown";
-            this.skinVariantUpDown.Size = new System.Drawing.Size(79, 20);
-            this.skinVariantUpDown.TabIndex = 30;
+            this.upDownSkinVariant.Name = "upDownSkinVariant";
+            this.upDownSkinVariant.Size = new System.Drawing.Size(79, 20);
+            this.upDownSkinVariant.TabIndex = 30;
             // 
             // anglerLbl
             // 
@@ -572,18 +595,18 @@
             this.skinVariantLbl.TabIndex = 24;
             this.skinVariantLbl.Text = "Skin Variant:";
             // 
-            // difficultyCmbBox
+            // comboBoxDifficulty
             // 
-            this.difficultyCmbBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Difficulty", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.difficultyCmbBox.FormattingEnabled = true;
-            this.difficultyCmbBox.Items.AddRange(new object[] {
+            this.comboBoxDifficulty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Difficulty", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.comboBoxDifficulty.FormattingEnabled = true;
+            this.comboBoxDifficulty.Items.AddRange(new object[] {
             "Softcore",
             "Mediumcore",
             "Hardcore"});
-            this.difficultyCmbBox.Location = new System.Drawing.Point(127, 46);
-            this.difficultyCmbBox.Name = "difficultyCmbBox";
-            this.difficultyCmbBox.Size = new System.Drawing.Size(179, 21);
-            this.difficultyCmbBox.TabIndex = 23;
+            this.comboBoxDifficulty.Location = new System.Drawing.Point(127, 46);
+            this.comboBoxDifficulty.Name = "comboBoxDifficulty";
+            this.comboBoxDifficulty.Size = new System.Drawing.Size(179, 21);
+            this.comboBoxDifficulty.TabIndex = 23;
             // 
             // difficultyLbl
             // 
@@ -595,13 +618,13 @@
             this.difficultyLbl.TabIndex = 22;
             this.difficultyLbl.Text = "Difficulty: ";
             // 
-            // playerNameTxtBox
+            // textBoxPlayerName
             // 
-            this.playerNameTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerNameTxtBox.Location = new System.Drawing.Point(127, 20);
-            this.playerNameTxtBox.Name = "playerNameTxtBox";
-            this.playerNameTxtBox.Size = new System.Drawing.Size(179, 20);
-            this.playerNameTxtBox.TabIndex = 21;
+            this.textBoxPlayerName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBoxPlayerName.Location = new System.Drawing.Point(127, 20);
+            this.textBoxPlayerName.Name = "textBoxPlayerName";
+            this.textBoxPlayerName.Size = new System.Drawing.Size(179, 20);
+            this.textBoxPlayerName.TabIndex = 21;
             // 
             // playerNameLbl
             // 
@@ -1077,24 +1100,24 @@
             // 
             // appearanceGroupBox
             // 
+            this.appearanceGroupBox.Controls.Add(this.buttonRandomColors);
+            this.appearanceGroupBox.Controls.Add(this.buttonRandomHair);
+            this.appearanceGroupBox.Controls.Add(this.buttonEditHair);
+            this.appearanceGroupBox.Controls.Add(this.pictureBoxShoeColor);
+            this.appearanceGroupBox.Controls.Add(this.labelShoeColor);
+            this.appearanceGroupBox.Controls.Add(this.pictureBoxPantsColor);
+            this.appearanceGroupBox.Controls.Add(this.labelPantsColor);
+            this.appearanceGroupBox.Controls.Add(this.pictureBoxUndershirtColor);
+            this.appearanceGroupBox.Controls.Add(this.labelUndershirtColor);
+            this.appearanceGroupBox.Controls.Add(this.pictureBoxShirtColor);
+            this.appearanceGroupBox.Controls.Add(this.labelShirtColor);
+            this.appearanceGroupBox.Controls.Add(this.pictureBoxEyeColor);
+            this.appearanceGroupBox.Controls.Add(this.labelEyeColor);
+            this.appearanceGroupBox.Controls.Add(this.pictureBoxSkinColor);
+            this.appearanceGroupBox.Controls.Add(this.labelSkinColor);
+            this.appearanceGroupBox.Controls.Add(this.pictureBoxHairColor);
+            this.appearanceGroupBox.Controls.Add(this.labelHairColor);
             this.appearanceGroupBox.Controls.Add(this.playerPictureBox);
-            this.appearanceGroupBox.Controls.Add(this.hairClrPictureBox);
-            this.appearanceGroupBox.Controls.Add(this.hairColorLbl);
-            this.appearanceGroupBox.Controls.Add(this.eyeClrPictureBox);
-            this.appearanceGroupBox.Controls.Add(this.randomizeColorsBtn);
-            this.appearanceGroupBox.Controls.Add(this.eyeColorLbl);
-            this.appearanceGroupBox.Controls.Add(this.randomizeHairBtn);
-            this.appearanceGroupBox.Controls.Add(this.skinClrPictureBox);
-            this.appearanceGroupBox.Controls.Add(this.hairDesignerBtn);
-            this.appearanceGroupBox.Controls.Add(this.skinColorLbl);
-            this.appearanceGroupBox.Controls.Add(this.shoeColorLbl);
-            this.appearanceGroupBox.Controls.Add(this.shirtClrPictureBox);
-            this.appearanceGroupBox.Controls.Add(this.pantsColorLbl);
-            this.appearanceGroupBox.Controls.Add(this.undershirtClrPictureBox);
-            this.appearanceGroupBox.Controls.Add(this.undershirtColorLbl);
-            this.appearanceGroupBox.Controls.Add(this.pantsClrPictureBox);
-            this.appearanceGroupBox.Controls.Add(this.shirtColorLbl);
-            this.appearanceGroupBox.Controls.Add(this.shoeClrPictureBox);
             this.appearanceGroupBox.Location = new System.Drawing.Point(183, 7);
             this.appearanceGroupBox.Name = "appearanceGroupBox";
             this.appearanceGroupBox.Size = new System.Drawing.Size(475, 287);
@@ -1102,188 +1125,204 @@
             this.appearanceGroupBox.TabStop = false;
             this.appearanceGroupBox.Text = "Appearance";
             // 
-            // hairClrPictureBox
+            // buttonRandomColors
             // 
-            this.hairClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.hairClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "HairColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.hairClrPictureBox.Location = new System.Drawing.Point(126, 19);
-            this.hairClrPictureBox.Name = "hairClrPictureBox";
-            this.hairClrPictureBox.Size = new System.Drawing.Size(75, 25);
-            this.hairClrPictureBox.TabIndex = 2;
-            this.hairClrPictureBox.TabStop = false;
-            this.hairClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            this.buttonRandomColors.Location = new System.Drawing.Point(351, 187);
+            this.buttonRandomColors.Name = "buttonRandomColors";
+            this.buttonRandomColors.Size = new System.Drawing.Size(117, 22);
+            this.buttonRandomColors.TabIndex = 18;
+            this.buttonRandomColors.Text = "Randomize Colors";
+            this.buttonRandomColors.UseVisualStyleBackColor = true;
             // 
-            // hairColorLbl
+            // buttonRandomHair
             // 
-            this.hairColorLbl.AutoSize = true;
-            this.hairColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hairColorLbl.Location = new System.Drawing.Point(46, 19);
-            this.hairColorLbl.Name = "hairColorLbl";
-            this.hairColorLbl.Size = new System.Drawing.Size(74, 15);
-            this.hairColorLbl.TabIndex = 3;
-            this.hairColorLbl.Text = "Hair color:";
+            this.buttonRandomHair.Location = new System.Drawing.Point(351, 159);
+            this.buttonRandomHair.Name = "buttonRandomHair";
+            this.buttonRandomHair.Size = new System.Drawing.Size(117, 22);
+            this.buttonRandomHair.TabIndex = 17;
+            this.buttonRandomHair.Text = "Randomize Hair";
+            this.buttonRandomHair.UseVisualStyleBackColor = true;
             // 
-            // eyeClrPictureBox
+            // buttonEditHair
             // 
-            this.eyeClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.eyeClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.eyeClrPictureBox.Location = new System.Drawing.Point(126, 50);
-            this.eyeClrPictureBox.Name = "eyeClrPictureBox";
-            this.eyeClrPictureBox.Size = new System.Drawing.Size(75, 25);
-            this.eyeClrPictureBox.TabIndex = 4;
-            this.eyeClrPictureBox.TabStop = false;
-            this.eyeClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            this.buttonEditHair.Location = new System.Drawing.Point(351, 20);
+            this.buttonEditHair.Name = "buttonEditHair";
+            this.buttonEditHair.Size = new System.Drawing.Size(117, 22);
+            this.buttonEditHair.TabIndex = 16;
+            this.buttonEditHair.Text = "Edit Hair";
+            this.buttonEditHair.UseVisualStyleBackColor = true;
             // 
-            // randomizeColorsBtn
+            // pictureBoxShoeColor
             // 
-            this.randomizeColorsBtn.Location = new System.Drawing.Point(365, 207);
-            this.randomizeColorsBtn.Name = "randomizeColorsBtn";
-            this.randomizeColorsBtn.Size = new System.Drawing.Size(100, 23);
-            this.randomizeColorsBtn.TabIndex = 18;
-            this.randomizeColorsBtn.Text = "Randomize Colors";
-            this.randomizeColorsBtn.UseVisualStyleBackColor = true;
-            this.randomizeColorsBtn.Click += new System.EventHandler(this.randomizeColorsBtn_Click);
+            this.pictureBoxShoeColor.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "ShoeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pictureBoxShoeColor.Location = new System.Drawing.Point(268, 187);
+            this.pictureBoxShoeColor.Name = "pictureBoxShoeColor";
+            this.pictureBoxShoeColor.Size = new System.Drawing.Size(77, 22);
+            this.pictureBoxShoeColor.TabIndex = 15;
+            this.pictureBoxShoeColor.TabStop = false;
+            this.pictureBoxShoeColor.Click += new System.EventHandler(this.pictureBox_Click);
             // 
-            // eyeColorLbl
+            // labelShoeColor
             // 
-            this.eyeColorLbl.AutoSize = true;
-            this.eyeColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eyeColorLbl.Location = new System.Drawing.Point(50, 47);
-            this.eyeColorLbl.Name = "eyeColorLbl";
-            this.eyeColorLbl.Size = new System.Drawing.Size(70, 15);
-            this.eyeColorLbl.TabIndex = 5;
-            this.eyeColorLbl.Text = "Eye color:";
+            this.labelShoeColor.AutoSize = true;
+            this.labelShoeColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelShoeColor.Location = new System.Drawing.Point(180, 187);
+            this.labelShoeColor.Name = "labelShoeColor";
+            this.labelShoeColor.Size = new System.Drawing.Size(82, 15);
+            this.labelShoeColor.TabIndex = 14;
+            this.labelShoeColor.Text = "Shoe Color:";
             // 
-            // randomizeHairBtn
+            // pictureBoxPantsColor
             // 
-            this.randomizeHairBtn.Location = new System.Drawing.Point(365, 178);
-            this.randomizeHairBtn.Name = "randomizeHairBtn";
-            this.randomizeHairBtn.Size = new System.Drawing.Size(100, 23);
-            this.randomizeHairBtn.TabIndex = 17;
-            this.randomizeHairBtn.Text = "Randomize Hair";
-            this.randomizeHairBtn.UseVisualStyleBackColor = true;
-            this.randomizeHairBtn.Click += new System.EventHandler(this.randomizeHairBtn_Click);
+            this.pictureBoxPantsColor.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "PantsColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pictureBoxPantsColor.Location = new System.Drawing.Point(268, 159);
+            this.pictureBoxPantsColor.Name = "pictureBoxPantsColor";
+            this.pictureBoxPantsColor.Size = new System.Drawing.Size(77, 22);
+            this.pictureBoxPantsColor.TabIndex = 13;
+            this.pictureBoxPantsColor.TabStop = false;
+            this.pictureBoxPantsColor.Click += new System.EventHandler(this.pictureBox_Click);
             // 
-            // skinClrPictureBox
+            // labelPantsColor
             // 
-            this.skinClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.skinClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "SkinColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.skinClrPictureBox.Location = new System.Drawing.Point(126, 81);
-            this.skinClrPictureBox.Name = "skinClrPictureBox";
-            this.skinClrPictureBox.Size = new System.Drawing.Size(75, 25);
-            this.skinClrPictureBox.TabIndex = 6;
-            this.skinClrPictureBox.TabStop = false;
-            this.skinClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            this.labelPantsColor.AutoSize = true;
+            this.labelPantsColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPantsColor.Location = new System.Drawing.Point(177, 159);
+            this.labelPantsColor.Name = "labelPantsColor";
+            this.labelPantsColor.Size = new System.Drawing.Size(85, 15);
+            this.labelPantsColor.TabIndex = 12;
+            this.labelPantsColor.Text = "Pants Color:";
             // 
-            // hairDesignerBtn
+            // pictureBoxUndershirtColor
             // 
-            this.hairDesignerBtn.Location = new System.Drawing.Point(365, 19);
-            this.hairDesignerBtn.Name = "hairDesignerBtn";
-            this.hairDesignerBtn.Size = new System.Drawing.Size(100, 23);
-            this.hairDesignerBtn.TabIndex = 16;
-            this.hairDesignerBtn.Text = "Hair Designer";
-            this.hairDesignerBtn.UseVisualStyleBackColor = true;
-            this.hairDesignerBtn.Click += new System.EventHandler(this.hairDesignerBtn_Click);
+            this.pictureBoxUndershirtColor.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "UndershirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pictureBoxUndershirtColor.Location = new System.Drawing.Point(268, 131);
+            this.pictureBoxUndershirtColor.Name = "pictureBoxUndershirtColor";
+            this.pictureBoxUndershirtColor.Size = new System.Drawing.Size(77, 22);
+            this.pictureBoxUndershirtColor.TabIndex = 11;
+            this.pictureBoxUndershirtColor.TabStop = false;
+            this.pictureBoxUndershirtColor.Click += new System.EventHandler(this.pictureBox_Click);
             // 
-            // skinColorLbl
+            // labelUndershirtColor
             // 
-            this.skinColorLbl.AutoSize = true;
-            this.skinColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinColorLbl.Location = new System.Drawing.Point(45, 81);
-            this.skinColorLbl.Name = "skinColorLbl";
-            this.skinColorLbl.Size = new System.Drawing.Size(75, 15);
-            this.skinColorLbl.TabIndex = 7;
-            this.skinColorLbl.Text = "Skin color:";
+            this.labelUndershirtColor.AutoSize = true;
+            this.labelUndershirtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUndershirtColor.Location = new System.Drawing.Point(146, 131);
+            this.labelUndershirtColor.Name = "labelUndershirtColor";
+            this.labelUndershirtColor.Size = new System.Drawing.Size(116, 15);
+            this.labelUndershirtColor.TabIndex = 10;
+            this.labelUndershirtColor.Text = "Undershirt Color:";
             // 
-            // shoeColorLbl
+            // pictureBoxShirtColor
             // 
-            this.shoeColorLbl.AutoSize = true;
-            this.shoeColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shoeColorLbl.Location = new System.Drawing.Point(40, 203);
-            this.shoeColorLbl.Name = "shoeColorLbl";
-            this.shoeColorLbl.Size = new System.Drawing.Size(80, 15);
-            this.shoeColorLbl.TabIndex = 15;
-            this.shoeColorLbl.Text = "Shoe color:";
+            this.pictureBoxShirtColor.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "ShirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pictureBoxShirtColor.Location = new System.Drawing.Point(268, 103);
+            this.pictureBoxShirtColor.Name = "pictureBoxShirtColor";
+            this.pictureBoxShirtColor.Size = new System.Drawing.Size(77, 22);
+            this.pictureBoxShirtColor.TabIndex = 9;
+            this.pictureBoxShirtColor.TabStop = false;
+            this.pictureBoxShirtColor.Click += new System.EventHandler(this.pictureBox_Click);
             // 
-            // shirtClrPictureBox
+            // labelShirtColor
             // 
-            this.shirtClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.shirtClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "ShirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.shirtClrPictureBox.Location = new System.Drawing.Point(126, 112);
-            this.shirtClrPictureBox.Name = "shirtClrPictureBox";
-            this.shirtClrPictureBox.Size = new System.Drawing.Size(75, 25);
-            this.shirtClrPictureBox.TabIndex = 8;
-            this.shirtClrPictureBox.TabStop = false;
-            this.shirtClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            this.labelShirtColor.AutoSize = true;
+            this.labelShirtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelShirtColor.Location = new System.Drawing.Point(183, 103);
+            this.labelShirtColor.Name = "labelShirtColor";
+            this.labelShirtColor.Size = new System.Drawing.Size(79, 15);
+            this.labelShirtColor.TabIndex = 8;
+            this.labelShirtColor.Text = "Shirt Color:";
             // 
-            // pantsColorLbl
+            // pictureBoxEyeColor
             // 
-            this.pantsColorLbl.AutoSize = true;
-            this.pantsColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pantsColorLbl.Location = new System.Drawing.Point(37, 174);
-            this.pantsColorLbl.Name = "pantsColorLbl";
-            this.pantsColorLbl.Size = new System.Drawing.Size(83, 15);
-            this.pantsColorLbl.TabIndex = 14;
-            this.pantsColorLbl.Text = "Pants color:";
+            this.pictureBoxEyeColor.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pictureBoxEyeColor.Location = new System.Drawing.Point(268, 75);
+            this.pictureBoxEyeColor.Name = "pictureBoxEyeColor";
+            this.pictureBoxEyeColor.Size = new System.Drawing.Size(77, 22);
+            this.pictureBoxEyeColor.TabIndex = 7;
+            this.pictureBoxEyeColor.TabStop = false;
+            this.pictureBoxEyeColor.Click += new System.EventHandler(this.pictureBox_Click);
             // 
-            // undershirtClrPictureBox
+            // labelEyeColor
             // 
-            this.undershirtClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.undershirtClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "UndershirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.undershirtClrPictureBox.Location = new System.Drawing.Point(126, 143);
-            this.undershirtClrPictureBox.Name = "undershirtClrPictureBox";
-            this.undershirtClrPictureBox.Size = new System.Drawing.Size(75, 25);
-            this.undershirtClrPictureBox.TabIndex = 9;
-            this.undershirtClrPictureBox.TabStop = false;
-            this.undershirtClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            this.labelEyeColor.AutoSize = true;
+            this.labelEyeColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEyeColor.Location = new System.Drawing.Point(190, 75);
+            this.labelEyeColor.Name = "labelEyeColor";
+            this.labelEyeColor.Size = new System.Drawing.Size(72, 15);
+            this.labelEyeColor.TabIndex = 6;
+            this.labelEyeColor.Text = "Eye Color:";
             // 
-            // undershirtColorLbl
+            // pictureBoxSkinColor
             // 
-            this.undershirtColorLbl.AutoSize = true;
-            this.undershirtColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.undershirtColorLbl.Location = new System.Drawing.Point(6, 143);
-            this.undershirtColorLbl.Name = "undershirtColorLbl";
-            this.undershirtColorLbl.Size = new System.Drawing.Size(114, 15);
-            this.undershirtColorLbl.TabIndex = 13;
-            this.undershirtColorLbl.Text = "Undershirt color:";
+            this.pictureBoxSkinColor.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "SkinColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pictureBoxSkinColor.Location = new System.Drawing.Point(268, 48);
+            this.pictureBoxSkinColor.Name = "pictureBoxSkinColor";
+            this.pictureBoxSkinColor.Size = new System.Drawing.Size(77, 22);
+            this.pictureBoxSkinColor.TabIndex = 5;
+            this.pictureBoxSkinColor.TabStop = false;
+            this.pictureBoxSkinColor.Click += new System.EventHandler(this.pictureBox_Click);
             // 
-            // pantsClrPictureBox
+            // labelSkinColor
             // 
-            this.pantsClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pantsClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "PantsColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pantsClrPictureBox.Location = new System.Drawing.Point(126, 174);
-            this.pantsClrPictureBox.Name = "pantsClrPictureBox";
-            this.pantsClrPictureBox.Size = new System.Drawing.Size(75, 25);
-            this.pantsClrPictureBox.TabIndex = 10;
-            this.pantsClrPictureBox.TabStop = false;
-            this.pantsClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            this.labelSkinColor.AutoSize = true;
+            this.labelSkinColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSkinColor.Location = new System.Drawing.Point(185, 48);
+            this.labelSkinColor.Name = "labelSkinColor";
+            this.labelSkinColor.Size = new System.Drawing.Size(77, 15);
+            this.labelSkinColor.TabIndex = 4;
+            this.labelSkinColor.Text = "Skin Color:";
             // 
-            // shirtColorLbl
+            // pictureBoxHairColor
             // 
-            this.shirtColorLbl.AutoSize = true;
-            this.shirtColorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shirtColorLbl.Location = new System.Drawing.Point(43, 112);
-            this.shirtColorLbl.Name = "shirtColorLbl";
-            this.shirtColorLbl.Size = new System.Drawing.Size(77, 15);
-            this.shirtColorLbl.TabIndex = 12;
-            this.shirtColorLbl.Text = "Shirt color:";
+            this.pictureBoxHairColor.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "HairColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pictureBoxHairColor.Location = new System.Drawing.Point(268, 20);
+            this.pictureBoxHairColor.Name = "pictureBoxHairColor";
+            this.pictureBoxHairColor.Size = new System.Drawing.Size(77, 22);
+            this.pictureBoxHairColor.TabIndex = 3;
+            this.pictureBoxHairColor.TabStop = false;
+            this.pictureBoxHairColor.Click += new System.EventHandler(this.pictureBox_Click);
             // 
-            // shoeClrPictureBox
+            // labelHairColor
             // 
-            this.shoeClrPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.shoeClrPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", this.playerBindingSource, "ShoeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.shoeClrPictureBox.Location = new System.Drawing.Point(126, 205);
-            this.shoeClrPictureBox.Name = "shoeClrPictureBox";
-            this.shoeClrPictureBox.Size = new System.Drawing.Size(75, 25);
-            this.shoeClrPictureBox.TabIndex = 11;
-            this.shoeClrPictureBox.TabStop = false;
-            this.shoeClrPictureBox.Click += new System.EventHandler(this.playerClrPictureBox_Click);
+            this.labelHairColor.AutoSize = true;
+            this.labelHairColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHairColor.Location = new System.Drawing.Point(186, 20);
+            this.labelHairColor.Name = "labelHairColor";
+            this.labelHairColor.Size = new System.Drawing.Size(76, 15);
+            this.labelHairColor.TabIndex = 1;
+            this.labelHairColor.Text = "Hair Color:";
+            // 
+            // playerPictureBox
+            // 
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("EyeColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("HairColor", this.playerBindingSource, "HairColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("HairId", this.playerBindingSource, "Hair", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("PantsColor", this.playerBindingSource, "PantsColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("ShirtColor", this.playerBindingSource, "ShirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("ShoeColor", this.playerBindingSource, "ShoeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("SkinVariant", this.playerBindingSource, "SkinVariant", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("UndershirtColor", this.playerBindingSource, "UndershirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.playerPictureBox.EyeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
+            this.playerPictureBox.HairColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(90)))), ((int)(((byte)(55)))));
+            this.playerPictureBox.HairId = 0;
+            this.playerPictureBox.HairTextureFile = "Data\\HairTextures\\Player_Hair_1.png";
+            this.playerPictureBox.Location = new System.Drawing.Point(6, 16);
+            this.playerPictureBox.Name = "playerPictureBox";
+            this.playerPictureBox.PantsColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(175)))));
+            this.playerPictureBox.ShirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(165)))), ((int)(((byte)(140)))));
+            this.playerPictureBox.ShoeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(105)))), ((int)(((byte)(60)))));
+            this.playerPictureBox.Size = new System.Drawing.Size(135, 223);
+            this.playerPictureBox.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(90)))));
+            this.playerPictureBox.SkinVariant = 0;
+            this.playerPictureBox.TabIndex = 0;
+            this.playerPictureBox.TabStop = false;
+            this.playerPictureBox.UndershirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(180)))), ((int)(((byte)(215)))));
             // 
             // equipmentFilterGroupBox
             // 
-            this.equipmentFilterGroupBox.Controls.Add(this.equipmentFilterTxtBox);
-            this.equipmentFilterGroupBox.Controls.Add(this.equipmentSearchLbl);
-            this.equipmentFilterGroupBox.Controls.Add(this.equipmentSearchBox);
+            this.equipmentFilterGroupBox.Controls.Add(this.textBoxEquipName);
+            this.equipmentFilterGroupBox.Controls.Add(this.labelSearchForEquip);
+            this.equipmentFilterGroupBox.Controls.Add(this.listBoxEquips);
             this.equipmentFilterGroupBox.Location = new System.Drawing.Point(7, 7);
             this.equipmentFilterGroupBox.Name = "equipmentFilterGroupBox";
             this.equipmentFilterGroupBox.Size = new System.Drawing.Size(170, 287);
@@ -1291,32 +1330,32 @@
             this.equipmentFilterGroupBox.TabStop = false;
             this.equipmentFilterGroupBox.Text = "Item Filtering";
             // 
-            // equipmentFilterTxtBox
+            // textBoxEquipName
             // 
-            this.equipmentFilterTxtBox.Location = new System.Drawing.Point(6, 41);
-            this.equipmentFilterTxtBox.Name = "equipmentFilterTxtBox";
-            this.equipmentFilterTxtBox.Size = new System.Drawing.Size(158, 20);
-            this.equipmentFilterTxtBox.TabIndex = 56;
-            this.equipmentFilterTxtBox.TextChanged += new System.EventHandler(this.equipmentFilterTxtBox_TextChanged);
+            this.textBoxEquipName.Location = new System.Drawing.Point(6, 41);
+            this.textBoxEquipName.Name = "textBoxEquipName";
+            this.textBoxEquipName.Size = new System.Drawing.Size(158, 20);
+            this.textBoxEquipName.TabIndex = 56;
+            this.textBoxEquipName.TextChanged += new System.EventHandler(this.textBoxEquipName_TextChanged);
             // 
-            // equipmentSearchLbl
+            // labelSearchForEquip
             // 
-            this.equipmentSearchLbl.AutoSize = true;
-            this.equipmentSearchLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equipmentSearchLbl.Location = new System.Drawing.Point(3, 20);
-            this.equipmentSearchLbl.Name = "equipmentSearchLbl";
-            this.equipmentSearchLbl.Size = new System.Drawing.Size(137, 16);
-            this.equipmentSearchLbl.TabIndex = 55;
-            this.equipmentSearchLbl.Text = "Search for an item:";
+            this.labelSearchForEquip.AutoSize = true;
+            this.labelSearchForEquip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearchForEquip.Location = new System.Drawing.Point(3, 20);
+            this.labelSearchForEquip.Name = "labelSearchForEquip";
+            this.labelSearchForEquip.Size = new System.Drawing.Size(137, 16);
+            this.labelSearchForEquip.TabIndex = 55;
+            this.labelSearchForEquip.Text = "Search for an item:";
             // 
-            // equipmentSearchBox
+            // listBoxEquips
             // 
-            this.equipmentSearchBox.FormattingEnabled = true;
-            this.equipmentSearchBox.Location = new System.Drawing.Point(6, 67);
-            this.equipmentSearchBox.Name = "equipmentSearchBox";
-            this.equipmentSearchBox.Size = new System.Drawing.Size(158, 212);
-            this.equipmentSearchBox.TabIndex = 54;
-            this.equipmentSearchBox.SelectedIndexChanged += new System.EventHandler(this.equipmentSearchBox_SelectedIndexChanged);
+            this.listBoxEquips.FormattingEnabled = true;
+            this.listBoxEquips.Location = new System.Drawing.Point(6, 67);
+            this.listBoxEquips.Name = "listBoxEquips";
+            this.listBoxEquips.Size = new System.Drawing.Size(158, 212);
+            this.listBoxEquips.TabIndex = 54;
+            this.listBoxEquips.SelectedIndexChanged += new System.EventHandler(this.listBoxEquips_SelectedIndexChanged);
             // 
             // dyeItem0
             // 
@@ -1347,12 +1386,12 @@
             // 
             // buffControlsGroupBox
             // 
-            this.buffControlsGroupBox.Controls.Add(this.deleteBuffBtn);
-            this.buffControlsGroupBox.Controls.Add(this.buffFilterTxtBox);
-            this.buffControlsGroupBox.Controls.Add(this.maxAllDurationsBtn);
-            this.buffControlsGroupBox.Controls.Add(this.maxDurationBtn);
-            this.buffControlsGroupBox.Controls.Add(this.deleteAllBuffsBtn);
-            this.buffControlsGroupBox.Controls.Add(this.buffSearchBox);
+            this.buffControlsGroupBox.Controls.Add(this.buttonDeleteBuff);
+            this.buffControlsGroupBox.Controls.Add(this.textBoxBuffName);
+            this.buffControlsGroupBox.Controls.Add(this.buttonMaxAllBuffs);
+            this.buffControlsGroupBox.Controls.Add(this.buttonMaxBuff);
+            this.buffControlsGroupBox.Controls.Add(this.buttonDeleteAllBuffs);
+            this.buffControlsGroupBox.Controls.Add(this.listBoxBuffs);
             this.buffControlsGroupBox.Location = new System.Drawing.Point(569, 7);
             this.buffControlsGroupBox.Name = "buffControlsGroupBox";
             this.buffControlsGroupBox.Size = new System.Drawing.Size(190, 406);
@@ -1360,66 +1399,66 @@
             this.buffControlsGroupBox.TabStop = false;
             this.buffControlsGroupBox.Text = "Controls";
             // 
-            // deleteBuffBtn
+            // buttonDeleteBuff
             // 
-            this.deleteBuffBtn.Location = new System.Drawing.Point(0, 339);
-            this.deleteBuffBtn.Name = "deleteBuffBtn";
-            this.deleteBuffBtn.Size = new System.Drawing.Size(80, 23);
-            this.deleteBuffBtn.TabIndex = 6;
-            this.deleteBuffBtn.Text = "Delete";
-            this.deleteBuffBtn.UseVisualStyleBackColor = true;
-            this.deleteBuffBtn.Click += new System.EventHandler(this.deleteBuffBtn_Click);
+            this.buttonDeleteBuff.Location = new System.Drawing.Point(0, 339);
+            this.buttonDeleteBuff.Name = "buttonDeleteBuff";
+            this.buttonDeleteBuff.Size = new System.Drawing.Size(80, 23);
+            this.buttonDeleteBuff.TabIndex = 6;
+            this.buttonDeleteBuff.Text = "Delete";
+            this.buttonDeleteBuff.UseVisualStyleBackColor = true;
+            this.buttonDeleteBuff.Click += new System.EventHandler(this.buttonDeleteBuff_Click);
             // 
-            // buffFilterTxtBox
+            // textBoxBuffName
             // 
-            this.buffFilterTxtBox.Location = new System.Drawing.Point(6, 23);
-            this.buffFilterTxtBox.Name = "buffFilterTxtBox";
-            this.buffFilterTxtBox.Size = new System.Drawing.Size(178, 20);
-            this.buffFilterTxtBox.TabIndex = 5;
-            this.buffFilterTxtBox.TextChanged += new System.EventHandler(this.buffFilterTxtBox_TextChanged);
+            this.textBoxBuffName.Location = new System.Drawing.Point(6, 23);
+            this.textBoxBuffName.Name = "textBoxBuffName";
+            this.textBoxBuffName.Size = new System.Drawing.Size(178, 20);
+            this.textBoxBuffName.TabIndex = 5;
+            this.textBoxBuffName.TextChanged += new System.EventHandler(this.textBoxBuffName_TextChanged);
             // 
-            // maxAllDurationsBtn
+            // buttonMaxAllBuffs
             // 
-            this.maxAllDurationsBtn.Location = new System.Drawing.Point(104, 377);
-            this.maxAllDurationsBtn.Name = "maxAllDurationsBtn";
-            this.maxAllDurationsBtn.Size = new System.Drawing.Size(80, 23);
-            this.maxAllDurationsBtn.TabIndex = 4;
-            this.maxAllDurationsBtn.Text = "Max All ";
-            this.maxAllDurationsBtn.UseVisualStyleBackColor = true;
-            this.maxAllDurationsBtn.Click += new System.EventHandler(this.maxAllDurationsBtn_Click);
+            this.buttonMaxAllBuffs.Location = new System.Drawing.Point(104, 377);
+            this.buttonMaxAllBuffs.Name = "buttonMaxAllBuffs";
+            this.buttonMaxAllBuffs.Size = new System.Drawing.Size(80, 23);
+            this.buttonMaxAllBuffs.TabIndex = 4;
+            this.buttonMaxAllBuffs.Text = "Max All ";
+            this.buttonMaxAllBuffs.UseVisualStyleBackColor = true;
+            this.buttonMaxAllBuffs.Click += new System.EventHandler(this.buttonMaxAllBuffs_Click);
             // 
-            // maxDurationBtn
+            // buttonMaxBuff
             // 
-            this.maxDurationBtn.Location = new System.Drawing.Point(0, 377);
-            this.maxDurationBtn.Name = "maxDurationBtn";
-            this.maxDurationBtn.Size = new System.Drawing.Size(80, 23);
-            this.maxDurationBtn.TabIndex = 3;
-            this.maxDurationBtn.Text = "Max Duration";
-            this.maxDurationBtn.UseVisualStyleBackColor = true;
-            this.maxDurationBtn.Click += new System.EventHandler(this.maxDurationBtn_Click);
+            this.buttonMaxBuff.Location = new System.Drawing.Point(0, 377);
+            this.buttonMaxBuff.Name = "buttonMaxBuff";
+            this.buttonMaxBuff.Size = new System.Drawing.Size(80, 23);
+            this.buttonMaxBuff.TabIndex = 3;
+            this.buttonMaxBuff.Text = "Max Duration";
+            this.buttonMaxBuff.UseVisualStyleBackColor = true;
+            this.buttonMaxBuff.Click += new System.EventHandler(this.buttonMaxBuff_Click);
             // 
-            // deleteAllBuffsBtn
+            // buttonDeleteAllBuffs
             // 
-            this.deleteAllBuffsBtn.Location = new System.Drawing.Point(104, 339);
-            this.deleteAllBuffsBtn.Name = "deleteAllBuffsBtn";
-            this.deleteAllBuffsBtn.Size = new System.Drawing.Size(80, 23);
-            this.deleteAllBuffsBtn.TabIndex = 2;
-            this.deleteAllBuffsBtn.Text = "Delete All";
-            this.deleteAllBuffsBtn.UseVisualStyleBackColor = true;
-            this.deleteAllBuffsBtn.Click += new System.EventHandler(this.deleteAllBuffsBtn_Click);
+            this.buttonDeleteAllBuffs.Location = new System.Drawing.Point(104, 339);
+            this.buttonDeleteAllBuffs.Name = "buttonDeleteAllBuffs";
+            this.buttonDeleteAllBuffs.Size = new System.Drawing.Size(80, 23);
+            this.buttonDeleteAllBuffs.TabIndex = 2;
+            this.buttonDeleteAllBuffs.Text = "Delete All";
+            this.buttonDeleteAllBuffs.UseVisualStyleBackColor = true;
+            this.buttonDeleteAllBuffs.Click += new System.EventHandler(this.buttonDeleteAllBuffs_Click);
             // 
-            // buffSearchBox
+            // listBoxBuffs
             // 
-            this.buffSearchBox.FormattingEnabled = true;
-            this.buffSearchBox.Location = new System.Drawing.Point(6, 49);
-            this.buffSearchBox.Name = "buffSearchBox";
-            this.buffSearchBox.Size = new System.Drawing.Size(178, 277);
-            this.buffSearchBox.TabIndex = 0;
-            this.buffSearchBox.SelectedIndexChanged += new System.EventHandler(this.buffSearchBox_SelectedIndexChanged);
+            this.listBoxBuffs.FormattingEnabled = true;
+            this.listBoxBuffs.Location = new System.Drawing.Point(6, 49);
+            this.listBoxBuffs.Name = "listBoxBuffs";
+            this.listBoxBuffs.Size = new System.Drawing.Size(178, 277);
+            this.listBoxBuffs.TabIndex = 0;
+            this.listBoxBuffs.SelectedIndexChanged += new System.EventHandler(this.listBoxBuffs_SelectedIndexChanged);
             // 
             // activeBuffsGroupBox
             // 
-            this.activeBuffsGroupBox.Controls.Add(this.buffDisplayGrid);
+            this.activeBuffsGroupBox.Controls.Add(this.gridViewBuffs);
             this.activeBuffsGroupBox.Location = new System.Drawing.Point(7, 7);
             this.activeBuffsGroupBox.Name = "activeBuffsGroupBox";
             this.activeBuffsGroupBox.Size = new System.Drawing.Size(556, 406);
@@ -1427,26 +1466,26 @@
             this.activeBuffsGroupBox.TabStop = false;
             this.activeBuffsGroupBox.Text = "Active Buffs";
             // 
-            // buffDisplayGrid
+            // gridViewBuffs
             // 
-            this.buffDisplayGrid.AllowUserToAddRows = false;
-            this.buffDisplayGrid.AllowUserToDeleteRows = false;
-            this.buffDisplayGrid.AutoGenerateColumns = false;
-            this.buffDisplayGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.buffDisplayGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridViewBuffs.AllowUserToAddRows = false;
+            this.gridViewBuffs.AllowUserToDeleteRows = false;
+            this.gridViewBuffs.AutoGenerateColumns = false;
+            this.gridViewBuffs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewBuffs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Image,
             this.nameDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.timeDataGridViewTextBoxColumn});
-            this.buffDisplayGrid.DataSource = this.buffsBindingSource;
-            this.buffDisplayGrid.Location = new System.Drawing.Point(7, 20);
-            this.buffDisplayGrid.Name = "buffDisplayGrid";
-            this.buffDisplayGrid.ReadOnly = true;
-            this.buffDisplayGrid.RowHeadersVisible = false;
-            this.buffDisplayGrid.RowTemplate.Height = 30;
-            this.buffDisplayGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.buffDisplayGrid.Size = new System.Drawing.Size(537, 371);
-            this.buffDisplayGrid.TabIndex = 0;
+            this.gridViewBuffs.DataSource = this.buffsBindingSource;
+            this.gridViewBuffs.Location = new System.Drawing.Point(7, 20);
+            this.gridViewBuffs.Name = "gridViewBuffs";
+            this.gridViewBuffs.ReadOnly = true;
+            this.gridViewBuffs.RowHeadersVisible = false;
+            this.gridViewBuffs.RowTemplate.Height = 30;
+            this.gridViewBuffs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridViewBuffs.Size = new System.Drawing.Size(537, 371);
+            this.gridViewBuffs.TabIndex = 0;
             // 
             // Image
             // 
@@ -1455,6 +1494,30 @@
             this.Image.Name = "Image";
             this.Image.ReadOnly = true;
             this.Image.Width = 33;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            this.timeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.timeDataGridViewTextBoxColumn.Width = 150;
             // 
             // buffsBindingSource
             // 
@@ -1537,7 +1600,7 @@
             // 
             this.ammoLbl.AutoSize = true;
             this.ammoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ammoLbl.Location = new System.Drawing.Point(767, 52);
+            this.ammoLbl.Location = new System.Drawing.Point(793, 52);
             this.ammoLbl.Name = "ammoLbl";
             this.ammoLbl.Size = new System.Drawing.Size(40, 13);
             this.ammoLbl.TabIndex = 62;
@@ -1547,7 +1610,7 @@
             // 
             this.coinsLbl.AutoSize = true;
             this.coinsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.coinsLbl.Location = new System.Drawing.Point(721, 52);
+            this.coinsLbl.Location = new System.Drawing.Point(747, 52);
             this.coinsLbl.Name = "coinsLbl";
             this.coinsLbl.Size = new System.Drawing.Size(38, 13);
             this.coinsLbl.TabIndex = 61;
@@ -1558,7 +1621,7 @@
             this.inventoryItem57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.inventoryItem57.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem57.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem57.Location = new System.Drawing.Point(767, 206);
+            this.inventoryItem57.Location = new System.Drawing.Point(793, 206);
             this.inventoryItem57.Name = "inventoryItem57";
             this.inventoryItem57.Size = new System.Drawing.Size(40, 40);
             this.inventoryItem57.TabIndex = 60;
@@ -1571,7 +1634,7 @@
             this.inventoryItem56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.inventoryItem56.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem56.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem56.Location = new System.Drawing.Point(767, 160);
+            this.inventoryItem56.Location = new System.Drawing.Point(793, 160);
             this.inventoryItem56.Name = "inventoryItem56";
             this.inventoryItem56.Size = new System.Drawing.Size(40, 40);
             this.inventoryItem56.TabIndex = 59;
@@ -1584,7 +1647,7 @@
             this.inventoryItem55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.inventoryItem55.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem55.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem55.Location = new System.Drawing.Point(767, 114);
+            this.inventoryItem55.Location = new System.Drawing.Point(793, 114);
             this.inventoryItem55.Name = "inventoryItem55";
             this.inventoryItem55.Size = new System.Drawing.Size(40, 40);
             this.inventoryItem55.TabIndex = 58;
@@ -1597,7 +1660,7 @@
             this.inventoryItem54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.inventoryItem54.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem54.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem54.Location = new System.Drawing.Point(767, 68);
+            this.inventoryItem54.Location = new System.Drawing.Point(793, 68);
             this.inventoryItem54.Name = "inventoryItem54";
             this.inventoryItem54.Size = new System.Drawing.Size(40, 40);
             this.inventoryItem54.TabIndex = 57;
@@ -1610,7 +1673,7 @@
             this.inventoryItem53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.inventoryItem53.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem53.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem53.Location = new System.Drawing.Point(721, 206);
+            this.inventoryItem53.Location = new System.Drawing.Point(747, 206);
             this.inventoryItem53.Name = "inventoryItem53";
             this.inventoryItem53.Size = new System.Drawing.Size(40, 40);
             this.inventoryItem53.TabIndex = 56;
@@ -1623,7 +1686,7 @@
             this.inventoryItem52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.inventoryItem52.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem52.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem52.Location = new System.Drawing.Point(721, 160);
+            this.inventoryItem52.Location = new System.Drawing.Point(747, 160);
             this.inventoryItem52.Name = "inventoryItem52";
             this.inventoryItem52.Size = new System.Drawing.Size(40, 40);
             this.inventoryItem52.TabIndex = 55;
@@ -1636,7 +1699,7 @@
             this.inventoryItem51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.inventoryItem51.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem51.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem51.Location = new System.Drawing.Point(721, 114);
+            this.inventoryItem51.Location = new System.Drawing.Point(747, 114);
             this.inventoryItem51.Name = "inventoryItem51";
             this.inventoryItem51.Size = new System.Drawing.Size(40, 40);
             this.inventoryItem51.TabIndex = 54;
@@ -1649,7 +1712,7 @@
             this.inventoryItem50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.inventoryItem50.Font = new System.Drawing.Font("Andy", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem50.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem50.Location = new System.Drawing.Point(721, 68);
+            this.inventoryItem50.Location = new System.Drawing.Point(747, 68);
             this.inventoryItem50.Name = "inventoryItem50";
             this.inventoryItem50.Size = new System.Drawing.Size(40, 40);
             this.inventoryItem50.TabIndex = 53;
@@ -1659,83 +1722,83 @@
             // 
             // itemPropertiesGroupBox
             // 
-            this.itemPropertiesGroupBox.Controls.Add(this.deleteAllItemsBtn);
-            this.itemPropertiesGroupBox.Controls.Add(this.deleteItemBtn);
-            this.itemPropertiesGroupBox.Controls.Add(this.maxAllStacksBtn);
-            this.itemPropertiesGroupBox.Controls.Add(this.maxStackBtn);
-            this.itemPropertiesGroupBox.Controls.Add(this.stackSizeUpDown);
+            this.itemPropertiesGroupBox.Controls.Add(this.buttonDeleteAllItems);
+            this.itemPropertiesGroupBox.Controls.Add(this.buttonDeleteItem);
+            this.itemPropertiesGroupBox.Controls.Add(this.buttonMaxAllStacks);
+            this.itemPropertiesGroupBox.Controls.Add(this.buttonMaxStack);
+            this.itemPropertiesGroupBox.Controls.Add(this.upDownStackSize);
             this.itemPropertiesGroupBox.Controls.Add(this.stackSizeLbl);
-            this.itemPropertiesGroupBox.Controls.Add(this.itemPrefixComboBox);
+            this.itemPropertiesGroupBox.Controls.Add(this.comboBoxItemPrefix);
             this.itemPropertiesGroupBox.Controls.Add(this.itemPrefixLbl);
-            this.itemPropertiesGroupBox.Location = new System.Drawing.Point(191, 272);
+            this.itemPropertiesGroupBox.Location = new System.Drawing.Point(217, 272);
             this.itemPropertiesGroupBox.Name = "itemPropertiesGroupBox";
             this.itemPropertiesGroupBox.Size = new System.Drawing.Size(524, 157);
             this.itemPropertiesGroupBox.TabIndex = 52;
             this.itemPropertiesGroupBox.TabStop = false;
             this.itemPropertiesGroupBox.Text = "Item Properties";
             // 
-            // deleteAllItemsBtn
+            // buttonDeleteAllItems
             // 
-            this.deleteAllItemsBtn.Location = new System.Drawing.Point(425, 47);
-            this.deleteAllItemsBtn.Name = "deleteAllItemsBtn";
-            this.deleteAllItemsBtn.Size = new System.Drawing.Size(93, 23);
-            this.deleteAllItemsBtn.TabIndex = 7;
-            this.deleteAllItemsBtn.Text = "Delete All Items";
-            this.deleteAllItemsBtn.UseVisualStyleBackColor = true;
-            this.deleteAllItemsBtn.Click += new System.EventHandler(this.deleteAllItemsBtn_Click);
+            this.buttonDeleteAllItems.Location = new System.Drawing.Point(425, 47);
+            this.buttonDeleteAllItems.Name = "buttonDeleteAllItems";
+            this.buttonDeleteAllItems.Size = new System.Drawing.Size(93, 23);
+            this.buttonDeleteAllItems.TabIndex = 7;
+            this.buttonDeleteAllItems.Text = "Delete All Items";
+            this.buttonDeleteAllItems.UseVisualStyleBackColor = true;
+            this.buttonDeleteAllItems.Click += new System.EventHandler(this.buttonDeleteAllItems_Click);
             // 
-            // deleteItemBtn
+            // buttonDeleteItem
             // 
-            this.deleteItemBtn.Location = new System.Drawing.Point(343, 48);
-            this.deleteItemBtn.Name = "deleteItemBtn";
-            this.deleteItemBtn.Size = new System.Drawing.Size(75, 23);
-            this.deleteItemBtn.TabIndex = 6;
-            this.deleteItemBtn.Text = "Delete";
-            this.deleteItemBtn.UseVisualStyleBackColor = true;
-            this.deleteItemBtn.Click += new System.EventHandler(this.deleteItemBtn_Click);
+            this.buttonDeleteItem.Location = new System.Drawing.Point(343, 48);
+            this.buttonDeleteItem.Name = "buttonDeleteItem";
+            this.buttonDeleteItem.Size = new System.Drawing.Size(75, 23);
+            this.buttonDeleteItem.TabIndex = 6;
+            this.buttonDeleteItem.Text = "Delete";
+            this.buttonDeleteItem.UseVisualStyleBackColor = true;
+            this.buttonDeleteItem.Click += new System.EventHandler(this.buttonDeleteItem_Click);
             // 
-            // maxAllStacksBtn
+            // buttonMaxAllStacks
             // 
-            this.maxAllStacksBtn.Location = new System.Drawing.Point(424, 17);
-            this.maxAllStacksBtn.Name = "maxAllStacksBtn";
-            this.maxAllStacksBtn.Size = new System.Drawing.Size(94, 23);
-            this.maxAllStacksBtn.TabIndex = 5;
-            this.maxAllStacksBtn.Text = "Max All Stacks";
-            this.maxAllStacksBtn.UseVisualStyleBackColor = true;
-            this.maxAllStacksBtn.Click += new System.EventHandler(this.maxAllStacksBtn_Click);
+            this.buttonMaxAllStacks.Location = new System.Drawing.Point(424, 17);
+            this.buttonMaxAllStacks.Name = "buttonMaxAllStacks";
+            this.buttonMaxAllStacks.Size = new System.Drawing.Size(94, 23);
+            this.buttonMaxAllStacks.TabIndex = 5;
+            this.buttonMaxAllStacks.Text = "Max All Stacks";
+            this.buttonMaxAllStacks.UseVisualStyleBackColor = true;
+            this.buttonMaxAllStacks.Click += new System.EventHandler(this.buttonMaxAllStacks_Click);
             // 
-            // maxStackBtn
+            // buttonMaxStack
             // 
-            this.maxStackBtn.Location = new System.Drawing.Point(343, 17);
-            this.maxStackBtn.Name = "maxStackBtn";
-            this.maxStackBtn.Size = new System.Drawing.Size(75, 23);
-            this.maxStackBtn.TabIndex = 4;
-            this.maxStackBtn.Text = "Max Stack";
-            this.maxStackBtn.UseVisualStyleBackColor = true;
-            this.maxStackBtn.Click += new System.EventHandler(this.maxStackBtn_Click);
+            this.buttonMaxStack.Location = new System.Drawing.Point(343, 17);
+            this.buttonMaxStack.Name = "buttonMaxStack";
+            this.buttonMaxStack.Size = new System.Drawing.Size(75, 23);
+            this.buttonMaxStack.TabIndex = 4;
+            this.buttonMaxStack.Text = "Max Stack";
+            this.buttonMaxStack.UseVisualStyleBackColor = true;
+            this.buttonMaxStack.Click += new System.EventHandler(this.buttonMaxStack_Click);
             // 
-            // stackSizeUpDown
+            // upDownStackSize
             // 
-            this.stackSizeUpDown.Location = new System.Drawing.Point(98, 48);
-            this.stackSizeUpDown.Maximum = new decimal(new int[] {
+            this.upDownStackSize.Location = new System.Drawing.Point(98, 48);
+            this.upDownStackSize.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.stackSizeUpDown.Minimum = new decimal(new int[] {
+            this.upDownStackSize.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.stackSizeUpDown.Name = "stackSizeUpDown";
-            this.stackSizeUpDown.Size = new System.Drawing.Size(121, 20);
-            this.stackSizeUpDown.TabIndex = 3;
-            this.stackSizeUpDown.Value = new decimal(new int[] {
+            this.upDownStackSize.Name = "upDownStackSize";
+            this.upDownStackSize.Size = new System.Drawing.Size(121, 20);
+            this.upDownStackSize.TabIndex = 3;
+            this.upDownStackSize.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.stackSizeUpDown.ValueChanged += new System.EventHandler(this.stackSizeUpDown_ValueChanged);
+            this.upDownStackSize.ValueChanged += new System.EventHandler(this.upDownStackSize_ValueChanged);
             // 
             // stackSizeLbl
             // 
@@ -1747,14 +1810,14 @@
             this.stackSizeLbl.TabIndex = 2;
             this.stackSizeLbl.Text = "Stack Size:";
             // 
-            // itemPrefixComboBox
+            // comboBoxItemPrefix
             // 
-            this.itemPrefixComboBox.FormattingEnabled = true;
-            this.itemPrefixComboBox.Location = new System.Drawing.Point(98, 20);
-            this.itemPrefixComboBox.Name = "itemPrefixComboBox";
-            this.itemPrefixComboBox.Size = new System.Drawing.Size(121, 21);
-            this.itemPrefixComboBox.TabIndex = 1;
-            this.itemPrefixComboBox.SelectedIndexChanged += new System.EventHandler(this.prefixComboBox_SelectedIndexChanged);
+            this.comboBoxItemPrefix.FormattingEnabled = true;
+            this.comboBoxItemPrefix.Location = new System.Drawing.Point(98, 20);
+            this.comboBoxItemPrefix.Name = "comboBoxItemPrefix";
+            this.comboBoxItemPrefix.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxItemPrefix.TabIndex = 1;
+            this.comboBoxItemPrefix.SelectedIndexChanged += new System.EventHandler(this.comboBoxItemPrefix_SelectedIndexChanged);
             // 
             // itemPrefixLbl
             // 
@@ -1768,123 +1831,20 @@
             // 
             // inventoryFilterGroupBox
             // 
-            this.inventoryFilterGroupBox.Controls.Add(this.rangedCheckBox);
-            this.inventoryFilterGroupBox.Controls.Add(this.thrownCheckBox);
-            this.inventoryFilterGroupBox.Controls.Add(this.magicCheckBox);
-            this.inventoryFilterGroupBox.Controls.Add(this.accessoryCheckBox);
-            this.inventoryFilterGroupBox.Controls.Add(this.meleeCheckBox);
-            this.inventoryFilterGroupBox.Controls.Add(this.rarityComboBox);
-            this.inventoryFilterGroupBox.Controls.Add(this.rarityLbl);
-            this.inventoryFilterGroupBox.Controls.Add(this.itemFilterTxtBox);
-            this.inventoryFilterGroupBox.Controls.Add(this.searchForItemLbl);
-            this.inventoryFilterGroupBox.Controls.Add(this.itemSearchBox);
+            this.inventoryFilterGroupBox.Controls.Add(this.itemFilterInventory);
             this.inventoryFilterGroupBox.Location = new System.Drawing.Point(7, 10);
             this.inventoryFilterGroupBox.Name = "inventoryFilterGroupBox";
-            this.inventoryFilterGroupBox.Size = new System.Drawing.Size(178, 419);
+            this.inventoryFilterGroupBox.Size = new System.Drawing.Size(204, 419);
             this.inventoryFilterGroupBox.TabIndex = 51;
             this.inventoryFilterGroupBox.TabStop = false;
             this.inventoryFilterGroupBox.Text = "Item Filtering";
             // 
-            // rangedCheckBox
+            // itemFilterInventory
             // 
-            this.rangedCheckBox.AutoSize = true;
-            this.rangedCheckBox.Location = new System.Drawing.Point(106, 313);
-            this.rangedCheckBox.Name = "rangedCheckBox";
-            this.rangedCheckBox.Size = new System.Drawing.Size(64, 17);
-            this.rangedCheckBox.TabIndex = 60;
-            this.rangedCheckBox.Text = "Ranged";
-            this.rangedCheckBox.UseVisualStyleBackColor = true;
-            this.rangedCheckBox.CheckedChanged += new System.EventHandler(this.itemFilterBoxes_CheckedChanged);
-            // 
-            // thrownCheckBox
-            // 
-            this.thrownCheckBox.AutoSize = true;
-            this.thrownCheckBox.Location = new System.Drawing.Point(106, 336);
-            this.thrownCheckBox.Name = "thrownCheckBox";
-            this.thrownCheckBox.Size = new System.Drawing.Size(62, 17);
-            this.thrownCheckBox.TabIndex = 59;
-            this.thrownCheckBox.Text = "Thrown";
-            this.thrownCheckBox.UseVisualStyleBackColor = true;
-            this.thrownCheckBox.CheckedChanged += new System.EventHandler(this.itemFilterBoxes_CheckedChanged);
-            // 
-            // magicCheckBox
-            // 
-            this.magicCheckBox.AutoSize = true;
-            this.magicCheckBox.Location = new System.Drawing.Point(12, 336);
-            this.magicCheckBox.Name = "magicCheckBox";
-            this.magicCheckBox.Size = new System.Drawing.Size(55, 17);
-            this.magicCheckBox.TabIndex = 58;
-            this.magicCheckBox.Text = "Magic";
-            this.magicCheckBox.UseVisualStyleBackColor = true;
-            this.magicCheckBox.CheckedChanged += new System.EventHandler(this.itemFilterBoxes_CheckedChanged);
-            // 
-            // accessoryCheckBox
-            // 
-            this.accessoryCheckBox.AutoSize = true;
-            this.accessoryCheckBox.Location = new System.Drawing.Point(12, 313);
-            this.accessoryCheckBox.Name = "accessoryCheckBox";
-            this.accessoryCheckBox.Size = new System.Drawing.Size(75, 17);
-            this.accessoryCheckBox.TabIndex = 57;
-            this.accessoryCheckBox.Text = "Accessory";
-            this.accessoryCheckBox.UseVisualStyleBackColor = true;
-            this.accessoryCheckBox.CheckedChanged += new System.EventHandler(this.itemFilterBoxes_CheckedChanged);
-            // 
-            // meleeCheckBox
-            // 
-            this.meleeCheckBox.AutoSize = true;
-            this.meleeCheckBox.Location = new System.Drawing.Point(12, 359);
-            this.meleeCheckBox.Name = "meleeCheckBox";
-            this.meleeCheckBox.Size = new System.Drawing.Size(55, 17);
-            this.meleeCheckBox.TabIndex = 56;
-            this.meleeCheckBox.Text = "Melee";
-            this.meleeCheckBox.UseVisualStyleBackColor = true;
-            this.meleeCheckBox.CheckedChanged += new System.EventHandler(this.itemFilterBoxes_CheckedChanged);
-            // 
-            // rarityComboBox
-            // 
-            this.rarityComboBox.FormattingEnabled = true;
-            this.rarityComboBox.Location = new System.Drawing.Point(12, 282);
-            this.rarityComboBox.Name = "rarityComboBox";
-            this.rarityComboBox.Size = new System.Drawing.Size(160, 21);
-            this.rarityComboBox.TabIndex = 55;
-            this.rarityComboBox.SelectedIndexChanged += new System.EventHandler(this.rarityComboBox_SelectedIndexChanged);
-            // 
-            // rarityLbl
-            // 
-            this.rarityLbl.AutoSize = true;
-            this.rarityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rarityLbl.Location = new System.Drawing.Point(9, 262);
-            this.rarityLbl.Name = "rarityLbl";
-            this.rarityLbl.Size = new System.Drawing.Size(53, 16);
-            this.rarityLbl.TabIndex = 54;
-            this.rarityLbl.Text = "Rarity:";
-            // 
-            // itemFilterTxtBox
-            // 
-            this.itemFilterTxtBox.Location = new System.Drawing.Point(9, 44);
-            this.itemFilterTxtBox.Name = "itemFilterTxtBox";
-            this.itemFilterTxtBox.Size = new System.Drawing.Size(163, 20);
-            this.itemFilterTxtBox.TabIndex = 53;
-            this.itemFilterTxtBox.TextChanged += new System.EventHandler(this.itemFilterTxtBox_TextChanged);
-            // 
-            // searchForItemLbl
-            // 
-            this.searchForItemLbl.AutoSize = true;
-            this.searchForItemLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchForItemLbl.Location = new System.Drawing.Point(6, 23);
-            this.searchForItemLbl.Name = "searchForItemLbl";
-            this.searchForItemLbl.Size = new System.Drawing.Size(137, 16);
-            this.searchForItemLbl.TabIndex = 52;
-            this.searchForItemLbl.Text = "Search for an item:";
-            // 
-            // itemSearchBox
-            // 
-            this.itemSearchBox.FormattingEnabled = true;
-            this.itemSearchBox.Location = new System.Drawing.Point(9, 70);
-            this.itemSearchBox.Name = "itemSearchBox";
-            this.itemSearchBox.Size = new System.Drawing.Size(163, 173);
-            this.itemSearchBox.TabIndex = 51;
-            this.itemSearchBox.SelectedIndexChanged += new System.EventHandler(this.itemSearchBox_SelectedIndexChanged);
+            this.itemFilterInventory.Location = new System.Drawing.Point(7, 20);
+            this.itemFilterInventory.Name = "itemFilterInventory";
+            this.itemFilterInventory.Size = new System.Drawing.Size(193, 377);
+            this.itemFilterInventory.TabIndex = 0;
             // 
             // inventoryItem49
             // 
@@ -1892,7 +1852,7 @@
             this.inventoryItem49.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem49.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem49.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem49.Location = new System.Drawing.Point(668, 219);
+            this.inventoryItem49.Location = new System.Drawing.Point(694, 219);
             this.inventoryItem49.Name = "inventoryItem49";
             this.inventoryItem49.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem49.TabIndex = 49;
@@ -1906,7 +1866,7 @@
             this.inventoryItem48.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem48.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem48.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem48.Location = new System.Drawing.Point(615, 220);
+            this.inventoryItem48.Location = new System.Drawing.Point(641, 220);
             this.inventoryItem48.Name = "inventoryItem48";
             this.inventoryItem48.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem48.TabIndex = 48;
@@ -1920,7 +1880,7 @@
             this.inventoryItem47.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem47.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem47.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem47.Location = new System.Drawing.Point(562, 220);
+            this.inventoryItem47.Location = new System.Drawing.Point(588, 220);
             this.inventoryItem47.Name = "inventoryItem47";
             this.inventoryItem47.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem47.TabIndex = 47;
@@ -1934,7 +1894,7 @@
             this.inventoryItem46.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem46.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem46.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem46.Location = new System.Drawing.Point(509, 220);
+            this.inventoryItem46.Location = new System.Drawing.Point(535, 220);
             this.inventoryItem46.Name = "inventoryItem46";
             this.inventoryItem46.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem46.TabIndex = 46;
@@ -1948,7 +1908,7 @@
             this.inventoryItem45.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem45.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem45.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem45.Location = new System.Drawing.Point(456, 220);
+            this.inventoryItem45.Location = new System.Drawing.Point(482, 220);
             this.inventoryItem45.Name = "inventoryItem45";
             this.inventoryItem45.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem45.TabIndex = 45;
@@ -1962,7 +1922,7 @@
             this.inventoryItem44.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem44.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem44.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem44.Location = new System.Drawing.Point(403, 220);
+            this.inventoryItem44.Location = new System.Drawing.Point(429, 220);
             this.inventoryItem44.Name = "inventoryItem44";
             this.inventoryItem44.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem44.TabIndex = 44;
@@ -1976,7 +1936,7 @@
             this.inventoryItem43.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem43.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem43.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem43.Location = new System.Drawing.Point(350, 220);
+            this.inventoryItem43.Location = new System.Drawing.Point(376, 220);
             this.inventoryItem43.Name = "inventoryItem43";
             this.inventoryItem43.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem43.TabIndex = 43;
@@ -1990,7 +1950,7 @@
             this.inventoryItem42.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem42.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem42.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem42.Location = new System.Drawing.Point(297, 220);
+            this.inventoryItem42.Location = new System.Drawing.Point(323, 220);
             this.inventoryItem42.Name = "inventoryItem42";
             this.inventoryItem42.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem42.TabIndex = 42;
@@ -2004,7 +1964,7 @@
             this.inventoryItem41.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem41.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem41.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem41.Location = new System.Drawing.Point(244, 220);
+            this.inventoryItem41.Location = new System.Drawing.Point(270, 220);
             this.inventoryItem41.Name = "inventoryItem41";
             this.inventoryItem41.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem41.TabIndex = 41;
@@ -2018,7 +1978,7 @@
             this.inventoryItem40.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem40.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem40.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem40.Location = new System.Drawing.Point(191, 220);
+            this.inventoryItem40.Location = new System.Drawing.Point(217, 220);
             this.inventoryItem40.Name = "inventoryItem40";
             this.inventoryItem40.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem40.TabIndex = 40;
@@ -2032,7 +1992,7 @@
             this.inventoryItem39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem39.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem39.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem39.Location = new System.Drawing.Point(668, 166);
+            this.inventoryItem39.Location = new System.Drawing.Point(694, 166);
             this.inventoryItem39.Name = "inventoryItem39";
             this.inventoryItem39.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem39.TabIndex = 39;
@@ -2046,7 +2006,7 @@
             this.inventoryItem38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem38.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem38.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem38.Location = new System.Drawing.Point(615, 167);
+            this.inventoryItem38.Location = new System.Drawing.Point(641, 167);
             this.inventoryItem38.Name = "inventoryItem38";
             this.inventoryItem38.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem38.TabIndex = 38;
@@ -2060,7 +2020,7 @@
             this.inventoryItem37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem37.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem37.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem37.Location = new System.Drawing.Point(562, 167);
+            this.inventoryItem37.Location = new System.Drawing.Point(588, 167);
             this.inventoryItem37.Name = "inventoryItem37";
             this.inventoryItem37.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem37.TabIndex = 37;
@@ -2074,7 +2034,7 @@
             this.inventoryItem36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem36.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem36.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem36.Location = new System.Drawing.Point(509, 167);
+            this.inventoryItem36.Location = new System.Drawing.Point(535, 167);
             this.inventoryItem36.Name = "inventoryItem36";
             this.inventoryItem36.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem36.TabIndex = 36;
@@ -2088,7 +2048,7 @@
             this.inventoryItem35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem35.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem35.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem35.Location = new System.Drawing.Point(456, 167);
+            this.inventoryItem35.Location = new System.Drawing.Point(482, 167);
             this.inventoryItem35.Name = "inventoryItem35";
             this.inventoryItem35.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem35.TabIndex = 35;
@@ -2102,7 +2062,7 @@
             this.inventoryItem34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem34.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem34.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem34.Location = new System.Drawing.Point(403, 167);
+            this.inventoryItem34.Location = new System.Drawing.Point(429, 167);
             this.inventoryItem34.Name = "inventoryItem34";
             this.inventoryItem34.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem34.TabIndex = 34;
@@ -2116,7 +2076,7 @@
             this.inventoryItem33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem33.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem33.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem33.Location = new System.Drawing.Point(350, 167);
+            this.inventoryItem33.Location = new System.Drawing.Point(376, 167);
             this.inventoryItem33.Name = "inventoryItem33";
             this.inventoryItem33.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem33.TabIndex = 33;
@@ -2130,7 +2090,7 @@
             this.inventoryItem32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem32.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem32.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem32.Location = new System.Drawing.Point(297, 167);
+            this.inventoryItem32.Location = new System.Drawing.Point(323, 167);
             this.inventoryItem32.Name = "inventoryItem32";
             this.inventoryItem32.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem32.TabIndex = 32;
@@ -2144,7 +2104,7 @@
             this.inventoryItem31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem31.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem31.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem31.Location = new System.Drawing.Point(244, 167);
+            this.inventoryItem31.Location = new System.Drawing.Point(270, 167);
             this.inventoryItem31.Name = "inventoryItem31";
             this.inventoryItem31.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem31.TabIndex = 31;
@@ -2158,7 +2118,7 @@
             this.inventoryItem30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem30.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem30.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem30.Location = new System.Drawing.Point(191, 167);
+            this.inventoryItem30.Location = new System.Drawing.Point(217, 167);
             this.inventoryItem30.Name = "inventoryItem30";
             this.inventoryItem30.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem30.TabIndex = 30;
@@ -2172,7 +2132,7 @@
             this.inventoryItem29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem29.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem29.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem29.Location = new System.Drawing.Point(668, 113);
+            this.inventoryItem29.Location = new System.Drawing.Point(694, 113);
             this.inventoryItem29.Name = "inventoryItem29";
             this.inventoryItem29.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem29.TabIndex = 29;
@@ -2186,7 +2146,7 @@
             this.inventoryItem28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem28.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem28.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem28.Location = new System.Drawing.Point(615, 114);
+            this.inventoryItem28.Location = new System.Drawing.Point(641, 114);
             this.inventoryItem28.Name = "inventoryItem28";
             this.inventoryItem28.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem28.TabIndex = 28;
@@ -2200,7 +2160,7 @@
             this.inventoryItem27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem27.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem27.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem27.Location = new System.Drawing.Point(562, 114);
+            this.inventoryItem27.Location = new System.Drawing.Point(588, 114);
             this.inventoryItem27.Name = "inventoryItem27";
             this.inventoryItem27.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem27.TabIndex = 27;
@@ -2214,7 +2174,7 @@
             this.inventoryItem26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem26.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem26.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem26.Location = new System.Drawing.Point(509, 114);
+            this.inventoryItem26.Location = new System.Drawing.Point(535, 114);
             this.inventoryItem26.Name = "inventoryItem26";
             this.inventoryItem26.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem26.TabIndex = 26;
@@ -2228,7 +2188,7 @@
             this.inventoryItem25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem25.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem25.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem25.Location = new System.Drawing.Point(456, 114);
+            this.inventoryItem25.Location = new System.Drawing.Point(482, 114);
             this.inventoryItem25.Name = "inventoryItem25";
             this.inventoryItem25.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem25.TabIndex = 25;
@@ -2242,7 +2202,7 @@
             this.inventoryItem24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem24.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem24.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem24.Location = new System.Drawing.Point(403, 114);
+            this.inventoryItem24.Location = new System.Drawing.Point(429, 114);
             this.inventoryItem24.Name = "inventoryItem24";
             this.inventoryItem24.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem24.TabIndex = 24;
@@ -2256,7 +2216,7 @@
             this.inventoryItem23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem23.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem23.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem23.Location = new System.Drawing.Point(350, 114);
+            this.inventoryItem23.Location = new System.Drawing.Point(376, 114);
             this.inventoryItem23.Name = "inventoryItem23";
             this.inventoryItem23.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem23.TabIndex = 23;
@@ -2270,7 +2230,7 @@
             this.inventoryItem22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem22.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem22.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem22.Location = new System.Drawing.Point(297, 114);
+            this.inventoryItem22.Location = new System.Drawing.Point(323, 114);
             this.inventoryItem22.Name = "inventoryItem22";
             this.inventoryItem22.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem22.TabIndex = 22;
@@ -2284,7 +2244,7 @@
             this.inventoryItem21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem21.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem21.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem21.Location = new System.Drawing.Point(244, 114);
+            this.inventoryItem21.Location = new System.Drawing.Point(270, 114);
             this.inventoryItem21.Name = "inventoryItem21";
             this.inventoryItem21.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem21.TabIndex = 21;
@@ -2298,7 +2258,7 @@
             this.inventoryItem20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem20.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem20.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem20.Location = new System.Drawing.Point(191, 114);
+            this.inventoryItem20.Location = new System.Drawing.Point(217, 114);
             this.inventoryItem20.Name = "inventoryItem20";
             this.inventoryItem20.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem20.TabIndex = 20;
@@ -2312,7 +2272,7 @@
             this.inventoryItem19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem19.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem19.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem19.Location = new System.Drawing.Point(668, 60);
+            this.inventoryItem19.Location = new System.Drawing.Point(694, 60);
             this.inventoryItem19.Name = "inventoryItem19";
             this.inventoryItem19.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem19.TabIndex = 19;
@@ -2326,7 +2286,7 @@
             this.inventoryItem18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem18.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem18.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem18.Location = new System.Drawing.Point(615, 61);
+            this.inventoryItem18.Location = new System.Drawing.Point(641, 61);
             this.inventoryItem18.Name = "inventoryItem18";
             this.inventoryItem18.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem18.TabIndex = 18;
@@ -2340,7 +2300,7 @@
             this.inventoryItem17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem17.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem17.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem17.Location = new System.Drawing.Point(562, 61);
+            this.inventoryItem17.Location = new System.Drawing.Point(588, 61);
             this.inventoryItem17.Name = "inventoryItem17";
             this.inventoryItem17.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem17.TabIndex = 17;
@@ -2354,7 +2314,7 @@
             this.inventoryItem16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem16.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem16.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem16.Location = new System.Drawing.Point(509, 61);
+            this.inventoryItem16.Location = new System.Drawing.Point(535, 61);
             this.inventoryItem16.Name = "inventoryItem16";
             this.inventoryItem16.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem16.TabIndex = 16;
@@ -2368,7 +2328,7 @@
             this.inventoryItem15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem15.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem15.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem15.Location = new System.Drawing.Point(456, 61);
+            this.inventoryItem15.Location = new System.Drawing.Point(482, 61);
             this.inventoryItem15.Name = "inventoryItem15";
             this.inventoryItem15.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem15.TabIndex = 15;
@@ -2382,7 +2342,7 @@
             this.inventoryItem14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem14.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem14.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem14.Location = new System.Drawing.Point(403, 61);
+            this.inventoryItem14.Location = new System.Drawing.Point(429, 61);
             this.inventoryItem14.Name = "inventoryItem14";
             this.inventoryItem14.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem14.TabIndex = 14;
@@ -2396,7 +2356,7 @@
             this.inventoryItem13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem13.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem13.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem13.Location = new System.Drawing.Point(350, 61);
+            this.inventoryItem13.Location = new System.Drawing.Point(376, 61);
             this.inventoryItem13.Name = "inventoryItem13";
             this.inventoryItem13.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem13.TabIndex = 13;
@@ -2410,7 +2370,7 @@
             this.inventoryItem12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem12.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem12.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem12.Location = new System.Drawing.Point(297, 61);
+            this.inventoryItem12.Location = new System.Drawing.Point(323, 61);
             this.inventoryItem12.Name = "inventoryItem12";
             this.inventoryItem12.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem12.TabIndex = 12;
@@ -2424,7 +2384,7 @@
             this.inventoryItem11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem11.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem11.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem11.Location = new System.Drawing.Point(244, 61);
+            this.inventoryItem11.Location = new System.Drawing.Point(270, 61);
             this.inventoryItem11.Name = "inventoryItem11";
             this.inventoryItem11.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem11.TabIndex = 11;
@@ -2438,7 +2398,7 @@
             this.inventoryItem10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem10.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem10.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem10.Location = new System.Drawing.Point(191, 61);
+            this.inventoryItem10.Location = new System.Drawing.Point(217, 61);
             this.inventoryItem10.Name = "inventoryItem10";
             this.inventoryItem10.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem10.TabIndex = 10;
@@ -2452,7 +2412,7 @@
             this.inventoryItem9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem9.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem9.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem9.Location = new System.Drawing.Point(668, 7);
+            this.inventoryItem9.Location = new System.Drawing.Point(694, 7);
             this.inventoryItem9.Name = "inventoryItem9";
             this.inventoryItem9.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem9.TabIndex = 9;
@@ -2466,7 +2426,7 @@
             this.inventoryItem8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem8.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem8.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem8.Location = new System.Drawing.Point(615, 8);
+            this.inventoryItem8.Location = new System.Drawing.Point(641, 8);
             this.inventoryItem8.Name = "inventoryItem8";
             this.inventoryItem8.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem8.TabIndex = 8;
@@ -2480,7 +2440,7 @@
             this.inventoryItem7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem7.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem7.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem7.Location = new System.Drawing.Point(562, 8);
+            this.inventoryItem7.Location = new System.Drawing.Point(588, 8);
             this.inventoryItem7.Name = "inventoryItem7";
             this.inventoryItem7.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem7.TabIndex = 7;
@@ -2494,7 +2454,7 @@
             this.inventoryItem6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem6.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem6.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem6.Location = new System.Drawing.Point(509, 8);
+            this.inventoryItem6.Location = new System.Drawing.Point(535, 8);
             this.inventoryItem6.Name = "inventoryItem6";
             this.inventoryItem6.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem6.TabIndex = 6;
@@ -2508,7 +2468,7 @@
             this.inventoryItem5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem5.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem5.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem5.Location = new System.Drawing.Point(456, 8);
+            this.inventoryItem5.Location = new System.Drawing.Point(482, 8);
             this.inventoryItem5.Name = "inventoryItem5";
             this.inventoryItem5.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem5.TabIndex = 5;
@@ -2522,7 +2482,7 @@
             this.inventoryItem4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem4.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem4.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem4.Location = new System.Drawing.Point(403, 8);
+            this.inventoryItem4.Location = new System.Drawing.Point(429, 8);
             this.inventoryItem4.Name = "inventoryItem4";
             this.inventoryItem4.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem4.TabIndex = 4;
@@ -2536,7 +2496,7 @@
             this.inventoryItem3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem3.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem3.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem3.Location = new System.Drawing.Point(350, 8);
+            this.inventoryItem3.Location = new System.Drawing.Point(376, 8);
             this.inventoryItem3.Name = "inventoryItem3";
             this.inventoryItem3.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem3.TabIndex = 3;
@@ -2550,7 +2510,7 @@
             this.inventoryItem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem2.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem2.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem2.Location = new System.Drawing.Point(297, 8);
+            this.inventoryItem2.Location = new System.Drawing.Point(323, 8);
             this.inventoryItem2.Name = "inventoryItem2";
             this.inventoryItem2.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem2.TabIndex = 2;
@@ -2564,7 +2524,7 @@
             this.inventoryItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem1.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem1.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem1.Location = new System.Drawing.Point(244, 8);
+            this.inventoryItem1.Location = new System.Drawing.Point(270, 8);
             this.inventoryItem1.Name = "inventoryItem1";
             this.inventoryItem1.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem1.TabIndex = 1;
@@ -2578,7 +2538,7 @@
             this.inventoryItem0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryItem0.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryItem0.ForeColor = System.Drawing.Color.White;
-            this.inventoryItem0.Location = new System.Drawing.Point(191, 10);
+            this.inventoryItem0.Location = new System.Drawing.Point(217, 10);
             this.inventoryItem0.Name = "inventoryItem0";
             this.inventoryItem0.Size = new System.Drawing.Size(47, 47);
             this.inventoryItem0.TabIndex = 0;
@@ -2586,67 +2546,156 @@
             this.inventoryItem0.UseVisualStyleBackColor = false;
             this.inventoryItem0.Enter += new System.EventHandler(this.inventoryItem_GotFocus);
             // 
-            // playerBindingSource
+            // tabPage1
             // 
-            this.playerBindingSource.DataSource = typeof(TerrariaInventoryEditor.TerrariaLib.Player);
+            this.tabPage1.Controls.Add(this.itemFilterControl1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(998, 482);
+            this.tabPage1.TabIndex = 4;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // playerPictureBox
+            // itemFilterControl1
             // 
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("EyeColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("HairColor", this.playerBindingSource, "HairColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("HairId", this.playerBindingSource, "Hair", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("PantsColor", this.playerBindingSource, "PantsColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("ShirtColor", this.playerBindingSource, "ShirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("ShoeColor", this.playerBindingSource, "ShoeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("SkinColor", this.playerBindingSource, "SkinColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("SkinVariant", this.playerBindingSource, "SkinVariant", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("UndershirtColor", this.playerBindingSource, "UndershirtColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.playerPictureBox.EyeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
-            this.playerPictureBox.HairColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(90)))), ((int)(((byte)(55)))));
-            this.playerPictureBox.HairId = 0;
-            this.playerPictureBox.HairTextureFile = "Data\\HairTextures\\Player_Hair_1.png";
-            this.playerPictureBox.Location = new System.Drawing.Point(207, 19);
-            this.playerPictureBox.Name = "playerPictureBox";
-            this.playerPictureBox.PantsColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(175)))));
-            this.playerPictureBox.ShirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(165)))), ((int)(((byte)(140)))));
-            this.playerPictureBox.ShoeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(105)))), ((int)(((byte)(60)))));
-            this.playerPictureBox.Size = new System.Drawing.Size(140, 211);
-            this.playerPictureBox.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(90)))));
-            this.playerPictureBox.SkinVariant = 0;
-            this.playerPictureBox.TabIndex = 19;
-            this.playerPictureBox.TabStop = false;
-            this.playerPictureBox.UndershirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(180)))), ((int)(((byte)(215)))));
+            this.itemFilterControl1.Location = new System.Drawing.Point(6, 6);
+            this.itemFilterControl1.Name = "itemFilterControl1";
+            this.itemFilterControl1.Size = new System.Drawing.Size(193, 377);
+            this.itemFilterControl1.TabIndex = 0;
             // 
-            // nameDataGridViewTextBoxColumn
+            // hairClrPictureBox
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 150;
+            this.hairClrPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.hairClrPictureBox.Name = "hairClrPictureBox";
+            this.hairClrPictureBox.Size = new System.Drawing.Size(100, 50);
+            this.hairClrPictureBox.TabIndex = 0;
+            this.hairClrPictureBox.TabStop = false;
             // 
-            // descriptionDataGridViewTextBoxColumn
+            // hairColorLbl
             // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descriptionDataGridViewTextBoxColumn.Width = 200;
+            this.hairColorLbl.Location = new System.Drawing.Point(0, 0);
+            this.hairColorLbl.Name = "hairColorLbl";
+            this.hairColorLbl.Size = new System.Drawing.Size(100, 23);
+            this.hairColorLbl.TabIndex = 0;
             // 
-            // timeDataGridViewTextBoxColumn
+            // eyeClrPictureBox
             // 
-            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
-            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
-            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
-            this.timeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.timeDataGridViewTextBoxColumn.Width = 150;
+            this.eyeClrPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.eyeClrPictureBox.Name = "eyeClrPictureBox";
+            this.eyeClrPictureBox.Size = new System.Drawing.Size(100, 50);
+            this.eyeClrPictureBox.TabIndex = 0;
+            this.eyeClrPictureBox.TabStop = false;
+            // 
+            // randomizeColorsBtn
+            // 
+            this.randomizeColorsBtn.Location = new System.Drawing.Point(0, 0);
+            this.randomizeColorsBtn.Name = "randomizeColorsBtn";
+            this.randomizeColorsBtn.Size = new System.Drawing.Size(75, 23);
+            this.randomizeColorsBtn.TabIndex = 0;
+            // 
+            // eyeColorLbl
+            // 
+            this.eyeColorLbl.Location = new System.Drawing.Point(0, 0);
+            this.eyeColorLbl.Name = "eyeColorLbl";
+            this.eyeColorLbl.Size = new System.Drawing.Size(100, 23);
+            this.eyeColorLbl.TabIndex = 0;
+            // 
+            // randomizeHairBtn
+            // 
+            this.randomizeHairBtn.Location = new System.Drawing.Point(0, 0);
+            this.randomizeHairBtn.Name = "randomizeHairBtn";
+            this.randomizeHairBtn.Size = new System.Drawing.Size(75, 23);
+            this.randomizeHairBtn.TabIndex = 0;
+            // 
+            // skinClrPictureBox
+            // 
+            this.skinClrPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.skinClrPictureBox.Name = "skinClrPictureBox";
+            this.skinClrPictureBox.Size = new System.Drawing.Size(100, 50);
+            this.skinClrPictureBox.TabIndex = 0;
+            this.skinClrPictureBox.TabStop = false;
+            // 
+            // hairDesignerBtn
+            // 
+            this.hairDesignerBtn.Location = new System.Drawing.Point(0, 0);
+            this.hairDesignerBtn.Name = "hairDesignerBtn";
+            this.hairDesignerBtn.Size = new System.Drawing.Size(75, 23);
+            this.hairDesignerBtn.TabIndex = 0;
+            // 
+            // skinColorLbl
+            // 
+            this.skinColorLbl.Location = new System.Drawing.Point(0, 0);
+            this.skinColorLbl.Name = "skinColorLbl";
+            this.skinColorLbl.Size = new System.Drawing.Size(100, 23);
+            this.skinColorLbl.TabIndex = 0;
+            // 
+            // shoeColorLbl
+            // 
+            this.shoeColorLbl.Location = new System.Drawing.Point(0, 0);
+            this.shoeColorLbl.Name = "shoeColorLbl";
+            this.shoeColorLbl.Size = new System.Drawing.Size(100, 23);
+            this.shoeColorLbl.TabIndex = 0;
+            // 
+            // shirtClrPictureBox
+            // 
+            this.shirtClrPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.shirtClrPictureBox.Name = "shirtClrPictureBox";
+            this.shirtClrPictureBox.Size = new System.Drawing.Size(100, 50);
+            this.shirtClrPictureBox.TabIndex = 0;
+            this.shirtClrPictureBox.TabStop = false;
+            // 
+            // pantsColorLbl
+            // 
+            this.pantsColorLbl.Location = new System.Drawing.Point(0, 0);
+            this.pantsColorLbl.Name = "pantsColorLbl";
+            this.pantsColorLbl.Size = new System.Drawing.Size(100, 23);
+            this.pantsColorLbl.TabIndex = 0;
+            // 
+            // undershirtClrPictureBox
+            // 
+            this.undershirtClrPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.undershirtClrPictureBox.Name = "undershirtClrPictureBox";
+            this.undershirtClrPictureBox.Size = new System.Drawing.Size(100, 50);
+            this.undershirtClrPictureBox.TabIndex = 0;
+            this.undershirtClrPictureBox.TabStop = false;
+            // 
+            // undershirtColorLbl
+            // 
+            this.undershirtColorLbl.Location = new System.Drawing.Point(0, 0);
+            this.undershirtColorLbl.Name = "undershirtColorLbl";
+            this.undershirtColorLbl.Size = new System.Drawing.Size(100, 23);
+            this.undershirtColorLbl.TabIndex = 0;
+            // 
+            // pantsClrPictureBox
+            // 
+            this.pantsClrPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.pantsClrPictureBox.Name = "pantsClrPictureBox";
+            this.pantsClrPictureBox.Size = new System.Drawing.Size(100, 50);
+            this.pantsClrPictureBox.TabIndex = 0;
+            this.pantsClrPictureBox.TabStop = false;
+            // 
+            // shirtColorLbl
+            // 
+            this.shirtColorLbl.Location = new System.Drawing.Point(0, 0);
+            this.shirtColorLbl.Name = "shirtColorLbl";
+            this.shirtColorLbl.Size = new System.Drawing.Size(100, 23);
+            this.shirtColorLbl.TabIndex = 0;
+            // 
+            // shoeClrPictureBox
+            // 
+            this.shoeClrPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.shoeClrPictureBox.Name = "shoeClrPictureBox";
+            this.shoeClrPictureBox.Size = new System.Drawing.Size(100, 50);
+            this.shoeClrPictureBox.TabIndex = 0;
+            this.shoeClrPictureBox.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 538);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControl);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -2654,18 +2703,42 @@
             this.Text = "Terraria Inventory Editor - v1.0.0.0";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.statsTab.ResumeLayout(false);
             this.healthManaGroupBox.ResumeLayout(false);
             this.healthManaGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
             this.playerInfoGroupBox.ResumeLayout(false);
             this.playerInfoGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.anglerQuestUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinVariantUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownAnglerQuests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownSkinVariant)).EndInit();
             this.appearanceTab.ResumeLayout(false);
             this.appearanceTab.PerformLayout();
             this.appearanceGroupBox.ResumeLayout(false);
             this.appearanceGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShoeColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPantsColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUndershirtColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShirtColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEyeColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSkinColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHairColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).EndInit();
+            this.equipmentFilterGroupBox.ResumeLayout(false);
+            this.equipmentFilterGroupBox.PerformLayout();
+            this.buffsTab.ResumeLayout(false);
+            this.buffControlsGroupBox.ResumeLayout(false);
+            this.buffControlsGroupBox.PerformLayout();
+            this.activeBuffsGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewBuffs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buffsBindingSource)).EndInit();
+            this.inventoryTab.ResumeLayout(false);
+            this.inventoryTab.PerformLayout();
+            this.itemPropertiesGroupBox.ResumeLayout(false);
+            this.itemPropertiesGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownStackSize)).EndInit();
+            this.inventoryFilterGroupBox.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.hairClrPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeClrPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinClrPictureBox)).EndInit();
@@ -2673,23 +2746,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.undershirtClrPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pantsClrPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shoeClrPictureBox)).EndInit();
-            this.equipmentFilterGroupBox.ResumeLayout(false);
-            this.equipmentFilterGroupBox.PerformLayout();
-            this.buffsTab.ResumeLayout(false);
-            this.buffControlsGroupBox.ResumeLayout(false);
-            this.buffControlsGroupBox.PerformLayout();
-            this.activeBuffsGroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.buffDisplayGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buffsBindingSource)).EndInit();
-            this.inventoryTab.ResumeLayout(false);
-            this.inventoryTab.PerformLayout();
-            this.itemPropertiesGroupBox.ResumeLayout(false);
-            this.itemPropertiesGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.stackSizeUpDown)).EndInit();
-            this.inventoryFilterGroupBox.ResumeLayout(false);
-            this.inventoryFilterGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2703,35 +2759,35 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage statsTab;
         private System.Windows.Forms.TabPage appearanceTab;
         private System.Windows.Forms.GroupBox healthManaGroupBox;
-        private System.Windows.Forms.Button maxOutBtn;
-        private System.Windows.Forms.Button resetHealthBtn;
+        private System.Windows.Forms.Button buttonMaxOut;
+        private System.Windows.Forms.Button buttonResetDefaults;
         private System.Windows.Forms.ProgressBar manaBar;
-        private System.Windows.Forms.TextBox maxManaBox;
-        private System.Windows.Forms.TextBox currentManaBox;
+        private System.Windows.Forms.TextBox textBoxMaxMana;
+        private System.Windows.Forms.TextBox textBoxCurrentMana;
         private System.Windows.Forms.Label manaLabel;
-        private System.Windows.Forms.TextBox maxHealthBox;
+        private System.Windows.Forms.TextBox textBoxMaxHealth;
         private System.Windows.Forms.ProgressBar healthBar;
-        private System.Windows.Forms.TextBox currentHealthBox;
+        private System.Windows.Forms.TextBox textBoxCurrentHealth;
         private System.Windows.Forms.Label healthLabel;
         private System.Windows.Forms.GroupBox playerInfoGroupBox;
         private System.Windows.Forms.Label anglerLbl;
         private System.Windows.Forms.Label skinVariantLbl;
-        private System.Windows.Forms.ComboBox difficultyCmbBox;
+        private System.Windows.Forms.ComboBox comboBoxDifficulty;
         private System.Windows.Forms.Label difficultyLbl;
-        private System.Windows.Forms.TextBox playerNameTxtBox;
+        private System.Windows.Forms.TextBox textBoxPlayerName;
         private System.Windows.Forms.Label playerNameLbl;
-        private System.Windows.Forms.NumericUpDown skinVariantUpDown;
-        private System.Windows.Forms.NumericUpDown anglerQuestUpDown;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.NumericUpDown upDownSkinVariant;
+        private System.Windows.Forms.NumericUpDown upDownAnglerQuests;
+        private System.Windows.Forms.TextBox textBoxPlayTime;
         private System.Windows.Forms.Label playTimeLbl;
         private System.Windows.Forms.Label taxMoneyLbl;
-        private System.Windows.Forms.CheckBox extraAccCheckBox;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.CheckBox hotbarCheckBox;
+        private System.Windows.Forms.CheckBox checkBoxExtraAccessory;
+        private System.Windows.Forms.TextBox textBoxTaxMoney;
+        private System.Windows.Forms.CheckBox checkBoxHotbarLocked;
         private System.Windows.Forms.BindingSource playerBindingSource;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.PictureBox hairClrPictureBox;
@@ -2753,14 +2809,14 @@
         private System.Windows.Forms.Button randomizeHairBtn;
         private System.Windows.Forms.TabPage buffsTab;
         private System.Windows.Forms.GroupBox activeBuffsGroupBox;
-        private System.Windows.Forms.DataGridView buffDisplayGrid;
+        private System.Windows.Forms.DataGridView gridViewBuffs;
         private System.Windows.Forms.BindingSource buffsBindingSource;
         private System.Windows.Forms.GroupBox buffControlsGroupBox;
-        private System.Windows.Forms.Button maxAllDurationsBtn;
-        private System.Windows.Forms.Button maxDurationBtn;
-        private System.Windows.Forms.Button deleteAllBuffsBtn;
-        private System.Windows.Forms.ListBox buffSearchBox;
-        private System.Windows.Forms.TextBox buffFilterTxtBox;
+        private System.Windows.Forms.Button buttonMaxAllBuffs;
+        private System.Windows.Forms.Button buttonMaxBuff;
+        private System.Windows.Forms.Button buttonDeleteAllBuffs;
+        private System.Windows.Forms.ListBox listBoxBuffs;
+        private System.Windows.Forms.TextBox textBoxBuffName;
         private System.Windows.Forms.TabPage inventoryTab;
         private System.Windows.Forms.DataGridViewImageColumn Image;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
@@ -2817,16 +2873,14 @@
         private System.Windows.Forms.Button inventoryItem1;
         private System.Windows.Forms.Button inventoryItem0;
         private System.Windows.Forms.GroupBox itemPropertiesGroupBox;
-        private System.Windows.Forms.Button deleteAllItemsBtn;
-        private System.Windows.Forms.Button deleteItemBtn;
-        private System.Windows.Forms.Button maxAllStacksBtn;
-        private System.Windows.Forms.Button maxStackBtn;
-        private System.Windows.Forms.NumericUpDown stackSizeUpDown;
+        private System.Windows.Forms.Button buttonDeleteAllItems;
+        private System.Windows.Forms.Button buttonDeleteItem;
+        private System.Windows.Forms.Button buttonMaxAllStacks;
+        private System.Windows.Forms.Button buttonMaxStack;
+        private System.Windows.Forms.NumericUpDown upDownStackSize;
         private System.Windows.Forms.Label stackSizeLbl;
-        private System.Windows.Forms.ComboBox itemPrefixComboBox;
+        private System.Windows.Forms.ComboBox comboBoxItemPrefix;
         private System.Windows.Forms.Label itemPrefixLbl;
-        private System.Windows.Forms.GroupBox inventoryFilterGroupBox;
-        private System.Windows.Forms.ListBox itemSearchBox;
         private System.Windows.Forms.Button inventoryItem53;
         private System.Windows.Forms.Button inventoryItem52;
         private System.Windows.Forms.Button inventoryItem51;
@@ -2835,16 +2889,14 @@
         private System.Windows.Forms.Button inventoryItem56;
         private System.Windows.Forms.Button inventoryItem55;
         private System.Windows.Forms.Button inventoryItem54;
-        private System.Windows.Forms.Label searchForItemLbl;
-        private System.Windows.Forms.TextBox itemFilterTxtBox;
         private System.Windows.Forms.Label ammoLbl;
         private System.Windows.Forms.Label coinsLbl;
-        private System.Windows.Forms.Button deleteBuffBtn;
+        private System.Windows.Forms.Button buttonDeleteBuff;
         private System.Windows.Forms.GroupBox equipmentFilterGroupBox;
         private System.Windows.Forms.Button dyeItem0;
-        private System.Windows.Forms.TextBox equipmentFilterTxtBox;
-        private System.Windows.Forms.Label equipmentSearchLbl;
-        private System.Windows.Forms.ListBox equipmentSearchBox;
+        private System.Windows.Forms.TextBox textBoxEquipName;
+        private System.Windows.Forms.Label labelSearchForEquip;
+        private System.Windows.Forms.ListBox listBoxEquips;
         private System.Windows.Forms.GroupBox appearanceGroupBox;
         private System.Windows.Forms.Label dyeLbl;
         private System.Windows.Forms.Button dyeItem2;
@@ -2876,13 +2928,27 @@
         private System.Windows.Forms.Button dyeItem4;
         private System.Windows.Forms.Button dyeItem3;
         private Framework.PlayerPictureBox playerPictureBox;
-        private System.Windows.Forms.CheckBox meleeCheckBox;
-        private System.Windows.Forms.ComboBox rarityComboBox;
-        private System.Windows.Forms.Label rarityLbl;
-        private System.Windows.Forms.CheckBox thrownCheckBox;
-        private System.Windows.Forms.CheckBox magicCheckBox;
-        private System.Windows.Forms.CheckBox accessoryCheckBox;
-        private System.Windows.Forms.CheckBox rangedCheckBox;
+        private System.Windows.Forms.PictureBox pictureBoxUndershirtColor;
+        private System.Windows.Forms.Label labelUndershirtColor;
+        private System.Windows.Forms.PictureBox pictureBoxShirtColor;
+        private System.Windows.Forms.Label labelShirtColor;
+        private System.Windows.Forms.PictureBox pictureBoxEyeColor;
+        private System.Windows.Forms.Label labelEyeColor;
+        private System.Windows.Forms.PictureBox pictureBoxSkinColor;
+        private System.Windows.Forms.Label labelSkinColor;
+        private System.Windows.Forms.PictureBox pictureBoxHairColor;
+        private System.Windows.Forms.Label labelHairColor;
+        private System.Windows.Forms.PictureBox pictureBoxShoeColor;
+        private System.Windows.Forms.Label labelShoeColor;
+        private System.Windows.Forms.PictureBox pictureBoxPantsColor;
+        private System.Windows.Forms.Label labelPantsColor;
+        private System.Windows.Forms.Button buttonRandomColors;
+        private System.Windows.Forms.Button buttonRandomHair;
+        private System.Windows.Forms.Button buttonEditHair;
+        private System.Windows.Forms.TabPage tabPage1;
+        private Framework.ItemFilterControl itemFilterControl1;
+        private System.Windows.Forms.GroupBox inventoryFilterGroupBox;
+        private Framework.ItemFilterControl itemFilterInventory;
     }
 }
 

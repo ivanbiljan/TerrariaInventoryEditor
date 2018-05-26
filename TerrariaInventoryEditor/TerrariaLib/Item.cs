@@ -190,10 +190,10 @@ namespace TerrariaInventoryEditor.TerrariaLib
         }
 
         /// <summary>
-        ///     Gets or sets a value indicating whether the item is a 'meele' weapon.
+        ///     Gets or sets a value indicating whether the item is a 'melee' weapon.
         /// </summary>
-        [JsonProperty("is_meele_weapon")]
-        public bool IsMeele
+        [JsonProperty("is_melee_weapon")]
+        public bool IsMelee
         {
             get => Get<bool>();
             set => Set(value);
@@ -419,7 +419,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
             IsAccessory = item.IsAccessory;
             IsAutoReuse = item.IsAutoReuse;
             IsMagic = item.IsMagic;
-            IsMeele = item.IsMeele;
+            IsMelee = item.IsMelee;
             IsRanged = item.IsRanged;
             IsThrown = item.IsThrown;
             Knockback = item.Knockback;
