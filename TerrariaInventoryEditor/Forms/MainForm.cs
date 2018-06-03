@@ -19,6 +19,7 @@ namespace TerrariaInventoryEditor.Forms
         private readonly Random _random = new Random();
         private readonly List<Button> _storageItems = new List<Button>();
 
+        private Player _player;
         private Button _selectedEquip;
         private Button _selectedItem;
         private Button _selectedStorageButton;
@@ -85,8 +86,11 @@ namespace TerrariaInventoryEditor.Forms
             // Initialize player texture files
             TextureManager.Instance.Load();
 
+            // Create the default player
+            _player = new Player();
+
             // Setup data sources
-            playerBindingSource.DataSource = Terraria.Instance.Player;
+            playerBindingSource.DataSource = _player;
             listBoxEquips.DataSource = GetFilteredEquipmentList();
             listBoxBuffs.DataSource = Terraria.Instance.Buffs;
             comboBoxItemPrefix.DataSource = Enum.GetValues(typeof(ItemPrefix)).Cast<ItemPrefix>().ToList();
@@ -113,7 +117,7 @@ namespace TerrariaInventoryEditor.Forms
 
         private void buttonDeleteAllBuffs_Click(object sender, EventArgs e)
         {
-            foreach (var buff in Terraria.Instance.Player.Buffs.Where(b => b.Id != 0))
+            foreach (var buff in _player.Buffs.Where(b => b.Id != 0))
             {
                 buff.SetDefaults(0);
             }
@@ -123,7 +127,7 @@ namespace TerrariaInventoryEditor.Forms
 
         private void buttonDeleteAllItems_Click(object sender, EventArgs e)
         {
-            foreach (var item in Terraria.Instance.Player.Inventory.Where(i => i.NetId != 0))
+            foreach (var item in _player.Inventory.Where(i => i.NetId != 0))
             {
                 item.SetDefaults(0);
             }
@@ -133,12 +137,11 @@ namespace TerrariaInventoryEditor.Forms
 
         private void buttonDeleteAllStorageItems_Click(object sender, EventArgs e)
         {
-            var player = Terraria.Instance.Player;
             for (var i = 0; i < 40; ++i)
             {
-                player.PiggyBank[i].SetDefaults(0);
-                player.Safe[i].SetDefaults(0);
-                player.Forge[i].SetDefaults(0);
+                _player.PiggyBank[i].SetDefaults(0);
+                _player.Safe[i].SetDefaults(0);
+                _player.Forge[i].SetDefaults(0);
             }
 
             DrawStorage();
@@ -146,7 +149,12 @@ namespace TerrariaInventoryEditor.Forms
 
         private void buttonDeleteBuff_Click(object sender, EventArgs e)
         {
-            Terraria.Instance.Player.Buffs[gridViewBuffs.CurrentCell.RowIndex].SetDefaults(0);
+            if (gridViewBuffs.CurrentCell == null)
+            {
+                return;
+            }
+
+            _player.Buffs[gridViewBuffs.CurrentCell.RowIndex].SetDefaults(0);
             gridViewBuffs.Refresh();
         }
 
@@ -157,9 +165,7 @@ namespace TerrariaInventoryEditor.Forms
                 return;
             }
 
-            var player = Terraria.Instance.Player;
-            player.Inventory[(int) _selectedItem.Tag].SetDefaults(0);
-
+            _player.Inventory[(int) _selectedItem.Tag].SetDefaults(0);
             _selectedItem.Image = new Bitmap("Data\\ItemTextures\\Item_0.png");
             _selectedItem.Text = "0";
         }
@@ -171,19 +177,18 @@ namespace TerrariaInventoryEditor.Forms
                 return;
             }
 
-            var player = Terraria.Instance.Player;
             var tag = (int) _selectedStorageButton.Tag;
-            if (tag < 40)
+            if (tag < _player.PiggyBank.Length)
             {
-                player.PiggyBank[tag].SetDefaults(0);
+                _player.PiggyBank[tag].SetDefaults(0);
             }
-            else if (tag < 80)
+            else if (tag < _player.PiggyBank.Length + _player.Safe.Length)
             {
-                player.Safe[tag - 40].SetDefaults(0);
+                _player.Safe[tag - _player.PiggyBank.Length].SetDefaults(0);
             }
             else
             {
-                player.Forge[tag - 80].SetDefaults(0);
+                _player.Forge[tag - (_player.PiggyBank.Length + _player.Safe.Length)].SetDefaults(0);
             }
 
             _selectedStorageButton.Image = new Bitmap("Data\\ItemTextures\\Item_0.png");
@@ -192,23 +197,22 @@ namespace TerrariaInventoryEditor.Forms
 
         private void buttonEditHair_Click(object sender, EventArgs e)
         {
-            var player = Terraria.Instance.Player;
-            using (var hairDesignerDialog = new HairDesignerForm(player.Hair, player.HairColor))
+            using (var hairDesignerDialog = new HairDesignerForm(_player.Hair, _player.HairColor))
             {
                 if (hairDesignerDialog.ShowDialog() != DialogResult.OK)
                 {
                     return;
                 }
 
-                player.Hair = hairDesignerDialog.HairId - 1;
-                player.HairColor = hairDesignerDialog.HairColor;
+                _player.Hair = hairDesignerDialog.HairId - 1;
+                _player.HairColor = hairDesignerDialog.HairColor;
                 playerPictureBox.Draw();
             }
         }
 
         private void buttonMaxAllBuffs_Click(object sender, EventArgs e)
         {
-            foreach (var buff in Terraria.Instance.Player.Buffs.Where(b => b.Id != 0))
+            foreach (var buff in _player.Buffs.Where(b => b.Id != 0))
             {
                 buff.Time = int.MaxValue;
             }
@@ -218,15 +222,14 @@ namespace TerrariaInventoryEditor.Forms
 
         private void buttonMaxAllStacks_Click(object sender, EventArgs e)
         {
-            var player = Terraria.Instance.Player;
             foreach (var item in _inventoryItems)
             {
-                if (player.Inventory[(int) item.Tag].NetId == 0)
+                if (_player.Inventory[(int) item.Tag].NetId == 0)
                 {
                     continue;
                 }
 
-                player.Inventory[(int) item.Tag].StackSize = player.Inventory[(int) item.Tag].MaxStack;
+                _player.Inventory[(int) item.Tag].StackSize = _player.Inventory[(int) item.Tag].MaxStack;
             }
 
             DrawInventory();
@@ -234,15 +237,14 @@ namespace TerrariaInventoryEditor.Forms
 
         private void buttonMaxBuff_Click(object sender, EventArgs e)
         {
-            Terraria.Instance.Player.Buffs[gridViewBuffs.CurrentCell.RowIndex].Time = int.MaxValue;
+            _player.Buffs[gridViewBuffs.CurrentCell.RowIndex].Time = int.MaxValue;
             gridViewBuffs.Refresh();
         }
 
         private void buttonMaxOut_Click(object sender, EventArgs e)
         {
-            var player = Terraria.Instance.Player;
-            player.Health = player.MaxHealth = 500;
-            player.Mana = player.MaxMana = 200;
+            _player.Health = _player.MaxHealth = 500;
+            _player.Mana = _player.MaxMana = 200;
         }
 
         private void buttonMaxStack_Click(object sender, EventArgs e)
@@ -252,44 +254,40 @@ namespace TerrariaInventoryEditor.Forms
                 return;
             }
 
-            var player = Terraria.Instance.Player;
-            if (player.Inventory[(int) _selectedItem.Tag].NetId == 0)
+            if (_player.Inventory[(int) _selectedItem.Tag].NetId == 0)
             {
                 return;
             }
 
-            player.Inventory[(int) _selectedItem.Tag].StackSize = player.Inventory[(int) _selectedItem.Tag].MaxStack;
-            _selectedItem.Text = player.Inventory[(int) _selectedItem.Tag].StackSize.ToString();
+            _player.Inventory[(int) _selectedItem.Tag].StackSize = _player.Inventory[(int) _selectedItem.Tag].MaxStack;
+            _selectedItem.Text = _player.Inventory[(int) _selectedItem.Tag].StackSize.ToString();
         }
 
         private void buttonRandomColors_Click(object sender, EventArgs e)
         {
-            var player = Terraria.Instance.Player;
-            player.EyeColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-            player.HairColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-            player.PantsColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-            player.ShirtColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-            player.ShoeColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-            player.SkinColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
-            player.UndershirtColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            _player.EyeColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            _player.HairColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            _player.PantsColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            _player.ShirtColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            _player.ShoeColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            _player.SkinColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            _player.UndershirtColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
 
             playerPictureBox.Draw();
         }
 
         private void buttonRandomHair_Click(object sender, EventArgs e)
         {
-            var player = Terraria.Instance.Player;
-            player.Hair = _random.Next(134);
-            player.HairColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
+            _player.Hair = _random.Next(134);
+            _player.HairColor = Color.FromArgb(_random.Next(256), _random.Next(256), _random.Next(256));
 
             playerPictureBox.Draw();
         }
 
         private void buttonResetDefaults_Click(object sender, EventArgs e)
         {
-            var player = Terraria.Instance.Player;
-            player.Health = player.MaxHealth = 100;
-            player.Mana = player.MaxMana = 20;
+            _player.Health = _player.MaxHealth = 100;
+            _player.Mana = _player.MaxMana = 20;
         }
 
         private void comboBoxItemPrefix_SelectedIndexChanged(object sender, EventArgs e)
@@ -299,60 +297,57 @@ namespace TerrariaInventoryEditor.Forms
                 return;
             }
 
-            var player = Terraria.Instance.Player;
-            if (player.Inventory[(int) _selectedItem.Tag].NetId == 0)
+            if (_player.Inventory[(int) _selectedItem.Tag].NetId == 0)
             {
                 return;
             }
 
-            player.Inventory[(int) _selectedItem.Tag].Prefix = (ItemPrefix) comboBoxItemPrefix.SelectedItem;
+            _player.Inventory[(int) _selectedItem.Tag].Prefix = (ItemPrefix) comboBoxItemPrefix.SelectedItem;
         }
 
         private void DrawEquipment()
         {
-            var player = Terraria.Instance.Player;
-            for (var i = 0; i < player.Armor.Length - 2; ++i) // TODO: Temporarily unsupported hidden accessory slots
+            for (var i = 0; i < _player.Armor.Length - 2; ++i) // TODO: Temporarily unsupported hidden accessory slots
             {
-                if (i < player.Dye.Length - 1)
+                if (i < _player.Dye.Length - 1)
                 {
-                    _dyeItems[i].Image = player.Dye[(int) _dyeItems[i].Tag].Image;
+                    _dyeItems[i].Image = _player.Dye[(int) _dyeItems[i].Tag].Image;
                 }
 
-                _equipmentItems[i].Image = player.Armor[(int) _equipmentItems[i].Tag].Image;
+                _equipmentItems[i].Image = _player.Armor[(int) _equipmentItems[i].Tag].Image;
             }
         }
 
         private void DrawInventory()
         {
-            var player = Terraria.Instance.Player;
-            for (var i = 0; i < player.Inventory.Length; ++i)
+            for (var i = 0; i < _player.Inventory.Length; ++i)
             {
                 var item = _inventoryItems[i];
-                item.Image = player.Inventory[i].Image;
-                item.Text = player.Inventory[i].StackSize.ToString();
+                item.Image = _player.Inventory[i].Image;
+                item.Text = _player.Inventory[i].StackSize.ToString();
             }
         }
 
         private void DrawStorage()
         {
-            var player = Terraria.Instance.Player;
-            for (var i = 0; i < player.PiggyBank.Length + player.Safe.Length + player.Forge.Length; ++i)
+            for (var i = 0; i < _player.PiggyBank.Length + _player.Safe.Length + _player.Forge.Length; ++i)
             {
                 var item = _storageItems[i];
-                if (i < player.PiggyBank.Length)
+                if (i < _player.PiggyBank.Length)
                 {
-                    item.Image = player.PiggyBank[i].Image;
-                    item.Text = player.PiggyBank[i].StackSize.ToString();
+                    item.Image = _player.PiggyBank[i].Image;
+                    item.Text = _player.PiggyBank[i].StackSize.ToString();
                 }
-                else if (i < player.PiggyBank.Length + player.Safe.Length)
+                else if (i < _player.PiggyBank.Length + _player.Safe.Length)
                 {
-                    item.Image = player.Safe[i - player.PiggyBank.Length].Image;
-                    item.Text = player.Safe[i - player.PiggyBank.Length].StackSize.ToString();
+                    item.Image = _player.Safe[i - _player.PiggyBank.Length].Image;
+                    item.Text = _player.Safe[i - _player.PiggyBank.Length].StackSize.ToString();
                 }
                 else
                 {
-                    item.Image = player.Forge[i - (player.PiggyBank.Length + player.Safe.Length)].Image;
-                    item.Text = player.Forge[i - (player.PiggyBank.Length + player.Safe.Length)].StackSize.ToString();
+                    item.Image = _player.Forge[i - (_player.PiggyBank.Length + _player.Safe.Length)].Image;
+                    item.Text = _player.Forge[i - (_player.PiggyBank.Length + _player.Safe.Length)].StackSize
+                        .ToString();
                 }
             }
         }
@@ -360,6 +355,7 @@ namespace TerrariaInventoryEditor.Forms
         private void equipmentItem_GotFocus(object sender, EventArgs e)
         {
             var button = (Button) sender;
+
             button.BackColor = Color.FromArgb(0, 171, 229);
             foreach (var equipmentButton in _equipmentItems.Concat(_dyeItems).Where(b => b != button))
             {
@@ -385,15 +381,13 @@ namespace TerrariaInventoryEditor.Forms
             {
                 return;
             }
-
-            var player = Terraria.Instance.Player;
             if (_dyeItems.Contains(button))
             {
-                player.Dye[(int) button.Tag].SetDefaults(0);
+                _player.Dye[(int) button.Tag].SetDefaults(0);
             }
             else
             {
-                player.Armor[(int) button.Tag].SetDefaults(0);
+                _player.Armor[(int) button.Tag].SetDefaults(0);
             }
 
             button.Image = new Bitmap("Data\\ItemTextures\\Item_0.png");
@@ -401,7 +395,6 @@ namespace TerrariaInventoryEditor.Forms
 
         private void inventoryItem_GotFocus(object sender, EventArgs e)
         {
-            var player = Terraria.Instance.Player;
             var button = (Button) sender;
 
             button.BackColor = Color.FromArgb(0, 171, 229);
@@ -411,15 +404,14 @@ namespace TerrariaInventoryEditor.Forms
             }
 
             _selectedItem = button;
-            comboBoxItemPrefix.SelectedItem = player.Inventory[(int) button.Tag].Prefix;
-            upDownStackSize.Value = player.Inventory[(int) button.Tag].StackSize > 0
-                ? player.Inventory[(int) button.Tag].StackSize
+            comboBoxItemPrefix.SelectedItem = _player.Inventory[(int) button.Tag].Prefix;
+            upDownStackSize.Value = _player.Inventory[(int) button.Tag].StackSize > 0
+                ? _player.Inventory[(int) button.Tag].StackSize
                 : 1;
         }
 
         private void itemFilterInventory_SelectedItemIndexChanged(object sender, EventArgs e)
         {
-            var player = Terraria.Instance.Player;
             if (_selectedItem == null)
             {
                 return;
@@ -427,12 +419,11 @@ namespace TerrariaInventoryEditor.Forms
 
             _selectedItem.Text = itemFilterInventory.SelectedItem.StackSize.ToString();
             _selectedItem.Image = itemFilterInventory.SelectedItem.Image;
-            player.Inventory[(int) _selectedItem.Tag].SetDefaults(itemFilterInventory.SelectedItem.NetId);
+            _player.Inventory[(int) _selectedItem.Tag].SetDefaults(itemFilterInventory.SelectedItem.NetId);
         }
 
         private void itemFilterStorage_SelectedItemIndexChanged(object sender, EventArgs e)
         {
-            var player = Terraria.Instance.Player;
             if (_selectedStorageButton == null)
             {
                 return;
@@ -444,15 +435,15 @@ namespace TerrariaInventoryEditor.Forms
             var tag = (int) _selectedStorageButton.Tag;
             if (tag < 40)
             {
-                player.PiggyBank[tag].SetDefaults(itemFilterStorage.SelectedItem.NetId);
+                _player.PiggyBank[tag].SetDefaults(itemFilterStorage.SelectedItem.NetId);
             }
             else if (tag < 80)
             {
-                player.Safe[tag - 40].SetDefaults(itemFilterStorage.SelectedItem.NetId);
+                _player.Safe[tag - 40].SetDefaults(itemFilterStorage.SelectedItem.NetId);
             }
             else
             {
-                player.Forge[tag - 80].SetDefaults(itemFilterStorage.SelectedItem.NetId);
+                _player.Forge[tag - 80].SetDefaults(itemFilterStorage.SelectedItem.NetId);
             }
         }
 
@@ -463,10 +454,10 @@ namespace TerrariaInventoryEditor.Forms
                 return;
             }
 
-            var player = Terraria.Instance.Player;
+            var buffIndex = gridViewBuffs.CurrentCell.RowIndex;
             var selectedBuff = (Buff) listBoxBuffs.SelectedItem;
-            player.Buffs[gridViewBuffs.CurrentCell.RowIndex].SetDefaults(selectedBuff.Id);
-            player.Buffs[gridViewBuffs.CurrentCell.RowIndex].Time = int.MaxValue;
+            _player.Buffs[buffIndex].SetDefaults(selectedBuff.Id);
+            _player.Buffs[buffIndex].Time = int.MaxValue;
         }
 
         private void listBoxEquips_SelectedIndexChanged(object sender, EventArgs e)
@@ -476,19 +467,17 @@ namespace TerrariaInventoryEditor.Forms
                 return;
             }
 
-            var player = Terraria.Instance.Player;
             var selectedItem = (Item) listBoxEquips.SelectedItem;
-
             if (_dyeItems.Contains(_selectedEquip))
             {
-                player.Dye[(int) _selectedEquip.Tag].SetDefaults(selectedItem.NetId);
+                _player.Dye[(int) _selectedEquip.Tag].SetDefaults(selectedItem.NetId);
             }
             else
             {
-                player.Armor[(int) _selectedEquip.Tag].SetDefaults(selectedItem.NetId);
+                _player.Armor[(int) _selectedEquip.Tag].SetDefaults(selectedItem.NetId);
             }
 
-            _selectedEquip.Image = player.Armor[(int) _selectedEquip.Tag].Image;
+            _selectedEquip.Image = _player.Armor[(int) _selectedEquip.Tag].Image;
         }
 
         private void pictureBox_Click(object sender, EventArgs e)
@@ -525,6 +514,7 @@ namespace TerrariaInventoryEditor.Forms
         private void storageItem_GotFocus(object sender, EventArgs e)
         {
             var button = (Button) sender;
+
             button.BackColor = Color.FromArgb(0, 171, 229);
             foreach (var storageButton in _storageItems.Where(b => b != button))
             {
@@ -565,7 +555,6 @@ namespace TerrariaInventoryEditor.Forms
         {
             listBoxBuffs.SelectedIndexChanged -= listBoxBuffs_SelectedIndexChanged;
 
-            var buffs = Terraria.Instance.Buffs;
             if (string.IsNullOrWhiteSpace(textBoxBuffName.Text))
             {
                 listBoxBuffs.DataSource = Terraria.Instance.Buffs;
@@ -592,7 +581,7 @@ namespace TerrariaInventoryEditor.Forms
 
         private void toolstripMenuItemNew_Click(object sender, EventArgs e)
         {
-            playerBindingSource.DataSource = Terraria.Instance.Player = new Player();
+            playerBindingSource.DataSource = _player = new Player();
             RedrawTextures();
         }
 
@@ -611,7 +600,7 @@ namespace TerrariaInventoryEditor.Forms
                     return;
                 }
 
-                Terraria.Instance.Player.Load(openFileDialog.FileName);
+                _player.Load(openFileDialog.FileName);
             }
 
             RedrawTextures();
@@ -619,10 +608,10 @@ namespace TerrariaInventoryEditor.Forms
 
         private void toolstripMenuItemSave_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(Terraria.Instance.Player.FilePath))
+            if (!string.IsNullOrWhiteSpace(_player.FilePath))
             {
-                Terraria.Instance.Player.Save(Terraria.Instance.Player.FilePath);
-                MessageBox.Show($"Player file saved! Path: {Terraria.Instance.Player.FilePath}",
+                _player.Save(_player.FilePath);
+                MessageBox.Show($"Player file saved! Path: {_player.FilePath}",
                     "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
@@ -637,7 +626,7 @@ namespace TerrariaInventoryEditor.Forms
             {
                 saveFileDialog.AddExtension = true;
                 saveFileDialog.DefaultExt = "plr";
-                saveFileDialog.FileName = Terraria.Instance.Player.Name;
+                saveFileDialog.FileName = _player.Name;
                 saveFileDialog.Filter = "Terraria Player File (*.plr)|*.plr";
 
                 if (saveFileDialog.ShowDialog() != DialogResult.OK)
@@ -647,8 +636,8 @@ namespace TerrariaInventoryEditor.Forms
                     return;
                 }
 
-                Terraria.Instance.Player.FilePath = saveFileDialog.FileName;
-                Terraria.Instance.Player.Save(saveFileDialog.FileName);
+                _player.FilePath = saveFileDialog.FileName;
+                _player.Save(saveFileDialog.FileName);
             }
         }
 
@@ -659,14 +648,13 @@ namespace TerrariaInventoryEditor.Forms
                 return;
             }
 
-            var player = Terraria.Instance.Player;
-            if (player.Inventory[(int) _selectedItem.Tag].NetId == 0)
+            if (_player.Inventory[(int) _selectedItem.Tag].NetId == 0)
             {
                 return;
             }
 
-            player.Inventory[(int) _selectedItem.Tag].StackSize = (int) upDownStackSize.Value;
-            _selectedItem.Text = player.Inventory[(int) _selectedItem.Tag].StackSize.ToString();
+            _player.Inventory[(int) _selectedItem.Tag].StackSize = (int) upDownStackSize.Value;
+            _selectedItem.Text = _player.Inventory[(int) _selectedItem.Tag].StackSize.ToString();
         }
     }
 }

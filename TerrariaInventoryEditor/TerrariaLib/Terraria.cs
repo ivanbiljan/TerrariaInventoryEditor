@@ -43,10 +43,5 @@ namespace TerrariaInventoryEditor.TerrariaLib
         ///     Gets the list of items.
         /// </summary>
         public List<Item> Items { get; }
-
-        /// <summary>
-        ///     Gets the player instance that's being edited.
-        /// </summary>
-        public Player Player { get; set; } = new Player();
     }
 }
