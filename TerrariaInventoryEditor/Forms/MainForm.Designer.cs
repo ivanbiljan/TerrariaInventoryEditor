@@ -146,7 +146,7 @@
             this.inventoryItem52 = new System.Windows.Forms.Button();
             this.inventoryItem51 = new System.Windows.Forms.Button();
             this.inventoryItem50 = new System.Windows.Forms.Button();
-            this.itemPropertiesGroupBox = new System.Windows.Forms.GroupBox();
+            this.groupBoxItemProperties = new System.Windows.Forms.GroupBox();
             this.buttonDeleteAllItems = new System.Windows.Forms.Button();
             this.buttonDeleteItem = new System.Windows.Forms.Button();
             this.buttonMaxAllStacks = new System.Windows.Forms.Button();
@@ -209,117 +209,117 @@
             this.inventoryItem0 = new System.Windows.Forms.Button();
             this.tabPageStorage = new System.Windows.Forms.TabPage();
             this.groupBoxForge = new System.Windows.Forms.GroupBox();
-            this.button108 = new System.Windows.Forms.Button();
-            this.button109 = new System.Windows.Forms.Button();
-            this.button110 = new System.Windows.Forms.Button();
-            this.button111 = new System.Windows.Forms.Button();
-            this.button112 = new System.Windows.Forms.Button();
-            this.button113 = new System.Windows.Forms.Button();
-            this.button114 = new System.Windows.Forms.Button();
-            this.button115 = new System.Windows.Forms.Button();
-            this.button116 = new System.Windows.Forms.Button();
-            this.button117 = new System.Windows.Forms.Button();
-            this.button98 = new System.Windows.Forms.Button();
-            this.button99 = new System.Windows.Forms.Button();
-            this.button100 = new System.Windows.Forms.Button();
-            this.button101 = new System.Windows.Forms.Button();
-            this.button102 = new System.Windows.Forms.Button();
-            this.button103 = new System.Windows.Forms.Button();
-            this.button104 = new System.Windows.Forms.Button();
-            this.button105 = new System.Windows.Forms.Button();
-            this.button106 = new System.Windows.Forms.Button();
-            this.button107 = new System.Windows.Forms.Button();
-            this.button88 = new System.Windows.Forms.Button();
-            this.button89 = new System.Windows.Forms.Button();
-            this.button90 = new System.Windows.Forms.Button();
-            this.button91 = new System.Windows.Forms.Button();
-            this.button92 = new System.Windows.Forms.Button();
-            this.button93 = new System.Windows.Forms.Button();
-            this.button94 = new System.Windows.Forms.Button();
-            this.button95 = new System.Windows.Forms.Button();
-            this.button96 = new System.Windows.Forms.Button();
-            this.button97 = new System.Windows.Forms.Button();
-            this.button87 = new System.Windows.Forms.Button();
-            this.button86 = new System.Windows.Forms.Button();
-            this.button85 = new System.Windows.Forms.Button();
-            this.button84 = new System.Windows.Forms.Button();
-            this.button83 = new System.Windows.Forms.Button();
-            this.button82 = new System.Windows.Forms.Button();
-            this.button81 = new System.Windows.Forms.Button();
-            this.button80 = new System.Windows.Forms.Button();
-            this.button79 = new System.Windows.Forms.Button();
-            this.button78 = new System.Windows.Forms.Button();
+            this.storageItem119 = new System.Windows.Forms.Button();
+            this.storageItem118 = new System.Windows.Forms.Button();
+            this.storageItem117 = new System.Windows.Forms.Button();
+            this.storageItem116 = new System.Windows.Forms.Button();
+            this.storageItem115 = new System.Windows.Forms.Button();
+            this.storageItem114 = new System.Windows.Forms.Button();
+            this.storageItem113 = new System.Windows.Forms.Button();
+            this.storageItem112 = new System.Windows.Forms.Button();
+            this.storageItem111 = new System.Windows.Forms.Button();
+            this.storageItem110 = new System.Windows.Forms.Button();
+            this.storageItem109 = new System.Windows.Forms.Button();
+            this.storageItem108 = new System.Windows.Forms.Button();
+            this.storageItem107 = new System.Windows.Forms.Button();
+            this.storageItem106 = new System.Windows.Forms.Button();
+            this.storageItem105 = new System.Windows.Forms.Button();
+            this.storageItem104 = new System.Windows.Forms.Button();
+            this.storageItem103 = new System.Windows.Forms.Button();
+            this.storageItem102 = new System.Windows.Forms.Button();
+            this.storageItem101 = new System.Windows.Forms.Button();
+            this.storageItem100 = new System.Windows.Forms.Button();
+            this.storageItem99 = new System.Windows.Forms.Button();
+            this.storageItem98 = new System.Windows.Forms.Button();
+            this.storageItem97 = new System.Windows.Forms.Button();
+            this.storageItem96 = new System.Windows.Forms.Button();
+            this.storageItem95 = new System.Windows.Forms.Button();
+            this.storageItem94 = new System.Windows.Forms.Button();
+            this.storageItem93 = new System.Windows.Forms.Button();
+            this.storageItem92 = new System.Windows.Forms.Button();
+            this.storageItem91 = new System.Windows.Forms.Button();
+            this.storageItem90 = new System.Windows.Forms.Button();
+            this.storageItem89 = new System.Windows.Forms.Button();
+            this.storageItem88 = new System.Windows.Forms.Button();
+            this.storageItem87 = new System.Windows.Forms.Button();
+            this.storageItem86 = new System.Windows.Forms.Button();
+            this.storageItem85 = new System.Windows.Forms.Button();
+            this.storageItem84 = new System.Windows.Forms.Button();
+            this.storageItem83 = new System.Windows.Forms.Button();
+            this.storageItem82 = new System.Windows.Forms.Button();
+            this.storageItem81 = new System.Windows.Forms.Button();
+            this.storageItem80 = new System.Windows.Forms.Button();
             this.groupBoxSafe = new System.Windows.Forms.GroupBox();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
-            this.button42 = new System.Windows.Forms.Button();
-            this.button43 = new System.Windows.Forms.Button();
-            this.button44 = new System.Windows.Forms.Button();
-            this.button45 = new System.Windows.Forms.Button();
-            this.button46 = new System.Windows.Forms.Button();
-            this.button47 = new System.Windows.Forms.Button();
-            this.button48 = new System.Windows.Forms.Button();
-            this.button49 = new System.Windows.Forms.Button();
-            this.button50 = new System.Windows.Forms.Button();
-            this.button51 = new System.Windows.Forms.Button();
-            this.button52 = new System.Windows.Forms.Button();
-            this.button53 = new System.Windows.Forms.Button();
-            this.button54 = new System.Windows.Forms.Button();
-            this.button55 = new System.Windows.Forms.Button();
-            this.button56 = new System.Windows.Forms.Button();
-            this.button57 = new System.Windows.Forms.Button();
-            this.button58 = new System.Windows.Forms.Button();
-            this.button59 = new System.Windows.Forms.Button();
-            this.button60 = new System.Windows.Forms.Button();
-            this.button61 = new System.Windows.Forms.Button();
-            this.button62 = new System.Windows.Forms.Button();
-            this.button63 = new System.Windows.Forms.Button();
-            this.button64 = new System.Windows.Forms.Button();
-            this.button65 = new System.Windows.Forms.Button();
-            this.button66 = new System.Windows.Forms.Button();
-            this.button67 = new System.Windows.Forms.Button();
-            this.button68 = new System.Windows.Forms.Button();
-            this.button69 = new System.Windows.Forms.Button();
-            this.button70 = new System.Windows.Forms.Button();
-            this.button71 = new System.Windows.Forms.Button();
-            this.button72 = new System.Windows.Forms.Button();
-            this.button73 = new System.Windows.Forms.Button();
-            this.button74 = new System.Windows.Forms.Button();
-            this.button75 = new System.Windows.Forms.Button();
-            this.button76 = new System.Windows.Forms.Button();
-            this.button77 = new System.Windows.Forms.Button();
+            this.storageItem79 = new System.Windows.Forms.Button();
+            this.storageItem78 = new System.Windows.Forms.Button();
+            this.storageItem77 = new System.Windows.Forms.Button();
+            this.storageItem76 = new System.Windows.Forms.Button();
+            this.storageItem75 = new System.Windows.Forms.Button();
+            this.storageItem74 = new System.Windows.Forms.Button();
+            this.storageItem73 = new System.Windows.Forms.Button();
+            this.storageItem72 = new System.Windows.Forms.Button();
+            this.storageItem71 = new System.Windows.Forms.Button();
+            this.storageItem70 = new System.Windows.Forms.Button();
+            this.storageItem69 = new System.Windows.Forms.Button();
+            this.storageItem68 = new System.Windows.Forms.Button();
+            this.storageItem67 = new System.Windows.Forms.Button();
+            this.storageItem66 = new System.Windows.Forms.Button();
+            this.storageItem65 = new System.Windows.Forms.Button();
+            this.storageItem64 = new System.Windows.Forms.Button();
+            this.storageItem63 = new System.Windows.Forms.Button();
+            this.storageItem62 = new System.Windows.Forms.Button();
+            this.storageItem61 = new System.Windows.Forms.Button();
+            this.storageItem60 = new System.Windows.Forms.Button();
+            this.storageItem59 = new System.Windows.Forms.Button();
+            this.storageItem58 = new System.Windows.Forms.Button();
+            this.storageItem57 = new System.Windows.Forms.Button();
+            this.storageItem56 = new System.Windows.Forms.Button();
+            this.storageItem55 = new System.Windows.Forms.Button();
+            this.storageItem54 = new System.Windows.Forms.Button();
+            this.storageItem53 = new System.Windows.Forms.Button();
+            this.storageItem52 = new System.Windows.Forms.Button();
+            this.storageItem51 = new System.Windows.Forms.Button();
+            this.storageItem50 = new System.Windows.Forms.Button();
+            this.storageItem49 = new System.Windows.Forms.Button();
+            this.storageItem48 = new System.Windows.Forms.Button();
+            this.storageItem47 = new System.Windows.Forms.Button();
+            this.storageItem46 = new System.Windows.Forms.Button();
+            this.storageItem45 = new System.Windows.Forms.Button();
+            this.storageItem44 = new System.Windows.Forms.Button();
+            this.storageItem43 = new System.Windows.Forms.Button();
+            this.storageItem42 = new System.Windows.Forms.Button();
+            this.storageItem41 = new System.Windows.Forms.Button();
+            this.storageItem40 = new System.Windows.Forms.Button();
             this.groupBoxPiggyItems = new System.Windows.Forms.GroupBox();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.storageItem39 = new System.Windows.Forms.Button();
+            this.storageItem38 = new System.Windows.Forms.Button();
+            this.storageItem37 = new System.Windows.Forms.Button();
+            this.storageItem36 = new System.Windows.Forms.Button();
+            this.storageItem35 = new System.Windows.Forms.Button();
+            this.storageItem34 = new System.Windows.Forms.Button();
+            this.storageItem33 = new System.Windows.Forms.Button();
+            this.storageItem32 = new System.Windows.Forms.Button();
+            this.storageItem31 = new System.Windows.Forms.Button();
+            this.storageItem30 = new System.Windows.Forms.Button();
+            this.storageItem29 = new System.Windows.Forms.Button();
+            this.storageItem28 = new System.Windows.Forms.Button();
+            this.storageItem27 = new System.Windows.Forms.Button();
+            this.storageItem26 = new System.Windows.Forms.Button();
+            this.storageItem25 = new System.Windows.Forms.Button();
+            this.storageItem24 = new System.Windows.Forms.Button();
+            this.storageItem23 = new System.Windows.Forms.Button();
+            this.storageItem22 = new System.Windows.Forms.Button();
+            this.storageItem21 = new System.Windows.Forms.Button();
+            this.storageItem20 = new System.Windows.Forms.Button();
+            this.storageItem19 = new System.Windows.Forms.Button();
+            this.storageItem18 = new System.Windows.Forms.Button();
+            this.storageItem17 = new System.Windows.Forms.Button();
+            this.storageItem16 = new System.Windows.Forms.Button();
+            this.storageItem15 = new System.Windows.Forms.Button();
+            this.storageItem14 = new System.Windows.Forms.Button();
+            this.storageItem13 = new System.Windows.Forms.Button();
+            this.storageItem12 = new System.Windows.Forms.Button();
+            this.storageItem11 = new System.Windows.Forms.Button();
             this.storageItem10 = new System.Windows.Forms.Button();
             this.storageItem9 = new System.Windows.Forms.Button();
             this.storageItem8 = new System.Windows.Forms.Button();
@@ -331,7 +331,7 @@
             this.storageItem2 = new System.Windows.Forms.Button();
             this.storageItem1 = new System.Windows.Forms.Button();
             this.storageItem0 = new System.Windows.Forms.Button();
-            this.itemFilterControl1 = new TerrariaInventoryEditor.Framework.ItemFilterControl();
+            this.itemFilterStorage = new TerrariaInventoryEditor.Framework.ItemFilterControl();
             this.hairClrPictureBox = new System.Windows.Forms.PictureBox();
             this.hairColorLbl = new System.Windows.Forms.Label();
             this.eyeClrPictureBox = new System.Windows.Forms.PictureBox();
@@ -349,6 +349,8 @@
             this.pantsClrPictureBox = new System.Windows.Forms.PictureBox();
             this.shirtColorLbl = new System.Windows.Forms.Label();
             this.shoeClrPictureBox = new System.Windows.Forms.PictureBox();
+            this.buttonDeleteStorageItem = new System.Windows.Forms.Button();
+            this.buttonDeleteAllStorageItems = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.statsTab.SuspendLayout();
@@ -374,7 +376,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewBuffs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buffsBindingSource)).BeginInit();
             this.inventoryTab.SuspendLayout();
-            this.itemPropertiesGroupBox.SuspendLayout();
+            this.groupBoxItemProperties.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownStackSize)).BeginInit();
             this.inventoryFilterGroupBox.SuspendLayout();
             this.tabPageStorage.SuspendLayout();
@@ -1460,7 +1462,7 @@
             this.playerPictureBox.PantsColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(175)))));
             this.playerPictureBox.ShirtColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(165)))), ((int)(((byte)(140)))));
             this.playerPictureBox.ShoeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(105)))), ((int)(((byte)(60)))));
-            this.playerPictureBox.Size = new System.Drawing.Size(135, 204);
+            this.playerPictureBox.Size = new System.Drawing.Size(135, 213);
             this.playerPictureBox.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(90)))));
             this.playerPictureBox.SkinVariant = 0;
             this.playerPictureBox.TabIndex = 0;
@@ -1696,7 +1698,7 @@
             this.inventoryTab.Controls.Add(this.inventoryItem52);
             this.inventoryTab.Controls.Add(this.inventoryItem51);
             this.inventoryTab.Controls.Add(this.inventoryItem50);
-            this.inventoryTab.Controls.Add(this.itemPropertiesGroupBox);
+            this.inventoryTab.Controls.Add(this.groupBoxItemProperties);
             this.inventoryTab.Controls.Add(this.inventoryFilterGroupBox);
             this.inventoryTab.Controls.Add(this.inventoryItem49);
             this.inventoryTab.Controls.Add(this.inventoryItem48);
@@ -1880,23 +1882,23 @@
             this.inventoryItem50.UseVisualStyleBackColor = false;
             this.inventoryItem50.Enter += new System.EventHandler(this.inventoryItem_GotFocus);
             // 
-            // itemPropertiesGroupBox
+            // groupBoxItemProperties
             // 
-            this.itemPropertiesGroupBox.Controls.Add(this.buttonDeleteAllItems);
-            this.itemPropertiesGroupBox.Controls.Add(this.buttonDeleteItem);
-            this.itemPropertiesGroupBox.Controls.Add(this.buttonMaxAllStacks);
-            this.itemPropertiesGroupBox.Controls.Add(this.buttonMaxStack);
-            this.itemPropertiesGroupBox.Controls.Add(this.upDownStackSize);
-            this.itemPropertiesGroupBox.Controls.Add(this.stackSizeLbl);
-            this.itemPropertiesGroupBox.Controls.Add(this.comboBoxItemPrefix);
-            this.itemPropertiesGroupBox.Controls.Add(this.itemPrefixLbl);
-            this.itemPropertiesGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemPropertiesGroupBox.Location = new System.Drawing.Point(217, 272);
-            this.itemPropertiesGroupBox.Name = "itemPropertiesGroupBox";
-            this.itemPropertiesGroupBox.Size = new System.Drawing.Size(524, 157);
-            this.itemPropertiesGroupBox.TabIndex = 52;
-            this.itemPropertiesGroupBox.TabStop = false;
-            this.itemPropertiesGroupBox.Text = "Item Properties";
+            this.groupBoxItemProperties.Controls.Add(this.buttonDeleteAllItems);
+            this.groupBoxItemProperties.Controls.Add(this.buttonDeleteItem);
+            this.groupBoxItemProperties.Controls.Add(this.buttonMaxAllStacks);
+            this.groupBoxItemProperties.Controls.Add(this.buttonMaxStack);
+            this.groupBoxItemProperties.Controls.Add(this.upDownStackSize);
+            this.groupBoxItemProperties.Controls.Add(this.stackSizeLbl);
+            this.groupBoxItemProperties.Controls.Add(this.comboBoxItemPrefix);
+            this.groupBoxItemProperties.Controls.Add(this.itemPrefixLbl);
+            this.groupBoxItemProperties.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxItemProperties.Location = new System.Drawing.Point(217, 272);
+            this.groupBoxItemProperties.Name = "groupBoxItemProperties";
+            this.groupBoxItemProperties.Size = new System.Drawing.Size(524, 157);
+            this.groupBoxItemProperties.TabIndex = 52;
+            this.groupBoxItemProperties.TabStop = false;
+            this.groupBoxItemProperties.Text = "Properties";
             // 
             // buttonDeleteAllItems
             // 
@@ -2717,10 +2719,12 @@
             // 
             // tabPageStorage
             // 
+            this.tabPageStorage.Controls.Add(this.buttonDeleteAllStorageItems);
+            this.tabPageStorage.Controls.Add(this.buttonDeleteStorageItem);
             this.tabPageStorage.Controls.Add(this.groupBoxForge);
             this.tabPageStorage.Controls.Add(this.groupBoxSafe);
             this.tabPageStorage.Controls.Add(this.groupBoxPiggyItems);
-            this.tabPageStorage.Controls.Add(this.itemFilterControl1);
+            this.tabPageStorage.Controls.Add(this.itemFilterStorage);
             this.tabPageStorage.Location = new System.Drawing.Point(4, 22);
             this.tabPageStorage.Name = "tabPageStorage";
             this.tabPageStorage.Padding = new System.Windows.Forms.Padding(3);
@@ -2731,46 +2735,46 @@
             // 
             // groupBoxForge
             // 
-            this.groupBoxForge.Controls.Add(this.button108);
-            this.groupBoxForge.Controls.Add(this.button109);
-            this.groupBoxForge.Controls.Add(this.button110);
-            this.groupBoxForge.Controls.Add(this.button111);
-            this.groupBoxForge.Controls.Add(this.button112);
-            this.groupBoxForge.Controls.Add(this.button113);
-            this.groupBoxForge.Controls.Add(this.button114);
-            this.groupBoxForge.Controls.Add(this.button115);
-            this.groupBoxForge.Controls.Add(this.button116);
-            this.groupBoxForge.Controls.Add(this.button117);
-            this.groupBoxForge.Controls.Add(this.button98);
-            this.groupBoxForge.Controls.Add(this.button99);
-            this.groupBoxForge.Controls.Add(this.button100);
-            this.groupBoxForge.Controls.Add(this.button101);
-            this.groupBoxForge.Controls.Add(this.button102);
-            this.groupBoxForge.Controls.Add(this.button103);
-            this.groupBoxForge.Controls.Add(this.button104);
-            this.groupBoxForge.Controls.Add(this.button105);
-            this.groupBoxForge.Controls.Add(this.button106);
-            this.groupBoxForge.Controls.Add(this.button107);
-            this.groupBoxForge.Controls.Add(this.button88);
-            this.groupBoxForge.Controls.Add(this.button89);
-            this.groupBoxForge.Controls.Add(this.button90);
-            this.groupBoxForge.Controls.Add(this.button91);
-            this.groupBoxForge.Controls.Add(this.button92);
-            this.groupBoxForge.Controls.Add(this.button93);
-            this.groupBoxForge.Controls.Add(this.button94);
-            this.groupBoxForge.Controls.Add(this.button95);
-            this.groupBoxForge.Controls.Add(this.button96);
-            this.groupBoxForge.Controls.Add(this.button97);
-            this.groupBoxForge.Controls.Add(this.button87);
-            this.groupBoxForge.Controls.Add(this.button86);
-            this.groupBoxForge.Controls.Add(this.button85);
-            this.groupBoxForge.Controls.Add(this.button84);
-            this.groupBoxForge.Controls.Add(this.button83);
-            this.groupBoxForge.Controls.Add(this.button82);
-            this.groupBoxForge.Controls.Add(this.button81);
-            this.groupBoxForge.Controls.Add(this.button80);
-            this.groupBoxForge.Controls.Add(this.button79);
-            this.groupBoxForge.Controls.Add(this.button78);
+            this.groupBoxForge.Controls.Add(this.storageItem119);
+            this.groupBoxForge.Controls.Add(this.storageItem118);
+            this.groupBoxForge.Controls.Add(this.storageItem117);
+            this.groupBoxForge.Controls.Add(this.storageItem116);
+            this.groupBoxForge.Controls.Add(this.storageItem115);
+            this.groupBoxForge.Controls.Add(this.storageItem114);
+            this.groupBoxForge.Controls.Add(this.storageItem113);
+            this.groupBoxForge.Controls.Add(this.storageItem112);
+            this.groupBoxForge.Controls.Add(this.storageItem111);
+            this.groupBoxForge.Controls.Add(this.storageItem110);
+            this.groupBoxForge.Controls.Add(this.storageItem109);
+            this.groupBoxForge.Controls.Add(this.storageItem108);
+            this.groupBoxForge.Controls.Add(this.storageItem107);
+            this.groupBoxForge.Controls.Add(this.storageItem106);
+            this.groupBoxForge.Controls.Add(this.storageItem105);
+            this.groupBoxForge.Controls.Add(this.storageItem104);
+            this.groupBoxForge.Controls.Add(this.storageItem103);
+            this.groupBoxForge.Controls.Add(this.storageItem102);
+            this.groupBoxForge.Controls.Add(this.storageItem101);
+            this.groupBoxForge.Controls.Add(this.storageItem100);
+            this.groupBoxForge.Controls.Add(this.storageItem99);
+            this.groupBoxForge.Controls.Add(this.storageItem98);
+            this.groupBoxForge.Controls.Add(this.storageItem97);
+            this.groupBoxForge.Controls.Add(this.storageItem96);
+            this.groupBoxForge.Controls.Add(this.storageItem95);
+            this.groupBoxForge.Controls.Add(this.storageItem94);
+            this.groupBoxForge.Controls.Add(this.storageItem93);
+            this.groupBoxForge.Controls.Add(this.storageItem92);
+            this.groupBoxForge.Controls.Add(this.storageItem91);
+            this.groupBoxForge.Controls.Add(this.storageItem90);
+            this.groupBoxForge.Controls.Add(this.storageItem89);
+            this.groupBoxForge.Controls.Add(this.storageItem88);
+            this.groupBoxForge.Controls.Add(this.storageItem87);
+            this.groupBoxForge.Controls.Add(this.storageItem86);
+            this.groupBoxForge.Controls.Add(this.storageItem85);
+            this.groupBoxForge.Controls.Add(this.storageItem84);
+            this.groupBoxForge.Controls.Add(this.storageItem83);
+            this.groupBoxForge.Controls.Add(this.storageItem82);
+            this.groupBoxForge.Controls.Add(this.storageItem81);
+            this.groupBoxForge.Controls.Add(this.storageItem80);
             this.groupBoxForge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxForge.Location = new System.Drawing.Point(748, 27);
             this.groupBoxForge.Name = "groupBoxForge";
@@ -2779,568 +2783,608 @@
             this.groupBoxForge.TabStop = false;
             this.groupBoxForge.Text = "Sorcerer\'s Forge";
             // 
-            // button108
-            // 
-            this.button108.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button108.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button108.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button108.ForeColor = System.Drawing.Color.White;
-            this.button108.Location = new System.Drawing.Point(218, 423);
-            this.button108.Name = "button108";
-            this.button108.Size = new System.Drawing.Size(47, 47);
-            this.button108.TabIndex = 51;
-            this.button108.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button108.UseVisualStyleBackColor = false;
-            // 
-            // button109
-            // 
-            this.button109.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button109.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button109.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button109.ForeColor = System.Drawing.Color.White;
-            this.button109.Location = new System.Drawing.Point(165, 423);
-            this.button109.Name = "button109";
-            this.button109.Size = new System.Drawing.Size(47, 47);
-            this.button109.TabIndex = 50;
-            this.button109.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button109.UseVisualStyleBackColor = false;
-            // 
-            // button110
-            // 
-            this.button110.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button110.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button110.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button110.ForeColor = System.Drawing.Color.White;
-            this.button110.Location = new System.Drawing.Point(112, 423);
-            this.button110.Name = "button110";
-            this.button110.Size = new System.Drawing.Size(47, 47);
-            this.button110.TabIndex = 49;
-            this.button110.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button110.UseVisualStyleBackColor = false;
-            // 
-            // button111
-            // 
-            this.button111.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button111.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button111.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button111.ForeColor = System.Drawing.Color.White;
-            this.button111.Location = new System.Drawing.Point(59, 423);
-            this.button111.Name = "button111";
-            this.button111.Size = new System.Drawing.Size(47, 47);
-            this.button111.TabIndex = 48;
-            this.button111.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button111.UseVisualStyleBackColor = false;
-            // 
-            // button112
-            // 
-            this.button112.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button112.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button112.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button112.ForeColor = System.Drawing.Color.White;
-            this.button112.Location = new System.Drawing.Point(6, 423);
-            this.button112.Name = "button112";
-            this.button112.Size = new System.Drawing.Size(47, 47);
-            this.button112.TabIndex = 47;
-            this.button112.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button112.UseVisualStyleBackColor = false;
-            // 
-            // button113
-            // 
-            this.button113.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button113.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button113.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button113.ForeColor = System.Drawing.Color.White;
-            this.button113.Location = new System.Drawing.Point(218, 368);
-            this.button113.Name = "button113";
-            this.button113.Size = new System.Drawing.Size(47, 47);
-            this.button113.TabIndex = 46;
-            this.button113.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button113.UseVisualStyleBackColor = false;
-            // 
-            // button114
-            // 
-            this.button114.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button114.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button114.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button114.ForeColor = System.Drawing.Color.White;
-            this.button114.Location = new System.Drawing.Point(165, 368);
-            this.button114.Name = "button114";
-            this.button114.Size = new System.Drawing.Size(47, 47);
-            this.button114.TabIndex = 45;
-            this.button114.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button114.UseVisualStyleBackColor = false;
-            // 
-            // button115
-            // 
-            this.button115.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button115.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button115.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button115.ForeColor = System.Drawing.Color.White;
-            this.button115.Location = new System.Drawing.Point(112, 368);
-            this.button115.Name = "button115";
-            this.button115.Size = new System.Drawing.Size(47, 47);
-            this.button115.TabIndex = 44;
-            this.button115.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button115.UseVisualStyleBackColor = false;
-            // 
-            // button116
-            // 
-            this.button116.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button116.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button116.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button116.ForeColor = System.Drawing.Color.White;
-            this.button116.Location = new System.Drawing.Point(59, 368);
-            this.button116.Name = "button116";
-            this.button116.Size = new System.Drawing.Size(47, 47);
-            this.button116.TabIndex = 43;
-            this.button116.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button116.UseVisualStyleBackColor = false;
-            // 
-            // button117
-            // 
-            this.button117.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button117.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button117.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button117.ForeColor = System.Drawing.Color.White;
-            this.button117.Location = new System.Drawing.Point(6, 368);
-            this.button117.Name = "button117";
-            this.button117.Size = new System.Drawing.Size(47, 47);
-            this.button117.TabIndex = 42;
-            this.button117.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button117.UseVisualStyleBackColor = false;
-            // 
-            // button98
-            // 
-            this.button98.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button98.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button98.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button98.ForeColor = System.Drawing.Color.White;
-            this.button98.Location = new System.Drawing.Point(218, 315);
-            this.button98.Name = "button98";
-            this.button98.Size = new System.Drawing.Size(47, 47);
-            this.button98.TabIndex = 41;
-            this.button98.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button98.UseVisualStyleBackColor = false;
-            // 
-            // button99
-            // 
-            this.button99.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button99.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button99.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button99.ForeColor = System.Drawing.Color.White;
-            this.button99.Location = new System.Drawing.Point(165, 315);
-            this.button99.Name = "button99";
-            this.button99.Size = new System.Drawing.Size(47, 47);
-            this.button99.TabIndex = 40;
-            this.button99.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button99.UseVisualStyleBackColor = false;
-            // 
-            // button100
-            // 
-            this.button100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button100.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button100.ForeColor = System.Drawing.Color.White;
-            this.button100.Location = new System.Drawing.Point(112, 315);
-            this.button100.Name = "button100";
-            this.button100.Size = new System.Drawing.Size(47, 47);
-            this.button100.TabIndex = 39;
-            this.button100.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button100.UseVisualStyleBackColor = false;
-            // 
-            // button101
-            // 
-            this.button101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button101.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button101.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button101.ForeColor = System.Drawing.Color.White;
-            this.button101.Location = new System.Drawing.Point(59, 315);
-            this.button101.Name = "button101";
-            this.button101.Size = new System.Drawing.Size(47, 47);
-            this.button101.TabIndex = 38;
-            this.button101.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button101.UseVisualStyleBackColor = false;
-            // 
-            // button102
-            // 
-            this.button102.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button102.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button102.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button102.ForeColor = System.Drawing.Color.White;
-            this.button102.Location = new System.Drawing.Point(6, 315);
-            this.button102.Name = "button102";
-            this.button102.Size = new System.Drawing.Size(47, 47);
-            this.button102.TabIndex = 37;
-            this.button102.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button102.UseVisualStyleBackColor = false;
-            // 
-            // button103
-            // 
-            this.button103.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button103.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button103.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button103.ForeColor = System.Drawing.Color.White;
-            this.button103.Location = new System.Drawing.Point(218, 262);
-            this.button103.Name = "button103";
-            this.button103.Size = new System.Drawing.Size(47, 47);
-            this.button103.TabIndex = 36;
-            this.button103.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button103.UseVisualStyleBackColor = false;
-            // 
-            // button104
-            // 
-            this.button104.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button104.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button104.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button104.ForeColor = System.Drawing.Color.White;
-            this.button104.Location = new System.Drawing.Point(165, 262);
-            this.button104.Name = "button104";
-            this.button104.Size = new System.Drawing.Size(47, 47);
-            this.button104.TabIndex = 35;
-            this.button104.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button104.UseVisualStyleBackColor = false;
-            // 
-            // button105
-            // 
-            this.button105.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button105.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button105.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button105.ForeColor = System.Drawing.Color.White;
-            this.button105.Location = new System.Drawing.Point(112, 262);
-            this.button105.Name = "button105";
-            this.button105.Size = new System.Drawing.Size(47, 47);
-            this.button105.TabIndex = 34;
-            this.button105.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button105.UseVisualStyleBackColor = false;
-            // 
-            // button106
-            // 
-            this.button106.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button106.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button106.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button106.ForeColor = System.Drawing.Color.White;
-            this.button106.Location = new System.Drawing.Point(59, 262);
-            this.button106.Name = "button106";
-            this.button106.Size = new System.Drawing.Size(47, 47);
-            this.button106.TabIndex = 33;
-            this.button106.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button106.UseVisualStyleBackColor = false;
-            // 
-            // button107
-            // 
-            this.button107.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button107.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button107.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button107.ForeColor = System.Drawing.Color.White;
-            this.button107.Location = new System.Drawing.Point(6, 262);
-            this.button107.Name = "button107";
-            this.button107.Size = new System.Drawing.Size(47, 47);
-            this.button107.TabIndex = 32;
-            this.button107.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button107.UseVisualStyleBackColor = false;
-            // 
-            // button88
-            // 
-            this.button88.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button88.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button88.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button88.ForeColor = System.Drawing.Color.White;
-            this.button88.Location = new System.Drawing.Point(218, 178);
-            this.button88.Name = "button88";
-            this.button88.Size = new System.Drawing.Size(47, 47);
-            this.button88.TabIndex = 31;
-            this.button88.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button88.UseVisualStyleBackColor = false;
-            // 
-            // button89
-            // 
-            this.button89.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button89.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button89.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button89.ForeColor = System.Drawing.Color.White;
-            this.button89.Location = new System.Drawing.Point(165, 178);
-            this.button89.Name = "button89";
-            this.button89.Size = new System.Drawing.Size(47, 47);
-            this.button89.TabIndex = 30;
-            this.button89.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button89.UseVisualStyleBackColor = false;
-            // 
-            // button90
-            // 
-            this.button90.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button90.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button90.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button90.ForeColor = System.Drawing.Color.White;
-            this.button90.Location = new System.Drawing.Point(112, 178);
-            this.button90.Name = "button90";
-            this.button90.Size = new System.Drawing.Size(47, 47);
-            this.button90.TabIndex = 29;
-            this.button90.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button90.UseVisualStyleBackColor = false;
-            // 
-            // button91
-            // 
-            this.button91.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button91.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button91.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button91.ForeColor = System.Drawing.Color.White;
-            this.button91.Location = new System.Drawing.Point(59, 178);
-            this.button91.Name = "button91";
-            this.button91.Size = new System.Drawing.Size(47, 47);
-            this.button91.TabIndex = 28;
-            this.button91.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button91.UseVisualStyleBackColor = false;
-            // 
-            // button92
-            // 
-            this.button92.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button92.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button92.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button92.ForeColor = System.Drawing.Color.White;
-            this.button92.Location = new System.Drawing.Point(6, 178);
-            this.button92.Name = "button92";
-            this.button92.Size = new System.Drawing.Size(47, 47);
-            this.button92.TabIndex = 27;
-            this.button92.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button92.UseVisualStyleBackColor = false;
-            // 
-            // button93
-            // 
-            this.button93.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button93.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button93.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button93.ForeColor = System.Drawing.Color.White;
-            this.button93.Location = new System.Drawing.Point(218, 125);
-            this.button93.Name = "button93";
-            this.button93.Size = new System.Drawing.Size(47, 47);
-            this.button93.TabIndex = 26;
-            this.button93.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button93.UseVisualStyleBackColor = false;
-            // 
-            // button94
-            // 
-            this.button94.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button94.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button94.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button94.ForeColor = System.Drawing.Color.White;
-            this.button94.Location = new System.Drawing.Point(165, 125);
-            this.button94.Name = "button94";
-            this.button94.Size = new System.Drawing.Size(47, 47);
-            this.button94.TabIndex = 25;
-            this.button94.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button94.UseVisualStyleBackColor = false;
-            // 
-            // button95
-            // 
-            this.button95.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button95.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button95.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button95.ForeColor = System.Drawing.Color.White;
-            this.button95.Location = new System.Drawing.Point(112, 125);
-            this.button95.Name = "button95";
-            this.button95.Size = new System.Drawing.Size(47, 47);
-            this.button95.TabIndex = 24;
-            this.button95.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button95.UseVisualStyleBackColor = false;
-            // 
-            // button96
-            // 
-            this.button96.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button96.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button96.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button96.ForeColor = System.Drawing.Color.White;
-            this.button96.Location = new System.Drawing.Point(59, 125);
-            this.button96.Name = "button96";
-            this.button96.Size = new System.Drawing.Size(47, 47);
-            this.button96.TabIndex = 23;
-            this.button96.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button96.UseVisualStyleBackColor = false;
-            // 
-            // button97
-            // 
-            this.button97.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button97.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button97.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button97.ForeColor = System.Drawing.Color.White;
-            this.button97.Location = new System.Drawing.Point(6, 125);
-            this.button97.Name = "button97";
-            this.button97.Size = new System.Drawing.Size(47, 47);
-            this.button97.TabIndex = 22;
-            this.button97.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button97.UseVisualStyleBackColor = false;
-            // 
-            // button87
-            // 
-            this.button87.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button87.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button87.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button87.ForeColor = System.Drawing.Color.White;
-            this.button87.Location = new System.Drawing.Point(218, 72);
-            this.button87.Name = "button87";
-            this.button87.Size = new System.Drawing.Size(47, 47);
-            this.button87.TabIndex = 21;
-            this.button87.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button87.UseVisualStyleBackColor = false;
-            // 
-            // button86
-            // 
-            this.button86.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button86.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button86.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button86.ForeColor = System.Drawing.Color.White;
-            this.button86.Location = new System.Drawing.Point(165, 72);
-            this.button86.Name = "button86";
-            this.button86.Size = new System.Drawing.Size(47, 47);
-            this.button86.TabIndex = 20;
-            this.button86.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button86.UseVisualStyleBackColor = false;
-            // 
-            // button85
-            // 
-            this.button85.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button85.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button85.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button85.ForeColor = System.Drawing.Color.White;
-            this.button85.Location = new System.Drawing.Point(112, 72);
-            this.button85.Name = "button85";
-            this.button85.Size = new System.Drawing.Size(47, 47);
-            this.button85.TabIndex = 19;
-            this.button85.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button85.UseVisualStyleBackColor = false;
-            // 
-            // button84
-            // 
-            this.button84.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button84.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button84.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button84.ForeColor = System.Drawing.Color.White;
-            this.button84.Location = new System.Drawing.Point(59, 72);
-            this.button84.Name = "button84";
-            this.button84.Size = new System.Drawing.Size(47, 47);
-            this.button84.TabIndex = 18;
-            this.button84.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button84.UseVisualStyleBackColor = false;
-            // 
-            // button83
-            // 
-            this.button83.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button83.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button83.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button83.ForeColor = System.Drawing.Color.White;
-            this.button83.Location = new System.Drawing.Point(6, 72);
-            this.button83.Name = "button83";
-            this.button83.Size = new System.Drawing.Size(47, 47);
-            this.button83.TabIndex = 17;
-            this.button83.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button83.UseVisualStyleBackColor = false;
-            // 
-            // button82
-            // 
-            this.button82.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button82.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button82.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button82.ForeColor = System.Drawing.Color.White;
-            this.button82.Location = new System.Drawing.Point(218, 19);
-            this.button82.Name = "button82";
-            this.button82.Size = new System.Drawing.Size(47, 47);
-            this.button82.TabIndex = 16;
-            this.button82.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button82.UseVisualStyleBackColor = false;
-            // 
-            // button81
-            // 
-            this.button81.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button81.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button81.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button81.ForeColor = System.Drawing.Color.White;
-            this.button81.Location = new System.Drawing.Point(165, 19);
-            this.button81.Name = "button81";
-            this.button81.Size = new System.Drawing.Size(47, 47);
-            this.button81.TabIndex = 15;
-            this.button81.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button81.UseVisualStyleBackColor = false;
-            // 
-            // button80
-            // 
-            this.button80.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button80.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button80.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button80.ForeColor = System.Drawing.Color.White;
-            this.button80.Location = new System.Drawing.Point(112, 19);
-            this.button80.Name = "button80";
-            this.button80.Size = new System.Drawing.Size(47, 47);
-            this.button80.TabIndex = 14;
-            this.button80.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button80.UseVisualStyleBackColor = false;
-            // 
-            // button79
-            // 
-            this.button79.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button79.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button79.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button79.ForeColor = System.Drawing.Color.White;
-            this.button79.Location = new System.Drawing.Point(59, 19);
-            this.button79.Name = "button79";
-            this.button79.Size = new System.Drawing.Size(47, 47);
-            this.button79.TabIndex = 13;
-            this.button79.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button79.UseVisualStyleBackColor = false;
-            // 
-            // button78
-            // 
-            this.button78.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button78.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button78.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button78.ForeColor = System.Drawing.Color.White;
-            this.button78.Location = new System.Drawing.Point(6, 19);
-            this.button78.Name = "button78";
-            this.button78.Size = new System.Drawing.Size(47, 47);
-            this.button78.TabIndex = 12;
-            this.button78.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button78.UseVisualStyleBackColor = false;
+            // storageItem119
+            // 
+            this.storageItem119.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem119.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem119.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem119.ForeColor = System.Drawing.Color.White;
+            this.storageItem119.Location = new System.Drawing.Point(218, 423);
+            this.storageItem119.Name = "storageItem119";
+            this.storageItem119.Size = new System.Drawing.Size(47, 47);
+            this.storageItem119.TabIndex = 51;
+            this.storageItem119.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem119.UseVisualStyleBackColor = false;
+            this.storageItem119.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem118
+            // 
+            this.storageItem118.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem118.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem118.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem118.ForeColor = System.Drawing.Color.White;
+            this.storageItem118.Location = new System.Drawing.Point(165, 423);
+            this.storageItem118.Name = "storageItem118";
+            this.storageItem118.Size = new System.Drawing.Size(47, 47);
+            this.storageItem118.TabIndex = 50;
+            this.storageItem118.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem118.UseVisualStyleBackColor = false;
+            this.storageItem118.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem117
+            // 
+            this.storageItem117.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem117.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem117.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem117.ForeColor = System.Drawing.Color.White;
+            this.storageItem117.Location = new System.Drawing.Point(112, 423);
+            this.storageItem117.Name = "storageItem117";
+            this.storageItem117.Size = new System.Drawing.Size(47, 47);
+            this.storageItem117.TabIndex = 49;
+            this.storageItem117.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem117.UseVisualStyleBackColor = false;
+            this.storageItem117.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem116
+            // 
+            this.storageItem116.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem116.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem116.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem116.ForeColor = System.Drawing.Color.White;
+            this.storageItem116.Location = new System.Drawing.Point(59, 423);
+            this.storageItem116.Name = "storageItem116";
+            this.storageItem116.Size = new System.Drawing.Size(47, 47);
+            this.storageItem116.TabIndex = 48;
+            this.storageItem116.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem116.UseVisualStyleBackColor = false;
+            this.storageItem116.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem115
+            // 
+            this.storageItem115.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem115.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem115.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem115.ForeColor = System.Drawing.Color.White;
+            this.storageItem115.Location = new System.Drawing.Point(6, 423);
+            this.storageItem115.Name = "storageItem115";
+            this.storageItem115.Size = new System.Drawing.Size(47, 47);
+            this.storageItem115.TabIndex = 47;
+            this.storageItem115.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem115.UseVisualStyleBackColor = false;
+            this.storageItem115.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem114
+            // 
+            this.storageItem114.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem114.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem114.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem114.ForeColor = System.Drawing.Color.White;
+            this.storageItem114.Location = new System.Drawing.Point(218, 368);
+            this.storageItem114.Name = "storageItem114";
+            this.storageItem114.Size = new System.Drawing.Size(47, 47);
+            this.storageItem114.TabIndex = 46;
+            this.storageItem114.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem114.UseVisualStyleBackColor = false;
+            this.storageItem114.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem113
+            // 
+            this.storageItem113.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem113.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem113.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem113.ForeColor = System.Drawing.Color.White;
+            this.storageItem113.Location = new System.Drawing.Point(165, 368);
+            this.storageItem113.Name = "storageItem113";
+            this.storageItem113.Size = new System.Drawing.Size(47, 47);
+            this.storageItem113.TabIndex = 45;
+            this.storageItem113.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem113.UseVisualStyleBackColor = false;
+            this.storageItem113.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem112
+            // 
+            this.storageItem112.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem112.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem112.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem112.ForeColor = System.Drawing.Color.White;
+            this.storageItem112.Location = new System.Drawing.Point(112, 368);
+            this.storageItem112.Name = "storageItem112";
+            this.storageItem112.Size = new System.Drawing.Size(47, 47);
+            this.storageItem112.TabIndex = 44;
+            this.storageItem112.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem112.UseVisualStyleBackColor = false;
+            this.storageItem112.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem111
+            // 
+            this.storageItem111.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem111.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem111.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem111.ForeColor = System.Drawing.Color.White;
+            this.storageItem111.Location = new System.Drawing.Point(59, 368);
+            this.storageItem111.Name = "storageItem111";
+            this.storageItem111.Size = new System.Drawing.Size(47, 47);
+            this.storageItem111.TabIndex = 43;
+            this.storageItem111.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem111.UseVisualStyleBackColor = false;
+            this.storageItem111.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem110
+            // 
+            this.storageItem110.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem110.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem110.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem110.ForeColor = System.Drawing.Color.White;
+            this.storageItem110.Location = new System.Drawing.Point(6, 368);
+            this.storageItem110.Name = "storageItem110";
+            this.storageItem110.Size = new System.Drawing.Size(47, 47);
+            this.storageItem110.TabIndex = 42;
+            this.storageItem110.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem110.UseVisualStyleBackColor = false;
+            this.storageItem110.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem109
+            // 
+            this.storageItem109.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem109.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem109.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem109.ForeColor = System.Drawing.Color.White;
+            this.storageItem109.Location = new System.Drawing.Point(218, 315);
+            this.storageItem109.Name = "storageItem109";
+            this.storageItem109.Size = new System.Drawing.Size(47, 47);
+            this.storageItem109.TabIndex = 41;
+            this.storageItem109.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem109.UseVisualStyleBackColor = false;
+            this.storageItem109.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem108
+            // 
+            this.storageItem108.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem108.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem108.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem108.ForeColor = System.Drawing.Color.White;
+            this.storageItem108.Location = new System.Drawing.Point(165, 315);
+            this.storageItem108.Name = "storageItem108";
+            this.storageItem108.Size = new System.Drawing.Size(47, 47);
+            this.storageItem108.TabIndex = 40;
+            this.storageItem108.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem108.UseVisualStyleBackColor = false;
+            this.storageItem108.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem107
+            // 
+            this.storageItem107.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem107.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem107.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem107.ForeColor = System.Drawing.Color.White;
+            this.storageItem107.Location = new System.Drawing.Point(112, 315);
+            this.storageItem107.Name = "storageItem107";
+            this.storageItem107.Size = new System.Drawing.Size(47, 47);
+            this.storageItem107.TabIndex = 39;
+            this.storageItem107.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem107.UseVisualStyleBackColor = false;
+            this.storageItem107.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem106
+            // 
+            this.storageItem106.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem106.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem106.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem106.ForeColor = System.Drawing.Color.White;
+            this.storageItem106.Location = new System.Drawing.Point(59, 315);
+            this.storageItem106.Name = "storageItem106";
+            this.storageItem106.Size = new System.Drawing.Size(47, 47);
+            this.storageItem106.TabIndex = 38;
+            this.storageItem106.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem106.UseVisualStyleBackColor = false;
+            this.storageItem106.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem105
+            // 
+            this.storageItem105.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem105.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem105.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem105.ForeColor = System.Drawing.Color.White;
+            this.storageItem105.Location = new System.Drawing.Point(6, 315);
+            this.storageItem105.Name = "storageItem105";
+            this.storageItem105.Size = new System.Drawing.Size(47, 47);
+            this.storageItem105.TabIndex = 37;
+            this.storageItem105.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem105.UseVisualStyleBackColor = false;
+            this.storageItem105.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem104
+            // 
+            this.storageItem104.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem104.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem104.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem104.ForeColor = System.Drawing.Color.White;
+            this.storageItem104.Location = new System.Drawing.Point(218, 262);
+            this.storageItem104.Name = "storageItem104";
+            this.storageItem104.Size = new System.Drawing.Size(47, 47);
+            this.storageItem104.TabIndex = 36;
+            this.storageItem104.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem104.UseVisualStyleBackColor = false;
+            this.storageItem104.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem103
+            // 
+            this.storageItem103.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem103.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem103.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem103.ForeColor = System.Drawing.Color.White;
+            this.storageItem103.Location = new System.Drawing.Point(165, 262);
+            this.storageItem103.Name = "storageItem103";
+            this.storageItem103.Size = new System.Drawing.Size(47, 47);
+            this.storageItem103.TabIndex = 35;
+            this.storageItem103.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem103.UseVisualStyleBackColor = false;
+            this.storageItem103.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem102
+            // 
+            this.storageItem102.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem102.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem102.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem102.ForeColor = System.Drawing.Color.White;
+            this.storageItem102.Location = new System.Drawing.Point(112, 262);
+            this.storageItem102.Name = "storageItem102";
+            this.storageItem102.Size = new System.Drawing.Size(47, 47);
+            this.storageItem102.TabIndex = 34;
+            this.storageItem102.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem102.UseVisualStyleBackColor = false;
+            this.storageItem102.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem101
+            // 
+            this.storageItem101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem101.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem101.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem101.ForeColor = System.Drawing.Color.White;
+            this.storageItem101.Location = new System.Drawing.Point(59, 262);
+            this.storageItem101.Name = "storageItem101";
+            this.storageItem101.Size = new System.Drawing.Size(47, 47);
+            this.storageItem101.TabIndex = 33;
+            this.storageItem101.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem101.UseVisualStyleBackColor = false;
+            this.storageItem101.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem100
+            // 
+            this.storageItem100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem100.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem100.ForeColor = System.Drawing.Color.White;
+            this.storageItem100.Location = new System.Drawing.Point(6, 262);
+            this.storageItem100.Name = "storageItem100";
+            this.storageItem100.Size = new System.Drawing.Size(47, 47);
+            this.storageItem100.TabIndex = 32;
+            this.storageItem100.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem100.UseVisualStyleBackColor = false;
+            this.storageItem100.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem99
+            // 
+            this.storageItem99.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem99.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem99.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem99.ForeColor = System.Drawing.Color.White;
+            this.storageItem99.Location = new System.Drawing.Point(218, 178);
+            this.storageItem99.Name = "storageItem99";
+            this.storageItem99.Size = new System.Drawing.Size(47, 47);
+            this.storageItem99.TabIndex = 31;
+            this.storageItem99.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem99.UseVisualStyleBackColor = false;
+            this.storageItem99.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem98
+            // 
+            this.storageItem98.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem98.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem98.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem98.ForeColor = System.Drawing.Color.White;
+            this.storageItem98.Location = new System.Drawing.Point(165, 178);
+            this.storageItem98.Name = "storageItem98";
+            this.storageItem98.Size = new System.Drawing.Size(47, 47);
+            this.storageItem98.TabIndex = 30;
+            this.storageItem98.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem98.UseVisualStyleBackColor = false;
+            this.storageItem98.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem97
+            // 
+            this.storageItem97.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem97.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem97.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem97.ForeColor = System.Drawing.Color.White;
+            this.storageItem97.Location = new System.Drawing.Point(112, 178);
+            this.storageItem97.Name = "storageItem97";
+            this.storageItem97.Size = new System.Drawing.Size(47, 47);
+            this.storageItem97.TabIndex = 29;
+            this.storageItem97.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem97.UseVisualStyleBackColor = false;
+            this.storageItem97.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem96
+            // 
+            this.storageItem96.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem96.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem96.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem96.ForeColor = System.Drawing.Color.White;
+            this.storageItem96.Location = new System.Drawing.Point(59, 178);
+            this.storageItem96.Name = "storageItem96";
+            this.storageItem96.Size = new System.Drawing.Size(47, 47);
+            this.storageItem96.TabIndex = 28;
+            this.storageItem96.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem96.UseVisualStyleBackColor = false;
+            this.storageItem96.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem95
+            // 
+            this.storageItem95.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem95.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem95.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem95.ForeColor = System.Drawing.Color.White;
+            this.storageItem95.Location = new System.Drawing.Point(6, 178);
+            this.storageItem95.Name = "storageItem95";
+            this.storageItem95.Size = new System.Drawing.Size(47, 47);
+            this.storageItem95.TabIndex = 27;
+            this.storageItem95.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem95.UseVisualStyleBackColor = false;
+            this.storageItem95.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem94
+            // 
+            this.storageItem94.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem94.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem94.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem94.ForeColor = System.Drawing.Color.White;
+            this.storageItem94.Location = new System.Drawing.Point(218, 125);
+            this.storageItem94.Name = "storageItem94";
+            this.storageItem94.Size = new System.Drawing.Size(47, 47);
+            this.storageItem94.TabIndex = 26;
+            this.storageItem94.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem94.UseVisualStyleBackColor = false;
+            this.storageItem94.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem93
+            // 
+            this.storageItem93.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem93.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem93.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem93.ForeColor = System.Drawing.Color.White;
+            this.storageItem93.Location = new System.Drawing.Point(165, 125);
+            this.storageItem93.Name = "storageItem93";
+            this.storageItem93.Size = new System.Drawing.Size(47, 47);
+            this.storageItem93.TabIndex = 25;
+            this.storageItem93.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem93.UseVisualStyleBackColor = false;
+            this.storageItem93.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem92
+            // 
+            this.storageItem92.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem92.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem92.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem92.ForeColor = System.Drawing.Color.White;
+            this.storageItem92.Location = new System.Drawing.Point(112, 125);
+            this.storageItem92.Name = "storageItem92";
+            this.storageItem92.Size = new System.Drawing.Size(47, 47);
+            this.storageItem92.TabIndex = 24;
+            this.storageItem92.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem92.UseVisualStyleBackColor = false;
+            this.storageItem92.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem91
+            // 
+            this.storageItem91.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem91.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem91.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem91.ForeColor = System.Drawing.Color.White;
+            this.storageItem91.Location = new System.Drawing.Point(59, 125);
+            this.storageItem91.Name = "storageItem91";
+            this.storageItem91.Size = new System.Drawing.Size(47, 47);
+            this.storageItem91.TabIndex = 23;
+            this.storageItem91.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem91.UseVisualStyleBackColor = false;
+            this.storageItem91.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem90
+            // 
+            this.storageItem90.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem90.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem90.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem90.ForeColor = System.Drawing.Color.White;
+            this.storageItem90.Location = new System.Drawing.Point(6, 125);
+            this.storageItem90.Name = "storageItem90";
+            this.storageItem90.Size = new System.Drawing.Size(47, 47);
+            this.storageItem90.TabIndex = 22;
+            this.storageItem90.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem90.UseVisualStyleBackColor = false;
+            this.storageItem90.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem89
+            // 
+            this.storageItem89.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem89.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem89.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem89.ForeColor = System.Drawing.Color.White;
+            this.storageItem89.Location = new System.Drawing.Point(218, 72);
+            this.storageItem89.Name = "storageItem89";
+            this.storageItem89.Size = new System.Drawing.Size(47, 47);
+            this.storageItem89.TabIndex = 21;
+            this.storageItem89.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem89.UseVisualStyleBackColor = false;
+            this.storageItem89.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem88
+            // 
+            this.storageItem88.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem88.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem88.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem88.ForeColor = System.Drawing.Color.White;
+            this.storageItem88.Location = new System.Drawing.Point(165, 72);
+            this.storageItem88.Name = "storageItem88";
+            this.storageItem88.Size = new System.Drawing.Size(47, 47);
+            this.storageItem88.TabIndex = 20;
+            this.storageItem88.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem88.UseVisualStyleBackColor = false;
+            this.storageItem88.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem87
+            // 
+            this.storageItem87.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem87.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem87.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem87.ForeColor = System.Drawing.Color.White;
+            this.storageItem87.Location = new System.Drawing.Point(112, 72);
+            this.storageItem87.Name = "storageItem87";
+            this.storageItem87.Size = new System.Drawing.Size(47, 47);
+            this.storageItem87.TabIndex = 19;
+            this.storageItem87.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem87.UseVisualStyleBackColor = false;
+            this.storageItem87.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem86
+            // 
+            this.storageItem86.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem86.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem86.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem86.ForeColor = System.Drawing.Color.White;
+            this.storageItem86.Location = new System.Drawing.Point(59, 72);
+            this.storageItem86.Name = "storageItem86";
+            this.storageItem86.Size = new System.Drawing.Size(47, 47);
+            this.storageItem86.TabIndex = 18;
+            this.storageItem86.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem86.UseVisualStyleBackColor = false;
+            this.storageItem86.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem85
+            // 
+            this.storageItem85.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem85.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem85.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem85.ForeColor = System.Drawing.Color.White;
+            this.storageItem85.Location = new System.Drawing.Point(6, 72);
+            this.storageItem85.Name = "storageItem85";
+            this.storageItem85.Size = new System.Drawing.Size(47, 47);
+            this.storageItem85.TabIndex = 17;
+            this.storageItem85.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem85.UseVisualStyleBackColor = false;
+            this.storageItem85.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem84
+            // 
+            this.storageItem84.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem84.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem84.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem84.ForeColor = System.Drawing.Color.White;
+            this.storageItem84.Location = new System.Drawing.Point(218, 19);
+            this.storageItem84.Name = "storageItem84";
+            this.storageItem84.Size = new System.Drawing.Size(47, 47);
+            this.storageItem84.TabIndex = 16;
+            this.storageItem84.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem84.UseVisualStyleBackColor = false;
+            this.storageItem84.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem83
+            // 
+            this.storageItem83.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem83.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem83.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem83.ForeColor = System.Drawing.Color.White;
+            this.storageItem83.Location = new System.Drawing.Point(165, 19);
+            this.storageItem83.Name = "storageItem83";
+            this.storageItem83.Size = new System.Drawing.Size(47, 47);
+            this.storageItem83.TabIndex = 15;
+            this.storageItem83.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem83.UseVisualStyleBackColor = false;
+            this.storageItem83.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem82
+            // 
+            this.storageItem82.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem82.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem82.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem82.ForeColor = System.Drawing.Color.White;
+            this.storageItem82.Location = new System.Drawing.Point(112, 19);
+            this.storageItem82.Name = "storageItem82";
+            this.storageItem82.Size = new System.Drawing.Size(47, 47);
+            this.storageItem82.TabIndex = 14;
+            this.storageItem82.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem82.UseVisualStyleBackColor = false;
+            this.storageItem82.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem81
+            // 
+            this.storageItem81.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem81.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem81.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem81.ForeColor = System.Drawing.Color.White;
+            this.storageItem81.Location = new System.Drawing.Point(59, 19);
+            this.storageItem81.Name = "storageItem81";
+            this.storageItem81.Size = new System.Drawing.Size(47, 47);
+            this.storageItem81.TabIndex = 13;
+            this.storageItem81.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem81.UseVisualStyleBackColor = false;
+            this.storageItem81.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem80
+            // 
+            this.storageItem80.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem80.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem80.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem80.ForeColor = System.Drawing.Color.White;
+            this.storageItem80.Location = new System.Drawing.Point(6, 19);
+            this.storageItem80.Name = "storageItem80";
+            this.storageItem80.Size = new System.Drawing.Size(47, 47);
+            this.storageItem80.TabIndex = 12;
+            this.storageItem80.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem80.UseVisualStyleBackColor = false;
+            this.storageItem80.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
             // groupBoxSafe
             // 
-            this.groupBoxSafe.Controls.Add(this.button38);
-            this.groupBoxSafe.Controls.Add(this.button39);
-            this.groupBoxSafe.Controls.Add(this.button40);
-            this.groupBoxSafe.Controls.Add(this.button41);
-            this.groupBoxSafe.Controls.Add(this.button42);
-            this.groupBoxSafe.Controls.Add(this.button43);
-            this.groupBoxSafe.Controls.Add(this.button44);
-            this.groupBoxSafe.Controls.Add(this.button45);
-            this.groupBoxSafe.Controls.Add(this.button46);
-            this.groupBoxSafe.Controls.Add(this.button47);
-            this.groupBoxSafe.Controls.Add(this.button48);
-            this.groupBoxSafe.Controls.Add(this.button49);
-            this.groupBoxSafe.Controls.Add(this.button50);
-            this.groupBoxSafe.Controls.Add(this.button51);
-            this.groupBoxSafe.Controls.Add(this.button52);
-            this.groupBoxSafe.Controls.Add(this.button53);
-            this.groupBoxSafe.Controls.Add(this.button54);
-            this.groupBoxSafe.Controls.Add(this.button55);
-            this.groupBoxSafe.Controls.Add(this.button56);
-            this.groupBoxSafe.Controls.Add(this.button57);
-            this.groupBoxSafe.Controls.Add(this.button58);
-            this.groupBoxSafe.Controls.Add(this.button59);
-            this.groupBoxSafe.Controls.Add(this.button60);
-            this.groupBoxSafe.Controls.Add(this.button61);
-            this.groupBoxSafe.Controls.Add(this.button62);
-            this.groupBoxSafe.Controls.Add(this.button63);
-            this.groupBoxSafe.Controls.Add(this.button64);
-            this.groupBoxSafe.Controls.Add(this.button65);
-            this.groupBoxSafe.Controls.Add(this.button66);
-            this.groupBoxSafe.Controls.Add(this.button67);
-            this.groupBoxSafe.Controls.Add(this.button68);
-            this.groupBoxSafe.Controls.Add(this.button69);
-            this.groupBoxSafe.Controls.Add(this.button70);
-            this.groupBoxSafe.Controls.Add(this.button71);
-            this.groupBoxSafe.Controls.Add(this.button72);
-            this.groupBoxSafe.Controls.Add(this.button73);
-            this.groupBoxSafe.Controls.Add(this.button74);
-            this.groupBoxSafe.Controls.Add(this.button75);
-            this.groupBoxSafe.Controls.Add(this.button76);
-            this.groupBoxSafe.Controls.Add(this.button77);
+            this.groupBoxSafe.Controls.Add(this.storageItem79);
+            this.groupBoxSafe.Controls.Add(this.storageItem78);
+            this.groupBoxSafe.Controls.Add(this.storageItem77);
+            this.groupBoxSafe.Controls.Add(this.storageItem76);
+            this.groupBoxSafe.Controls.Add(this.storageItem75);
+            this.groupBoxSafe.Controls.Add(this.storageItem74);
+            this.groupBoxSafe.Controls.Add(this.storageItem73);
+            this.groupBoxSafe.Controls.Add(this.storageItem72);
+            this.groupBoxSafe.Controls.Add(this.storageItem71);
+            this.groupBoxSafe.Controls.Add(this.storageItem70);
+            this.groupBoxSafe.Controls.Add(this.storageItem69);
+            this.groupBoxSafe.Controls.Add(this.storageItem68);
+            this.groupBoxSafe.Controls.Add(this.storageItem67);
+            this.groupBoxSafe.Controls.Add(this.storageItem66);
+            this.groupBoxSafe.Controls.Add(this.storageItem65);
+            this.groupBoxSafe.Controls.Add(this.storageItem64);
+            this.groupBoxSafe.Controls.Add(this.storageItem63);
+            this.groupBoxSafe.Controls.Add(this.storageItem62);
+            this.groupBoxSafe.Controls.Add(this.storageItem61);
+            this.groupBoxSafe.Controls.Add(this.storageItem60);
+            this.groupBoxSafe.Controls.Add(this.storageItem59);
+            this.groupBoxSafe.Controls.Add(this.storageItem58);
+            this.groupBoxSafe.Controls.Add(this.storageItem57);
+            this.groupBoxSafe.Controls.Add(this.storageItem56);
+            this.groupBoxSafe.Controls.Add(this.storageItem55);
+            this.groupBoxSafe.Controls.Add(this.storageItem54);
+            this.groupBoxSafe.Controls.Add(this.storageItem53);
+            this.groupBoxSafe.Controls.Add(this.storageItem52);
+            this.groupBoxSafe.Controls.Add(this.storageItem51);
+            this.groupBoxSafe.Controls.Add(this.storageItem50);
+            this.groupBoxSafe.Controls.Add(this.storageItem49);
+            this.groupBoxSafe.Controls.Add(this.storageItem48);
+            this.groupBoxSafe.Controls.Add(this.storageItem47);
+            this.groupBoxSafe.Controls.Add(this.storageItem46);
+            this.groupBoxSafe.Controls.Add(this.storageItem45);
+            this.groupBoxSafe.Controls.Add(this.storageItem44);
+            this.groupBoxSafe.Controls.Add(this.storageItem43);
+            this.groupBoxSafe.Controls.Add(this.storageItem42);
+            this.groupBoxSafe.Controls.Add(this.storageItem41);
+            this.groupBoxSafe.Controls.Add(this.storageItem40);
             this.groupBoxSafe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxSafe.Location = new System.Drawing.Point(205, 270);
             this.groupBoxSafe.Name = "groupBoxSafe";
@@ -3349,557 +3393,597 @@
             this.groupBoxSafe.TabStop = false;
             this.groupBoxSafe.Text = "Safe";
             // 
-            // button38
-            // 
-            this.button38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button38.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button38.ForeColor = System.Drawing.Color.White;
-            this.button38.Location = new System.Drawing.Point(483, 180);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(47, 47);
-            this.button38.TabIndex = 50;
-            this.button38.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button38.UseVisualStyleBackColor = false;
-            // 
-            // button39
-            // 
-            this.button39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button39.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button39.ForeColor = System.Drawing.Color.White;
-            this.button39.Location = new System.Drawing.Point(430, 180);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(47, 47);
-            this.button39.TabIndex = 49;
-            this.button39.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button39.UseVisualStyleBackColor = false;
-            // 
-            // button40
-            // 
-            this.button40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button40.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button40.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button40.ForeColor = System.Drawing.Color.White;
-            this.button40.Location = new System.Drawing.Point(377, 180);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(47, 47);
-            this.button40.TabIndex = 48;
-            this.button40.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button40.UseVisualStyleBackColor = false;
-            // 
-            // button41
-            // 
-            this.button41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button41.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button41.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button41.ForeColor = System.Drawing.Color.White;
-            this.button41.Location = new System.Drawing.Point(324, 180);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(47, 47);
-            this.button41.TabIndex = 47;
-            this.button41.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button41.UseVisualStyleBackColor = false;
-            // 
-            // button42
-            // 
-            this.button42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button42.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button42.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button42.ForeColor = System.Drawing.Color.White;
-            this.button42.Location = new System.Drawing.Point(271, 180);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(47, 47);
-            this.button42.TabIndex = 46;
-            this.button42.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button42.UseVisualStyleBackColor = false;
-            // 
-            // button43
-            // 
-            this.button43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button43.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button43.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button43.ForeColor = System.Drawing.Color.White;
-            this.button43.Location = new System.Drawing.Point(218, 180);
-            this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(47, 47);
-            this.button43.TabIndex = 45;
-            this.button43.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button43.UseVisualStyleBackColor = false;
-            // 
-            // button44
-            // 
-            this.button44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button44.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button44.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button44.ForeColor = System.Drawing.Color.White;
-            this.button44.Location = new System.Drawing.Point(165, 180);
-            this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(47, 47);
-            this.button44.TabIndex = 44;
-            this.button44.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button44.UseVisualStyleBackColor = false;
-            // 
-            // button45
-            // 
-            this.button45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button45.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button45.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button45.ForeColor = System.Drawing.Color.White;
-            this.button45.Location = new System.Drawing.Point(112, 180);
-            this.button45.Name = "button45";
-            this.button45.Size = new System.Drawing.Size(47, 47);
-            this.button45.TabIndex = 43;
-            this.button45.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button45.UseVisualStyleBackColor = false;
-            // 
-            // button46
-            // 
-            this.button46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button46.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button46.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button46.ForeColor = System.Drawing.Color.White;
-            this.button46.Location = new System.Drawing.Point(59, 180);
-            this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(47, 47);
-            this.button46.TabIndex = 42;
-            this.button46.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button46.UseVisualStyleBackColor = false;
-            // 
-            // button47
-            // 
-            this.button47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button47.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button47.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button47.ForeColor = System.Drawing.Color.White;
-            this.button47.Location = new System.Drawing.Point(6, 180);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(47, 47);
-            this.button47.TabIndex = 41;
-            this.button47.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button47.UseVisualStyleBackColor = false;
-            // 
-            // button48
-            // 
-            this.button48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button48.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button48.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button48.ForeColor = System.Drawing.Color.White;
-            this.button48.Location = new System.Drawing.Point(483, 127);
-            this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(47, 47);
-            this.button48.TabIndex = 40;
-            this.button48.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button48.UseVisualStyleBackColor = false;
-            // 
-            // button49
-            // 
-            this.button49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button49.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button49.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button49.ForeColor = System.Drawing.Color.White;
-            this.button49.Location = new System.Drawing.Point(430, 127);
-            this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(47, 47);
-            this.button49.TabIndex = 39;
-            this.button49.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button49.UseVisualStyleBackColor = false;
-            // 
-            // button50
-            // 
-            this.button50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button50.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button50.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button50.ForeColor = System.Drawing.Color.White;
-            this.button50.Location = new System.Drawing.Point(377, 127);
-            this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(47, 47);
-            this.button50.TabIndex = 38;
-            this.button50.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button50.UseVisualStyleBackColor = false;
-            // 
-            // button51
-            // 
-            this.button51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button51.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button51.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button51.ForeColor = System.Drawing.Color.White;
-            this.button51.Location = new System.Drawing.Point(324, 127);
-            this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(47, 47);
-            this.button51.TabIndex = 37;
-            this.button51.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button51.UseVisualStyleBackColor = false;
-            // 
-            // button52
-            // 
-            this.button52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button52.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button52.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button52.ForeColor = System.Drawing.Color.White;
-            this.button52.Location = new System.Drawing.Point(271, 127);
-            this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(47, 47);
-            this.button52.TabIndex = 36;
-            this.button52.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button52.UseVisualStyleBackColor = false;
-            // 
-            // button53
-            // 
-            this.button53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button53.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button53.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button53.ForeColor = System.Drawing.Color.White;
-            this.button53.Location = new System.Drawing.Point(218, 127);
-            this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(47, 47);
-            this.button53.TabIndex = 35;
-            this.button53.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button53.UseVisualStyleBackColor = false;
-            // 
-            // button54
-            // 
-            this.button54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button54.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button54.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button54.ForeColor = System.Drawing.Color.White;
-            this.button54.Location = new System.Drawing.Point(165, 127);
-            this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(47, 47);
-            this.button54.TabIndex = 34;
-            this.button54.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button54.UseVisualStyleBackColor = false;
-            // 
-            // button55
-            // 
-            this.button55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button55.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button55.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button55.ForeColor = System.Drawing.Color.White;
-            this.button55.Location = new System.Drawing.Point(112, 127);
-            this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(47, 47);
-            this.button55.TabIndex = 33;
-            this.button55.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button55.UseVisualStyleBackColor = false;
-            // 
-            // button56
-            // 
-            this.button56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button56.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button56.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button56.ForeColor = System.Drawing.Color.White;
-            this.button56.Location = new System.Drawing.Point(59, 127);
-            this.button56.Name = "button56";
-            this.button56.Size = new System.Drawing.Size(47, 47);
-            this.button56.TabIndex = 32;
-            this.button56.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button56.UseVisualStyleBackColor = false;
-            // 
-            // button57
-            // 
-            this.button57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button57.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button57.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button57.ForeColor = System.Drawing.Color.White;
-            this.button57.Location = new System.Drawing.Point(6, 127);
-            this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(47, 47);
-            this.button57.TabIndex = 31;
-            this.button57.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button57.UseVisualStyleBackColor = false;
-            // 
-            // button58
-            // 
-            this.button58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button58.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button58.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button58.ForeColor = System.Drawing.Color.White;
-            this.button58.Location = new System.Drawing.Point(483, 74);
-            this.button58.Name = "button58";
-            this.button58.Size = new System.Drawing.Size(47, 47);
-            this.button58.TabIndex = 30;
-            this.button58.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button58.UseVisualStyleBackColor = false;
-            // 
-            // button59
-            // 
-            this.button59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button59.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button59.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button59.ForeColor = System.Drawing.Color.White;
-            this.button59.Location = new System.Drawing.Point(430, 74);
-            this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(47, 47);
-            this.button59.TabIndex = 29;
-            this.button59.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button59.UseVisualStyleBackColor = false;
-            // 
-            // button60
-            // 
-            this.button60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button60.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button60.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button60.ForeColor = System.Drawing.Color.White;
-            this.button60.Location = new System.Drawing.Point(377, 74);
-            this.button60.Name = "button60";
-            this.button60.Size = new System.Drawing.Size(47, 47);
-            this.button60.TabIndex = 28;
-            this.button60.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button60.UseVisualStyleBackColor = false;
-            // 
-            // button61
-            // 
-            this.button61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button61.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button61.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button61.ForeColor = System.Drawing.Color.White;
-            this.button61.Location = new System.Drawing.Point(324, 74);
-            this.button61.Name = "button61";
-            this.button61.Size = new System.Drawing.Size(47, 47);
-            this.button61.TabIndex = 27;
-            this.button61.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button61.UseVisualStyleBackColor = false;
-            // 
-            // button62
-            // 
-            this.button62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button62.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button62.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button62.ForeColor = System.Drawing.Color.White;
-            this.button62.Location = new System.Drawing.Point(271, 74);
-            this.button62.Name = "button62";
-            this.button62.Size = new System.Drawing.Size(47, 47);
-            this.button62.TabIndex = 26;
-            this.button62.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button62.UseVisualStyleBackColor = false;
-            // 
-            // button63
-            // 
-            this.button63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button63.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button63.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button63.ForeColor = System.Drawing.Color.White;
-            this.button63.Location = new System.Drawing.Point(218, 74);
-            this.button63.Name = "button63";
-            this.button63.Size = new System.Drawing.Size(47, 47);
-            this.button63.TabIndex = 25;
-            this.button63.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button63.UseVisualStyleBackColor = false;
-            // 
-            // button64
-            // 
-            this.button64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button64.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button64.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button64.ForeColor = System.Drawing.Color.White;
-            this.button64.Location = new System.Drawing.Point(165, 74);
-            this.button64.Name = "button64";
-            this.button64.Size = new System.Drawing.Size(47, 47);
-            this.button64.TabIndex = 24;
-            this.button64.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button64.UseVisualStyleBackColor = false;
-            // 
-            // button65
-            // 
-            this.button65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button65.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button65.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button65.ForeColor = System.Drawing.Color.White;
-            this.button65.Location = new System.Drawing.Point(112, 74);
-            this.button65.Name = "button65";
-            this.button65.Size = new System.Drawing.Size(47, 47);
-            this.button65.TabIndex = 23;
-            this.button65.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button65.UseVisualStyleBackColor = false;
-            // 
-            // button66
-            // 
-            this.button66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button66.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button66.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button66.ForeColor = System.Drawing.Color.White;
-            this.button66.Location = new System.Drawing.Point(59, 74);
-            this.button66.Name = "button66";
-            this.button66.Size = new System.Drawing.Size(47, 47);
-            this.button66.TabIndex = 22;
-            this.button66.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button66.UseVisualStyleBackColor = false;
-            // 
-            // button67
-            // 
-            this.button67.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button67.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button67.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button67.ForeColor = System.Drawing.Color.White;
-            this.button67.Location = new System.Drawing.Point(6, 74);
-            this.button67.Name = "button67";
-            this.button67.Size = new System.Drawing.Size(47, 47);
-            this.button67.TabIndex = 21;
-            this.button67.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button67.UseVisualStyleBackColor = false;
-            // 
-            // button68
-            // 
-            this.button68.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button68.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button68.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button68.ForeColor = System.Drawing.Color.White;
-            this.button68.Location = new System.Drawing.Point(483, 19);
-            this.button68.Name = "button68";
-            this.button68.Size = new System.Drawing.Size(47, 47);
-            this.button68.TabIndex = 20;
-            this.button68.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button68.UseVisualStyleBackColor = false;
-            // 
-            // button69
-            // 
-            this.button69.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button69.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button69.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button69.ForeColor = System.Drawing.Color.White;
-            this.button69.Location = new System.Drawing.Point(430, 19);
-            this.button69.Name = "button69";
-            this.button69.Size = new System.Drawing.Size(47, 47);
-            this.button69.TabIndex = 19;
-            this.button69.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button69.UseVisualStyleBackColor = false;
-            // 
-            // button70
-            // 
-            this.button70.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button70.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button70.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button70.ForeColor = System.Drawing.Color.White;
-            this.button70.Location = new System.Drawing.Point(377, 19);
-            this.button70.Name = "button70";
-            this.button70.Size = new System.Drawing.Size(47, 47);
-            this.button70.TabIndex = 18;
-            this.button70.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button70.UseVisualStyleBackColor = false;
-            // 
-            // button71
-            // 
-            this.button71.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button71.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button71.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button71.ForeColor = System.Drawing.Color.White;
-            this.button71.Location = new System.Drawing.Point(324, 19);
-            this.button71.Name = "button71";
-            this.button71.Size = new System.Drawing.Size(47, 47);
-            this.button71.TabIndex = 17;
-            this.button71.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button71.UseVisualStyleBackColor = false;
-            // 
-            // button72
-            // 
-            this.button72.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button72.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button72.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button72.ForeColor = System.Drawing.Color.White;
-            this.button72.Location = new System.Drawing.Point(271, 19);
-            this.button72.Name = "button72";
-            this.button72.Size = new System.Drawing.Size(47, 47);
-            this.button72.TabIndex = 16;
-            this.button72.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button72.UseVisualStyleBackColor = false;
-            // 
-            // button73
-            // 
-            this.button73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button73.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button73.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button73.ForeColor = System.Drawing.Color.White;
-            this.button73.Location = new System.Drawing.Point(218, 19);
-            this.button73.Name = "button73";
-            this.button73.Size = new System.Drawing.Size(47, 47);
-            this.button73.TabIndex = 15;
-            this.button73.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button73.UseVisualStyleBackColor = false;
-            // 
-            // button74
-            // 
-            this.button74.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button74.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button74.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button74.ForeColor = System.Drawing.Color.White;
-            this.button74.Location = new System.Drawing.Point(165, 19);
-            this.button74.Name = "button74";
-            this.button74.Size = new System.Drawing.Size(47, 47);
-            this.button74.TabIndex = 14;
-            this.button74.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button74.UseVisualStyleBackColor = false;
-            // 
-            // button75
-            // 
-            this.button75.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button75.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button75.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button75.ForeColor = System.Drawing.Color.White;
-            this.button75.Location = new System.Drawing.Point(112, 19);
-            this.button75.Name = "button75";
-            this.button75.Size = new System.Drawing.Size(47, 47);
-            this.button75.TabIndex = 13;
-            this.button75.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button75.UseVisualStyleBackColor = false;
-            // 
-            // button76
-            // 
-            this.button76.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button76.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button76.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button76.ForeColor = System.Drawing.Color.White;
-            this.button76.Location = new System.Drawing.Point(59, 19);
-            this.button76.Name = "button76";
-            this.button76.Size = new System.Drawing.Size(47, 47);
-            this.button76.TabIndex = 12;
-            this.button76.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button76.UseVisualStyleBackColor = false;
-            // 
-            // button77
-            // 
-            this.button77.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button77.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button77.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button77.ForeColor = System.Drawing.Color.White;
-            this.button77.Location = new System.Drawing.Point(6, 19);
-            this.button77.Name = "button77";
-            this.button77.Size = new System.Drawing.Size(47, 47);
-            this.button77.TabIndex = 11;
-            this.button77.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button77.UseVisualStyleBackColor = false;
+            // storageItem79
+            // 
+            this.storageItem79.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem79.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem79.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem79.ForeColor = System.Drawing.Color.White;
+            this.storageItem79.Location = new System.Drawing.Point(483, 180);
+            this.storageItem79.Name = "storageItem79";
+            this.storageItem79.Size = new System.Drawing.Size(47, 47);
+            this.storageItem79.TabIndex = 50;
+            this.storageItem79.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem79.UseVisualStyleBackColor = false;
+            this.storageItem79.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem78
+            // 
+            this.storageItem78.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem78.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem78.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem78.ForeColor = System.Drawing.Color.White;
+            this.storageItem78.Location = new System.Drawing.Point(430, 180);
+            this.storageItem78.Name = "storageItem78";
+            this.storageItem78.Size = new System.Drawing.Size(47, 47);
+            this.storageItem78.TabIndex = 49;
+            this.storageItem78.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem78.UseVisualStyleBackColor = false;
+            this.storageItem78.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem77
+            // 
+            this.storageItem77.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem77.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem77.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem77.ForeColor = System.Drawing.Color.White;
+            this.storageItem77.Location = new System.Drawing.Point(377, 180);
+            this.storageItem77.Name = "storageItem77";
+            this.storageItem77.Size = new System.Drawing.Size(47, 47);
+            this.storageItem77.TabIndex = 48;
+            this.storageItem77.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem77.UseVisualStyleBackColor = false;
+            this.storageItem77.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem76
+            // 
+            this.storageItem76.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem76.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem76.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem76.ForeColor = System.Drawing.Color.White;
+            this.storageItem76.Location = new System.Drawing.Point(324, 180);
+            this.storageItem76.Name = "storageItem76";
+            this.storageItem76.Size = new System.Drawing.Size(47, 47);
+            this.storageItem76.TabIndex = 47;
+            this.storageItem76.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem76.UseVisualStyleBackColor = false;
+            this.storageItem76.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem75
+            // 
+            this.storageItem75.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem75.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem75.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem75.ForeColor = System.Drawing.Color.White;
+            this.storageItem75.Location = new System.Drawing.Point(271, 180);
+            this.storageItem75.Name = "storageItem75";
+            this.storageItem75.Size = new System.Drawing.Size(47, 47);
+            this.storageItem75.TabIndex = 46;
+            this.storageItem75.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem75.UseVisualStyleBackColor = false;
+            this.storageItem75.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem74
+            // 
+            this.storageItem74.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem74.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem74.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem74.ForeColor = System.Drawing.Color.White;
+            this.storageItem74.Location = new System.Drawing.Point(218, 180);
+            this.storageItem74.Name = "storageItem74";
+            this.storageItem74.Size = new System.Drawing.Size(47, 47);
+            this.storageItem74.TabIndex = 45;
+            this.storageItem74.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem74.UseVisualStyleBackColor = false;
+            this.storageItem74.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem73
+            // 
+            this.storageItem73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem73.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem73.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem73.ForeColor = System.Drawing.Color.White;
+            this.storageItem73.Location = new System.Drawing.Point(165, 180);
+            this.storageItem73.Name = "storageItem73";
+            this.storageItem73.Size = new System.Drawing.Size(47, 47);
+            this.storageItem73.TabIndex = 44;
+            this.storageItem73.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem73.UseVisualStyleBackColor = false;
+            this.storageItem73.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem72
+            // 
+            this.storageItem72.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem72.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem72.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem72.ForeColor = System.Drawing.Color.White;
+            this.storageItem72.Location = new System.Drawing.Point(112, 180);
+            this.storageItem72.Name = "storageItem72";
+            this.storageItem72.Size = new System.Drawing.Size(47, 47);
+            this.storageItem72.TabIndex = 43;
+            this.storageItem72.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem72.UseVisualStyleBackColor = false;
+            this.storageItem72.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem71
+            // 
+            this.storageItem71.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem71.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem71.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem71.ForeColor = System.Drawing.Color.White;
+            this.storageItem71.Location = new System.Drawing.Point(59, 180);
+            this.storageItem71.Name = "storageItem71";
+            this.storageItem71.Size = new System.Drawing.Size(47, 47);
+            this.storageItem71.TabIndex = 42;
+            this.storageItem71.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem71.UseVisualStyleBackColor = false;
+            this.storageItem71.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem70
+            // 
+            this.storageItem70.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem70.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem70.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem70.ForeColor = System.Drawing.Color.White;
+            this.storageItem70.Location = new System.Drawing.Point(6, 180);
+            this.storageItem70.Name = "storageItem70";
+            this.storageItem70.Size = new System.Drawing.Size(47, 47);
+            this.storageItem70.TabIndex = 41;
+            this.storageItem70.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem70.UseVisualStyleBackColor = false;
+            this.storageItem70.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem69
+            // 
+            this.storageItem69.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem69.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem69.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem69.ForeColor = System.Drawing.Color.White;
+            this.storageItem69.Location = new System.Drawing.Point(483, 127);
+            this.storageItem69.Name = "storageItem69";
+            this.storageItem69.Size = new System.Drawing.Size(47, 47);
+            this.storageItem69.TabIndex = 40;
+            this.storageItem69.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem69.UseVisualStyleBackColor = false;
+            this.storageItem69.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem68
+            // 
+            this.storageItem68.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem68.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem68.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem68.ForeColor = System.Drawing.Color.White;
+            this.storageItem68.Location = new System.Drawing.Point(430, 127);
+            this.storageItem68.Name = "storageItem68";
+            this.storageItem68.Size = new System.Drawing.Size(47, 47);
+            this.storageItem68.TabIndex = 39;
+            this.storageItem68.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem68.UseVisualStyleBackColor = false;
+            this.storageItem68.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem67
+            // 
+            this.storageItem67.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem67.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem67.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem67.ForeColor = System.Drawing.Color.White;
+            this.storageItem67.Location = new System.Drawing.Point(377, 127);
+            this.storageItem67.Name = "storageItem67";
+            this.storageItem67.Size = new System.Drawing.Size(47, 47);
+            this.storageItem67.TabIndex = 38;
+            this.storageItem67.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem67.UseVisualStyleBackColor = false;
+            this.storageItem67.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem66
+            // 
+            this.storageItem66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem66.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem66.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem66.ForeColor = System.Drawing.Color.White;
+            this.storageItem66.Location = new System.Drawing.Point(324, 127);
+            this.storageItem66.Name = "storageItem66";
+            this.storageItem66.Size = new System.Drawing.Size(47, 47);
+            this.storageItem66.TabIndex = 37;
+            this.storageItem66.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem66.UseVisualStyleBackColor = false;
+            this.storageItem66.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem65
+            // 
+            this.storageItem65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem65.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem65.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem65.ForeColor = System.Drawing.Color.White;
+            this.storageItem65.Location = new System.Drawing.Point(271, 127);
+            this.storageItem65.Name = "storageItem65";
+            this.storageItem65.Size = new System.Drawing.Size(47, 47);
+            this.storageItem65.TabIndex = 36;
+            this.storageItem65.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem65.UseVisualStyleBackColor = false;
+            this.storageItem65.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem64
+            // 
+            this.storageItem64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem64.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem64.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem64.ForeColor = System.Drawing.Color.White;
+            this.storageItem64.Location = new System.Drawing.Point(218, 127);
+            this.storageItem64.Name = "storageItem64";
+            this.storageItem64.Size = new System.Drawing.Size(47, 47);
+            this.storageItem64.TabIndex = 35;
+            this.storageItem64.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem64.UseVisualStyleBackColor = false;
+            this.storageItem64.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem63
+            // 
+            this.storageItem63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem63.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem63.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem63.ForeColor = System.Drawing.Color.White;
+            this.storageItem63.Location = new System.Drawing.Point(165, 127);
+            this.storageItem63.Name = "storageItem63";
+            this.storageItem63.Size = new System.Drawing.Size(47, 47);
+            this.storageItem63.TabIndex = 34;
+            this.storageItem63.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem63.UseVisualStyleBackColor = false;
+            this.storageItem63.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem62
+            // 
+            this.storageItem62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem62.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem62.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem62.ForeColor = System.Drawing.Color.White;
+            this.storageItem62.Location = new System.Drawing.Point(112, 127);
+            this.storageItem62.Name = "storageItem62";
+            this.storageItem62.Size = new System.Drawing.Size(47, 47);
+            this.storageItem62.TabIndex = 33;
+            this.storageItem62.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem62.UseVisualStyleBackColor = false;
+            this.storageItem62.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem61
+            // 
+            this.storageItem61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem61.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem61.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem61.ForeColor = System.Drawing.Color.White;
+            this.storageItem61.Location = new System.Drawing.Point(59, 127);
+            this.storageItem61.Name = "storageItem61";
+            this.storageItem61.Size = new System.Drawing.Size(47, 47);
+            this.storageItem61.TabIndex = 32;
+            this.storageItem61.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem61.UseVisualStyleBackColor = false;
+            this.storageItem61.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem60
+            // 
+            this.storageItem60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem60.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem60.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem60.ForeColor = System.Drawing.Color.White;
+            this.storageItem60.Location = new System.Drawing.Point(6, 127);
+            this.storageItem60.Name = "storageItem60";
+            this.storageItem60.Size = new System.Drawing.Size(47, 47);
+            this.storageItem60.TabIndex = 31;
+            this.storageItem60.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem60.UseVisualStyleBackColor = false;
+            this.storageItem60.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem59
+            // 
+            this.storageItem59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem59.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem59.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem59.ForeColor = System.Drawing.Color.White;
+            this.storageItem59.Location = new System.Drawing.Point(483, 74);
+            this.storageItem59.Name = "storageItem59";
+            this.storageItem59.Size = new System.Drawing.Size(47, 47);
+            this.storageItem59.TabIndex = 30;
+            this.storageItem59.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem59.UseVisualStyleBackColor = false;
+            this.storageItem59.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem58
+            // 
+            this.storageItem58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem58.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem58.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem58.ForeColor = System.Drawing.Color.White;
+            this.storageItem58.Location = new System.Drawing.Point(430, 74);
+            this.storageItem58.Name = "storageItem58";
+            this.storageItem58.Size = new System.Drawing.Size(47, 47);
+            this.storageItem58.TabIndex = 29;
+            this.storageItem58.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem58.UseVisualStyleBackColor = false;
+            this.storageItem58.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem57
+            // 
+            this.storageItem57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem57.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem57.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem57.ForeColor = System.Drawing.Color.White;
+            this.storageItem57.Location = new System.Drawing.Point(377, 74);
+            this.storageItem57.Name = "storageItem57";
+            this.storageItem57.Size = new System.Drawing.Size(47, 47);
+            this.storageItem57.TabIndex = 28;
+            this.storageItem57.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem57.UseVisualStyleBackColor = false;
+            this.storageItem57.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem56
+            // 
+            this.storageItem56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem56.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem56.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem56.ForeColor = System.Drawing.Color.White;
+            this.storageItem56.Location = new System.Drawing.Point(324, 74);
+            this.storageItem56.Name = "storageItem56";
+            this.storageItem56.Size = new System.Drawing.Size(47, 47);
+            this.storageItem56.TabIndex = 27;
+            this.storageItem56.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem56.UseVisualStyleBackColor = false;
+            this.storageItem56.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem55
+            // 
+            this.storageItem55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem55.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem55.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem55.ForeColor = System.Drawing.Color.White;
+            this.storageItem55.Location = new System.Drawing.Point(271, 74);
+            this.storageItem55.Name = "storageItem55";
+            this.storageItem55.Size = new System.Drawing.Size(47, 47);
+            this.storageItem55.TabIndex = 26;
+            this.storageItem55.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem55.UseVisualStyleBackColor = false;
+            this.storageItem55.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem54
+            // 
+            this.storageItem54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem54.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem54.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem54.ForeColor = System.Drawing.Color.White;
+            this.storageItem54.Location = new System.Drawing.Point(218, 74);
+            this.storageItem54.Name = "storageItem54";
+            this.storageItem54.Size = new System.Drawing.Size(47, 47);
+            this.storageItem54.TabIndex = 25;
+            this.storageItem54.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem54.UseVisualStyleBackColor = false;
+            this.storageItem54.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem53
+            // 
+            this.storageItem53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem53.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem53.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem53.ForeColor = System.Drawing.Color.White;
+            this.storageItem53.Location = new System.Drawing.Point(165, 74);
+            this.storageItem53.Name = "storageItem53";
+            this.storageItem53.Size = new System.Drawing.Size(47, 47);
+            this.storageItem53.TabIndex = 24;
+            this.storageItem53.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem53.UseVisualStyleBackColor = false;
+            this.storageItem53.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem52
+            // 
+            this.storageItem52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem52.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem52.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem52.ForeColor = System.Drawing.Color.White;
+            this.storageItem52.Location = new System.Drawing.Point(112, 74);
+            this.storageItem52.Name = "storageItem52";
+            this.storageItem52.Size = new System.Drawing.Size(47, 47);
+            this.storageItem52.TabIndex = 23;
+            this.storageItem52.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem52.UseVisualStyleBackColor = false;
+            this.storageItem52.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem51
+            // 
+            this.storageItem51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem51.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem51.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem51.ForeColor = System.Drawing.Color.White;
+            this.storageItem51.Location = new System.Drawing.Point(59, 74);
+            this.storageItem51.Name = "storageItem51";
+            this.storageItem51.Size = new System.Drawing.Size(47, 47);
+            this.storageItem51.TabIndex = 22;
+            this.storageItem51.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem51.UseVisualStyleBackColor = false;
+            this.storageItem51.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem50
+            // 
+            this.storageItem50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem50.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem50.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem50.ForeColor = System.Drawing.Color.White;
+            this.storageItem50.Location = new System.Drawing.Point(6, 74);
+            this.storageItem50.Name = "storageItem50";
+            this.storageItem50.Size = new System.Drawing.Size(47, 47);
+            this.storageItem50.TabIndex = 21;
+            this.storageItem50.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem50.UseVisualStyleBackColor = false;
+            this.storageItem50.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem49
+            // 
+            this.storageItem49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem49.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem49.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem49.ForeColor = System.Drawing.Color.White;
+            this.storageItem49.Location = new System.Drawing.Point(483, 19);
+            this.storageItem49.Name = "storageItem49";
+            this.storageItem49.Size = new System.Drawing.Size(47, 47);
+            this.storageItem49.TabIndex = 20;
+            this.storageItem49.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem49.UseVisualStyleBackColor = false;
+            this.storageItem49.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem48
+            // 
+            this.storageItem48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem48.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem48.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem48.ForeColor = System.Drawing.Color.White;
+            this.storageItem48.Location = new System.Drawing.Point(430, 19);
+            this.storageItem48.Name = "storageItem48";
+            this.storageItem48.Size = new System.Drawing.Size(47, 47);
+            this.storageItem48.TabIndex = 19;
+            this.storageItem48.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem48.UseVisualStyleBackColor = false;
+            this.storageItem48.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem47
+            // 
+            this.storageItem47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem47.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem47.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem47.ForeColor = System.Drawing.Color.White;
+            this.storageItem47.Location = new System.Drawing.Point(377, 19);
+            this.storageItem47.Name = "storageItem47";
+            this.storageItem47.Size = new System.Drawing.Size(47, 47);
+            this.storageItem47.TabIndex = 18;
+            this.storageItem47.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem47.UseVisualStyleBackColor = false;
+            this.storageItem47.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem46
+            // 
+            this.storageItem46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem46.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem46.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem46.ForeColor = System.Drawing.Color.White;
+            this.storageItem46.Location = new System.Drawing.Point(324, 19);
+            this.storageItem46.Name = "storageItem46";
+            this.storageItem46.Size = new System.Drawing.Size(47, 47);
+            this.storageItem46.TabIndex = 17;
+            this.storageItem46.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem46.UseVisualStyleBackColor = false;
+            this.storageItem46.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem45
+            // 
+            this.storageItem45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem45.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem45.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem45.ForeColor = System.Drawing.Color.White;
+            this.storageItem45.Location = new System.Drawing.Point(271, 19);
+            this.storageItem45.Name = "storageItem45";
+            this.storageItem45.Size = new System.Drawing.Size(47, 47);
+            this.storageItem45.TabIndex = 16;
+            this.storageItem45.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem45.UseVisualStyleBackColor = false;
+            this.storageItem45.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem44
+            // 
+            this.storageItem44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem44.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem44.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem44.ForeColor = System.Drawing.Color.White;
+            this.storageItem44.Location = new System.Drawing.Point(218, 19);
+            this.storageItem44.Name = "storageItem44";
+            this.storageItem44.Size = new System.Drawing.Size(47, 47);
+            this.storageItem44.TabIndex = 15;
+            this.storageItem44.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem44.UseVisualStyleBackColor = false;
+            this.storageItem44.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem43
+            // 
+            this.storageItem43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem43.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem43.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem43.ForeColor = System.Drawing.Color.White;
+            this.storageItem43.Location = new System.Drawing.Point(165, 19);
+            this.storageItem43.Name = "storageItem43";
+            this.storageItem43.Size = new System.Drawing.Size(47, 47);
+            this.storageItem43.TabIndex = 14;
+            this.storageItem43.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem43.UseVisualStyleBackColor = false;
+            this.storageItem43.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem42
+            // 
+            this.storageItem42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem42.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem42.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem42.ForeColor = System.Drawing.Color.White;
+            this.storageItem42.Location = new System.Drawing.Point(112, 19);
+            this.storageItem42.Name = "storageItem42";
+            this.storageItem42.Size = new System.Drawing.Size(47, 47);
+            this.storageItem42.TabIndex = 13;
+            this.storageItem42.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem42.UseVisualStyleBackColor = false;
+            this.storageItem42.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem41
+            // 
+            this.storageItem41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem41.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem41.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem41.ForeColor = System.Drawing.Color.White;
+            this.storageItem41.Location = new System.Drawing.Point(59, 19);
+            this.storageItem41.Name = "storageItem41";
+            this.storageItem41.Size = new System.Drawing.Size(47, 47);
+            this.storageItem41.TabIndex = 12;
+            this.storageItem41.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem41.UseVisualStyleBackColor = false;
+            this.storageItem41.Enter += new System.EventHandler(this.storageItem_GotFocus);
+            // 
+            // storageItem40
+            // 
+            this.storageItem40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem40.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem40.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem40.ForeColor = System.Drawing.Color.White;
+            this.storageItem40.Location = new System.Drawing.Point(6, 19);
+            this.storageItem40.Name = "storageItem40";
+            this.storageItem40.Size = new System.Drawing.Size(47, 47);
+            this.storageItem40.TabIndex = 11;
+            this.storageItem40.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem40.UseVisualStyleBackColor = false;
+            this.storageItem40.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
             // groupBoxPiggyItems
             // 
-            this.groupBoxPiggyItems.Controls.Add(this.button28);
-            this.groupBoxPiggyItems.Controls.Add(this.button29);
-            this.groupBoxPiggyItems.Controls.Add(this.button30);
-            this.groupBoxPiggyItems.Controls.Add(this.button31);
-            this.groupBoxPiggyItems.Controls.Add(this.button32);
-            this.groupBoxPiggyItems.Controls.Add(this.button33);
-            this.groupBoxPiggyItems.Controls.Add(this.button34);
-            this.groupBoxPiggyItems.Controls.Add(this.button35);
-            this.groupBoxPiggyItems.Controls.Add(this.button36);
-            this.groupBoxPiggyItems.Controls.Add(this.button37);
-            this.groupBoxPiggyItems.Controls.Add(this.button18);
-            this.groupBoxPiggyItems.Controls.Add(this.button19);
-            this.groupBoxPiggyItems.Controls.Add(this.button20);
-            this.groupBoxPiggyItems.Controls.Add(this.button21);
-            this.groupBoxPiggyItems.Controls.Add(this.button22);
-            this.groupBoxPiggyItems.Controls.Add(this.button23);
-            this.groupBoxPiggyItems.Controls.Add(this.button24);
-            this.groupBoxPiggyItems.Controls.Add(this.button25);
-            this.groupBoxPiggyItems.Controls.Add(this.button26);
-            this.groupBoxPiggyItems.Controls.Add(this.button27);
-            this.groupBoxPiggyItems.Controls.Add(this.button8);
-            this.groupBoxPiggyItems.Controls.Add(this.button9);
-            this.groupBoxPiggyItems.Controls.Add(this.button10);
-            this.groupBoxPiggyItems.Controls.Add(this.button11);
-            this.groupBoxPiggyItems.Controls.Add(this.button12);
-            this.groupBoxPiggyItems.Controls.Add(this.button13);
-            this.groupBoxPiggyItems.Controls.Add(this.button14);
-            this.groupBoxPiggyItems.Controls.Add(this.button15);
-            this.groupBoxPiggyItems.Controls.Add(this.button16);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem39);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem38);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem37);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem36);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem35);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem34);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem33);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem32);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem31);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem30);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem29);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem28);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem27);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem26);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem25);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem24);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem23);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem22);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem21);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem20);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem19);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem18);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem17);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem16);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem15);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem14);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem13);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem12);
+            this.groupBoxPiggyItems.Controls.Add(this.storageItem11);
             this.groupBoxPiggyItems.Controls.Add(this.storageItem10);
             this.groupBoxPiggyItems.Controls.Add(this.storageItem9);
             this.groupBoxPiggyItems.Controls.Add(this.storageItem8);
@@ -3919,382 +4003,411 @@
             this.groupBoxPiggyItems.TabStop = false;
             this.groupBoxPiggyItems.Text = "Piggy Bank";
             // 
-            // button28
+            // storageItem39
             // 
-            this.button28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button28.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button28.ForeColor = System.Drawing.Color.White;
-            this.button28.Location = new System.Drawing.Point(483, 180);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(47, 47);
-            this.button28.TabIndex = 50;
-            this.button28.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button28.UseVisualStyleBackColor = false;
+            this.storageItem39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem39.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem39.ForeColor = System.Drawing.Color.White;
+            this.storageItem39.Location = new System.Drawing.Point(483, 180);
+            this.storageItem39.Name = "storageItem39";
+            this.storageItem39.Size = new System.Drawing.Size(47, 47);
+            this.storageItem39.TabIndex = 50;
+            this.storageItem39.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem39.UseVisualStyleBackColor = false;
+            this.storageItem39.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button29
+            // storageItem38
             // 
-            this.button29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button29.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button29.ForeColor = System.Drawing.Color.White;
-            this.button29.Location = new System.Drawing.Point(430, 180);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(47, 47);
-            this.button29.TabIndex = 49;
-            this.button29.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button29.UseVisualStyleBackColor = false;
+            this.storageItem38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem38.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem38.ForeColor = System.Drawing.Color.White;
+            this.storageItem38.Location = new System.Drawing.Point(430, 180);
+            this.storageItem38.Name = "storageItem38";
+            this.storageItem38.Size = new System.Drawing.Size(47, 47);
+            this.storageItem38.TabIndex = 49;
+            this.storageItem38.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem38.UseVisualStyleBackColor = false;
+            this.storageItem38.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button30
+            // storageItem37
             // 
-            this.button30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button30.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.ForeColor = System.Drawing.Color.White;
-            this.button30.Location = new System.Drawing.Point(377, 180);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(47, 47);
-            this.button30.TabIndex = 48;
-            this.button30.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button30.UseVisualStyleBackColor = false;
+            this.storageItem37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem37.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem37.ForeColor = System.Drawing.Color.White;
+            this.storageItem37.Location = new System.Drawing.Point(377, 180);
+            this.storageItem37.Name = "storageItem37";
+            this.storageItem37.Size = new System.Drawing.Size(47, 47);
+            this.storageItem37.TabIndex = 48;
+            this.storageItem37.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem37.UseVisualStyleBackColor = false;
+            this.storageItem37.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button31
+            // storageItem36
             // 
-            this.button31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button31.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button31.ForeColor = System.Drawing.Color.White;
-            this.button31.Location = new System.Drawing.Point(324, 180);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(47, 47);
-            this.button31.TabIndex = 47;
-            this.button31.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button31.UseVisualStyleBackColor = false;
+            this.storageItem36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem36.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem36.ForeColor = System.Drawing.Color.White;
+            this.storageItem36.Location = new System.Drawing.Point(324, 180);
+            this.storageItem36.Name = "storageItem36";
+            this.storageItem36.Size = new System.Drawing.Size(47, 47);
+            this.storageItem36.TabIndex = 47;
+            this.storageItem36.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem36.UseVisualStyleBackColor = false;
+            this.storageItem36.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button32
+            // storageItem35
             // 
-            this.button32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button32.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button32.ForeColor = System.Drawing.Color.White;
-            this.button32.Location = new System.Drawing.Point(271, 180);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(47, 47);
-            this.button32.TabIndex = 46;
-            this.button32.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button32.UseVisualStyleBackColor = false;
+            this.storageItem35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem35.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem35.ForeColor = System.Drawing.Color.White;
+            this.storageItem35.Location = new System.Drawing.Point(271, 180);
+            this.storageItem35.Name = "storageItem35";
+            this.storageItem35.Size = new System.Drawing.Size(47, 47);
+            this.storageItem35.TabIndex = 46;
+            this.storageItem35.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem35.UseVisualStyleBackColor = false;
+            this.storageItem35.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button33
+            // storageItem34
             // 
-            this.button33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button33.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button33.ForeColor = System.Drawing.Color.White;
-            this.button33.Location = new System.Drawing.Point(218, 180);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(47, 47);
-            this.button33.TabIndex = 45;
-            this.button33.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button33.UseVisualStyleBackColor = false;
+            this.storageItem34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem34.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem34.ForeColor = System.Drawing.Color.White;
+            this.storageItem34.Location = new System.Drawing.Point(218, 180);
+            this.storageItem34.Name = "storageItem34";
+            this.storageItem34.Size = new System.Drawing.Size(47, 47);
+            this.storageItem34.TabIndex = 45;
+            this.storageItem34.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem34.UseVisualStyleBackColor = false;
+            this.storageItem34.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button34
+            // storageItem33
             // 
-            this.button34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button34.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button34.ForeColor = System.Drawing.Color.White;
-            this.button34.Location = new System.Drawing.Point(165, 180);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(47, 47);
-            this.button34.TabIndex = 44;
-            this.button34.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button34.UseVisualStyleBackColor = false;
+            this.storageItem33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem33.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem33.ForeColor = System.Drawing.Color.White;
+            this.storageItem33.Location = new System.Drawing.Point(165, 180);
+            this.storageItem33.Name = "storageItem33";
+            this.storageItem33.Size = new System.Drawing.Size(47, 47);
+            this.storageItem33.TabIndex = 44;
+            this.storageItem33.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem33.UseVisualStyleBackColor = false;
+            this.storageItem33.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button35
+            // storageItem32
             // 
-            this.button35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button35.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button35.ForeColor = System.Drawing.Color.White;
-            this.button35.Location = new System.Drawing.Point(112, 180);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(47, 47);
-            this.button35.TabIndex = 43;
-            this.button35.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button35.UseVisualStyleBackColor = false;
+            this.storageItem32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem32.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem32.ForeColor = System.Drawing.Color.White;
+            this.storageItem32.Location = new System.Drawing.Point(112, 180);
+            this.storageItem32.Name = "storageItem32";
+            this.storageItem32.Size = new System.Drawing.Size(47, 47);
+            this.storageItem32.TabIndex = 43;
+            this.storageItem32.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem32.UseVisualStyleBackColor = false;
+            this.storageItem32.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button36
+            // storageItem31
             // 
-            this.button36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button36.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button36.ForeColor = System.Drawing.Color.White;
-            this.button36.Location = new System.Drawing.Point(59, 180);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(47, 47);
-            this.button36.TabIndex = 42;
-            this.button36.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button36.UseVisualStyleBackColor = false;
+            this.storageItem31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem31.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem31.ForeColor = System.Drawing.Color.White;
+            this.storageItem31.Location = new System.Drawing.Point(59, 180);
+            this.storageItem31.Name = "storageItem31";
+            this.storageItem31.Size = new System.Drawing.Size(47, 47);
+            this.storageItem31.TabIndex = 42;
+            this.storageItem31.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem31.UseVisualStyleBackColor = false;
+            this.storageItem31.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button37
+            // storageItem30
             // 
-            this.button37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button37.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button37.ForeColor = System.Drawing.Color.White;
-            this.button37.Location = new System.Drawing.Point(6, 180);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(47, 47);
-            this.button37.TabIndex = 41;
-            this.button37.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button37.UseVisualStyleBackColor = false;
+            this.storageItem30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem30.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem30.ForeColor = System.Drawing.Color.White;
+            this.storageItem30.Location = new System.Drawing.Point(6, 180);
+            this.storageItem30.Name = "storageItem30";
+            this.storageItem30.Size = new System.Drawing.Size(47, 47);
+            this.storageItem30.TabIndex = 41;
+            this.storageItem30.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem30.UseVisualStyleBackColor = false;
+            this.storageItem30.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button18
+            // storageItem29
             // 
-            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button18.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(483, 127);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(47, 47);
-            this.button18.TabIndex = 40;
-            this.button18.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button18.UseVisualStyleBackColor = false;
+            this.storageItem29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem29.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem29.ForeColor = System.Drawing.Color.White;
+            this.storageItem29.Location = new System.Drawing.Point(483, 127);
+            this.storageItem29.Name = "storageItem29";
+            this.storageItem29.Size = new System.Drawing.Size(47, 47);
+            this.storageItem29.TabIndex = 40;
+            this.storageItem29.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem29.UseVisualStyleBackColor = false;
+            this.storageItem29.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button19
+            // storageItem28
             // 
-            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button19.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(430, 127);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(47, 47);
-            this.button19.TabIndex = 39;
-            this.button19.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button19.UseVisualStyleBackColor = false;
+            this.storageItem28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem28.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem28.ForeColor = System.Drawing.Color.White;
+            this.storageItem28.Location = new System.Drawing.Point(430, 127);
+            this.storageItem28.Name = "storageItem28";
+            this.storageItem28.Size = new System.Drawing.Size(47, 47);
+            this.storageItem28.TabIndex = 39;
+            this.storageItem28.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem28.UseVisualStyleBackColor = false;
+            this.storageItem28.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button20
+            // storageItem27
             // 
-            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button20.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.ForeColor = System.Drawing.Color.White;
-            this.button20.Location = new System.Drawing.Point(377, 127);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(47, 47);
-            this.button20.TabIndex = 38;
-            this.button20.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button20.UseVisualStyleBackColor = false;
+            this.storageItem27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem27.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem27.ForeColor = System.Drawing.Color.White;
+            this.storageItem27.Location = new System.Drawing.Point(377, 127);
+            this.storageItem27.Name = "storageItem27";
+            this.storageItem27.Size = new System.Drawing.Size(47, 47);
+            this.storageItem27.TabIndex = 38;
+            this.storageItem27.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem27.UseVisualStyleBackColor = false;
+            this.storageItem27.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button21
+            // storageItem26
             // 
-            this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button21.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.ForeColor = System.Drawing.Color.White;
-            this.button21.Location = new System.Drawing.Point(324, 127);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(47, 47);
-            this.button21.TabIndex = 37;
-            this.button21.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button21.UseVisualStyleBackColor = false;
+            this.storageItem26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem26.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem26.ForeColor = System.Drawing.Color.White;
+            this.storageItem26.Location = new System.Drawing.Point(324, 127);
+            this.storageItem26.Name = "storageItem26";
+            this.storageItem26.Size = new System.Drawing.Size(47, 47);
+            this.storageItem26.TabIndex = 37;
+            this.storageItem26.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem26.UseVisualStyleBackColor = false;
+            this.storageItem26.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button22
+            // storageItem25
             // 
-            this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button22.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.ForeColor = System.Drawing.Color.White;
-            this.button22.Location = new System.Drawing.Point(271, 127);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(47, 47);
-            this.button22.TabIndex = 36;
-            this.button22.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button22.UseVisualStyleBackColor = false;
+            this.storageItem25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem25.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem25.ForeColor = System.Drawing.Color.White;
+            this.storageItem25.Location = new System.Drawing.Point(271, 127);
+            this.storageItem25.Name = "storageItem25";
+            this.storageItem25.Size = new System.Drawing.Size(47, 47);
+            this.storageItem25.TabIndex = 36;
+            this.storageItem25.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem25.UseVisualStyleBackColor = false;
+            this.storageItem25.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button23
+            // storageItem24
             // 
-            this.button23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button23.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.ForeColor = System.Drawing.Color.White;
-            this.button23.Location = new System.Drawing.Point(218, 127);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(47, 47);
-            this.button23.TabIndex = 35;
-            this.button23.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button23.UseVisualStyleBackColor = false;
+            this.storageItem24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem24.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem24.ForeColor = System.Drawing.Color.White;
+            this.storageItem24.Location = new System.Drawing.Point(218, 127);
+            this.storageItem24.Name = "storageItem24";
+            this.storageItem24.Size = new System.Drawing.Size(47, 47);
+            this.storageItem24.TabIndex = 35;
+            this.storageItem24.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem24.UseVisualStyleBackColor = false;
+            this.storageItem24.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button24
+            // storageItem23
             // 
-            this.button24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button24.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.ForeColor = System.Drawing.Color.White;
-            this.button24.Location = new System.Drawing.Point(165, 127);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(47, 47);
-            this.button24.TabIndex = 34;
-            this.button24.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button24.UseVisualStyleBackColor = false;
+            this.storageItem23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem23.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem23.ForeColor = System.Drawing.Color.White;
+            this.storageItem23.Location = new System.Drawing.Point(165, 127);
+            this.storageItem23.Name = "storageItem23";
+            this.storageItem23.Size = new System.Drawing.Size(47, 47);
+            this.storageItem23.TabIndex = 34;
+            this.storageItem23.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem23.UseVisualStyleBackColor = false;
+            this.storageItem23.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button25
+            // storageItem22
             // 
-            this.button25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button25.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.ForeColor = System.Drawing.Color.White;
-            this.button25.Location = new System.Drawing.Point(112, 127);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(47, 47);
-            this.button25.TabIndex = 33;
-            this.button25.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button25.UseVisualStyleBackColor = false;
+            this.storageItem22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem22.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem22.ForeColor = System.Drawing.Color.White;
+            this.storageItem22.Location = new System.Drawing.Point(112, 127);
+            this.storageItem22.Name = "storageItem22";
+            this.storageItem22.Size = new System.Drawing.Size(47, 47);
+            this.storageItem22.TabIndex = 33;
+            this.storageItem22.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem22.UseVisualStyleBackColor = false;
+            this.storageItem22.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button26
+            // storageItem21
             // 
-            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button26.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.ForeColor = System.Drawing.Color.White;
-            this.button26.Location = new System.Drawing.Point(59, 127);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(47, 47);
-            this.button26.TabIndex = 32;
-            this.button26.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button26.UseVisualStyleBackColor = false;
+            this.storageItem21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem21.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem21.ForeColor = System.Drawing.Color.White;
+            this.storageItem21.Location = new System.Drawing.Point(59, 127);
+            this.storageItem21.Name = "storageItem21";
+            this.storageItem21.Size = new System.Drawing.Size(47, 47);
+            this.storageItem21.TabIndex = 32;
+            this.storageItem21.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem21.UseVisualStyleBackColor = false;
+            this.storageItem21.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button27
+            // storageItem20
             // 
-            this.button27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button27.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button27.ForeColor = System.Drawing.Color.White;
-            this.button27.Location = new System.Drawing.Point(6, 127);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(47, 47);
-            this.button27.TabIndex = 31;
-            this.button27.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button27.UseVisualStyleBackColor = false;
+            this.storageItem20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem20.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem20.ForeColor = System.Drawing.Color.White;
+            this.storageItem20.Location = new System.Drawing.Point(6, 127);
+            this.storageItem20.Name = "storageItem20";
+            this.storageItem20.Size = new System.Drawing.Size(47, 47);
+            this.storageItem20.TabIndex = 31;
+            this.storageItem20.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem20.UseVisualStyleBackColor = false;
+            this.storageItem20.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button8
+            // storageItem19
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(483, 74);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(47, 47);
-            this.button8.TabIndex = 30;
-            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button8.UseVisualStyleBackColor = false;
+            this.storageItem19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem19.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem19.ForeColor = System.Drawing.Color.White;
+            this.storageItem19.Location = new System.Drawing.Point(483, 74);
+            this.storageItem19.Name = "storageItem19";
+            this.storageItem19.Size = new System.Drawing.Size(47, 47);
+            this.storageItem19.TabIndex = 30;
+            this.storageItem19.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem19.UseVisualStyleBackColor = false;
+            this.storageItem19.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button9
+            // storageItem18
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(430, 74);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(47, 47);
-            this.button9.TabIndex = 29;
-            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button9.UseVisualStyleBackColor = false;
+            this.storageItem18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem18.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem18.ForeColor = System.Drawing.Color.White;
+            this.storageItem18.Location = new System.Drawing.Point(430, 74);
+            this.storageItem18.Name = "storageItem18";
+            this.storageItem18.Size = new System.Drawing.Size(47, 47);
+            this.storageItem18.TabIndex = 29;
+            this.storageItem18.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem18.UseVisualStyleBackColor = false;
+            this.storageItem18.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button10
+            // storageItem17
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(377, 74);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(47, 47);
-            this.button10.TabIndex = 28;
-            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button10.UseVisualStyleBackColor = false;
+            this.storageItem17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem17.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem17.ForeColor = System.Drawing.Color.White;
+            this.storageItem17.Location = new System.Drawing.Point(377, 74);
+            this.storageItem17.Name = "storageItem17";
+            this.storageItem17.Size = new System.Drawing.Size(47, 47);
+            this.storageItem17.TabIndex = 28;
+            this.storageItem17.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem17.UseVisualStyleBackColor = false;
+            this.storageItem17.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button11
+            // storageItem16
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(324, 74);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(47, 47);
-            this.button11.TabIndex = 27;
-            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button11.UseVisualStyleBackColor = false;
+            this.storageItem16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem16.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem16.ForeColor = System.Drawing.Color.White;
+            this.storageItem16.Location = new System.Drawing.Point(324, 74);
+            this.storageItem16.Name = "storageItem16";
+            this.storageItem16.Size = new System.Drawing.Size(47, 47);
+            this.storageItem16.TabIndex = 27;
+            this.storageItem16.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem16.UseVisualStyleBackColor = false;
+            this.storageItem16.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button12
+            // storageItem15
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button12.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(271, 74);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(47, 47);
-            this.button12.TabIndex = 26;
-            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button12.UseVisualStyleBackColor = false;
+            this.storageItem15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem15.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem15.ForeColor = System.Drawing.Color.White;
+            this.storageItem15.Location = new System.Drawing.Point(271, 74);
+            this.storageItem15.Name = "storageItem15";
+            this.storageItem15.Size = new System.Drawing.Size(47, 47);
+            this.storageItem15.TabIndex = 26;
+            this.storageItem15.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem15.UseVisualStyleBackColor = false;
+            this.storageItem15.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button13
+            // storageItem14
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button13.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(218, 74);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(47, 47);
-            this.button13.TabIndex = 25;
-            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button13.UseVisualStyleBackColor = false;
+            this.storageItem14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem14.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem14.ForeColor = System.Drawing.Color.White;
+            this.storageItem14.Location = new System.Drawing.Point(218, 74);
+            this.storageItem14.Name = "storageItem14";
+            this.storageItem14.Size = new System.Drawing.Size(47, 47);
+            this.storageItem14.TabIndex = 25;
+            this.storageItem14.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem14.UseVisualStyleBackColor = false;
+            this.storageItem14.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button14
+            // storageItem13
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button14.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(165, 74);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(47, 47);
-            this.button14.TabIndex = 24;
-            this.button14.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button14.UseVisualStyleBackColor = false;
+            this.storageItem13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem13.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem13.ForeColor = System.Drawing.Color.White;
+            this.storageItem13.Location = new System.Drawing.Point(165, 74);
+            this.storageItem13.Name = "storageItem13";
+            this.storageItem13.Size = new System.Drawing.Size(47, 47);
+            this.storageItem13.TabIndex = 24;
+            this.storageItem13.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem13.UseVisualStyleBackColor = false;
+            this.storageItem13.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button15
+            // storageItem12
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button15.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(112, 74);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(47, 47);
-            this.button15.TabIndex = 23;
-            this.button15.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button15.UseVisualStyleBackColor = false;
+            this.storageItem12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem12.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem12.ForeColor = System.Drawing.Color.White;
+            this.storageItem12.Location = new System.Drawing.Point(112, 74);
+            this.storageItem12.Name = "storageItem12";
+            this.storageItem12.Size = new System.Drawing.Size(47, 47);
+            this.storageItem12.TabIndex = 23;
+            this.storageItem12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem12.UseVisualStyleBackColor = false;
+            this.storageItem12.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // button16
+            // storageItem11
             // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button16.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(59, 74);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(47, 47);
-            this.button16.TabIndex = 22;
-            this.button16.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button16.UseVisualStyleBackColor = false;
+            this.storageItem11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.storageItem11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.storageItem11.Font = new System.Drawing.Font("Andy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageItem11.ForeColor = System.Drawing.Color.White;
+            this.storageItem11.Location = new System.Drawing.Point(59, 74);
+            this.storageItem11.Name = "storageItem11";
+            this.storageItem11.Size = new System.Drawing.Size(47, 47);
+            this.storageItem11.TabIndex = 22;
+            this.storageItem11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.storageItem11.UseVisualStyleBackColor = false;
+            this.storageItem11.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
             // storageItem10
             // 
@@ -4308,6 +4421,7 @@
             this.storageItem10.TabIndex = 21;
             this.storageItem10.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.storageItem10.UseVisualStyleBackColor = false;
+            this.storageItem10.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
             // storageItem9
             // 
@@ -4321,6 +4435,7 @@
             this.storageItem9.TabIndex = 20;
             this.storageItem9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.storageItem9.UseVisualStyleBackColor = false;
+            this.storageItem9.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
             // storageItem8
             // 
@@ -4334,6 +4449,7 @@
             this.storageItem8.TabIndex = 19;
             this.storageItem8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.storageItem8.UseVisualStyleBackColor = false;
+            this.storageItem8.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
             // storageItem7
             // 
@@ -4347,6 +4463,7 @@
             this.storageItem7.TabIndex = 18;
             this.storageItem7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.storageItem7.UseVisualStyleBackColor = false;
+            this.storageItem7.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
             // storageItem6
             // 
@@ -4360,6 +4477,7 @@
             this.storageItem6.TabIndex = 17;
             this.storageItem6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.storageItem6.UseVisualStyleBackColor = false;
+            this.storageItem6.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
             // storageItem5
             // 
@@ -4373,6 +4491,7 @@
             this.storageItem5.TabIndex = 16;
             this.storageItem5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.storageItem5.UseVisualStyleBackColor = false;
+            this.storageItem5.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
             // storageItem4
             // 
@@ -4386,6 +4505,7 @@
             this.storageItem4.TabIndex = 15;
             this.storageItem4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.storageItem4.UseVisualStyleBackColor = false;
+            this.storageItem4.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
             // storageItem3
             // 
@@ -4399,6 +4519,7 @@
             this.storageItem3.TabIndex = 14;
             this.storageItem3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.storageItem3.UseVisualStyleBackColor = false;
+            this.storageItem3.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
             // storageItem2
             // 
@@ -4412,6 +4533,7 @@
             this.storageItem2.TabIndex = 13;
             this.storageItem2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.storageItem2.UseVisualStyleBackColor = false;
+            this.storageItem2.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
             // storageItem1
             // 
@@ -4425,6 +4547,7 @@
             this.storageItem1.TabIndex = 12;
             this.storageItem1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.storageItem1.UseVisualStyleBackColor = false;
+            this.storageItem1.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
             // storageItem0
             // 
@@ -4438,13 +4561,14 @@
             this.storageItem0.TabIndex = 11;
             this.storageItem0.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.storageItem0.UseVisualStyleBackColor = false;
+            this.storageItem0.Enter += new System.EventHandler(this.storageItem_GotFocus);
             // 
-            // itemFilterControl1
+            // itemFilterStorage
             // 
-            this.itemFilterControl1.Location = new System.Drawing.Point(6, 6);
-            this.itemFilterControl1.Name = "itemFilterControl1";
-            this.itemFilterControl1.Size = new System.Drawing.Size(193, 377);
-            this.itemFilterControl1.TabIndex = 0;
+            this.itemFilterStorage.Location = new System.Drawing.Point(6, 6);
+            this.itemFilterStorage.Name = "itemFilterStorage";
+            this.itemFilterStorage.Size = new System.Drawing.Size(193, 377);
+            this.itemFilterStorage.TabIndex = 0;
             // 
             // hairClrPictureBox
             // 
@@ -4572,6 +4696,26 @@
             this.shoeClrPictureBox.TabIndex = 0;
             this.shoeClrPictureBox.TabStop = false;
             // 
+            // buttonDeleteStorageItem
+            // 
+            this.buttonDeleteStorageItem.Location = new System.Drawing.Point(7, 473);
+            this.buttonDeleteStorageItem.Name = "buttonDeleteStorageItem";
+            this.buttonDeleteStorageItem.Size = new System.Drawing.Size(90, 23);
+            this.buttonDeleteStorageItem.TabIndex = 53;
+            this.buttonDeleteStorageItem.Text = "Delete Item";
+            this.buttonDeleteStorageItem.UseVisualStyleBackColor = true;
+            this.buttonDeleteStorageItem.Click += new System.EventHandler(this.buttonDeleteStorageItem_Click);
+            // 
+            // buttonDeleteAllStorageItems
+            // 
+            this.buttonDeleteAllStorageItems.Location = new System.Drawing.Point(109, 473);
+            this.buttonDeleteAllStorageItems.Name = "buttonDeleteAllStorageItems";
+            this.buttonDeleteAllStorageItems.Size = new System.Drawing.Size(90, 23);
+            this.buttonDeleteAllStorageItems.TabIndex = 54;
+            this.buttonDeleteAllStorageItems.Text = "Delete All Items";
+            this.buttonDeleteAllStorageItems.UseVisualStyleBackColor = true;
+            this.buttonDeleteAllStorageItems.Click += new System.EventHandler(this.buttonDeleteAllStorageItems_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4616,8 +4760,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.buffsBindingSource)).EndInit();
             this.inventoryTab.ResumeLayout(false);
             this.inventoryTab.PerformLayout();
-            this.itemPropertiesGroupBox.ResumeLayout(false);
-            this.itemPropertiesGroupBox.PerformLayout();
+            this.groupBoxItemProperties.ResumeLayout(false);
+            this.groupBoxItemProperties.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownStackSize)).EndInit();
             this.inventoryFilterGroupBox.ResumeLayout(false);
             this.tabPageStorage.ResumeLayout(false);
@@ -4757,7 +4901,7 @@
         private System.Windows.Forms.Button inventoryItem2;
         private System.Windows.Forms.Button inventoryItem1;
         private System.Windows.Forms.Button inventoryItem0;
-        private System.Windows.Forms.GroupBox itemPropertiesGroupBox;
+        private System.Windows.Forms.GroupBox groupBoxItemProperties;
         private System.Windows.Forms.Button buttonDeleteAllItems;
         private System.Windows.Forms.Button buttonDeleteItem;
         private System.Windows.Forms.Button buttonMaxAllStacks;
@@ -4831,121 +4975,121 @@
         private System.Windows.Forms.Button buttonRandomHair;
         private System.Windows.Forms.Button buttonEditHair;
         private System.Windows.Forms.TabPage tabPageStorage;
-        private Framework.ItemFilterControl itemFilterControl1;
+        private Framework.ItemFilterControl itemFilterStorage;
         private System.Windows.Forms.GroupBox inventoryFilterGroupBox;
         private Framework.ItemFilterControl itemFilterInventory;
         private System.Windows.Forms.GroupBox groupBoxForge;
-        private System.Windows.Forms.Button button108;
-        private System.Windows.Forms.Button button109;
-        private System.Windows.Forms.Button button110;
-        private System.Windows.Forms.Button button111;
-        private System.Windows.Forms.Button button112;
-        private System.Windows.Forms.Button button113;
-        private System.Windows.Forms.Button button114;
-        private System.Windows.Forms.Button button115;
-        private System.Windows.Forms.Button button116;
-        private System.Windows.Forms.Button button117;
-        private System.Windows.Forms.Button button98;
-        private System.Windows.Forms.Button button99;
-        private System.Windows.Forms.Button button100;
-        private System.Windows.Forms.Button button101;
-        private System.Windows.Forms.Button button102;
-        private System.Windows.Forms.Button button103;
-        private System.Windows.Forms.Button button104;
-        private System.Windows.Forms.Button button105;
-        private System.Windows.Forms.Button button106;
-        private System.Windows.Forms.Button button107;
-        private System.Windows.Forms.Button button88;
-        private System.Windows.Forms.Button button89;
-        private System.Windows.Forms.Button button90;
-        private System.Windows.Forms.Button button91;
-        private System.Windows.Forms.Button button92;
-        private System.Windows.Forms.Button button93;
-        private System.Windows.Forms.Button button94;
-        private System.Windows.Forms.Button button95;
-        private System.Windows.Forms.Button button96;
-        private System.Windows.Forms.Button button97;
-        private System.Windows.Forms.Button button87;
-        private System.Windows.Forms.Button button86;
-        private System.Windows.Forms.Button button85;
-        private System.Windows.Forms.Button button84;
-        private System.Windows.Forms.Button button83;
-        private System.Windows.Forms.Button button82;
-        private System.Windows.Forms.Button button81;
-        private System.Windows.Forms.Button button80;
-        private System.Windows.Forms.Button button79;
-        private System.Windows.Forms.Button button78;
+        private System.Windows.Forms.Button storageItem119;
+        private System.Windows.Forms.Button storageItem118;
+        private System.Windows.Forms.Button storageItem117;
+        private System.Windows.Forms.Button storageItem116;
+        private System.Windows.Forms.Button storageItem115;
+        private System.Windows.Forms.Button storageItem114;
+        private System.Windows.Forms.Button storageItem113;
+        private System.Windows.Forms.Button storageItem112;
+        private System.Windows.Forms.Button storageItem111;
+        private System.Windows.Forms.Button storageItem110;
+        private System.Windows.Forms.Button storageItem109;
+        private System.Windows.Forms.Button storageItem108;
+        private System.Windows.Forms.Button storageItem107;
+        private System.Windows.Forms.Button storageItem106;
+        private System.Windows.Forms.Button storageItem105;
+        private System.Windows.Forms.Button storageItem104;
+        private System.Windows.Forms.Button storageItem103;
+        private System.Windows.Forms.Button storageItem102;
+        private System.Windows.Forms.Button storageItem101;
+        private System.Windows.Forms.Button storageItem100;
+        private System.Windows.Forms.Button storageItem99;
+        private System.Windows.Forms.Button storageItem98;
+        private System.Windows.Forms.Button storageItem97;
+        private System.Windows.Forms.Button storageItem96;
+        private System.Windows.Forms.Button storageItem95;
+        private System.Windows.Forms.Button storageItem94;
+        private System.Windows.Forms.Button storageItem93;
+        private System.Windows.Forms.Button storageItem92;
+        private System.Windows.Forms.Button storageItem91;
+        private System.Windows.Forms.Button storageItem90;
+        private System.Windows.Forms.Button storageItem89;
+        private System.Windows.Forms.Button storageItem88;
+        private System.Windows.Forms.Button storageItem87;
+        private System.Windows.Forms.Button storageItem86;
+        private System.Windows.Forms.Button storageItem85;
+        private System.Windows.Forms.Button storageItem84;
+        private System.Windows.Forms.Button storageItem83;
+        private System.Windows.Forms.Button storageItem82;
+        private System.Windows.Forms.Button storageItem81;
+        private System.Windows.Forms.Button storageItem80;
         private System.Windows.Forms.GroupBox groupBoxSafe;
-        private System.Windows.Forms.Button button38;
-        private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.Button button40;
-        private System.Windows.Forms.Button button41;
-        private System.Windows.Forms.Button button42;
-        private System.Windows.Forms.Button button43;
-        private System.Windows.Forms.Button button44;
-        private System.Windows.Forms.Button button45;
-        private System.Windows.Forms.Button button46;
-        private System.Windows.Forms.Button button47;
-        private System.Windows.Forms.Button button48;
-        private System.Windows.Forms.Button button49;
-        private System.Windows.Forms.Button button50;
-        private System.Windows.Forms.Button button51;
-        private System.Windows.Forms.Button button52;
-        private System.Windows.Forms.Button button53;
-        private System.Windows.Forms.Button button54;
-        private System.Windows.Forms.Button button55;
-        private System.Windows.Forms.Button button56;
-        private System.Windows.Forms.Button button57;
-        private System.Windows.Forms.Button button58;
-        private System.Windows.Forms.Button button59;
-        private System.Windows.Forms.Button button60;
-        private System.Windows.Forms.Button button61;
-        private System.Windows.Forms.Button button62;
-        private System.Windows.Forms.Button button63;
-        private System.Windows.Forms.Button button64;
-        private System.Windows.Forms.Button button65;
-        private System.Windows.Forms.Button button66;
-        private System.Windows.Forms.Button button67;
-        private System.Windows.Forms.Button button68;
-        private System.Windows.Forms.Button button69;
-        private System.Windows.Forms.Button button70;
-        private System.Windows.Forms.Button button71;
-        private System.Windows.Forms.Button button72;
-        private System.Windows.Forms.Button button73;
-        private System.Windows.Forms.Button button74;
-        private System.Windows.Forms.Button button75;
-        private System.Windows.Forms.Button button76;
-        private System.Windows.Forms.Button button77;
+        private System.Windows.Forms.Button storageItem79;
+        private System.Windows.Forms.Button storageItem78;
+        private System.Windows.Forms.Button storageItem77;
+        private System.Windows.Forms.Button storageItem76;
+        private System.Windows.Forms.Button storageItem75;
+        private System.Windows.Forms.Button storageItem74;
+        private System.Windows.Forms.Button storageItem73;
+        private System.Windows.Forms.Button storageItem72;
+        private System.Windows.Forms.Button storageItem71;
+        private System.Windows.Forms.Button storageItem70;
+        private System.Windows.Forms.Button storageItem69;
+        private System.Windows.Forms.Button storageItem68;
+        private System.Windows.Forms.Button storageItem67;
+        private System.Windows.Forms.Button storageItem66;
+        private System.Windows.Forms.Button storageItem65;
+        private System.Windows.Forms.Button storageItem64;
+        private System.Windows.Forms.Button storageItem63;
+        private System.Windows.Forms.Button storageItem62;
+        private System.Windows.Forms.Button storageItem61;
+        private System.Windows.Forms.Button storageItem60;
+        private System.Windows.Forms.Button storageItem59;
+        private System.Windows.Forms.Button storageItem58;
+        private System.Windows.Forms.Button storageItem57;
+        private System.Windows.Forms.Button storageItem56;
+        private System.Windows.Forms.Button storageItem55;
+        private System.Windows.Forms.Button storageItem54;
+        private System.Windows.Forms.Button storageItem53;
+        private System.Windows.Forms.Button storageItem52;
+        private System.Windows.Forms.Button storageItem51;
+        private System.Windows.Forms.Button storageItem50;
+        private System.Windows.Forms.Button storageItem49;
+        private System.Windows.Forms.Button storageItem48;
+        private System.Windows.Forms.Button storageItem47;
+        private System.Windows.Forms.Button storageItem46;
+        private System.Windows.Forms.Button storageItem45;
+        private System.Windows.Forms.Button storageItem44;
+        private System.Windows.Forms.Button storageItem43;
+        private System.Windows.Forms.Button storageItem42;
+        private System.Windows.Forms.Button storageItem41;
+        private System.Windows.Forms.Button storageItem40;
         private System.Windows.Forms.GroupBox groupBoxPiggyItems;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button36;
-        private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button storageItem39;
+        private System.Windows.Forms.Button storageItem38;
+        private System.Windows.Forms.Button storageItem37;
+        private System.Windows.Forms.Button storageItem36;
+        private System.Windows.Forms.Button storageItem35;
+        private System.Windows.Forms.Button storageItem34;
+        private System.Windows.Forms.Button storageItem33;
+        private System.Windows.Forms.Button storageItem32;
+        private System.Windows.Forms.Button storageItem31;
+        private System.Windows.Forms.Button storageItem30;
+        private System.Windows.Forms.Button storageItem29;
+        private System.Windows.Forms.Button storageItem28;
+        private System.Windows.Forms.Button storageItem27;
+        private System.Windows.Forms.Button storageItem26;
+        private System.Windows.Forms.Button storageItem25;
+        private System.Windows.Forms.Button storageItem24;
+        private System.Windows.Forms.Button storageItem23;
+        private System.Windows.Forms.Button storageItem22;
+        private System.Windows.Forms.Button storageItem21;
+        private System.Windows.Forms.Button storageItem20;
+        private System.Windows.Forms.Button storageItem19;
+        private System.Windows.Forms.Button storageItem18;
+        private System.Windows.Forms.Button storageItem17;
+        private System.Windows.Forms.Button storageItem16;
+        private System.Windows.Forms.Button storageItem15;
+        private System.Windows.Forms.Button storageItem14;
+        private System.Windows.Forms.Button storageItem13;
+        private System.Windows.Forms.Button storageItem12;
+        private System.Windows.Forms.Button storageItem11;
         private System.Windows.Forms.Button storageItem10;
         private System.Windows.Forms.Button storageItem9;
         private System.Windows.Forms.Button storageItem8;
@@ -4957,6 +5101,8 @@
         private System.Windows.Forms.Button storageItem2;
         private System.Windows.Forms.Button storageItem1;
         private System.Windows.Forms.Button storageItem0;
+        private System.Windows.Forms.Button buttonDeleteAllStorageItems;
+        private System.Windows.Forms.Button buttonDeleteStorageItem;
     }
 }
 

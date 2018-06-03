@@ -171,6 +171,16 @@ namespace TerrariaInventoryEditor.TerrariaLib
         }
 
         /// <summary>
+        ///     Gets or sets a value indicating whether the item is consumable.
+        /// </summary>
+        [JsonProperty("is_consumable")]
+        public bool IsConsumable
+        {
+            get => Get<bool>();
+            set => Set(value);
+        }
+
+        /// <summary>
         ///     Gets or sets a value indicating whether the item is favourited.
         /// </summary>
         public bool IsFavourite
@@ -389,6 +399,15 @@ namespace TerrariaInventoryEditor.TerrariaLib
         }
 
         /// <summary>
+        ///     Returns the string representation of this item.
+        /// </summary>
+        /// <returns>The string representation of this item.</returns>
+        public override string ToString()
+        {
+            return Name;
+        }
+
+        /// <summary>
         ///     Constructs the item based on the specified net ID.
         /// </summary>
         /// <param name="netId">The net ID.</param>
@@ -418,6 +437,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
             Height = item.Height;
             IsAccessory = item.IsAccessory;
             IsAutoReuse = item.IsAutoReuse;
+            IsConsumable = item.IsConsumable;
             IsMagic = item.IsMagic;
             IsMelee = item.IsMelee;
             IsRanged = item.IsRanged;
@@ -438,15 +458,6 @@ namespace TerrariaInventoryEditor.TerrariaLib
             UseAmmo = item.UseAmmo;
             UseTime = item.UseTime;
             Width = item.Width;
-        }
-
-        /// <summary>
-        ///     Returns the string representation of this item.
-        /// </summary>
-        /// <returns>The string representation of this item.</returns>
-        public override string ToString()
-        {
-            return Name;
         }
     }
 }

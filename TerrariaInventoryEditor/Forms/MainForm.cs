@@ -17,9 +17,11 @@ namespace TerrariaInventoryEditor.Forms
         private readonly List<Button> _equipmentItems = new List<Button>();
         private readonly List<Button> _inventoryItems = new List<Button>();
         private readonly Random _random = new Random();
+        private readonly List<Button> _storageItems = new List<Button>();
 
         private Button _selectedEquip;
         private Button _selectedItem;
+        private Button _selectedStorageButton;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="MainForm" /> class.
@@ -32,19 +34,7 @@ namespace TerrariaInventoryEditor.Forms
             Width = 687;
             Height = 298;
 
-            // Initialize player texture files
-            TextureManager.Instance.Load();
-
-            // Hook the required events
-            itemFilterInventory.ItemListBoxSelectedIndexChanged += itemFilterInventory_SelectedItemIndexChanged;
-
-            // Setup data sources
-            playerBindingSource.DataSource = Terraria.Instance.Player;
-            listBoxEquips.DataSource = GetFilteredEquipmentList();
-            listBoxBuffs.DataSource = Terraria.Instance.Buffs;
-            comboBoxItemPrefix.DataSource = Enum.GetValues(typeof(ItemPrefix)).Cast<ItemPrefix>().ToList();
-
-            // Store dye labels
+            // Store dye items
             for (var i = 0; i < 10; i++)
             {
                 if (!(Controls.Find($"dyeItem{i}", true).SingleOrDefault() is Button dyeItem))
@@ -56,7 +46,7 @@ namespace TerrariaInventoryEditor.Forms
                 _dyeItems.Add(dyeItem);
             }
 
-            // Store equipment labels
+            // Store equipment items
             for (var i = 0; i < 20; ++i)
             {
                 if (!(Controls.Find($"equipmentItem{i}", true).SingleOrDefault() is Button equipmentItem))
@@ -68,7 +58,7 @@ namespace TerrariaInventoryEditor.Forms
                 _equipmentItems.Add(equipmentItem);
             }
 
-            // Store inventory labels
+            // Store inventory items
             for (var i = 0; i < 58; ++i)
             {
                 if (!(Controls.Find($"inventoryItem{i}", true).SingleOrDefault() is Button inventoryItem))
@@ -80,10 +70,33 @@ namespace TerrariaInventoryEditor.Forms
                 _inventoryItems.Add(inventoryItem);
             }
 
+            // Store bank items
+            for (var i = 0; i < 120; ++i)
+            {
+                if (!(Controls.Find($"storageItem{i}", true).SingleOrDefault() is Button storageItem))
+                {
+                    continue;
+                }
+
+                storageItem.Tag = i;
+                _storageItems.Add(storageItem);
+            }
+
+            // Initialize player texture files
+            TextureManager.Instance.Load();
+
+            // Setup data sources
+            playerBindingSource.DataSource = Terraria.Instance.Player;
+            listBoxEquips.DataSource = GetFilteredEquipmentList();
+            listBoxBuffs.DataSource = Terraria.Instance.Buffs;
+            comboBoxItemPrefix.DataSource = Enum.GetValues(typeof(ItemPrefix)).Cast<ItemPrefix>().ToList();
+
             // Draw the character
-            playerPictureBox.Draw();
-            DrawEquipment();
-            DrawInventory();
+            RedrawTextures();
+
+            // Hook the required events
+            itemFilterInventory.ItemListBoxSelectedIndexChanged += itemFilterInventory_SelectedItemIndexChanged;
+            itemFilterStorage.ItemListBoxSelectedIndexChanged += itemFilterStorage_SelectedItemIndexChanged;
         }
 
         private static List<Item> GetFilteredEquipmentList(string filter = null)
@@ -110,13 +123,25 @@ namespace TerrariaInventoryEditor.Forms
 
         private void buttonDeleteAllItems_Click(object sender, EventArgs e)
         {
-            var player = Terraria.Instance.Player;
-            foreach (var item in player.Inventory.Where(i => i.NetId != 0))
+            foreach (var item in Terraria.Instance.Player.Inventory.Where(i => i.NetId != 0))
             {
                 item.SetDefaults(0);
             }
 
             DrawInventory();
+        }
+
+        private void buttonDeleteAllStorageItems_Click(object sender, EventArgs e)
+        {
+            var player = Terraria.Instance.Player;
+            for (var i = 0; i < 40; ++i)
+            {
+                player.PiggyBank[i].SetDefaults(0);
+                player.Safe[i].SetDefaults(0);
+                player.Forge[i].SetDefaults(0);
+            }
+
+            DrawStorage();
         }
 
         private void buttonDeleteBuff_Click(object sender, EventArgs e)
@@ -133,10 +158,36 @@ namespace TerrariaInventoryEditor.Forms
             }
 
             var player = Terraria.Instance.Player;
-            player.Inventory[(int) _selectedItem.Tag] = new Item();
+            player.Inventory[(int) _selectedItem.Tag].SetDefaults(0);
 
             _selectedItem.Image = new Bitmap("Data\\ItemTextures\\Item_0.png");
-            _selectedItem.Text = string.Empty;
+            _selectedItem.Text = "0";
+        }
+
+        private void buttonDeleteStorageItem_Click(object sender, EventArgs e)
+        {
+            if (_selectedStorageButton == null)
+            {
+                return;
+            }
+
+            var player = Terraria.Instance.Player;
+            var tag = (int) _selectedStorageButton.Tag;
+            if (tag < 40)
+            {
+                player.PiggyBank[tag].SetDefaults(0);
+            }
+            else if (tag < 80)
+            {
+                player.Safe[tag - 40].SetDefaults(0);
+            }
+            else
+            {
+                player.Forge[tag - 80].SetDefaults(0);
+            }
+
+            _selectedStorageButton.Image = new Bitmap("Data\\ItemTextures\\Item_0.png");
+            _selectedStorageButton.Text = "0";
         }
 
         private void buttonEditHair_Click(object sender, EventArgs e)
@@ -274,12 +325,35 @@ namespace TerrariaInventoryEditor.Forms
         private void DrawInventory()
         {
             var player = Terraria.Instance.Player;
-            for (var i = 0; i < 58; ++i)
+            for (var i = 0; i < player.Inventory.Length; ++i)
             {
                 var item = _inventoryItems[i];
-
                 item.Image = player.Inventory[i].Image;
                 item.Text = player.Inventory[i].StackSize.ToString();
+            }
+        }
+
+        private void DrawStorage()
+        {
+            var player = Terraria.Instance.Player;
+            for (var i = 0; i < player.PiggyBank.Length + player.Safe.Length + player.Forge.Length; ++i)
+            {
+                var item = _storageItems[i];
+                if (i < player.PiggyBank.Length)
+                {
+                    item.Image = player.PiggyBank[i].Image;
+                    item.Text = player.PiggyBank[i].StackSize.ToString();
+                }
+                else if (i < player.PiggyBank.Length + player.Safe.Length)
+                {
+                    item.Image = player.Safe[i - player.PiggyBank.Length].Image;
+                    item.Text = player.Safe[i - player.PiggyBank.Length].StackSize.ToString();
+                }
+                else
+                {
+                    item.Image = player.Forge[i - (player.PiggyBank.Length + player.Safe.Length)].Image;
+                    item.Text = player.Forge[i - (player.PiggyBank.Length + player.Safe.Length)].StackSize.ToString();
+                }
             }
         }
 
@@ -356,6 +430,32 @@ namespace TerrariaInventoryEditor.Forms
             player.Inventory[(int) _selectedItem.Tag].SetDefaults(itemFilterInventory.SelectedItem.NetId);
         }
 
+        private void itemFilterStorage_SelectedItemIndexChanged(object sender, EventArgs e)
+        {
+            var player = Terraria.Instance.Player;
+            if (_selectedStorageButton == null)
+            {
+                return;
+            }
+
+            _selectedStorageButton.Text = itemFilterStorage.SelectedItem.StackSize.ToString();
+            _selectedStorageButton.Image = itemFilterStorage.SelectedItem.Image;
+
+            var tag = (int) _selectedStorageButton.Tag;
+            if (tag < 40)
+            {
+                player.PiggyBank[tag].SetDefaults(itemFilterStorage.SelectedItem.NetId);
+            }
+            else if (tag < 80)
+            {
+                player.Safe[tag - 40].SetDefaults(itemFilterStorage.SelectedItem.NetId);
+            }
+            else
+            {
+                player.Forge[tag - 80].SetDefaults(itemFilterStorage.SelectedItem.NetId);
+            }
+        }
+
         private void listBoxBuffs_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (gridViewBuffs.CurrentCell == null)
@@ -412,6 +512,26 @@ namespace TerrariaInventoryEditor.Forms
                 pictureBox.BackColor = colorDialog.Color;
                 playerPictureBox.Draw();
             }
+        }
+
+        private void RedrawTextures()
+        {
+            playerPictureBox.Draw();
+            DrawEquipment();
+            DrawInventory();
+            DrawStorage();
+        }
+
+        private void storageItem_GotFocus(object sender, EventArgs e)
+        {
+            var button = (Button) sender;
+            button.BackColor = Color.FromArgb(0, 171, 229);
+            foreach (var storageButton in _storageItems.Where(b => b != button))
+            {
+                storageButton.BackColor = Color.FromArgb(90, 90, 180);
+            }
+
+            _selectedStorageButton = button;
         }
 
         private void tabControl_TabSelected(object sender, TabControlEventArgs e)
@@ -473,13 +593,7 @@ namespace TerrariaInventoryEditor.Forms
         private void toolstripMenuItemNew_Click(object sender, EventArgs e)
         {
             playerBindingSource.DataSource = Terraria.Instance.Player = new Player();
-
-            comboBoxItemPrefix.SelectedIndex = 0;
-            upDownStackSize.Value = 1;
-
-            playerPictureBox.Draw();
-            DrawEquipment();
-            DrawInventory();
+            RedrawTextures();
         }
 
         private void toolstripMenuItemOpen_Click(object sender, EventArgs e)
@@ -500,9 +614,7 @@ namespace TerrariaInventoryEditor.Forms
                 Terraria.Instance.Player.Load(openFileDialog.FileName);
             }
 
-            playerPictureBox.Draw();
-            DrawEquipment();
-            DrawInventory();
+            RedrawTextures();
         }
 
         private void toolstripMenuItemSave_Click(object sender, EventArgs e)

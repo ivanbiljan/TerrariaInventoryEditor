@@ -57,6 +57,15 @@ namespace TerrariaInventoryEditor.TerrariaLib
         }
 
         /// <summary>
+        ///     Returns the string representation of this buff.
+        /// </summary>
+        /// <returns>The string representation of this buff.</returns>
+        public override string ToString()
+        {
+            return Name;
+        }
+
+        /// <summary>
         ///     Constructs the buff based on the specified buff ID.
         /// </summary>
         /// <param name="buffId">The buff ID.</param>
@@ -75,15 +84,6 @@ namespace TerrariaInventoryEditor.TerrariaLib
             Description = buff.Description;
             Id = buff.Id;
             Name = buff.Name;
-        }
-
-        /// <summary>
-        ///     Returns the string representation of this buff.
-        /// </summary>
-        /// <returns>The string representation of this buff.</returns>
-        public override string ToString()
-        {
-            return Name;
         }
     }
 }
