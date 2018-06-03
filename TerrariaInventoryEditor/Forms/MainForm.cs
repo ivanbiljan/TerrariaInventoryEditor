@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using TerrariaInventoryEditor.Framework;
@@ -591,6 +592,9 @@ namespace TerrariaInventoryEditor.Forms
             {
                 openFileDialog.AddExtension = true;
                 openFileDialog.Filter = "Terraria Player Files (*.plr)|*.plr|All Files (*.*)|*.*";
+                openFileDialog.InitialDirectory =
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                        "My Games\\Terraria\\Players");
                 openFileDialog.Title = "Select a Player File";
 
                 if (openFileDialog.ShowDialog() != DialogResult.OK)
@@ -628,6 +632,9 @@ namespace TerrariaInventoryEditor.Forms
                 saveFileDialog.DefaultExt = "plr";
                 saveFileDialog.FileName = _player.Name;
                 saveFileDialog.Filter = "Terraria Player File (*.plr)|*.plr";
+                saveFileDialog.InitialDirectory =
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                        "My Games\\Terraria\\Players");
 
                 if (saveFileDialog.ShowDialog() != DialogResult.OK)
                 {
