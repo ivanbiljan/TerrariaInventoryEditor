@@ -33,8 +33,8 @@ namespace TerrariaInventoryEditor.Forms
             InitializeComponent();
 
             // Set the default size 
-            Width = 687;
-            Height = 298;
+            Width = DpiManager.Scale(687);
+            Height = DpiManager.Scale(298);
 
             // Store dye items
             for (var i = 0; i < 10; i++)
@@ -96,7 +96,7 @@ namespace TerrariaInventoryEditor.Forms
             listBoxBuffs.DataSource = Terraria.Instance.Buffs;
             comboBoxItemPrefix.DataSource = Enum.GetValues(typeof(ItemPrefix)).Cast<ItemPrefix>().ToList();
 
-            // Draw the character
+            // Draw the character, inventory, equips etc.
             RedrawTextures();
 
             // Hook the required events
@@ -530,24 +530,24 @@ namespace TerrariaInventoryEditor.Forms
             switch (e.TabPageIndex)
             {
                 case 0:
-                    Width = 687;
-                    Height = 298;
+                    Width = DpiManager.Scale(687);
+                    Height = DpiManager.Scale(298);
                     break;
                 case 1:
-                    Width = 950;
-                    Height = 583;
+                    Width = DpiManager.Scale(950);
+                    Height = DpiManager.Scale(583);
                     break;
                 case 2:
-                    Width = 800;
-                    Height = 512;
+                    Width = DpiManager.Scale(800);
+                    Height = DpiManager.Scale(512);
                     break;
                 case 3:
-                    Width = 870;
-                    Height = 526;
+                    Width = DpiManager.Scale(870);
+                    Height = DpiManager.Scale(526);
                     break;
                 case 4:
-                    Width = 1060;
-                    Height = 600;
+                    Width = DpiManager.Scale(1060);
+                    Height = DpiManager.Scale(600);
                     break;
             }
         }

@@ -7,7 +7,7 @@ using TerrariaInventoryEditor.TerrariaLib;
 namespace TerrariaInventoryEditor.Framework
 {
     /// <summary>
-    ///     Represents the Texture manager.
+    ///     Represents the Texture manager.This class is a singleton.
     /// </summary>
     public sealed class TextureManager
     {

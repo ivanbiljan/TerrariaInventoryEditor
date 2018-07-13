@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DpiManager.cs" />
     <Compile Include="Extensions\BinaryReader.Extensions.cs" />
     <Compile Include="Extensions\BinaryWriter.Extensions.cs" />
     <Compile Include="Extensions\Byte.Extensions.cs" />
@@ -74,6 +75,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Framework\TextureManager.cs" />
+    <Compile Include="NativeMethods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

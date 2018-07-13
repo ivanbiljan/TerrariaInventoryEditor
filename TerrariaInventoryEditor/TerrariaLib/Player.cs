@@ -13,11 +13,6 @@ namespace TerrariaInventoryEditor.TerrariaLib
     /// <summary>
     ///     Represents a Terraria Player.
     /// </summary>
-    // TODO: Implement older version support []
-    // TODO: Hide misc implementation - [X]
-    // TODO: Downed DD2 implementation - [X]
-    // TODO: Spawn points implementation - [X]
-    // TODO: Hide info implementation - [X]
     public sealed class Player : DataSourceObject
     {
         private const string EncryptionKey = "h3y_gUyZ";
@@ -259,7 +254,21 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// <summary>
         ///     Gets or sets a value indicating whether the player is male.
         /// </summary>
-        public bool IsMale => SkinVariant < 4 || SkinVariant == 8;
+        public bool IsMale
+        {
+            get => SkinVariant < 4 || SkinVariant == 9;
+            set
+            {
+                if (value)
+                {
+                    SkinVariant = (int) PlayerVariant.MaleStarter;
+                }
+                else
+                {
+                    SkinVariant = (int) PlayerVariant.FemaleStarter;
+                }
+            }
+        }
 
         /// <summary>
         ///     Gets or sets the player's current mana.
@@ -415,7 +424,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// <summary>
         ///     Loads a player profile from the given path.
         /// </summary>
-        /// <param name="playerPath">The path, which must not be null.</param>
+        /// <param name="playerPath">The path, which must not be <c>null</c>.</param>
         public void Load([NotNull] string playerPath)
         {
             Debug.Assert(playerPath != null, "Player file path must not be null.");
@@ -430,53 +439,99 @@ namespace TerrariaInventoryEditor.TerrariaLib
                 using (var reader = new BinaryReader(cryptoStream))
                 {
                     var releaseNumber = reader.ReadInt32();
-                    if (releaseNumber != Terraria.CurrentRelease)
+                    if (!Terraria.Instance.SupportedVersions.Contains(releaseNumber))
                     {
                         throw new Exception("Unsupported Terraria version.");
                     }
-
-                    var magicNumber = reader.ReadUInt64();
-                    if ((magicNumber & 72057594037927935) != MagicNumber)
+                    if (releaseNumber >= 135)
                     {
-                        throw new Exception("Expected ReLogic file format.");
-                    }
+                        var magicNumber = reader.ReadUInt64();
+                        if ((magicNumber & 72057594037927935) != MagicNumber)
+                        {
+                            throw new Exception("Expected ReLogic file format.");
+                        }
 
-                    var fileType = (byte) ((magicNumber >> 56) & byte.MaxValue);
-                    if (fileType != 3)
+                        var fileType = (byte) ((magicNumber >> 56) & byte.MaxValue);
+                        if (fileType != 3)
+                        {
+                            throw new Exception("Expected Player file type.");
+                        }
+
+                        Revision = reader.ReadUInt32();
+                        IsFavourite = (reader.ReadUInt64() & 1L) == 1L;
+                    }
+                    else
                     {
-                        throw new Exception("Expected Player file type.");
+                        Revision = 0;
+                        IsFavourite = false;
                     }
-
-                    Revision = reader.ReadUInt32();
-                    IsFavourite = (reader.ReadUInt64() & 1L) == 1L;
 
                     Name = reader.ReadString();
                     Difficulty = (PlayerDifficulty) reader.ReadByte();
-                    PlayTime = new TimeSpan(reader.ReadInt64());
+                    PlayTime = releaseNumber >= 138 ? new TimeSpan(reader.ReadInt64()) : TimeSpan.Zero;
                     Hair = reader.ReadInt32();
-                    HairDye = reader.ReadByte();
 
-                    var visuals = reader.ReadByte();
-                    for (var i = 0; i < 8; ++i)
+                    if (releaseNumber >= 82)
                     {
-                        HideVisuals[i] = visuals.ReadBit(i);
+                        HairDye = reader.ReadByte();
+                    }
+                    if (releaseNumber >= 124)
+                    {
+                        var visuals = reader.ReadByte();
+                        for (var i = 0; i < 8; ++i)
+                        {
+                            HideVisuals[i] = visuals.ReadBit(i);
+                        }
+
+                        visuals = reader.ReadByte();
+                        for (var i = 0; i < 2; ++i)
+                        {
+                            HideVisuals[i + 8] = visuals.ReadBit(i);
+                        }
+                    }
+                    else if (releaseNumber >= 83)
+                    {
+                        var visuals = reader.ReadByte();
+                        for (var i = 0; i < 8; ++i)
+                        {
+                            HideVisuals[i] = visuals.ReadBit(i);
+                        }
+                    }
+                    if (releaseNumber >= 119)
+                    {
+                        HideMisc = reader.ReadByte();
+                    }
+                    if (releaseNumber < 107)
+                    {
+                        IsMale = reader.ReadBoolean();
+                    }
+                    else
+                    {
+                        SkinVariant = reader.ReadByte();
+                    }
+                    if (releaseNumber < 161 && SkinVariant == 7)
+                    {
+                        SkinVariant = 9;
                     }
 
-                    visuals = reader.ReadByte();
-                    for (var i = 0; i < 2; ++i)
-                    {
-                        HideVisuals[i + 8] = visuals.ReadBit(i);
-                    }
-
-                    HideMisc = reader.ReadByte();
-                    SkinVariant = reader.ReadByte();
                     Health = reader.ReadInt32();
                     MaxHealth = reader.ReadInt32();
                     Mana = reader.ReadInt32();
                     MaxMana = reader.ReadInt32();
-                    ExtraAccessory = reader.ReadBoolean();
-                    DownedDd2Event = reader.ReadBoolean();
-                    TaxMoney = reader.ReadInt32();
+
+                    if (releaseNumber >= 125)
+                    {
+                        ExtraAccessory = reader.ReadBoolean();
+                    }
+                    if (releaseNumber >= 182)
+                    {
+                        DownedDd2Event = reader.ReadBoolean();
+                    }
+                    if (releaseNumber >= 128)
+                    {
+                        TaxMoney = reader.ReadInt32();
+                    }
+
                     HairColor = reader.ReadColor();
                     SkinColor = reader.ReadColor();
                     EyeColor = reader.ReadColor();
@@ -485,19 +540,35 @@ namespace TerrariaInventoryEditor.TerrariaLib
                     PantsColor = reader.ReadColor();
                     ShoeColor = reader.ReadColor();
 
-                    for (var i = 0; i < Armor.Length; ++i)
+                    if (releaseNumber < 124)
                     {
-                        Armor[i].SetDefaults(reader.ReadInt32());
-                        Armor[i].Prefix = (ItemPrefix) reader.ReadByte();
+                        for (var i = 0; i < (releaseNumber >= 81 ? 16 : 11); ++i)
+                        {
+                            var index = i >= 8 ? i + 2 : i;
+                            Armor[index].SetDefaults(reader.ReadInt32());
+                            Armor[index].Prefix = (ItemPrefix) reader.ReadByte();
+                        }
+                    }
+                    else
+                    {
+                        for (var i = 0; i < Armor.Length; ++i)
+                        {
+                            Armor[i].SetDefaults(reader.ReadInt32());
+                            Armor[i].Prefix = (ItemPrefix) reader.ReadByte();
+                        }
+                    }
+                    if (releaseNumber >= 47)
+                    {
+                        var dyeCount = releaseNumber >= 124 ? 10 : releaseNumber >= 81 ? 8 : 3;
+                        for (var i = 0; i < dyeCount; ++i)
+                        {
+                            Dye[i].SetDefaults(reader.ReadInt32());
+                            Dye[i].Prefix = (ItemPrefix) reader.ReadByte();
+                        }
                     }
 
-                    for (var i = 0; i < Dye.Length; ++i)
-                    {
-                        Dye[i].SetDefaults(reader.ReadInt32());
-                        Dye[i].Prefix = (ItemPrefix) reader.ReadByte();
-                    }
-
-                    for (var i = 0; i < Inventory.Length; ++i)
+                    var inventoryCount = releaseNumber >= 58 ? Inventory.Length : 48;
+                    for (var i = 0; i < inventoryCount; ++i)
                     {
                         var itemType = reader.ReadInt32();
                         if (itemType >= 3930)
@@ -505,66 +576,85 @@ namespace TerrariaInventoryEditor.TerrariaLib
                             Inventory[i].SetDefaults(0);
                             reader.ReadInt32(); // Stack
                             reader.ReadByte(); // Prefix
-                            reader.ReadBoolean(); // Favourite
+                            if (releaseNumber >= 114)
+                            {
+                                reader.ReadBoolean(); // Favourite
+                            }
                         }
                         else
                         {
                             Inventory[i].SetDefaults(itemType);
                             Inventory[i].StackSize = reader.ReadInt32();
                             Inventory[i].Prefix = (ItemPrefix) reader.ReadByte();
-                            Inventory[i].IsFavourite = reader.ReadBoolean();
+                            if (releaseNumber >= 114)
+                            {
+                                Inventory[i].IsFavourite = reader.ReadBoolean();
+                            }
                         }
                     }
 
-                    for (var i = 0; i < MiscEquips.Length; ++i)
+                    if (releaseNumber >= 117)
                     {
-                        var equipType = reader.ReadInt32();
-                        if (equipType >= 3930)
+                        for (var i = 0; i < MiscEquips.Length; ++i)
                         {
-                            MiscEquips[i].SetDefaults(0);
-                            reader.ReadByte(); // Prefix
-                        }
-                        else
-                        {
-                            MiscEquips[i].SetDefaults(equipType);
-                            MiscEquips[i].Prefix = (ItemPrefix) reader.ReadByte();
-                        }
+                            if (releaseNumber < 136 && i == 1)
+                            {
+                                continue;
+                            }
 
-                        var dyeType = reader.ReadInt32();
-                        if (dyeType >= 3930)
-                        {
-                            MiscDye[i].SetDefaults(0);
-                            reader.ReadByte(); // Prefix
-                        }
-                        else
-                        {
-                            MiscDye[i].SetDefaults(dyeType);
-                            MiscDye[i].Prefix = (ItemPrefix) reader.ReadByte();
+                            var equipType = reader.ReadInt32();
+                            if (equipType >= 3930)
+                            {
+                                MiscEquips[i].SetDefaults(0);
+                                reader.ReadByte(); // Prefix
+                            }
+                            else
+                            {
+                                MiscEquips[i].SetDefaults(equipType);
+                                MiscEquips[i].Prefix = (ItemPrefix) reader.ReadByte();
+                            }
+
+                            var dyeType = reader.ReadInt32();
+                            if (dyeType >= 3930)
+                            {
+                                MiscDye[i].SetDefaults(0);
+                                reader.ReadByte(); // Prefix
+                            }
+                            else
+                            {
+                                MiscDye[i].SetDefaults(dyeType);
+                                MiscDye[i].Prefix = (ItemPrefix) reader.ReadByte();
+                            }
                         }
                     }
 
-                    for (var i = 0; i < PiggyBank.Length; ++i)
+                    var bankCount = releaseNumber >= 58 ? PiggyBank.Length : 20;
+                    for (var i = 0; i < bankCount; ++i)
                     {
                         PiggyBank[i].SetDefaults(reader.ReadInt32());
                         PiggyBank[i].StackSize = reader.ReadInt32();
                         PiggyBank[i].Prefix = (ItemPrefix) reader.ReadByte();
                     }
 
-                    for (var i = 0; i < Safe.Length; ++i)
+                    for (var i = 0; i < bankCount; ++i)
                     {
                         Safe[i].SetDefaults(reader.ReadInt32());
                         Safe[i].StackSize = reader.ReadInt32();
                         Safe[i].Prefix = (ItemPrefix) reader.ReadByte();
                     }
 
-                    for (var i = 0; i < Forge.Length; ++i)
+                    if (releaseNumber >= 182)
                     {
-                        Forge[i].SetDefaults(reader.ReadInt32());
-                        Forge[i].StackSize = reader.ReadInt32();
-                        Forge[i].Prefix = (ItemPrefix) reader.ReadByte();
+                        for (var i = 0; i < Forge.Length; ++i)
+                        {
+                            Forge[i].SetDefaults(reader.ReadInt32());
+                            Forge[i].StackSize = reader.ReadInt32();
+                            Forge[i].Prefix = (ItemPrefix) reader.ReadByte();
+                        }
                     }
 
-                    for (var i = 0; i < Buffs.Length; ++i)
+                    var buffCount = releaseNumber < 74 ? 10 : 22;
+                    for (var i = 0; i < buffCount; ++i)
                     {
                         Buffs[i].SetDefaults(reader.ReadInt32());
                         Buffs[i].Time = reader.ReadInt32();
@@ -585,23 +675,39 @@ namespace TerrariaInventoryEditor.TerrariaLib
                     }
 
                     IsHotbarLocked = reader.ReadBoolean();
-                    for (var i = 0; i < HideInfo.Length; ++i)
+
+                    if (releaseNumber >= 115)
                     {
-                        HideInfo[i] = reader.ReadBoolean();
+                        for (var i = 0; i < HideInfo.Length; ++i)
+                        {
+                            HideInfo[i] = reader.ReadBoolean();
+                        }
+                    }
+                    if (releaseNumber >= 98)
+                    {
+                        AnglerQuestsFinished = reader.ReadInt32();
+                    }
+                    if (releaseNumber >= 162)
+                    {
+                        for (var i = 0; i < DPadRadialBindings.Length; ++i)
+                        {
+                            DPadRadialBindings[i] = reader.ReadInt32();
+                        }
+                    }
+                    if (releaseNumber >= 164)
+                    {
+                        var buildAccessorieCount = releaseNumber < 167 ? 8 : BuildAccessorieStatus.Length;
+                        for (var i = 0; i < buildAccessorieCount; ++i)
+                        {
+                            BuildAccessorieStatus[i] = reader.ReadInt32();
+                        }
+                    }
+                    if (releaseNumber >= 181)
+                    {
+                        BartenderQuestLog = reader.ReadInt32();
                     }
 
-                    AnglerQuestsFinished = reader.ReadInt32();
-                    for (var i = 0; i < DPadRadialBindings.Length; ++i)
-                    {
-                        DPadRadialBindings[i] = reader.ReadInt32();
-                    }
-
-                    for (var i = 0; i < BuildAccessorieStatus.Length; ++i)
-                    {
-                        BuildAccessorieStatus[i] = reader.ReadInt32();
-                    }
-
-                    BartenderQuestLog = reader.ReadInt32();
+                    Release = Terraria.CurrentRelease;
                 }
             }
         }
@@ -609,7 +715,7 @@ namespace TerrariaInventoryEditor.TerrariaLib
         /// <summary>
         ///     Writes the current player profile to the specified path.
         /// </summary>
-        /// <param name="playerPath">The path, which must not be null.</param>
+        /// <param name="playerPath">The path, which must not be <c>null</c>.</param>
         public void Save([NotNull] string playerPath)
         {
             Debug.Assert(playerPath != null, "Player file path must not be null.");
