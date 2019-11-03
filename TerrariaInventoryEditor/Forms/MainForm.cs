@@ -33,8 +33,8 @@ namespace TerrariaInventoryEditor.Forms
             InitializeComponent();
 
             // Set the default size 
-            Width = DpiManager.Scale(687);
-            Height = DpiManager.Scale(298);
+            Width = DpiManager.Scale(685);
+            Height = DpiManager.Scale(605);
 
             // Store dye items
             for (var i = 0; i < 10; i++)
@@ -530,8 +530,8 @@ namespace TerrariaInventoryEditor.Forms
             switch (e.TabPageIndex)
             {
                 case 0:
-                    Width = DpiManager.Scale(687);
-                    Height = DpiManager.Scale(298);
+                    Width = DpiManager.Scale(685);
+                    Height = DpiManager.Scale(605);
                     break;
                 case 1:
                     Width = DpiManager.Scale(950);
@@ -662,6 +662,11 @@ namespace TerrariaInventoryEditor.Forms
 
             _player.Inventory[(int) _selectedItem.Tag].StackSize = (int) upDownStackSize.Value;
             _selectedItem.Text = _player.Inventory[(int) _selectedItem.Tag].StackSize.ToString();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
