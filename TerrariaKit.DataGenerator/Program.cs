@@ -79,12 +79,10 @@ namespace TerrariaKit.DataGenerator
                 return null;
             }
 
-            using (var stream = _terrariaAssembly.GetManifestResourceStream(resource))
-            {
-                var buffer = new byte[stream.Length];
-                stream.Read(buffer, 0, buffer.Length);
-                return Assembly.Load(buffer);
-            }
+            using var stream = _terrariaAssembly.GetManifestResourceStream(resource);
+            var buffer = new byte[stream.Length];
+            stream.Read(buffer, 0, buffer.Length);
+            return Assembly.Load(buffer);
         }
     }
 }
