@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.Win32;
+using TerrariaKit.Core.Models;
 
 namespace TerrariaKit.DataGenerator
 {
@@ -38,11 +40,19 @@ namespace TerrariaKit.DataGenerator
             // Reflection is slow but it also means that we can generate the data without user intervention
             _terrariaAssembly = Assembly.LoadFrom(terrariaExePath);
 
+            GenerateLocalizationMappings();
+
             _terrariaAssembly.GetType("Terraria.Lang")!.GetMethod("InitializeLegacyLocalization")!.Invoke(null, null);
 
             var itemType = _terrariaAssembly.GetType("Terraria.Item");
             var item = Activator.CreateInstance(itemType!);
             var maxItemTypes = (int)_terrariaAssembly.GetType("Terraria.Main")!.GetField("maxItemTypes")!.GetValue(null)!;
+
+            var languageGetTextMethod =
+                _terrariaAssembly.GetType("Terraria.Localization.Language")!.GetMethod("GetTextValue",
+                    new[] {typeof(string)});
+
+            var items = new List<Item>();
             for (var i = 0; i < maxItemTypes; ++i)
             {
                 // Familiar clothing vanity hack
@@ -52,14 +62,15 @@ namespace TerrariaKit.DataGenerator
                 }
                 
                 itemType.GetMethod("SetDefaults", new []{typeof(int)})!.Invoke(item, new object[] {i});
-                var json = JsonSerializer.Serialize(new
-                {
-                    netId = itemType.GetField("netID")!.GetValue(item),
-                    name = itemType.GetProperty("Name")!.GetValue(item)
-                });
 
-                Console.WriteLine(json);
+                var currentItem = new Item(
+                    (int) itemType.GetField("netID")!.GetValue(item),
+                    (string) languageGetTextMethod.Invoke(null, new[] {itemType.GetProperty("Name")!.GetValue(item)}));
+
+                items.Add(currentItem);
             }
+
+            Console.WriteLine(JsonSerializer.Serialize(items, new JsonSerializerOptions {WriteIndented = true}));
         }
 
         private static Assembly? CurrentDomainOnAssemblyResolve(object? sender, ResolveEventArgs args)
