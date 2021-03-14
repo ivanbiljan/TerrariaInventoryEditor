@@ -73,6 +73,45 @@ namespace TerrariaKit.DataGenerator
             Console.WriteLine(JsonSerializer.Serialize(items, new JsonSerializerOptions {WriteIndented = true}));
         }
 
+        private static void GenerateLocalizationMappings() 
+        {
+            var localizationMapping = new Dictionary<string, string>();
+
+            var localizationFileNames = _terrariaAssembly.GetManifestResourceNames()
+                                                         .Where(r =>
+                                                             r.StartsWith("Terraria.Localization.Content.en-US") &&
+                                                             r.EndsWith(".json"));
+
+            var serializerOptions = new JsonSerializerOptions {
+                AllowTrailingCommas = true,
+                WriteIndented = true
+            };
+
+            foreach (var localizationFilePath in localizationFileNames) {
+                string fileContents = null;
+                using (var manifestStream = _terrariaAssembly.GetManifestResourceStream(localizationFilePath))
+                using (var reader = new StreamReader(manifestStream)) {
+                    fileContents = reader.ReadToEnd();
+                }
+
+                if (string.IsNullOrWhiteSpace(fileContents)) {
+                    Console.WriteLine($"Invalid stream at path: {localizationFilePath}");
+                    continue;
+                }
+
+                var categoriesMap =
+                    JsonSerializer.Deserialize<Dictionary<string, Dictionary<string, string>>>(fileContents,
+                        serializerOptions);
+                foreach (var category in categoriesMap) {
+                    foreach (var kvp in category.Value) {
+                        localizationMapping[$"{category.Key}.{kvp.Key}"] = kvp.Value;
+                    }
+                }
+            }
+
+            Console.WriteLine(JsonSerializer.Serialize(localizationMapping, serializerOptions));
+        }
+
         private static Assembly? CurrentDomainOnAssemblyResolve(object? sender, ResolveEventArgs args)
         {
             var assemblyName = new AssemblyName(args.Name);
