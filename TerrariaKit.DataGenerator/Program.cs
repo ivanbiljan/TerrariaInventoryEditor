@@ -15,6 +15,7 @@ namespace TerrariaKit.DataGenerator
         private const string TerrariaRegistrySubKeyPath =
             @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 105600";
 
+        private static readonly IDictionary<string, string> _localizationMapping = new Dictionary<string, string>();
         private static Assembly _terrariaAssembly;
 
         static void Main(string[] args)
@@ -64,8 +65,11 @@ namespace TerrariaKit.DataGenerator
                 itemType.GetMethod("SetDefaults", new []{typeof(int)})!.Invoke(item, new object[] {i});
 
                 var currentItem = new Item(
-                    (int) itemType.GetField("netID")!.GetValue(item),
-                    (string) languageGetTextMethod.Invoke(null, new[] {itemType.GetProperty("Name")!.GetValue(item)}));
+                    NetId: (int) itemType.GetField("netID")!.GetValue(item),
+                    Name: _localizationMapping.TryGetValue((string)itemType.GetProperty("Name")!.GetValue(item),
+                        out var name)
+                        ? name
+                        : "N/A");
 
                 items.Add(currentItem);
             }
@@ -75,8 +79,6 @@ namespace TerrariaKit.DataGenerator
 
         private static void GenerateLocalizationMappings() 
         {
-            var localizationMapping = new Dictionary<string, string>();
-
             var localizationFileNames = _terrariaAssembly.GetManifestResourceNames()
                                                          .Where(r =>
                                                              r.StartsWith("Terraria.Localization.Content.en-US") &&
@@ -104,12 +106,12 @@ namespace TerrariaKit.DataGenerator
                         serializerOptions);
                 foreach (var category in categoriesMap) {
                     foreach (var kvp in category.Value) {
-                        localizationMapping[$"{category.Key}.{kvp.Key}"] = kvp.Value;
+                        _localizationMapping[$"{category.Key}.{kvp.Key}"] = kvp.Value;
                     }
                 }
             }
 
-            Console.WriteLine(JsonSerializer.Serialize(localizationMapping, serializerOptions));
+            Console.WriteLine(JsonSerializer.Serialize(_localizationMapping, serializerOptions));
         }
 
         private static Assembly? CurrentDomainOnAssemblyResolve(object? sender, ResolveEventArgs args)
