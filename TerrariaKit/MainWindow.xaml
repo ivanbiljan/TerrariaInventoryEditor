@@ -3,18 +3,58 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TerrariaKit"
+        xmlns:local="clr-namespace:TerrariaKit.Converters"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <local:TabItemWidthConverter x:Key="TabItemWidthConverter" />
+    </Window.Resources>
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="350"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+        <TabControl TabStripPlacement="Top" HorizontalAlignment="Stretch" Background="White">
+            <TabControl.Resources>
+                <Style TargetType="TabItem">
+                    <Setter Property="Width">
+                        <Setter.Value>
+                            <MultiBinding Converter="{StaticResource TabItemWidthConverter}">
+                                <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type TabControl}}" />
+                                <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type TabControl}}" Path="ActualWidth" />
+                            </MultiBinding>
+                        </Setter.Value>
+                    </Setter>
 
-        <StackPanel Orientation="Vertical"
-                    Margin="5">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TabItem">
+                                <!--https://stackoverflow.com/questions/48290918/wpf-button-composed-of-two-textblocks-leaves-non-clickable-area/48291357-->
+                                <StackPanel Name="Panel" Cursor="Hand" Orientation="Vertical" HorizontalAlignment="Stretch" Background="Transparent">
+                                    <ContentPresenter x:Name="ContentSite"
+                                                      VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"
+                                                      ContentSource="Header"
+                                                      Margin="5,2"/>
+                                    <TextBlock Name="BottomBar" Background="DeepSkyBlue" Height="4" />
+                                </StackPanel>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="BottomBar" Property="Background" Value="DeepSkyBlue"></Setter>
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="False">
+                                        <Setter TargetName="BottomBar" Property="Background" Value="White"></Setter>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.Resources>
 
-        </StackPanel>
+            <TabItem Header="Character"></TabItem>
+            <TabItem Header="Inventory"></TabItem>
+            <TabItem Header="Storage"></TabItem>
+            <TabItem Header="Buffs"></TabItem>
+
+        </TabControl>
     </Grid>
 </Window>
