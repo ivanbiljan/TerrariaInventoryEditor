@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TerrariaKit.Converters"
+        xmlns:views="clr-namespace:TerrariaKit.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
@@ -50,7 +51,7 @@
                 </Style>
             </TabControl.Resources>
 
-            <TabItem Header="Character"></TabItem>
+            <TabItem Header="Character"><views:CharacterView /></TabItem>
             <TabItem Header="Inventory"></TabItem>
             <TabItem Header="Storage"></TabItem>
             <TabItem Header="Buffs"></TabItem>

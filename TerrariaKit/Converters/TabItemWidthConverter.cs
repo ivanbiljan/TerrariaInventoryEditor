@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Data;
 
-namespace TerrariaKit.Converters {
-    public sealed class TabItemWidthConverter : IMultiValueConverter {
+namespace TerrariaKit.Converters
+{
+    public sealed class TabItemWidthConverter : IMultiValueConverter
+    {
         /// <inheritdoc />
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
