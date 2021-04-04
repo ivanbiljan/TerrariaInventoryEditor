@@ -52,7 +52,7 @@
                         <ComboBox Grid.Column="0" Margin="5, 5" />
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
                             <CheckBox VerticalAlignment="Center" />
-                            <TextBlock Text="Extra accessory" VerticalAlignment="Center" Margin="5, 0" FontWeight="SemiBold"></TextBlock>
+                            <TextBlock Text="Extra accessory" VerticalAlignment="Center" Margin="5, 0" FontWeight="SemiBold" />
                         </StackPanel>
                     </Grid>
                 </Grid>
