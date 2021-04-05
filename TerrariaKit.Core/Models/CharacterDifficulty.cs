@@ -9,7 +9,7 @@ namespace TerrariaKit.Core.Models
     /// <summary>
     /// Specifies a character's difficulty.
     /// </summary>
-    public enum CharacterDifficulty
+    public enum CharacterDifficulty : byte
     {
         Classic,
         Mediumcore,

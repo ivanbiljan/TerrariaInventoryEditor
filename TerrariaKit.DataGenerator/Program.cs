@@ -65,8 +65,8 @@ namespace TerrariaKit.DataGenerator
                 itemType.GetMethod("SetDefaults", new []{typeof(int)})!.Invoke(item, new object[] {i});
 
                 var currentItem = new Item(
-                    NetId: (int) itemType.GetField("netID")!.GetValue(item),
-                    Name: _localizationMapping.TryGetValue((string)itemType.GetProperty("Name")!.GetValue(item),
+                    netId: (int) itemType.GetField("netID")!.GetValue(item),
+                    name: _localizationMapping.TryGetValue((string)itemType.GetProperty("Name")!.GetValue(item),
                         out var name)
                         ? name
                         : "N/A");

@@ -14,6 +14,7 @@ namespace TerrariaKit.Core.Models
     /// </summary>
     public sealed class Character
     {
+        // TODO: Strip out members irrelevant to the console client. This class should only contain data common to the inventory editor and the console client
         public string Name { get; set; }
         
         public CharacterDifficulty Difficulty { get; set; }
@@ -61,5 +62,45 @@ namespace TerrariaKit.Core.Models
         public Color PantsColor { get; set; }
         
         public Color ShoeColor { get; set; }
+
+        public Item[] Armor { get; } = new Item[20];
+
+        public Item[] Dye { get; } = new Item[10];
+
+        public Item[] Inventory { get; } = new Item[58];
+
+        public Item[] MiscellaneousEquips { get; } = new Item[5];
+
+        public Item[] MiscellaneousDye { get; } = new Item[5];
+
+        public Item[] Bank { get; } = new Item[40];
+
+        public Item[] Bank2 { get; } = new Item[40];
+
+        public Item[] Bank3 { get; } = new Item[40];
+
+        public Item[] Bank4 { get; } = new Item[40];
+        
+        public Flags VoidVaultInformation { get; }
+
+        public Buff[] Buffs { get; } = new Buff[22];
+
+        public SpawnInfo[] Spawns { get; } = new SpawnInfo[200];
+        
+        public bool IsHotbarLocked { get; set; }
+
+        public bool[] HideInfo { get; } = new bool[7];
+        
+        public int NumberOfAnglerQuestsFinished { get; set; }
+
+        public bool[] BuilderAccessoriesStatuses { get; } = new bool[12];
+        
+        public int BartenderQuestLog { get; set; }
+        
+        public bool IsDead { get; set; }
+        
+        public int RespawnTimer { get; set; }
+        
+        public int GolferScoreAccumulated { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace TerrariaKit.ViewModels
     /// Represents the base class for a ViewModel.
     /// </summary>
     /// <typeparam name="T">The type of model this ViewModel encapsulates.</typeparam>
-    internal sealed class ViewModelBase<T> : INotifyPropertyChanged where T : class
+    internal abstract class ViewModelBase<T> : INotifyPropertyChanged where T : class
     {
         private readonly IDictionary<string, object?> _propertyNameToValueMapping = new Dictionary<string, object?>();
 

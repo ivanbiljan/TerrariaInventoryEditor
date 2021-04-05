@@ -8,4 +8,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TerrariaKit.Core\TerrariaKit.Core.csproj" />
+  </ItemGroup>
+
 </Project>
