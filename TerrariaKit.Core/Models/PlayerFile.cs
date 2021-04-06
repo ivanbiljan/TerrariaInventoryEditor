@@ -14,6 +14,11 @@ namespace TerrariaKit.Core.Models
         private const byte PlayerFileType = 3;
         private uint _revision;
 
+        public PlayerFile(string path)
+        {
+            Path = path;
+        }
+
         /// <summary>
         /// Gets the data.
         /// </summary>

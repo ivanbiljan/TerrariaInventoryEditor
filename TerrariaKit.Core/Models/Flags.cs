@@ -33,5 +33,7 @@ namespace TerrariaKit.Core.Models
         }
 
         public static implicit operator byte(Flags flags) => flags._vector;
+
+        public static explicit operator Flags(byte @byte) => new Flags {_vector = @byte};
     }
 }

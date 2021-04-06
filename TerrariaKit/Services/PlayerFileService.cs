@@ -14,8 +14,22 @@ namespace TerrariaKit.Services
 {
     internal sealed class PlayerFileService
     {
+        // TODO: cloud saves
+        // TODO: Dpad radial bindings
+        // TODO: creative tracker
+        // TODO: temporary item slot saves
+        // TODO: creative powers
+        // TODO: older release backwards compatibility
+        
         private const string EncryptionString = "h3y_gUyZ";
         private const int CurrentRelease = 234;
+
+        private readonly LocalizationService _localizationService;
+        
+        public PlayerFileService(LocalizationService localizationService)
+        {
+            _localizationService = localizationService;
+        }
         
         public void Save(PlayerFile playerFile)
         {
@@ -185,6 +199,98 @@ namespace TerrariaKit.Services
             writer.Write(0); // TODO: creative tracker
             writer.Write(0); // TODO: temporary item slot contents
             writer.Write(false); // TODO: creative powers
+        }
+
+        public PlayerFile Read(string path)
+        {
+            var playerFile = new PlayerFile(path);
+            var player = new Character();
+
+            using var rijndael = new RijndaelManaged {Padding = PaddingMode.None};
+            var decryptionKey = new UnicodeEncoding().GetBytes(EncryptionString);
+            using var decryptor = rijndael.CreateDecryptor(decryptionKey, decryptionKey);
+            using var stream = new CryptoStream(new MemoryStream(File.ReadAllBytes(path)), decryptor,
+                CryptoStreamMode.Read);
+            using var reader = new BinaryReader(stream);
+
+            var release = reader.ReadInt32();
+            playerFile.ReadMetadata(reader);
+            player.Name = reader.ReadString();
+            player.Difficulty = (CharacterDifficulty) reader.ReadByte();
+            player.PlayTime = new TimeSpan(reader.ReadInt64());
+            player.Hair = reader.ReadInt32();
+            player.HairDye = reader.ReadByte();
+
+            var flags = (Flags) reader.ReadByte();
+            for (var i = 0; i < 8; ++i)
+            {
+                player.IsAccessoryHidden[i] = flags[i];
+            }
+
+            var flags2 = (Flags) reader.ReadByte();
+            for (var i = 0; i < player.IsAccessoryHidden.Length - 8; ++i)
+            {
+                player.IsAccessoryHidden[i + 8] = flags2[i];
+            }
+
+            player.HideMisc = reader.ReadByte();
+            player.SkinVariant = reader.ReadByte();
+            player.Health = reader.ReadInt32();
+            player.MaxHealth = reader.ReadInt32();
+            player.Mana = reader.ReadInt32();
+            player.MaxMana = reader.ReadInt32();
+            player.HasExtraAccessoryEnabled = reader.ReadBoolean();
+            player.HasUnlockedTorchGodsReward = reader.ReadBoolean();
+            player.IsUsingBiomeTorches = reader.ReadBoolean();
+            player.HasCompletedDD2Event = reader.ReadBoolean();
+            player.TaxMoney = reader.ReadInt32();
+            player.HairColor = reader.ReadRgb();
+            player.SkinColor = reader.ReadRgb();
+            player.EyeColor = reader.ReadRgb();
+            player.ShirtColor = reader.ReadRgb();
+            player.UndershirtColor = reader.ReadRgb();
+            player.PantsColor = reader.ReadRgb();
+            player.ShoeColor = reader.ReadRgb();
+            
+            for (var i = 0; i < player.Armor.Length; ++i)
+            {
+                var netId = reader.ReadInt32();
+                player.Armor[i] = new Item(netId, _localizationService.GetItemName(netId))
+                {
+                    Prefix = reader.ReadByte()
+                };
+            }
+
+            for (var i = 0; i < player.Dye.Length; ++i)
+            {
+                var netId = reader.ReadInt32();
+                player.Dye[i] = new Item(netId, _localizationService.GetItemName(netId))
+                {
+                    Prefix = reader.ReadByte()
+                };
+            }
+
+            for (var i = 0; i < player.Inventory.Length; ++i)
+            {
+                var netId = reader.ReadInt32();
+                player.Inventory[i] = new Item(netId, _localizationService.GetItemName(netId))
+                {
+                    StackSize = reader.ReadInt32(),
+                    Prefix = reader.ReadByte(),
+                    IsFavorite = reader.ReadBoolean()
+                };
+            }
+
+            for (var i = 0; i < player.MiscellaneousEquips.Length; ++i)
+            {
+                var netId = reader.ReadInt32();
+                player.MiscellaneousEquips[i] = new Item(netId, _localizationService.GetItemName(netId))
+                {
+                    Prefix = reader.ReadByte()
+                };
+            }
+
+            return playerFile;
         }
     }
 }
