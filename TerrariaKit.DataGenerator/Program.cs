@@ -74,7 +74,9 @@ namespace TerrariaKit.DataGenerator
                 items.Add(currentItem);
             }
 
-            Console.WriteLine(JsonSerializer.Serialize(items, new JsonSerializerOptions {WriteIndented = true}));
+            //Console.WriteLine(JsonSerializer.Serialize(items, new JsonSerializerOptions {WriteIndented = true}));
+            File.WriteAllText("items.json",
+                JsonSerializer.Serialize(items, new JsonSerializerOptions {WriteIndented = true}));
         }
 
         private static void GenerateLocalizationMappings() 
@@ -111,7 +113,8 @@ namespace TerrariaKit.DataGenerator
                 }
             }
 
-            Console.WriteLine(JsonSerializer.Serialize(_localizationMapping, serializerOptions));
+            //Console.WriteLine(JsonSerializer.Serialize(_localizationMapping, serializerOptions));
+            File.WriteAllText("localization.json", JsonSerializer.Serialize(_localizationMapping, serializerOptions));
         }
 
         private static Assembly? CurrentDomainOnAssemblyResolve(object? sender, ResolveEventArgs args)
