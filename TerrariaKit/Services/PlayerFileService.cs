@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -193,8 +194,8 @@ namespace TerrariaKit.Services
                 writer.Write(player.RespawnTimer);
             }
 
-            var golfTimestamp = DateTime.UtcNow.ToBinary();
-            writer.Write(golfTimestamp);
+            var saveTimestamp = DateTime.UtcNow.ToBinary();
+            writer.Write(saveTimestamp);
             writer.Write(player.GolferScoreAccumulated);
             writer.Write(0); // TODO: creative tracker
             writer.Write(0); // TODO: temporary item slot contents
@@ -251,7 +252,7 @@ namespace TerrariaKit.Services
             player.UndershirtColor = reader.ReadRgb();
             player.PantsColor = reader.ReadRgb();
             player.ShoeColor = reader.ReadRgb();
-            
+
             for (var i = 0; i < player.Armor.Length; ++i)
             {
                 var netId = reader.ReadInt32();
@@ -289,6 +290,96 @@ namespace TerrariaKit.Services
                     Prefix = reader.ReadByte()
                 };
             }
+
+            for (var i = 0; i < player.Bank.Length; ++i)
+            {
+                var netId = reader.ReadInt32();
+                player.Bank[i] = new Item(netId, _localizationService.GetItemName(netId))
+                {
+                    StackSize = reader.ReadInt32(),
+                    Prefix = reader.ReadByte()
+                };
+            }
+
+            for (var i = 0; i < player.Bank2.Length; ++i)
+            {
+                var netId = reader.ReadInt32();
+                player.Bank2[i] = new Item(netId, _localizationService.GetItemName(netId))
+                {
+                    StackSize = reader.ReadInt32(),
+                    Prefix = reader.ReadByte()
+                };
+            }
+
+            for (var i = 0; i < player.Bank3.Length; ++i)
+            {
+                var netId = reader.ReadInt32();
+                player.Bank3[i] = new Item(netId, _localizationService.GetItemName(netId))
+                {
+                    StackSize = reader.ReadInt32(),
+                    Prefix = reader.ReadByte()
+                };
+            }
+
+            for (var i = 0; i < player.Bank4.Length; ++i)
+            {
+                var netId = reader.ReadInt32();
+                player.Bank4[i] = new Item(netId, _localizationService.GetItemName(netId))
+                {
+                    StackSize = reader.ReadInt32(),
+                    Prefix = reader.ReadByte()
+                };
+            }
+
+            player.VoidVaultInformation = (Flags) reader.ReadByte();
+
+            for (var i = 0; i < player.Buffs.Length; ++i)
+            {
+                player.Buffs[i] = new Buff(reader.ReadInt32(), reader.ReadInt32());
+            }
+
+            for (var i = 0; i < player.Spawns.Length; ++i)
+            {
+                var spawnX = reader.ReadInt32();
+                if (spawnX == -1)
+                {
+                    break;
+                }
+
+                var spawnY = reader.ReadInt32();
+                var worldId = reader.ReadInt32();
+                var worldName = reader.ReadString();
+                player.Spawns[i] = new SpawnInfo(worldId, worldName, spawnX, spawnY);
+            }
+
+            player.IsHotbarLocked = reader.ReadBoolean();
+
+            for (var i = 0; i < player.HideInfo.Length; ++i)
+            {
+                player.HideInfo[i] = reader.ReadBoolean();
+            }
+
+            player.NumberOfAnglerQuestsFinished = reader.ReadInt32();
+
+            reader.ReadInt32(); // Dpad radial bindings
+
+            for (var i = 0; i < player.BuilderAccessoriesStatuses.Length; ++i)
+            {
+                player.BuilderAccessoriesStatuses[i] = reader.ReadBoolean();
+            }
+
+            player.BartenderQuestLog = reader.ReadInt32();
+            if (player.IsDead = reader.ReadBoolean())
+            {
+                player.RespawnTimer = reader.ReadInt32();
+            }
+
+            player.LastSave = DateTime.FromBinary(reader.ReadInt64());
+            player.GolferScoreAccumulated = reader.ReadInt32();
+
+            reader.ReadInt32(); // Creative tracker
+            reader.ReadInt32(); // Temporary item slot
+            reader.ReadBoolean(); // Creative powers
 
             return playerFile;
         }

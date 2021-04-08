@@ -81,7 +81,7 @@ namespace TerrariaKit.Core.Models
 
         public Item[] Bank4 { get; } = new Item[40];
         
-        public Flags VoidVaultInformation { get; }
+        public Flags VoidVaultInformation { get; set; }
 
         public Buff[] Buffs { get; } = new Buff[22];
 
