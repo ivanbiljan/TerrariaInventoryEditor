@@ -101,6 +101,8 @@ namespace TerrariaKit.Core.Models
         
         public int RespawnTimer { get; set; }
         
+        public DateTime LastSave { get; set; }
+        
         public int GolferScoreAccumulated { get; set; }
     }
 }

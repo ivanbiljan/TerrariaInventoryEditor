@@ -15,14 +15,14 @@ namespace TerrariaKit.ViewModels
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        public T Get<T>([CallerMemberName] string? name = null)
+        public TProperty Get<TProperty>([CallerMemberName] string? name = null)
         {
-            return (_propertyNameToValueMapping.TryGetValue(name!, out var obj) && obj != null ? (T) obj : default)!;
+            return (_propertyNameToValueMapping.TryGetValue(name!, out var obj) && obj != null ? (TProperty) obj : default)!;
         }
 
-        public void Set<T>(T value, [CallerMemberName] string? name = null)
+        public void Set<TProperty>(TProperty value, [CallerMemberName] string? name = null)
         {
-            if (EqualityComparer<T>.Default.Equals(Get<T>(name), value))
+            if (EqualityComparer<TProperty>.Default.Equals(Get<TProperty>(name), value))
             {
                 return;
             }
