@@ -34,7 +34,7 @@
                     </Grid.RowDefinitions>
 
                     <TextBlock Text="Player name:" FontWeight="DemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" />
-                    <TextBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="5, 0" />
+                    <TextBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="5, 0" Text="{Binding Path=Name}" />
 
                     <TextBlock Grid.Row="1" Grid.Column="0" Text="Difficulty:" FontWeight="DemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" />
                     <ComboBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="5, 0" />

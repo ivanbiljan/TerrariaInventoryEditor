@@ -59,5 +59,8 @@
             <TabItem Header="Buffs"></TabItem>
 
         </TabControl>
+
+        <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="32" Height="32" Margin="25" Style="{StaticResource FabStyle}"
+                Content=".\Resources\files.png"></Button>
     </Grid>
 </Window>

@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Styles\files.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TerrariaKit.Core\TerrariaKit.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\files.png" />
   </ItemGroup>
 
 </Project>
