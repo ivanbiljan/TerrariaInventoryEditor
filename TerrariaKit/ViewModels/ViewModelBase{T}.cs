@@ -17,6 +17,11 @@ namespace TerrariaKit.ViewModels
 
         public T Model { get; protected set; } = new T();
 
+        public virtual void Load(T parameter)
+        {
+            Model = parameter;
+        }
+
         public TProperty Get<TProperty>([CallerMemberName] string? name = null)
         {
             return (_propertyNameToValueMapping.TryGetValue(name!, out var obj) && obj != null ? (TProperty) obj : default)!;
