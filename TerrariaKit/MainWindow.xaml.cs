@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using TerrariaKit.Services;
+using TerrariaKit.ViewModels;
 
 namespace TerrariaKit {
     /// <summary>
@@ -23,26 +24,7 @@ namespace TerrariaKit {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
-        }
-
-        private void LoadFileButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            var openFileDialog = new OpenFileDialog
-            {
-                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments,
-                    Environment.SpecialFolderOption.None),
-                Filter = "Terraria Player Files (*.plr)|*.plr"
-            };
-
-            if (openFileDialog.ShowDialog() != true)
-            {
-                return;
-            }
-
-            // TODO: set up DI
-            var playerFileService = new PlayerFileService(new LocalizationService());
-            var playerFile = playerFileService.Read(openFileDialog.FileName);
-            
+            DataContext = new MainViewModel();
         }
     }
 }
