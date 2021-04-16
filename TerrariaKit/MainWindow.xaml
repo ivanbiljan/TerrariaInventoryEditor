@@ -60,7 +60,7 @@
 
         </TabControl>
 
-        <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="40" Height="40" Margin="25" Style="{StaticResource FabStyle}"
-                Content=".\Resources\files.png"></Button>
+        <Button Name="LoadFileButton" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="40" Height="40" Margin="25" Style="{StaticResource FabStyle}"
+                Content=".\Resources\files.png" Click="LoadFileButton_OnClick"></Button>
     </Grid>
 </Window>
