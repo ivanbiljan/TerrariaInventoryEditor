@@ -38,9 +38,9 @@
 
                     <TextBlock Grid.Row="1" Grid.Column="0" Text="Difficulty:" FontWeight="DemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" />
                     <ComboBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="5, 0" SelectedIndex="{Binding Path=Difficulty}">
-                        <ComboBoxItem Content="Classic" Tag="0" />
-                        <ComboBoxItem Content="Mediumcore" Tag="1" />
-                        <ComboBoxItem Content="Hardcore" Tag="2" />
+                        <ComboBoxItem Content="Classic" />
+                        <ComboBoxItem Content="Mediumcore" />
+                        <ComboBoxItem Content="Hardcore" />
                     </ComboBox>
 
                     <TextBlock Grid.Row="2" Grid.Column="0" Text="Playtime:" FontWeight="DemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" />
@@ -54,11 +54,11 @@
                         </Grid.ColumnDefinitions>
 
                         <ComboBox Grid.Column="0" Margin="5, 5" SelectedIndex="{Binding Path=SkinVariant}">
-                            <ComboBoxItem Content="Starter" Tag="1" />
-                            <ComboBoxItem Content="Sticker" Tag="2" />
-                            <ComboBoxItem Content="Gangster" Tag="3" />
-                            <ComboBoxItem Content="Coat" Tag="4" />
-                            <ComboBoxItem Content="Dress" Tag="5" />
+                            <ComboBoxItem Content="Starter" />
+                            <ComboBoxItem Content="Sticker" />
+                            <ComboBoxItem Content="Gangster" />
+                            <ComboBoxItem Content="Coat" />
+                            <ComboBoxItem Content="Dress" />
                         </ComboBox>
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
                             <CheckBox VerticalAlignment="Center" />
