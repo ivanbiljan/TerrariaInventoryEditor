@@ -6,8 +6,7 @@
         xmlns:local="clr-namespace:TerrariaKit.Converters"
         xmlns:views="clr-namespace:TerrariaKit.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="900"
-        DataContext="">
+        Title="MainWindow" Height="600" Width="900">
 
     <Window.Resources>
         <local:TabItemWidthConverter x:Key="TabItemWidthConverter" />
@@ -52,7 +51,7 @@
                 </Style>
             </TabControl.Resources>
 
-            <TabItem Header="Character" DataContext="{Binding ChildViewModels[0]}">
+            <TabItem Header="Character" DataContext="{Binding Path=ChildViewModels[0]}">
                 <views:CharacterView />
             </TabItem>
             <TabItem Header="Inventory"></TabItem>

@@ -204,8 +204,8 @@ namespace TerrariaKit.Services
 
         public PlayerFile Read(string path)
         {
-            var playerFile = new PlayerFile(path);
             var player = new Character();
+            var playerFile = new PlayerFile(path) {Data = player};
 
             using var rijndael = new RijndaelManaged {Padding = PaddingMode.None};
             var decryptionKey = new UnicodeEncoding().GetBytes(EncryptionString);
@@ -341,7 +341,7 @@ namespace TerrariaKit.Services
             for (var i = 0; i < player.Spawns.Length; ++i)
             {
                 var spawnX = reader.ReadInt32();
-                if (spawnX == -1)
+                if (spawnX == 0)
                 {
                     break;
                 }
@@ -361,7 +361,8 @@ namespace TerrariaKit.Services
 
             player.NumberOfAnglerQuestsFinished = reader.ReadInt32();
 
-            reader.ReadInt32(); // Dpad radial bindings
+            for (var i = 0; i < 4; ++i)
+                reader.ReadInt32(); // Dpad radial bindings
 
             for (var i = 0; i < player.BuilderAccessoriesStatuses.Length; ++i)
             {

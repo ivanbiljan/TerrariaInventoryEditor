@@ -18,10 +18,8 @@ namespace TerrariaKit.ViewModels {
         {
             _childViewModels = new ObservableCollection<ViewModelBase>
             {
-                new CharacterViewModel()
+                new CharacterViewModel(this)
             };
-
-            //LoadPlayerCommand = new DelegateCommand(OpenPlayerFileDialog);
         }
         
         public ICommand LoadPlayerCommand => new DelegateCommand(OpenPlayerFileDialog);
@@ -43,6 +41,14 @@ namespace TerrariaKit.ViewModels {
             var playerFileService = new PlayerFileService(new LocalizationService());
             var playerFile = playerFileService.Read(openFileDialog.FileName);
             Load(playerFile.Data);
+            
+            // Something about this approach doesn't feel right. Calling OnPropertyChanged with a null argument
+            // indicates that all properties of an object have changed. This forces views
+            // to refresh when a new player is loaded
+            foreach (var child in ChildViewModels)
+            {
+                child.OnPropertyChanged(null);
+            }
         }
     }
 }
