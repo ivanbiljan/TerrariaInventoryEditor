@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace TerrariaKit.ViewModels
 {
-    internal sealed class CharacterViewModel : ViewModelBase<CharacterViewModel>
+    internal sealed class CharacterViewModel : ViewModelBase
     {
-        public string Name
-        {
-            get => Model.Name;
-            set => Model.Name = value;
-        }
     }
 }

@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:TerrariaKit.Converters"
         xmlns:views="clr-namespace:TerrariaKit.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="900">
+        Title="MainWindow" Height="600" Width="900"
+        DataContext="">
 
     <Window.Resources>
         <local:TabItemWidthConverter x:Key="TabItemWidthConverter" />
@@ -51,7 +52,7 @@
                 </Style>
             </TabControl.Resources>
 
-            <TabItem Header="Character">
+            <TabItem Header="Character" DataContext="{Binding ChildViewModels[0]}">
                 <views:CharacterView />
             </TabItem>
             <TabItem Header="Inventory"></TabItem>
@@ -61,6 +62,6 @@
         </TabControl>
 
         <Button Name="LoadFileButton" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="40" Height="40" Margin="25" Style="{StaticResource FabStyle}"
-                Content=".\Resources\files.png"></Button>
+                Content=".\Resources\files.png" Command="{Binding Path=LoadPlayerCommand}"></Button>
     </Grid>
 </Window>
