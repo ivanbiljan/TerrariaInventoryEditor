@@ -9,10 +9,15 @@ namespace TerrariaKit.Core.Models {
     /// Specifies a character style.
     /// </summary>
     public enum SkinVariant {
-        Starter = 1,
-        Sticker,
-        Gangster,
-        Coat,
-        Dress
+        MaleStarter,
+        MaleSticker,
+        MaleGangster,
+        MaleCoat,
+        MaleDress,
+        FemaleStarter,
+        FemaleSticker,
+        FemaleGangster,
+        FemaleCoat,
+        FemaleDress
     }
 }
