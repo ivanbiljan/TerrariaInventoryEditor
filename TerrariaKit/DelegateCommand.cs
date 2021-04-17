@@ -18,7 +18,7 @@ namespace TerrariaKit {
         }
 
         /// <inheritdoc />
-        public bool CanExecute(object? parameter) => _canExecute?.Invoke(parameter) ?? false;
+        public bool CanExecute(object? parameter) => _canExecute?.Invoke(parameter) ?? true;
 
         /// <inheritdoc />
         public void Execute(object? parameter) => _callback(parameter);
