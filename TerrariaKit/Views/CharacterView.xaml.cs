@@ -19,7 +19,8 @@ namespace TerrariaKit.Views {
     /// Interaction logic for CharacterView.xaml
     /// </summary>
     public partial class CharacterView : UserControl {
-        public CharacterView() {
+        public CharacterView()
+        {
             InitializeComponent();
         }
     }
