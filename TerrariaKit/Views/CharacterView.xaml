@@ -53,15 +53,20 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <ComboBox Grid.Column="0" Margin="5, 5" SelectedIndex="{Binding Path=SkinVariant}">
-                            <ComboBoxItem Content="Starter" />
-                            <ComboBoxItem Content="Sticker" />
-                            <ComboBoxItem Content="Gangster" />
-                            <ComboBoxItem Content="Coat" />
-                            <ComboBoxItem Content="Dress" />
+                        <ComboBox Grid.Column="0" Margin="5, 3" VerticalContentAlignment="Center" SelectedIndex="{Binding Path=SkinVariant}">
+                            <ComboBoxItem Content="Male Starter" />
+                            <ComboBoxItem Content="Male Sticker" />
+                            <ComboBoxItem Content="Male Gangster" />
+                            <ComboBoxItem Content="Male Coat" />
+                            <ComboBoxItem Content="Male Dress" />
+                            <ComboBoxItem Content="Female Starter" />
+                            <ComboBoxItem Content="Female Sticker" />
+                            <ComboBoxItem Content="Female Gangster" />
+                            <ComboBoxItem Content="Female Coat" />
+                            <ComboBoxItem Content="Female Dress" />
                         </ComboBox>
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
-                            <CheckBox VerticalAlignment="Center" />
+                            <CheckBox VerticalAlignment="Center" IsChecked="{Binding Path=HasExtraAccessory}" />
                             <TextBlock Text="Extra accessory" VerticalAlignment="Center" Margin="5, 0" FontWeight="SemiBold" />
                         </StackPanel>
                     </Grid>

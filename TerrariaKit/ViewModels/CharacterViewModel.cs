@@ -27,7 +27,7 @@ namespace TerrariaKit.ViewModels
             }
         }
 
-        public int Difficulty
+        public byte Difficulty
         {
             get => (byte) _mainViewModel.Model.Difficulty;
             set
@@ -52,12 +52,12 @@ namespace TerrariaKit.ViewModels
             }
         }
 
-        public int SkinVariant
+        public byte SkinVariant
         {
             get => _mainViewModel.Model.SkinVariant;
             set
             {
-                _mainViewModel.Model.SkinVariant = (byte) value;
+                _mainViewModel.Model.SkinVariant = value;
                 OnPropertyChanged(nameof(SkinVariant));
             }
         }
