@@ -42,7 +42,15 @@ namespace TerrariaKit.DataGenerator
             _terrariaAssembly = Assembly.LoadFrom(terrariaExePath);
 
             GenerateLocalizationMappings();
+            GenerateItemData();
 
+            //Console.WriteLine(JsonSerializer.Serialize(items, new JsonSerializerOptions {WriteIndented = true}));
+            File.WriteAllText("items.json",
+                JsonSerializer.Serialize(items, new JsonSerializerOptions {WriteIndented = true}));
+        }
+
+        private static void GenerateItemData()
+        {
             _terrariaAssembly.GetType("Terraria.Lang")!.GetMethod("InitializeLegacyLocalization")!.Invoke(null, null);
 
             var itemType = _terrariaAssembly.GetType("Terraria.Item");
@@ -51,21 +59,19 @@ namespace TerrariaKit.DataGenerator
 
             var languageGetTextMethod =
                 _terrariaAssembly.GetType("Terraria.Localization.Language")!.GetMethod("GetTextValue",
-                    new[] {typeof(string)});
+                    new[] { typeof(string) });
 
             var items = new List<Item>();
-            for (var i = 0; i < maxItemTypes; ++i)
-            {
+            for (var i = 0; i < maxItemTypes; ++i) {
                 // Familiar clothing vanity hack
-                if (i >= 269 && i <= 271)
-                {
+                if (i >= 269 && i <= 271) {
                     continue;
                 }
-                
-                itemType.GetMethod("SetDefaults", new []{typeof(int)})!.Invoke(item, new object[] {i});
+
+                itemType.GetMethod("SetDefaults", new[] { typeof(int) })!.Invoke(item, new object[] { i });
 
                 var currentItem = new Item(
-                    netId: (int) itemType.GetField("netID")!.GetValue(item),
+                    netId: (int)itemType.GetField("netID")!.GetValue(item),
                     name: _localizationMapping.TryGetValue((string)itemType.GetProperty("Name")!.GetValue(item),
                         out var name)
                         ? name
@@ -73,10 +79,6 @@ namespace TerrariaKit.DataGenerator
 
                 items.Add(currentItem);
             }
-
-            //Console.WriteLine(JsonSerializer.Serialize(items, new JsonSerializerOptions {WriteIndented = true}));
-            File.WriteAllText("items.json",
-                JsonSerializer.Serialize(items, new JsonSerializerOptions {WriteIndented = true}));
         }
 
         private static void GenerateLocalizationMappings() 
