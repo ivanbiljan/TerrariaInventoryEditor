@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TerrariaKit.Services;
 using TerrariaKit.ViewModels;
 
 namespace TerrariaKit.Views {
@@ -22,6 +24,8 @@ namespace TerrariaKit.Views {
         public CharacterView()
         {
             InitializeComponent();
+            var service = new TextureService();
+            ImagePlaceholder.Source = service.GetHairTexture(1);
         }
     }
 }

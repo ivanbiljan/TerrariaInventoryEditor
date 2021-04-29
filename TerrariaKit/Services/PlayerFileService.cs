@@ -362,7 +362,7 @@ namespace TerrariaKit.Services
             player.NumberOfAnglerQuestsFinished = reader.ReadInt32();
 
             for (var i = 0; i < 4; ++i)
-            reader.ReadInt32(); // Dpad radial bindings
+                reader.ReadInt32(); // Dpad radial bindings
 
             for (var i = 0; i < player.BuilderAccessoriesStatuses.Length; ++i)
             {

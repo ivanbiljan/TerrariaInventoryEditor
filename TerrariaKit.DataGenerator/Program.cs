@@ -15,6 +15,12 @@ namespace TerrariaKit.DataGenerator
         private const string TerrariaRegistrySubKeyPath =
             @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 105600";
 
+        private static readonly JsonSerializerOptions JsonSerializerOptions = new JsonSerializerOptions
+        {
+            AllowTrailingCommas = true,
+            WriteIndented = true
+        };
+        
         private static readonly IDictionary<string, string> _localizationMapping = new Dictionary<string, string>();
         private static Assembly _terrariaAssembly;
 
@@ -43,10 +49,12 @@ namespace TerrariaKit.DataGenerator
 
             GenerateLocalizationMappings();
             GenerateItemData();
+            DecompressTextureFiles(Path.Combine(terrariaExePath, "Content", "Images"));
+        }
 
-            //Console.WriteLine(JsonSerializer.Serialize(items, new JsonSerializerOptions {WriteIndented = true}));
-            File.WriteAllText("items.json",
-                JsonSerializer.Serialize(items, new JsonSerializerOptions {WriteIndented = true}));
+        private static void DecompressTextureFiles(string path)
+        {
+            
         }
 
         private static void GenerateItemData()
@@ -79,6 +87,8 @@ namespace TerrariaKit.DataGenerator
 
                 items.Add(currentItem);
             }
+
+            File.WriteAllText("items.json", JsonSerializer.Serialize(items, JsonSerializerOptions));
         }
 
         private static void GenerateLocalizationMappings() 
@@ -87,11 +97,6 @@ namespace TerrariaKit.DataGenerator
                                                          .Where(r =>
                                                              r.StartsWith("Terraria.Localization.Content.en-US") &&
                                                              r.EndsWith(".json"));
-
-            var serializerOptions = new JsonSerializerOptions {
-                AllowTrailingCommas = true,
-                WriteIndented = true
-            };
 
             foreach (var localizationFilePath in localizationFileNames) {
                 string fileContents = null;
@@ -107,7 +112,7 @@ namespace TerrariaKit.DataGenerator
 
                 var categoriesMap =
                     JsonSerializer.Deserialize<Dictionary<string, Dictionary<string, string>>>(fileContents,
-                        serializerOptions);
+                        JsonSerializerOptions);
                 foreach (var category in categoriesMap) {
                     foreach (var kvp in category.Value) {
                         _localizationMapping[$"{category.Key}.{kvp.Key}"] = kvp.Value;
@@ -116,7 +121,7 @@ namespace TerrariaKit.DataGenerator
             }
 
             //Console.WriteLine(JsonSerializer.Serialize(_localizationMapping, serializerOptions));
-            File.WriteAllText("localization.json", JsonSerializer.Serialize(_localizationMapping, serializerOptions));
+            File.WriteAllText("localization.json", JsonSerializer.Serialize(_localizationMapping, JsonSerializerOptions));
         }
 
         private static Assembly? CurrentDomainOnAssemblyResolve(object? sender, ResolveEventArgs args)

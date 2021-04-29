@@ -11,9 +11,12 @@ using System.Windows.Media.Imaging;
 namespace TerrariaKit.Services {
     internal sealed class TextureService : ITextureService
     {
+        private const byte CompressedLzx = 0x80;
+        private const byte CompressedLz4 = 0x40;
         private const string TexturesPath = "Content\\Images";
         private const int NumberOfHairTextures = 164;
 
+        // TODO: some sort of resource cleanup should probably be implemented later on
         private readonly IDictionary<string, ImageSource?> _textureCache = new Dictionary<string, ImageSource?>();
 
         /// <inheritdoc />
@@ -22,7 +25,7 @@ namespace TerrariaKit.Services {
             hairId = hairId <= 0 || hairId >= NumberOfHairTextures ? 1 : hairId;
             if (!_textureCache.TryGetValue($"Player_Hair_{hairId}", out var texture))
             {
-                texture = FromXnbImage(Path.Combine(TexturesPath, $"Player_Hair_{hairId}"));
+                texture = FromXnbImage(Path.Combine(TexturesPath, $"Player_Hair_{hairId}.xnb"));
                 _textureCache[$"Player_Hair_{hairId}"] = texture;
             }
 
@@ -55,7 +58,7 @@ namespace TerrariaKit.Services {
             throw new NotImplementedException();
         }
 
-        private static BitmapImage? FromXnbImage(string filePath)
+        private static BitmapSource? FromXnbImage(string filePath)
         {
             if (filePath is null)
             {
@@ -64,17 +67,22 @@ namespace TerrariaKit.Services {
 
             if (!File.Exists(filePath) || Path.GetExtension(filePath) != ".xnb")
             {
-                throw new ArgumentException("Invalid .xnb resource path", nameof(filePath));
+                throw new ArgumentException($"Invalid .xnb resource path: {filePath}", nameof(filePath));
             }
 
             using var fileStream = File.OpenRead(filePath);
             using var binaryReader = new BinaryReader(fileStream);
 
-            // XNB header (3 bytes) + platform (1 byte) + version (1 byte) + flags(1 byte) + resource length (1 byte)
-            binaryReader.BaseStream.Seek(7, SeekOrigin.Begin);
+            // XNB header (3 bytes) + platform (1 byte) + version (1 byte) + flags(1 byte)
+            binaryReader.BaseStream.Seek(5, SeekOrigin.Begin);
+            var flags = binaryReader.ReadByte();
+            if ((flags & CompressedLzx) != 0 || (flags & CompressedLz4) != 0)
+            {
+                var size = binaryReader.ReadInt32();
+            }
 
             // Read the actual image
-            binaryReader.ReadInt32(); // surface format
+            var surfaceFormat = binaryReader.ReadInt32(); // surface format
             var width = binaryReader.ReadInt32();
             var height = binaryReader.ReadInt32();
             binaryReader.ReadInt32(); // level count
@@ -84,17 +92,23 @@ namespace TerrariaKit.Services {
             return GetImageFromBytes(buffer);
         }
 
-        private static BitmapImage GetImageFromBytes(byte[] bytes)
+        private static BitmapSource GetImageFromBytes(byte[] bytes)
         {
             using var memoryStream = new MemoryStream(bytes);
+            //memoryStream.Position = 0;
+            memoryStream.Position = 0;
+            return BitmapDecoder.Create(memoryStream, BitmapCreateOptions.None, BitmapCacheOption.OnLoad).Frames[0];
 
-            var result = new BitmapImage();
-            result.BeginInit();
-            result.CacheOption = BitmapCacheOption.OnLoad;
-            result.StreamSource = memoryStream;
-            result.EndInit();
+            //var result = new BitmapImage();
+            //result.BeginInit();
+            //result.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
+            //result.CacheOption = BitmapCacheOption.OnLoad;
+            //result.UriSource = null;
+            //result.StreamSource = memoryStream;
+            //result.EndInit();
+            //result.Freeze();
 
-            return result;
+            //return result;
         }
     }
 }

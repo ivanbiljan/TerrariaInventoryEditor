@@ -102,6 +102,7 @@
             </GroupBox>
 
             <GroupBox Header="Appearance" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <Image Name="ImagePlaceholder" Width="100" Height="100"></Image>
             </GroupBox>
         </Grid>
     </Viewbox>
