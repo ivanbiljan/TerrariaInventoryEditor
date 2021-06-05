@@ -10,6 +10,8 @@ using TerrariaKit.Core.Models;
 
 namespace TerrariaKit.DataGenerator
 {
+    // TODO: .xnb -> .png for texture files
+    
     class Program
     {
         private const string TerrariaRegistrySubKeyPath =

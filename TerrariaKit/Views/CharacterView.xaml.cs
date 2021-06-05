@@ -21,11 +21,7 @@ namespace TerrariaKit.Views {
     /// Interaction logic for CharacterView.xaml
     /// </summary>
     public partial class CharacterView : UserControl {
-        public CharacterView()
-        {
-            InitializeComponent();
-            var service = new TextureService();
-            ImagePlaceholder.Source = service.GetHairTexture(1);
+        public CharacterView() {
         }
     }
 }

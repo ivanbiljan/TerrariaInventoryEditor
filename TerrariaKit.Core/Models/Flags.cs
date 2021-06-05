@@ -18,7 +18,7 @@ namespace TerrariaKit.Core.Models
 
         public bool this[int index]
         {
-            get => (_vector & (1 << index)) == 1;
+            get => (_vector & (1 << index)) > 0;
             set
             {
                 if (value)

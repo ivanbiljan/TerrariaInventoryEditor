@@ -13,7 +13,11 @@
     </Window.Resources>
 
     <Grid>
-        <TabControl TabStripPlacement="Top" HorizontalAlignment="Stretch" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="113*"/>
+            <ColumnDefinition Width="337*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl TabStripPlacement="Top" Background="White" Grid.ColumnSpan="2">
             <TabControl.Resources>
                 <Style TargetType="TabItem">
                     <Setter Property="Width">
@@ -60,7 +64,7 @@
 
         </TabControl>
 
-        <Button Name="LoadFileButton" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="40" Height="40" Margin="25" Style="{StaticResource FabStyle}"
-                Content=".\Resources\files.png" Command="{Binding Path=LoadPlayerCommand}"></Button>
+        <Button Name="LoadFileButton" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="40" Height="40" Margin="0,0,25,25" Style="{StaticResource FabStyle}"
+                Content=".\Resources\files.png" Command="{Binding Path=LoadPlayerCommand}" Grid.Column="1"></Button>
     </Grid>
 </Window>
