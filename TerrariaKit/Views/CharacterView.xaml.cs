@@ -22,6 +22,7 @@ namespace TerrariaKit.Views {
     /// </summary>
     public partial class CharacterView : UserControl {
         public CharacterView() {
+            InitializeComponent();
         }
     }
 }
