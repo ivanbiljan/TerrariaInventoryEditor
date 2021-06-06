@@ -58,7 +58,9 @@
             <TabItem Header="Character" DataContext="{Binding Path=ChildViewModels[0]}">
                 <views:CharacterView />
             </TabItem>
-            <TabItem Header="Inventory"></TabItem>
+            <TabItem Header="Inventory">
+                <views:InventoryView></views:InventoryView>
+            </TabItem>
             <TabItem Header="Storage"></TabItem>
             <TabItem Header="Buffs"></TabItem>
 
